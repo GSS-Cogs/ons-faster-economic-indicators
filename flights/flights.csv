@@ -1,0 +1,2539 @@
+﻿Date,Measure,Value,Unit
+2019-1-2,Flights,5147,Number
+2019-1-3,Flights,5518,Number
+2019-1-4,Flights,5588,Number
+2019-1-5,Flights,4798,Number
+2019-1-6,Flights,5329,Number
+2019-1-7,Flights,5288,Number
+2019-1-8,Flights,4670,Number
+2019-1-9,Flights,4702,Number
+2019-1-10,Flights,5056,Number
+2019-1-11,Flights,5330,Number
+2019-1-12,Flights,4227,Number
+2019-1-13,Flights,4848,Number
+2019-1-14,Flights,5147,Number
+2019-1-15,Flights,4596,Number
+2019-1-16,Flights,4625,Number
+2019-1-17,Flights,5068,Number
+2019-1-18,Flights,5426,Number
+2019-1-19,Flights,4172,Number
+2019-1-20,Flights,4929,Number
+2019-1-21,Flights,5167,Number
+2019-1-22,Flights,4550,Number
+2019-1-23,Flights,4611,Number
+2019-1-24,Flights,5089,Number
+2019-1-25,Flights,5444,Number
+2019-1-26,Flights,4215,Number
+2019-1-27,Flights,4899,Number
+2019-1-28,Flights,5252,Number
+2019-1-29,Flights,4638,Number
+2019-1-30,Flights,4686,Number
+2019-1-31,Flights,5026,Number
+2019-2-1,Flights,5182,Number
+2019-2-2,Flights,4362,Number
+2019-2-3,Flights,5044,Number
+2019-2-4,Flights,5262,Number
+2019-2-5,Flights,4767,Number
+2019-2-6,Flights,4867,Number
+2019-2-7,Flights,5363,Number
+2019-2-8,Flights,5508,Number
+2019-2-9,Flights,4499,Number
+2019-2-10,Flights,5098,Number
+2019-2-11,Flights,5475,Number
+2019-2-12,Flights,5046,Number
+2019-2-13,Flights,5035,Number
+2019-2-14,Flights,5548,Number
+2019-2-15,Flights,5961,Number
+2019-2-16,Flights,5054,Number
+2019-2-17,Flights,5290,Number
+2019-2-18,Flights,5529,Number
+2019-2-19,Flights,5154,Number
+2019-2-20,Flights,5026,Number
+2019-2-21,Flights,5527,Number
+2019-2-22,Flights,5611,Number
+2019-2-23,Flights,4981,Number
+2019-2-24,Flights,5692,Number
+2019-2-25,Flights,5621,Number
+2019-2-26,Flights,5200,Number
+2019-2-27,Flights,5122,Number
+2019-2-28,Flights,5569,Number
+2019-3-1,Flights,5818,Number
+2019-3-2,Flights,4657,Number
+2019-3-3,Flights,5144,Number
+2019-3-4,Flights,5590,Number
+2019-3-5,Flights,5140,Number
+2019-3-6,Flights,5112,Number
+2019-3-7,Flights,5581,Number
+2019-3-8,Flights,5833,Number
+2019-3-9,Flights,4621,Number
+2019-3-10,Flights,5184,Number
+2019-3-11,Flights,5693,Number
+2019-3-12,Flights,5089,Number
+2019-3-13,Flights,5076,Number
+2019-3-14,Flights,5583,Number
+2019-3-15,Flights,5883,Number
+2019-3-16,Flights,4673,Number
+2019-3-17,Flights,5324,Number
+2019-3-18,Flights,5693,Number
+2019-3-19,Flights,5209,Number
+2019-3-20,Flights,5182,Number
+2019-3-21,Flights,5665,Number
+2019-3-22,Flights,5891,Number
+2019-3-23,Flights,4670,Number
+2019-3-24,Flights,5313,Number
+2019-3-25,Flights,5621,Number
+2019-3-26,Flights,5233,Number
+2019-3-27,Flights,5243,Number
+2019-3-28,Flights,5709,Number
+2019-3-29,Flights,5985,Number
+2019-3-30,Flights,4788,Number
+2019-3-31,Flights,5361,Number
+2019-4-1,Flights,6058,Number
+2019-4-2,Flights,5832,Number
+2019-4-3,Flights,5915,Number
+2019-4-4,Flights,6078,Number
+2019-4-5,Flights,6288,Number
+2019-4-6,Flights,5353,Number
+2019-4-7,Flights,5710,Number
+2019-4-8,Flights,6125,Number
+2019-4-9,Flights,5946,Number
+2019-4-10,Flights,6064,Number
+2019-4-11,Flights,6198,Number
+2019-4-12,Flights,6372,Number
+2019-4-13,Flights,5367,Number
+2019-4-14,Flights,5761,Number
+2019-4-15,Flights,6119,Number
+2019-4-16,Flights,5930,Number
+2019-4-17,Flights,5989,Number
+2019-4-18,Flights,6268,Number
+2019-4-19,Flights,5859,Number
+2019-4-20,Flights,5174,Number
+2019-4-21,Flights,5555,Number
+2019-4-22,Flights,5903,Number
+2019-4-23,Flights,5999,Number
+2019-4-24,Flights,5983,Number
+2019-4-25,Flights,6106,Number
+2019-4-26,Flights,6253,Number
+2019-4-27,Flights,5172,Number
+2019-4-28,Flights,5677,Number
+2019-4-29,Flights,6201,Number
+2019-4-30,Flights,6085,Number
+2019-5-1,Flights,6157,Number
+2019-5-2,Flights,6396,Number
+2019-5-3,Flights,6677,Number
+2019-5-4,Flights,5474,Number
+2019-5-5,Flights,5900,Number
+2019-5-6,Flights,6076,Number
+2019-5-7,Flights,6373,Number
+2019-5-8,Flights,6286,Number
+2019-5-9,Flights,6207,Number
+2019-5-10,Flights,6672,Number
+2019-5-11,Flights,5601,Number
+2019-5-12,Flights,6121,Number
+2019-5-13,Flights,6457,Number
+2019-5-14,Flights,6284,Number
+2019-5-15,Flights,6331,Number
+2019-5-16,Flights,6509,Number
+2019-5-17,Flights,6632,Number
+2019-5-18,Flights,5686,Number
+2019-5-19,Flights,6007,Number
+2019-5-20,Flights,6644,Number
+2019-5-21,Flights,6258,Number
+2019-5-22,Flights,6498,Number
+2019-5-23,Flights,6702,Number
+2019-5-24,Flights,7089,Number
+2019-5-25,Flights,6003,Number
+2019-5-26,Flights,6175,Number
+2019-5-27,Flights,6445,Number
+2019-5-28,Flights,6589,Number
+2019-5-29,Flights,6618,Number
+2019-5-30,Flights,6745,Number
+2019-5-31,Flights,6970,Number
+2019-6-1,Flights,6130,Number
+2019-6-2,Flights,6747,Number
+2019-6-3,Flights,6819,Number
+2019-6-4,Flights,6654,Number
+2019-6-5,Flights,6765,Number
+2019-6-6,Flights,6896,Number
+2019-6-7,Flights,6915,Number
+2019-6-8,Flights,5978,Number
+2019-6-9,Flights,6283,Number
+2019-6-10,Flights,6762,Number
+2019-6-11,Flights,6653,Number
+2019-6-12,Flights,6608,Number
+2019-6-13,Flights,6953,Number
+2019-6-14,Flights,7015,Number
+2019-6-15,Flights,5998,Number
+2019-6-16,Flights,6445,Number
+2019-6-17,Flights,6934,Number
+2019-6-18,Flights,6684,Number
+2019-6-19,Flights,6745,Number
+2019-6-20,Flights,6995,Number
+2019-6-21,Flights,7038,Number
+2019-6-22,Flights,5990,Number
+2019-6-23,Flights,6433,Number
+2019-6-24,Flights,6833,Number
+2019-6-25,Flights,6711,Number
+2019-6-26,Flights,6766,Number
+2019-6-27,Flights,7039,Number
+2019-6-28,Flights,7010,Number
+2019-6-29,Flights,6014,Number
+2019-6-30,Flights,6464,Number
+2019-7-1,Flights,6932,Number
+2019-7-2,Flights,6749,Number
+2019-7-3,Flights,6794,Number
+2019-7-4,Flights,7034,Number
+2019-7-5,Flights,7080,Number
+2019-7-6,Flights,6118,Number
+2019-7-7,Flights,6454,Number
+2019-7-8,Flights,6889,Number
+2019-7-9,Flights,6707,Number
+2019-7-10,Flights,6704,Number
+2019-7-11,Flights,7010,Number
+2019-7-12,Flights,7002,Number
+2019-7-13,Flights,6199,Number
+2019-7-14,Flights,6555,Number
+2019-7-15,Flights,6958,Number
+2019-7-16,Flights,6667,Number
+2019-7-17,Flights,6795,Number
+2019-7-18,Flights,6972,Number
+2019-7-19,Flights,6950,Number
+2019-7-20,Flights,6091,Number
+2019-7-21,Flights,6432,Number
+2019-7-22,Flights,6836,Number
+2019-7-23,Flights,6651,Number
+2019-7-24,Flights,6667,Number
+2019-7-25,Flights,6519,Number
+2019-7-26,Flights,6807,Number
+2019-7-27,Flights,6074,Number
+2019-7-28,Flights,6338,Number
+2019-7-29,Flights,6799,Number
+2019-7-30,Flights,6639,Number
+2019-7-31,Flights,6726,Number
+2019-8-1,Flights,6871,Number
+2019-8-2,Flights,6911,Number
+2019-8-3,Flights,6134,Number
+2019-8-4,Flights,6398,Number
+2019-8-5,Flights,6740,Number
+2019-8-6,Flights,6527,Number
+2019-8-7,Flights,6454,Number
+2019-8-8,Flights,6808,Number
+2019-8-9,Flights,6716,Number
+2019-8-10,Flights,5992,Number
+2019-8-11,Flights,6422,Number
+2019-8-12,Flights,6735,Number
+2019-8-13,Flights,6592,Number
+2019-8-14,Flights,6613,Number
+2019-8-15,Flights,6786,Number
+2019-8-16,Flights,6886,Number
+2019-8-17,Flights,6063,Number
+2019-8-18,Flights,6418,Number
+2019-8-19,Flights,6783,Number
+2019-8-20,Flights,6638,Number
+2019-8-21,Flights,6716,Number
+2019-8-22,Flights,6859,Number
+2019-8-23,Flights,6955,Number
+2019-8-24,Flights,6081,Number
+2019-8-25,Flights,6394,Number
+2019-8-26,Flights,6541,Number
+2019-8-27,Flights,6710,Number
+2019-8-28,Flights,6779,Number
+2019-8-29,Flights,6956,Number
+2019-8-30,Flights,7065,Number
+2019-8-31,Flights,6201,Number
+2019-9-1,Flights,6378,Number
+2019-9-2,Flights,6917,Number
+2019-9-3,Flights,6723,Number
+2019-9-4,Flights,6723,Number
+2019-9-5,Flights,6964,Number
+2019-9-6,Flights,6850,Number
+2019-9-7,Flights,5997,Number
+2019-9-8,Flights,6507,Number
+2019-9-9,Flights,6096,Number
+2019-9-10,Flights,5926,Number
+2019-9-11,Flights,6656,Number
+2019-9-12,Flights,6948,Number
+2019-9-13,Flights,7047,Number
+2019-9-14,Flights,5965,Number
+2019-9-15,Flights,6467,Number
+2019-9-16,Flights,6847,Number
+2019-9-17,Flights,6663,Number
+2019-9-18,Flights,6678,Number
+2019-9-19,Flights,6920,Number
+2019-9-20,Flights,7020,Number
+2019-9-21,Flights,5884,Number
+2019-9-22,Flights,6361,Number
+2019-9-23,Flights,6793,Number
+2019-9-24,Flights,6413,Number
+2019-9-25,Flights,6637,Number
+2019-9-26,Flights,6879,Number
+2019-9-27,Flights,6472,Number
+2019-9-28,Flights,5771,Number
+2019-9-29,Flights,6296,Number
+2019-9-30,Flights,6755,Number
+2019-10-1,Flights,6154,Number
+2019-10-2,Flights,6418,Number
+2019-10-3,Flights,6575,Number
+2019-10-4,Flights,6743,Number
+2019-10-5,Flights,5520,Number
+2019-10-6,Flights,6146,Number
+2019-10-7,Flights,6439,Number
+2019-10-8,Flights,6000,Number
+2019-10-9,Flights,6044,Number
+2019-10-10,Flights,6428,Number
+2019-10-11,Flights,6569,Number
+2019-10-12,Flights,5337,Number
+2019-10-13,Flights,5938,Number
+2019-10-14,Flights,6366,Number
+2019-10-15,Flights,6110,Number
+2019-10-16,Flights,6102,Number
+2019-10-17,Flights,6393,Number
+2019-10-18,Flights,6623,Number
+2019-10-19,Flights,5475,Number
+2019-10-20,Flights,5965,Number
+2019-10-21,Flights,6388,Number
+2019-10-22,Flights,6036,Number
+2019-10-23,Flights,6156,Number
+2019-10-24,Flights,6418,Number
+2019-10-25,Flights,6431,Number
+2019-10-26,Flights,5389,Number
+2019-10-27,Flights,5607,Number
+2019-10-28,Flights,5935,Number
+2019-10-29,Flights,5563,Number
+2019-10-30,Flights,5483,Number
+2019-10-31,Flights,5833,Number
+2019-11-1,Flights,5874,Number
+2019-11-2,Flights,4674,Number
+2019-11-3,Flights,5413,Number
+2019-11-4,Flights,5683,Number
+2019-11-5,Flights,5112,Number
+2019-11-6,Flights,4902,Number
+2019-11-7,Flights,5301,Number
+2019-11-8,Flights,5692,Number
+2019-11-9,Flights,4123,Number
+2019-11-10,Flights,5099,Number
+2019-11-11,Flights,5503,Number
+2019-11-12,Flights,4732,Number
+2019-11-13,Flights,4695,Number
+2019-11-14,Flights,5289,Number
+2019-11-15,Flights,5701,Number
+2019-11-16,Flights,4089,Number
+2019-11-17,Flights,5031,Number
+2019-11-18,Flights,5423,Number
+2019-11-19,Flights,4671,Number
+2019-11-20,Flights,4736,Number
+2019-11-21,Flights,5171,Number
+2019-11-22,Flights,5650,Number
+2019-11-23,Flights,3954,Number
+2019-11-24,Flights,4948,Number
+2019-11-25,Flights,5267,Number
+2019-11-26,Flights,4679,Number
+2019-11-27,Flights,4726,Number
+2019-11-28,Flights,5182,Number
+2019-11-29,Flights,5512,Number
+2019-11-30,Flights,4004,Number
+2019-12-1,Flights,5024,Number
+2019-12-2,Flights,5507,Number
+2019-12-3,Flights,4955,Number
+2019-12-4,Flights,5054,Number
+2019-12-5,Flights,5257,Number
+2019-12-6,Flights,5641,Number
+2019-12-7,Flights,4227,Number
+2019-12-8,Flights,5070,Number
+2019-12-9,Flights,5570,Number
+2019-12-10,Flights,4890,Number
+2019-12-11,Flights,5109,Number
+2019-12-12,Flights,5464,Number
+2019-12-13,Flights,5821,Number
+2019-12-14,Flights,4607,Number
+2019-12-15,Flights,5245,Number
+2019-12-16,Flights,5579,Number
+2019-12-17,Flights,5033,Number
+2019-12-18,Flights,5156,Number
+2019-12-19,Flights,5800,Number
+2019-12-20,Flights,5933,Number
+2019-12-21,Flights,5070,Number
+2019-12-22,Flights,5380,Number
+2019-12-23,Flights,5494,Number
+2019-12-24,Flights,3883,Number
+2019-12-25,Flights,1386,Number
+2019-12-26,Flights,4498,Number
+2019-12-27,Flights,5513,Number
+2019-12-28,Flights,4894,Number
+2019-12-29,Flights,5220,Number
+2019-12-30,Flights,5140,Number
+2019-12-31,Flights,4112,Number
+2020-1-1,Flights,3950,Number
+2020-1-2,Flights,5252,Number
+2020-1-3,Flights,5536,Number
+2020-1-4,Flights,4844,Number
+2020-1-5,Flights,5390,Number
+2020-1-6,Flights,5245,Number
+2020-1-7,Flights,4630,Number
+2020-1-8,Flights,4474,Number
+2020-1-9,Flights,4801,Number
+2020-1-10,Flights,5297,Number
+2020-1-11,Flights,4199,Number
+2020-1-12,Flights,4950,Number
+2020-1-13,Flights,4825,Number
+2020-1-14,Flights,4120,Number
+2020-1-15,Flights,4362,Number
+2020-1-16,Flights,4786,Number
+2020-1-17,Flights,5310,Number
+2020-1-18,Flights,4155,Number
+2020-1-19,Flights,4990,Number
+2020-1-20,Flights,5023,Number
+2020-1-21,Flights,4364,Number
+2020-1-22,Flights,4242,Number
+2020-1-23,Flights,4886,Number
+2020-1-24,Flights,5436,Number
+2020-1-25,Flights,4135,Number
+2020-1-26,Flights,4934,Number
+2020-1-27,Flights,5031,Number
+2020-1-28,Flights,4325,Number
+2020-1-29,Flights,4404,Number
+2020-1-30,Flights,4866,Number
+2020-1-31,Flights,5414,Number
+2020-2-1,Flights,4298,Number
+2020-2-2,Flights,4969,Number
+2020-2-3,Flights,5127,Number
+2020-2-4,Flights,4524,Number
+2020-2-5,Flights,4605,Number
+2020-2-6,Flights,5058,Number
+2020-2-7,Flights,5525,Number
+2020-2-8,Flights,4410,Number
+2020-2-9,Flights,3171,Number
+2020-2-10,Flights,5056,Number
+2020-2-11,Flights,4579,Number
+2020-2-12,Flights,4801,Number
+2020-2-13,Flights,5299,Number
+2020-2-14,Flights,5870,Number
+2020-2-15,Flights,4506,Number
+2020-2-16,Flights,4927,Number
+2020-2-17,Flights,5392,Number
+2020-2-18,Flights,4958,Number
+2020-2-19,Flights,4906,Number
+2020-2-20,Flights,5306,Number
+2020-2-21,Flights,5722,Number
+2020-2-22,Flights,4845,Number
+2020-2-23,Flights,5460,Number
+2020-2-24,Flights,5593,Number
+2020-2-25,Flights,5162,Number
+2020-2-26,Flights,5050,Number
+2020-2-27,Flights,5448,Number
+2020-2-28,Flights,5685,Number
+2020-2-29,Flights,4531,Number
+2020-3-1,Flights,5266,Number
+2020-3-2,Flights,5503,Number
+2020-3-3,Flights,5089,Number
+2020-3-4,Flights,4891,Number
+2020-3-5,Flights,4995,Number
+2020-3-6,Flights,5309,Number
+2020-3-7,Flights,4340,Number
+2020-3-8,Flights,4953,Number
+2020-3-9,Flights,5175,Number
+2020-3-10,Flights,4470,Number
+2020-3-11,Flights,4332,Number
+2020-3-12,Flights,4903,Number
+2020-3-13,Flights,5158,Number
+2020-3-14,Flights,4093,Number
+2020-3-15,Flights,4448,Number
+2020-3-16,Flights,4489,Number
+2020-3-17,Flights,3575,Number
+2020-3-18,Flights,3258,Number
+2020-3-19,Flights,3278,Number
+2020-3-20,Flights,3265,Number
+2020-3-21,Flights,1926,Number
+2020-3-22,Flights,1904,Number
+2020-3-23,Flights,1663,Number
+2020-3-24,Flights,1348,Number
+2020-3-25,Flights,1071,Number
+2020-3-26,Flights,1098,Number
+2020-3-27,Flights,1053,Number
+2020-3-28,Flights,733,Number
+2020-3-29,Flights,706,Number
+2020-3-30,Flights,658,Number
+2020-3-31,Flights,677,Number
+2020-4-1,Flights,680,Number
+2020-4-2,Flights,642,Number
+2020-4-3,Flights,667,Number
+2020-4-4,Flights,465,Number
+2020-4-5,Flights,462,Number
+2020-4-6,Flights,506,Number
+2020-4-7,Flights,564,Number
+2020-4-8,Flights,591,Number
+2020-4-9,Flights,563,Number
+2020-4-10,Flights,473,Number
+2020-4-11,Flights,341,Number
+2020-4-12,Flights,346,Number
+2020-4-13,Flights,353,Number
+2020-4-14,Flights,501,Number
+2020-4-15,Flights,563,Number
+2020-4-16,Flights,585,Number
+2020-4-17,Flights,553,Number
+2020-4-18,Flights,391,Number
+2020-4-19,Flights,399,Number
+2020-4-20,Flights,542,Number
+2020-4-21,Flights,530,Number
+2020-4-22,Flights,613,Number
+2020-4-23,Flights,602,Number
+2020-4-24,Flights,602,Number
+2020-4-25,Flights,417,Number
+2020-4-26,Flights,406,Number
+2020-4-27,Flights,561,Number
+2020-4-28,Flights,564,Number
+2020-4-29,Flights,642,Number
+2020-4-30,Flights,643,Number
+2020-5-1,Flights,611,Number
+2020-5-2,Flights,416,Number
+2020-5-3,Flights,474,Number
+2020-5-4,Flights,585,Number
+2020-5-5,Flights,603,Number
+2020-5-6,Flights,714,Number
+2020-5-7,Flights,678,Number
+2020-5-8,Flights,573,Number
+2020-5-9,Flights,432,Number
+2020-5-10,Flights,513,Number
+2020-5-11,Flights,638,Number
+2020-5-12,Flights,659,Number
+2020-5-13,Flights,697,Number
+2020-5-14,Flights,694,Number
+2020-5-15,Flights,707,Number
+2020-5-16,Flights,486,Number
+2020-5-17,Flights,497,Number
+2020-5-18,Flights,684,Number
+2020-5-19,Flights,658,Number
+2020-5-20,Flights,761,Number
+2020-5-21,Flights,692,Number
+2020-5-22,Flights,696,Number
+2020-5-23,Flights,562,Number
+2020-5-24,Flights,554,Number
+2020-5-25,Flights,628,Number
+2020-5-26,Flights,750,Number
+2020-5-27,Flights,820,Number
+2020-5-28,Flights,729,Number
+2020-5-29,Flights,841,Number
+2020-5-30,Flights,553,Number
+2020-5-31,Flights,551,Number
+2020-6-1,Flights,714,Number
+2020-6-2,Flights,819,Number
+2020-6-3,Flights,891,Number
+2020-6-4,Flights,888,Number
+2020-6-5,Flights,939,Number
+2020-6-6,Flights,694,Number
+2020-6-7,Flights,728,Number
+2020-6-8,Flights,793,Number
+2020-6-9,Flights,772,Number
+2020-6-10,Flights,834,Number
+2020-6-11,Flights,780,Number
+2020-6-12,Flights,844,Number
+2020-6-13,Flights,555,Number
+2020-6-14,Flights,617,Number
+2020-6-15,Flights,863,Number
+2020-6-16,Flights,831,Number
+2020-6-17,Flights,884,Number
+2020-6-18,Flights,903,Number
+2020-6-19,Flights,933,Number
+2020-6-20,Flights,612,Number
+2020-6-21,Flights,731,Number
+2020-6-22,Flights,998,Number
+2020-6-23,Flights,950,Number
+2020-6-24,Flights,1012,Number
+2020-6-25,Flights,1054,Number
+2020-6-26,Flights,1051,Number
+2020-6-27,Flights,718,Number
+2020-6-28,Flights,767,Number
+2020-6-29,Flights,963,Number
+2020-6-30,Flights,1023,Number
+2020-7-1,Flights,1583,Number
+2020-7-2,Flights,1556,Number
+2020-7-3,Flights,1669,Number
+2020-7-4,Flights,1337,Number
+2020-7-5,Flights,1413,Number
+2020-7-6,Flights,1602,Number
+2020-7-7,Flights,1533,Number
+2020-7-8,Flights,1606,Number
+2020-7-9,Flights,1691,Number
+2020-7-10,Flights,1907,Number
+2020-7-11,Flights,1548,Number
+2020-7-12,Flights,1594,Number
+2020-7-13,Flights,1698,Number
+2020-7-14,Flights,1676,Number
+2020-7-15,Flights,1881,Number
+2020-7-16,Flights,2115,Number
+2020-7-17,Flights,2264,Number
+2020-7-18,Flights,1994,Number
+2020-7-19,Flights,2030,Number
+2020-7-20,Flights,2138,Number
+2020-7-21,Flights,2044,Number
+2020-7-22,Flights,2101,Number
+2020-7-23,Flights,2166,Number
+2020-7-24,Flights,2419,Number
+2020-7-25,Flights,2223,Number
+2020-7-26,Flights,2237,Number
+2020-7-27,Flights,2156,Number
+2020-7-28,Flights,2066,Number
+2020-7-29,Flights,2163,Number
+2020-7-30,Flights,2191,Number
+2020-7-31,Flights,2529,Number
+2020-8-1,Flights,2816,Number
+2020-8-2,Flights,2765,Number
+2020-8-3,Flights,2865,Number
+2020-8-4,Flights,2499,Number
+2020-8-5,Flights,2578,Number
+2020-8-6,Flights,2687,Number
+2020-8-7,Flights,2977,Number
+2020-8-8,Flights,2688,Number
+2020-8-9,Flights,2775,Number
+2020-8-10,Flights,2832,Number
+2020-8-11,Flights,2491,Number
+2020-8-12,Flights,2544,Number
+2020-8-13,Flights,2566,Number
+2020-8-14,Flights,3018,Number
+2020-8-15,Flights,2702,Number
+2020-8-16,Flights,2779,Number
+2020-8-17,Flights,2780,Number
+2020-8-18,Flights,2502,Number
+2020-8-19,Flights,2621,Number
+2020-8-20,Flights,2712,Number
+2020-8-21,Flights,2963,Number
+2020-8-22,Flights,2726,Number
+2020-8-23,Flights,2831,Number
+2020-8-24,Flights,2922,Number
+2020-8-25,Flights,2513,Number
+2020-8-26,Flights,2694,Number
+2020-8-27,Flights,2800,Number
+2020-8-28,Flights,3154,Number
+2020-8-29,Flights,2813,Number
+2020-8-30,Flights,2954,Number
+2020-8-31,Flights,3008,Number
+2020-9-1,Flights,2702,Number
+2020-9-2,Flights,2576,Number
+2020-9-3,Flights,2726,Number
+2020-9-4,Flights,3053,Number
+2020-9-5,Flights,2608,Number
+2020-9-6,Flights,2827,Number
+2020-9-7,Flights,2758,Number
+2020-9-8,Flights,2444,Number
+2020-9-9,Flights,2508,Number
+2020-9-10,Flights,2653,Number
+2020-9-11,Flights,3112,Number
+2020-9-12,Flights,2513,Number
+2020-9-13,Flights,2778,Number
+2020-9-14,Flights,2754,Number
+2020-9-15,Flights,2437,Number
+2020-9-16,Flights,2481,Number
+2020-9-17,Flights,2689,Number
+2020-9-18,Flights,3068,Number
+2020-9-19,Flights,2454,Number
+2020-9-20,Flights,2771,Number
+2020-9-21,Flights,2716,Number
+2020-9-22,Flights,2373,Number
+2020-9-23,Flights,2409,Number
+2020-9-24,Flights,2595,Number
+2020-9-25,Flights,2979,Number
+2020-9-26,Flights,2433,Number
+2020-9-27,Flights,2693,Number
+2020-9-28,Flights,2688,Number
+2020-9-29,Flights,2330,Number
+2020-9-30,Flights,2308,Number
+2020-10-1,Flights,2357,Number
+2020-10-2,Flights,2787,Number
+2020-10-3,Flights,2255,Number
+2020-10-4,Flights,2430,Number
+2020-10-5,Flights,2459,Number
+2020-10-6,Flights,2096,Number
+2020-10-7,Flights,2137,Number
+2020-10-8,Flights,2308,Number
+2020-10-9,Flights,2689,Number
+2020-10-10,Flights,2127,Number
+2020-10-11,Flights,2315,Number
+2020-10-12,Flights,2284,Number
+2020-10-13,Flights,1902,Number
+2020-10-14,Flights,1984,Number
+2020-10-15,Flights,2144,Number
+2020-10-16,Flights,2663,Number
+2020-10-17,Flights,2166,Number
+2020-10-18,Flights,2231,Number
+2020-10-19,Flights,2109,Number
+2020-10-20,Flights,1767,Number
+2020-10-21,Flights,1834,Number
+2020-10-22,Flights,2022,Number
+2020-10-23,Flights,2408,Number
+2020-10-24,Flights,2028,Number
+2020-10-25,Flights,2238,Number
+2020-10-26,Flights,2148,Number
+2020-10-27,Flights,1753,Number
+2020-10-28,Flights,1833,Number
+2020-10-29,Flights,2028,Number
+2020-10-30,Flights,2497,Number
+2020-10-31,Flights,2021,Number
+2020-11-1,Flights,2259,Number
+2020-11-2,Flights,2034,Number
+2020-11-3,Flights,1716,Number
+2020-11-4,Flights,1825,Number
+2020-11-5,Flights,1649,Number
+2020-11-6,Flights,1954,Number
+2020-11-7,Flights,1403,Number
+2020-11-8,Flights,1536,Number
+2020-11-9,Flights,1440,Number
+2020-11-10,Flights,1239,Number
+2020-11-11,Flights,1245,Number
+2020-11-12,Flights,1337,Number
+2020-11-13,Flights,1531,Number
+2020-11-14,Flights,983,Number
+2020-11-15,Flights,1164,Number
+2020-11-16,Flights,1277,Number
+2020-11-17,Flights,1104,Number
+2020-11-18,Flights,1092,Number
+2020-11-19,Flights,1246,Number
+2020-11-20,Flights,1286,Number
+2020-11-21,Flights,889,Number
+2020-11-22,Flights,1005,Number
+2020-11-23,Flights,1146,Number
+2020-11-24,Flights,1071,Number
+2020-11-25,Flights,1125,Number
+2020-11-26,Flights,1160,Number
+2020-11-27,Flights,1238,Number
+2020-11-28,Flights,885,Number
+2020-11-29,Flights,1013,Number
+2020-11-30,Flights,1158,Number
+2020-12-1,Flights,1160,Number
+2020-12-2,Flights,1276,Number
+2020-12-3,Flights,1374,Number
+2020-12-4,Flights,1602,Number
+2020-12-5,Flights,1168,Number
+2020-12-6,Flights,1299,Number
+2020-12-7,Flights,1349,Number
+2020-12-8,Flights,1333,Number
+2020-12-9,Flights,1455,Number
+2020-12-10,Flights,1648,Number
+2020-12-11,Flights,1892,Number
+2020-12-12,Flights,1450,Number
+2020-12-13,Flights,1559,Number
+2020-12-14,Flights,1582,Number
+2020-12-15,Flights,1553,Number
+2020-12-16,Flights,1591,Number
+2020-12-17,Flights,2196,Number
+2020-12-18,Flights,2481,Number
+2020-12-19,Flights,2209,Number
+2020-12-20,Flights,2256,Number
+2020-12-21,Flights,1828,Number
+2020-12-22,Flights,1508,Number
+2020-12-23,Flights,1684,Number
+2020-12-24,Flights,1231,Number
+2020-12-25,Flights,364,Number
+2020-12-26,Flights,926,Number
+2020-12-27,Flights,1337,Number
+2020-12-28,Flights,1258,Number
+2020-12-29,Flights,1233,Number
+2020-12-30,Flights,1359,Number
+2020-12-31,Flights,952,Number
+2021-1-1,Flights,753,Number
+2021-1-2,Flights,1412,Number
+2021-1-3,Flights,1724,Number
+2021-1-4,Flights,1571,Number
+2021-1-5,Flights,1329,Number
+2021-1-6,Flights,1260,Number
+2021-1-7,Flights,1263,Number
+2021-1-8,Flights,1464,Number
+2021-1-9,Flights,1195,Number
+2021-1-10,Flights,1336,Number
+2021-1-11,Flights,1056,Number
+2021-1-12,Flights,975,Number
+2021-1-13,Flights,980,Number
+2021-1-14,Flights,1080,Number
+2021-1-15,Flights,1173,Number
+2021-1-16,Flights,807,Number
+2021-1-17,Flights,909,Number
+2021-1-18,Flights,934,Number
+2021-1-19,Flights,876,Number
+2021-1-20,Flights,834,Number
+2021-1-21,Flights,923,Number
+2021-1-22,Flights,1073,Number
+2021-1-23,Flights,696,Number
+2021-1-24,Flights,752,Number
+2021-1-25,Flights,852,Number
+2021-1-26,Flights,839,Number
+2021-1-27,Flights,860,Number
+2021-1-28,Flights,929,Number
+2021-1-29,Flights,983,Number
+2021-1-30,Flights,759,Number
+2021-1-31,Flights,812,Number
+2021-2-1,Flights,848,Number
+2021-2-2,Flights,825,Number
+2021-2-3,Flights,871,Number
+2021-2-4,Flights,908,Number
+2021-2-5,Flights,1032,Number
+2021-2-6,Flights,742,Number
+2021-2-7,Flights,743,Number
+2021-2-8,Flights,796,Number
+2021-2-9,Flights,740,Number
+2021-2-10,Flights,926,Number
+2021-2-11,Flights,981,Number
+2021-2-12,Flights,1058,Number
+2021-2-13,Flights,771,Number
+2021-2-14,Flights,772,Number
+2021-2-15,Flights,892,Number
+2021-2-16,Flights,798,Number
+2021-2-17,Flights,862,Number
+2021-2-18,Flights,974,Number
+2021-2-19,Flights,976,Number
+2021-2-20,Flights,700,Number
+2021-2-21,Flights,835,Number
+2021-2-22,Flights,885,Number
+2021-2-23,Flights,796,Number
+2021-2-24,Flights,929,Number
+2021-2-25,Flights,1015,Number
+2021-2-26,Flights,1059,Number
+2021-2-27,Flights,768,Number
+2021-2-28,Flights,879,Number
+2021-3-1,Flights,944,Number
+2021-3-2,Flights,904,Number
+2021-3-3,Flights,977,Number
+2021-3-4,Flights,1068,Number
+2021-3-5,Flights,1092,Number
+2021-3-6,Flights,743,Number
+2021-3-7,Flights,864,Number
+2021-3-8,Flights,937,Number
+2021-3-9,Flights,913,Number
+2021-3-10,Flights,953,Number
+2021-3-11,Flights,976,Number
+2021-3-12,Flights,1096,Number
+2021-3-13,Flights,714,Number
+2021-3-14,Flights,895,Number
+2021-3-15,Flights,959,Number
+2021-3-16,Flights,947,Number
+2021-3-17,Flights,1068,Number
+2021-3-18,Flights,1070,Number
+2021-3-19,Flights,1209,Number
+2021-3-20,Flights,799,Number
+2021-3-21,Flights,927,Number
+2021-3-22,Flights,985,Number
+2021-3-23,Flights,910,Number
+2021-3-24,Flights,980,Number
+2021-3-25,Flights,1116,Number
+2021-3-26,Flights,1282,Number
+2021-3-27,Flights,848,Number
+2021-3-28,Flights,980,Number
+2021-3-29,Flights,1081,Number
+2021-3-30,Flights,977,Number
+2021-3-31,Flights,1193,Number
+2021-4-1,Flights,1324,Number
+2021-4-2,Flights,1177,Number
+2021-4-3,Flights,834,Number
+2021-4-4,Flights,891,Number
+2021-4-5,Flights,926,Number
+2021-4-6,Flights,953,Number
+2021-4-7,Flights,1179,Number
+2021-4-8,Flights,1207,Number
+2021-4-9,Flights,1274,Number
+2021-4-10,Flights,948,Number
+2021-4-11,Flights,1071,Number
+2021-4-12,Flights,1160,Number
+2021-4-13,Flights,1076,Number
+2021-4-14,Flights,1145,Number
+2021-4-15,Flights,1216,Number
+2021-4-16,Flights,1287,Number
+2021-4-17,Flights,871,Number
+2021-4-18,Flights,1134,Number
+2021-4-19,Flights,1175,Number
+2021-4-20,Flights,1041,Number
+2021-4-21,Flights,1124,Number
+2021-4-22,Flights,1196,Number
+2021-4-23,Flights,1287,Number
+2021-4-24,Flights,873,Number
+2021-4-25,Flights,982,Number
+2021-4-26,Flights,1152,Number
+2021-4-27,Flights,1058,Number
+2021-4-28,Flights,1132,Number
+2021-4-29,Flights,1249,Number
+2021-4-30,Flights,1395,Number
+2021-5-1,Flights,958,Number
+2021-5-2,Flights,1032,Number
+2021-5-3,Flights,1113,Number
+2021-5-4,Flights,1094,Number
+2021-5-5,Flights,1162,Number
+2021-5-6,Flights,1229,Number
+2021-5-7,Flights,1422,Number
+2021-5-8,Flights,851,Number
+2021-5-9,Flights,1122,Number
+2021-5-10,Flights,1300,Number
+2021-5-11,Flights,1105,Number
+2021-5-12,Flights,1166,Number
+2021-5-13,Flights,1274,Number
+2021-5-14,Flights,1355,Number
+2021-5-15,Flights,899,Number
+2021-5-16,Flights,1080,Number
+2021-5-17,Flights,1493,Number
+2021-5-18,Flights,1252,Number
+2021-5-19,Flights,1391,Number
+2021-5-20,Flights,1496,Number
+2021-5-21,Flights,1692,Number
+2021-5-22,Flights,1241,Number
+2021-5-23,Flights,1430,Number
+2021-5-24,Flights,1600,Number
+2021-5-25,Flights,1347,Number
+2021-5-26,Flights,1521,Number
+2021-5-27,Flights,1748,Number
+2021-5-28,Flights,2236,Number
+2021-5-29,Flights,1771,Number
+2021-5-30,Flights,1706,Number
+2021-5-31,Flights,1518,Number
+2021-6-1,Flights,1845,Number
+2021-6-2,Flights,1818,Number
+2021-6-3,Flights,1930,Number
+2021-6-4,Flights,2252,Number
+2021-6-5,Flights,1942,Number
+2021-6-6,Flights,2132,Number
+2021-6-7,Flights,2024,Number
+2021-6-8,Flights,1666,Number
+2021-6-9,Flights,1776,Number
+2021-6-10,Flights,1833,Number
+2021-6-11,Flights,2124,Number
+2021-6-12,Flights,1593,Number
+2021-6-13,Flights,1828,Number
+2021-6-14,Flights,1911,Number
+2021-6-15,Flights,1703,Number
+2021-6-16,Flights,1855,Number
+2021-6-17,Flights,2030,Number
+2021-6-18,Flights,2217,Number
+2021-6-19,Flights,1735,Number
+2021-6-20,Flights,1993,Number
+2021-6-21,Flights,1955,Number
+2021-6-22,Flights,1815,Number
+2021-6-23,Flights,1868,Number
+2021-6-24,Flights,2012,Number
+2021-6-25,Flights,2287,Number
+2021-6-26,Flights,1857,Number
+2021-6-27,Flights,1999,Number
+2021-6-28,Flights,2095,Number
+2021-6-29,Flights,1837,Number
+2021-6-30,Flights,2006,Number
+2021-7-1,Flights,2240,Number
+2021-7-2,Flights,2483,Number
+2021-7-3,Flights,2080,Number
+2021-7-4,Flights,2139,Number
+2021-7-5,Flights,2301,Number
+2021-7-6,Flights,2040,Number
+2021-7-7,Flights,2140,Number
+2021-7-8,Flights,2336,Number
+2021-7-9,Flights,2691,Number
+2021-7-10,Flights,2346,Number
+2021-7-11,Flights,2292,Number
+2021-7-12,Flights,2453,Number
+2021-7-13,Flights,2140,Number
+2021-7-14,Flights,2143,Number
+2021-7-15,Flights,2313,Number
+2021-7-16,Flights,2895,Number
+2021-7-17,Flights,2639,Number
+2021-7-18,Flights,2611,Number
+2021-7-19,Flights,2889,Number
+2021-7-20,Flights,2623,Number
+2021-7-21,Flights,2592,Number
+2021-7-22,Flights,2857,Number
+2021-7-23,Flights,3306,Number
+2021-7-24,Flights,2939,Number
+2021-7-25,Flights,2936,Number
+2021-7-26,Flights,2923,Number
+2021-7-27,Flights,2623,Number
+2021-7-28,Flights,2696,Number
+2021-7-29,Flights,2832,Number
+2021-7-30,Flights,3271,Number
+2021-7-31,Flights,3056,Number
+2021-8-1,Flights,3104,Number
+2021-8-2,Flights,3181,Number
+2021-8-3,Flights,2935,Number
+2021-8-4,Flights,2952,Number
+2021-8-5,Flights,3048,Number
+2021-8-6,Flights,3332,Number
+2021-8-7,Flights,3135,Number
+2021-8-8,Flights,3192,Number
+2021-8-9,Flights,3118,Number
+2021-8-10,Flights,2896,Number
+2021-8-11,Flights,3019,Number
+2021-8-12,Flights,3115,Number
+2021-8-13,Flights,3422,Number
+2021-8-14,Flights,3224,Number
+2021-8-15,Flights,3197,Number
+2021-8-16,Flights,3284,Number
+2021-8-17,Flights,2967,Number
+2021-8-18,Flights,3114,Number
+2021-8-19,Flights,3204,Number
+2021-8-20,Flights,3602,Number
+2021-8-21,Flights,3230,Number
+2021-8-22,Flights,3392,Number
+2021-8-23,Flights,3404,Number
+2021-8-24,Flights,3112,Number
+2021-8-25,Flights,3299,Number
+2021-8-26,Flights,3369,Number
+2021-8-27,Flights,3687,Number
+2021-8-28,Flights,3417,Number
+2021-8-29,Flights,3547,Number
+2021-8-30,Flights,3569,Number
+2021-8-31,Flights,3395,Number
+2021-9-1,Flights,3477,Number
+2021-9-2,Flights,3556,Number
+2021-9-3,Flights,3858,Number
+2021-9-4,Flights,3462,Number
+2021-9-5,Flights,3805,Number
+2021-9-6,Flights,3706,Number
+2021-9-7,Flights,3299,Number
+2021-9-8,Flights,3373,Number
+2021-9-9,Flights,3594,Number
+2021-9-10,Flights,3934,Number
+2021-9-11,Flights,3426,Number
+2021-9-12,Flights,3721,Number
+2021-9-13,Flights,3768,Number
+2021-9-14,Flights,3244,Number
+2021-9-15,Flights,3461,Number
+2021-9-16,Flights,3551,Number
+2021-9-17,Flights,3992,Number
+2021-9-18,Flights,3371,Number
+2021-9-19,Flights,3766,Number
+2021-9-20,Flights,3749,Number
+2021-9-21,Flights,3308,Number
+2021-9-22,Flights,3404,Number
+2021-9-23,Flights,3687,Number
+2021-9-24,Flights,3977,Number
+2021-9-25,Flights,3409,Number
+2021-9-26,Flights,3726,Number
+2021-9-27,Flights,3716,Number
+2021-9-28,Flights,3192,Number
+2021-9-29,Flights,3394,Number
+2021-9-30,Flights,3534,Number
+2021-10-1,Flights,4061,Number
+2021-10-2,Flights,3290,Number
+2021-10-3,Flights,3748,Number
+2021-10-4,Flights,3779,Number
+2021-10-5,Flights,3201,Number
+2021-10-6,Flights,3364,Number
+2021-10-7,Flights,3570,Number
+2021-10-8,Flights,4083,Number
+2021-10-9,Flights,3279,Number
+2021-10-10,Flights,3662,Number
+2021-10-11,Flights,3736,Number
+2021-10-12,Flights,3276,Number
+2021-10-13,Flights,3379,Number
+2021-10-14,Flights,3630,Number
+2021-10-15,Flights,4115,Number
+2021-10-16,Flights,3495,Number
+2021-10-17,Flights,3744,Number
+2021-10-18,Flights,3715,Number
+2021-10-19,Flights,3216,Number
+2021-10-20,Flights,3382,Number
+2021-10-21,Flights,3685,Number
+2021-10-22,Flights,4251,Number
+2021-10-23,Flights,3530,Number
+2021-10-24,Flights,3799,Number
+2021-10-25,Flights,3738,Number
+2021-10-26,Flights,3218,Number
+2021-10-27,Flights,3449,Number
+2021-10-28,Flights,3590,Number
+2021-10-29,Flights,4106,Number
+2021-10-30,Flights,3561,Number
+2021-10-31,Flights,4001,Number
+2021-11-1,Flights,3823,Number
+2021-11-2,Flights,3273,Number
+2021-11-3,Flights,3295,Number
+2021-11-4,Flights,3515,Number
+2021-11-5,Flights,3861,Number
+2021-11-6,Flights,2952,Number
+2021-11-7,Flights,3484,Number
+2021-11-8,Flights,3524,Number
+2021-11-9,Flights,3079,Number
+2021-11-10,Flights,3097,Number
+2021-11-11,Flights,3376,Number
+2021-11-12,Flights,3744,Number
+2021-11-13,Flights,2755,Number
+2021-11-14,Flights,3414,Number
+2021-11-15,Flights,3517,Number
+2021-11-16,Flights,3084,Number
+2021-11-17,Flights,3072,Number
+2021-11-18,Flights,3306,Number
+2021-11-19,Flights,3768,Number
+2021-11-20,Flights,2803,Number
+2021-11-21,Flights,3323,Number
+2021-11-22,Flights,3475,Number
+2021-11-23,Flights,3022,Number
+2021-11-24,Flights,3051,Number
+2021-11-25,Flights,3409,Number
+2021-11-26,Flights,3546,Number
+2021-11-27,Flights,2604,Number
+2021-11-28,Flights,3259,Number
+2021-11-29,Flights,3555,Number
+2021-11-30,Flights,2953,Number
+2021-12-1,Flights,3025,Number
+2021-12-2,Flights,3367,Number
+2021-12-3,Flights,3622,Number
+2021-12-4,Flights,2812,Number
+2021-12-5,Flights,3291,Number
+2021-12-6,Flights,3477,Number
+2021-12-7,Flights,2765,Number
+2021-12-8,Flights,3051,Number
+2021-12-9,Flights,3348,Number
+2021-12-10,Flights,3888,Number
+2021-12-11,Flights,3067,Number
+2021-12-12,Flights,3512,Number
+2021-12-13,Flights,3655,Number
+2021-12-14,Flights,3291,Number
+2021-12-15,Flights,3504,Number
+2021-12-16,Flights,3848,Number
+2021-12-17,Flights,4446,Number
+2021-12-18,Flights,3467,Number
+2021-12-19,Flights,3709,Number
+2021-12-20,Flights,4021,Number
+2021-12-21,Flights,3581,Number
+2021-12-22,Flights,3667,Number
+2021-12-23,Flights,3767,Number
+2021-12-24,Flights,2849,Number
+2021-12-25,Flights,934,Number
+2021-12-26,Flights,3135,Number
+2021-12-27,Flights,3568,Number
+2021-12-28,Flights,3238,Number
+2021-12-29,Flights,3224,Number
+2021-12-30,Flights,3358,Number
+2021-12-31,Flights,2904,Number
+2022-1-1,Flights,2501,Number
+2022-1-2,Flights,3685,Number
+2022-1-3,Flights,3745,Number
+2022-1-4,Flights,3313,Number
+2022-1-5,Flights,3166,Number
+2022-1-6,Flights,3113,Number
+2022-1-7,Flights,3483,Number
+2022-1-8,Flights,3016,Number
+2022-1-9,Flights,3465,Number
+2022-1-10,Flights,2588,Number
+2022-1-11,Flights,2187,Number
+2022-1-12,Flights,2153,Number
+2022-1-13,Flights,2427,Number
+2022-1-14,Flights,2752,Number
+2022-1-15,Flights,2312,Number
+2022-1-16,Flights,2681,Number
+2022-1-17,Flights,2410,Number
+2022-1-18,Flights,2037,Number
+2022-1-19,Flights,2084,Number
+2022-1-20,Flights,2408,Number
+2022-1-21,Flights,2801,Number
+2022-1-22,Flights,2361,Number
+2022-1-23,Flights,2697,Number
+2022-1-24,Flights,2397,Number
+2022-1-25,Flights,2040,Number
+2022-1-26,Flights,2093,Number
+2022-1-27,Flights,2413,Number
+2022-1-28,Flights,2769,Number
+2022-1-29,Flights,2261,Number
+2022-1-30,Flights,2670,Number
+2022-1-31,Flights,2429,Number
+2022-2-1,Flights,2434,Number
+2022-2-2,Flights,2580,Number
+2022-2-3,Flights,2848,Number
+2022-2-4,Flights,3238,Number
+2022-2-5,Flights,2762,Number
+2022-2-6,Flights,3214,Number
+2022-2-7,Flights,3037,Number
+2022-2-8,Flights,2638,Number
+2022-2-9,Flights,2668,Number
+2022-2-10,Flights,3325,Number
+2022-2-11,Flights,3989,Number
+2022-2-12,Flights,3602,Number
+2022-2-13,Flights,3537,Number
+2022-2-14,Flights,3422,Number
+2022-2-15,Flights,2960,Number
+2022-2-16,Flights,2879,Number
+2022-2-17,Flights,3389,Number
+2022-2-18,Flights,2902,Number
+2022-2-19,Flights,3819,Number
+2022-2-20,Flights,3743,Number
+2022-2-21,Flights,3383,Number
+2022-2-22,Flights,3083,Number
+2022-2-23,Flights,3066,Number
+2022-2-24,Flights,3421,Number
+2022-2-25,Flights,3863,Number
+2022-2-26,Flights,3202,Number
+2022-2-27,Flights,3754,Number
+2022-2-28,Flights,3659,Number
+2022-3-1,Flights,3243,Number
+2022-3-2,Flights,3338,Number
+2022-3-3,Flights,3641,Number
+2022-3-4,Flights,4074,Number
+2022-3-5,Flights,3437,Number
+2022-3-6,Flights,3805,Number
+2022-3-7,Flights,3793,Number
+2022-3-8,Flights,3400,Number
+2022-3-9,Flights,3367,Number
+2022-3-10,Flights,3807,Number
+2022-3-11,Flights,4111,Number
+2022-3-12,Flights,3453,Number
+2022-3-13,Flights,3921,Number
+2022-3-14,Flights,3883,Number
+2022-3-15,Flights,3516,Number
+2022-3-16,Flights,3501,Number
+2022-3-17,Flights,3842,Number
+2022-3-18,Flights,4239,Number
+2022-3-19,Flights,3550,Number
+2022-3-20,Flights,3913,Number
+2022-3-21,Flights,3908,Number
+2022-3-22,Flights,3473,Number
+2022-3-23,Flights,3553,Number
+2022-3-24,Flights,3813,Number
+2022-3-25,Flights,4227,Number
+2022-3-26,Flights,3573,Number
+2022-3-27,Flights,4390,Number
+2022-3-28,Flights,4748,Number
+2022-3-29,Flights,4578,Number
+2022-3-30,Flights,4397,Number
+2022-3-31,Flights,4616,Number
+2022-4-1,Flights,4916,Number
+2022-4-2,Flights,4337,Number
+2022-4-3,Flights,4524,Number
+2022-4-4,Flights,4835,Number
+2022-4-5,Flights,4582,Number
+2022-4-6,Flights,4761,Number
+2022-4-7,Flights,4874,Number
+2022-4-8,Flights,5095,Number
+2022-4-9,Flights,4518,Number
+2022-4-10,Flights,4718,Number
+2022-4-11,Flights,4956,Number
+2022-4-12,Flights,4791,Number
+2022-4-13,Flights,4752,Number
+2022-4-14,Flights,5042,Number
+2022-4-15,Flights,4895,Number
+2022-4-16,Flights,4309,Number
+2022-4-17,Flights,4550,Number
+2022-4-18,Flights,4929,Number
+2022-4-19,Flights,4920,Number
+2022-4-20,Flights,4845,Number
+2022-4-21,Flights,4894,Number
+2022-4-22,Flights,5119,Number
+2022-4-23,Flights,4266,Number
+2022-4-24,Flights,4737,Number
+2022-4-25,Flights,4956,Number
+2022-4-26,Flights,4854,Number
+2022-4-27,Flights,4830,Number
+2022-4-28,Flights,5060,Number
+2022-4-29,Flights,5351,Number
+2022-4-30,Flights,4451,Number
+2022-5-1,Flights,4870,Number
+2022-5-2,Flights,5274,Number
+2022-5-3,Flights,5131,Number
+2022-5-4,Flights,5098,Number
+2022-5-5,Flights,5388,Number
+2022-5-6,Flights,5575,Number
+2022-5-7,Flights,4675,Number
+2022-5-8,Flights,5148,Number
+2022-5-9,Flights,5402,Number
+2022-5-10,Flights,5193,Number
+2022-5-11,Flights,5227,Number
+2022-5-12,Flights,5428,Number
+2022-5-13,Flights,5636,Number
+2022-5-14,Flights,4851,Number
+2022-5-15,Flights,5169,Number
+2022-5-16,Flights,5417,Number
+2022-5-17,Flights,5294,Number
+2022-5-18,Flights,5315,Number
+2022-5-19,Flights,5540,Number
+2022-5-20,Flights,5610,Number
+2022-5-21,Flights,4929,Number
+2022-5-22,Flights,5309,Number
+2022-5-23,Flights,5572,Number
+2022-5-24,Flights,5383,Number
+2022-5-25,Flights,5530,Number
+2022-5-26,Flights,5724,Number
+2022-5-27,Flights,6130,Number
+2022-5-28,Flights,5387,Number
+2022-5-29,Flights,5446,Number
+2022-5-30,Flights,5826,Number
+2022-5-31,Flights,5522,Number
+2022-6-1,Flights,5723,Number
+2022-6-2,Flights,5635,Number
+2022-6-3,Flights,5612,Number
+2022-6-4,Flights,5177,Number
+2022-6-5,Flights,5679,Number
+2022-6-6,Flights,5970,Number
+2022-6-7,Flights,5699,Number
+2022-6-8,Flights,5609,Number
+2022-6-9,Flights,5882,Number
+2022-6-10,Flights,5989,Number
+2022-6-11,Flights,5205,Number
+2022-6-12,Flights,5570,Number
+2022-6-13,Flights,5913,Number
+2022-6-14,Flights,5726,Number
+2022-6-15,Flights,5737,Number
+2022-6-16,Flights,5861,Number
+2022-6-17,Flights,5898,Number
+2022-6-18,Flights,5098,Number
+2022-6-19,Flights,5536,Number
+2022-6-20,Flights,5791,Number
+2022-6-21,Flights,5732,Number
+2022-6-22,Flights,5669,Number
+2022-6-23,Flights,5792,Number
+2022-6-24,Flights,5907,Number
+2022-6-25,Flights,5144,Number
+2022-6-26,Flights,5485,Number
+2019-1-8,Flights 7 day average,5191,Number
+2019-1-9,Flights 7 day average,5128,Number
+2019-1-10,Flights 7 day average,5062,Number
+2019-1-11,Flights 7 day average,5025,Number
+2019-1-12,Flights 7 day average,4943,Number
+2019-1-13,Flights 7 day average,4874,Number
+2019-1-14,Flights 7 day average,4854,Number
+2019-1-15,Flights 7 day average,4844,Number
+2019-1-16,Flights 7 day average,4833,Number
+2019-1-17,Flights 7 day average,4834,Number
+2019-1-18,Flights 7 day average,4848,Number
+2019-1-19,Flights 7 day average,4840,Number
+2019-1-20,Flights 7 day average,4852,Number
+2019-1-21,Flights 7 day average,4855,Number
+2019-1-22,Flights 7 day average,4848,Number
+2019-1-23,Flights 7 day average,4846,Number
+2019-1-24,Flights 7 day average,4849,Number
+2019-1-25,Flights 7 day average,4852,Number
+2019-1-26,Flights 7 day average,4858,Number
+2019-1-27,Flights 7 day average,4854,Number
+2019-1-28,Flights 7 day average,4866,Number
+2019-1-29,Flights 7 day average,4878,Number
+2019-1-30,Flights 7 day average,4889,Number
+2019-1-31,Flights 7 day average,4880,Number
+2019-2-1,Flights 7 day average,4843,Number
+2019-2-2,Flights 7 day average,4864,Number
+2019-2-3,Flights 7 day average,4884,Number
+2019-2-4,Flights 7 day average,4886,Number
+2019-2-5,Flights 7 day average,4904,Number
+2019-2-6,Flights 7 day average,4930,Number
+2019-2-7,Flights 7 day average,4978,Number
+2019-2-8,Flights 7 day average,5025,Number
+2019-2-9,Flights 7 day average,5044,Number
+2019-2-10,Flights 7 day average,5052,Number
+2019-2-11,Flights 7 day average,5082,Number
+2019-2-12,Flights 7 day average,5122,Number
+2019-2-13,Flights 7 day average,5146,Number
+2019-2-14,Flights 7 day average,5173,Number
+2019-2-15,Flights 7 day average,5237,Number
+2019-2-16,Flights 7 day average,5317,Number
+2019-2-17,Flights 7 day average,5344,Number
+2019-2-18,Flights 7 day average,5352,Number
+2019-2-19,Flights 7 day average,5367,Number
+2019-2-20,Flights 7 day average,5366,Number
+2019-2-21,Flights 7 day average,5363,Number
+2019-2-22,Flights 7 day average,5313,Number
+2019-2-23,Flights 7 day average,5303,Number
+2019-2-24,Flights 7 day average,5360,Number
+2019-2-25,Flights 7 day average,5373,Number
+2019-2-26,Flights 7 day average,5380,Number
+2019-2-27,Flights 7 day average,5393,Number
+2019-2-28,Flights 7 day average,5399,Number
+2019-3-1,Flights 7 day average,5429,Number
+2019-3-2,Flights 7 day average,5383,Number
+2019-3-3,Flights 7 day average,5304,Number
+2019-3-4,Flights 7 day average,5300,Number
+2019-3-5,Flights 7 day average,5291,Number
+2019-3-6,Flights 7 day average,5290,Number
+2019-3-7,Flights 7 day average,5292,Number
+2019-3-8,Flights 7 day average,5294,Number
+2019-3-9,Flights 7 day average,5289,Number
+2019-3-10,Flights 7 day average,5294,Number
+2019-3-11,Flights 7 day average,5309,Number
+2019-3-12,Flights 7 day average,5302,Number
+2019-3-13,Flights 7 day average,5297,Number
+2019-3-14,Flights 7 day average,5297,Number
+2019-3-15,Flights 7 day average,5304,Number
+2019-3-16,Flights 7 day average,5312,Number
+2019-3-17,Flights 7 day average,5332,Number
+2019-3-18,Flights 7 day average,5332,Number
+2019-3-19,Flights 7 day average,5349,Number
+2019-3-20,Flights 7 day average,5364,Number
+2019-3-21,Flights 7 day average,5376,Number
+2019-3-22,Flights 7 day average,5377,Number
+2019-3-23,Flights 7 day average,5376,Number
+2019-3-24,Flights 7 day average,5375,Number
+2019-3-25,Flights 7 day average,5364,Number
+2019-3-26,Flights 7 day average,5368,Number
+2019-3-27,Flights 7 day average,5377,Number
+2019-3-28,Flights 7 day average,5383,Number
+2019-3-29,Flights 7 day average,5396,Number
+2019-3-30,Flights 7 day average,5413,Number
+2019-3-31,Flights 7 day average,5420,Number
+2019-4-1,Flights 7 day average,5482,Number
+2019-4-2,Flights 7 day average,5568,Number
+2019-4-3,Flights 7 day average,5664,Number
+2019-4-4,Flights 7 day average,5717,Number
+2019-4-5,Flights 7 day average,5760,Number
+2019-4-6,Flights 7 day average,5841,Number
+2019-4-7,Flights 7 day average,5891,Number
+2019-4-8,Flights 7 day average,5900,Number
+2019-4-9,Flights 7 day average,5916,Number
+2019-4-10,Flights 7 day average,5938,Number
+2019-4-11,Flights 7 day average,5955,Number
+2019-4-12,Flights 7 day average,5967,Number
+2019-4-13,Flights 7 day average,5969,Number
+2019-4-14,Flights 7 day average,5976,Number
+2019-4-15,Flights 7 day average,5975,Number
+2019-4-16,Flights 7 day average,5973,Number
+2019-4-17,Flights 7 day average,5962,Number
+2019-4-18,Flights 7 day average,5972,Number
+2019-4-19,Flights 7 day average,5899,Number
+2019-4-20,Flights 7 day average,5871,Number
+2019-4-21,Flights 7 day average,5842,Number
+2019-4-22,Flights 7 day average,5811,Number
+2019-4-23,Flights 7 day average,5821,Number
+2019-4-24,Flights 7 day average,5820,Number
+2019-4-25,Flights 7 day average,5797,Number
+2019-4-26,Flights 7 day average,5853,Number
+2019-4-27,Flights 7 day average,5853,Number
+2019-4-28,Flights 7 day average,5870,Number
+2019-4-29,Flights 7 day average,5913,Number
+2019-4-30,Flights 7 day average,5925,Number
+2019-5-1,Flights 7 day average,5950,Number
+2019-5-2,Flights 7 day average,5992,Number
+2019-5-3,Flights 7 day average,6052,Number
+2019-5-4,Flights 7 day average,6095,Number
+2019-5-5,Flights 7 day average,6127,Number
+2019-5-6,Flights 7 day average,6109,Number
+2019-5-7,Flights 7 day average,6150,Number
+2019-5-8,Flights 7 day average,6169,Number
+2019-5-9,Flights 7 day average,6142,Number
+2019-5-10,Flights 7 day average,6141,Number
+2019-5-11,Flights 7 day average,6159,Number
+2019-5-12,Flights 7 day average,6191,Number
+2019-5-13,Flights 7 day average,6245,Number
+2019-5-14,Flights 7 day average,6233,Number
+2019-5-15,Flights 7 day average,6239,Number
+2019-5-16,Flights 7 day average,6282,Number
+2019-5-17,Flights 7 day average,6276,Number
+2019-5-18,Flights 7 day average,6289,Number
+2019-5-19,Flights 7 day average,6272,Number
+2019-5-20,Flights 7 day average,6299,Number
+2019-5-21,Flights 7 day average,6295,Number
+2019-5-22,Flights 7 day average,6319,Number
+2019-5-23,Flights 7 day average,6347,Number
+2019-5-24,Flights 7 day average,6412,Number
+2019-5-25,Flights 7 day average,6457,Number
+2019-5-26,Flights 7 day average,6481,Number
+2019-5-27,Flights 7 day average,6453,Number
+2019-5-28,Flights 7 day average,6500,Number
+2019-5-29,Flights 7 day average,6517,Number
+2019-5-30,Flights 7 day average,6523,Number
+2019-5-31,Flights 7 day average,6506,Number
+2019-6-1,Flights 7 day average,6525,Number
+2019-6-2,Flights 7 day average,6606,Number
+2019-6-3,Flights 7 day average,6660,Number
+2019-6-4,Flights 7 day average,6669,Number
+2019-6-5,Flights 7 day average,6690,Number
+2019-6-6,Flights 7 day average,6712,Number
+2019-6-7,Flights 7 day average,6704,Number
+2019-6-8,Flights 7 day average,6682,Number
+2019-6-9,Flights 7 day average,6616,Number
+2019-6-10,Flights 7 day average,6608,Number
+2019-6-11,Flights 7 day average,6607,Number
+2019-6-12,Flights 7 day average,6585,Number
+2019-6-13,Flights 7 day average,6593,Number
+2019-6-14,Flights 7 day average,6607,Number
+2019-6-15,Flights 7 day average,6610,Number
+2019-6-16,Flights 7 day average,6633,Number
+2019-6-17,Flights 7 day average,6658,Number
+2019-6-18,Flights 7 day average,6662,Number
+2019-6-19,Flights 7 day average,6682,Number
+2019-6-20,Flights 7 day average,6688,Number
+2019-6-21,Flights 7 day average,6691,Number
+2019-6-22,Flights 7 day average,6690,Number
+2019-6-23,Flights 7 day average,6688,Number
+2019-6-24,Flights 7 day average,6674,Number
+2019-6-25,Flights 7 day average,6678,Number
+2019-6-26,Flights 7 day average,6681,Number
+2019-6-27,Flights 7 day average,6687,Number
+2019-6-28,Flights 7 day average,6683,Number
+2019-6-29,Flights 7 day average,6687,Number
+2019-6-30,Flights 7 day average,6691,Number
+2019-7-1,Flights 7 day average,6705,Number
+2019-7-2,Flights 7 day average,6711,Number
+2019-7-3,Flights 7 day average,6715,Number
+2019-7-4,Flights 7 day average,6714,Number
+2019-7-5,Flights 7 day average,6724,Number
+2019-7-6,Flights 7 day average,6739,Number
+2019-7-7,Flights 7 day average,6737,Number
+2019-7-8,Flights 7 day average,6731,Number
+2019-7-9,Flights 7 day average,6725,Number
+2019-7-10,Flights 7 day average,6712,Number
+2019-7-11,Flights 7 day average,6709,Number
+2019-7-12,Flights 7 day average,6698,Number
+2019-7-13,Flights 7 day average,6709,Number
+2019-7-14,Flights 7 day average,6724,Number
+2019-7-15,Flights 7 day average,6734,Number
+2019-7-16,Flights 7 day average,6728,Number
+2019-7-17,Flights 7 day average,6741,Number
+2019-7-18,Flights 7 day average,6735,Number
+2019-7-19,Flights 7 day average,6728,Number
+2019-7-20,Flights 7 day average,6713,Number
+2019-7-21,Flights 7 day average,6695,Number
+2019-7-22,Flights 7 day average,6678,Number
+2019-7-23,Flights 7 day average,6675,Number
+2019-7-24,Flights 7 day average,6657,Number
+2019-7-25,Flights 7 day average,6592,Number
+2019-7-26,Flights 7 day average,6572,Number
+2019-7-27,Flights 7 day average,6569,Number
+2019-7-28,Flights 7 day average,6556,Number
+2019-7-29,Flights 7 day average,6551,Number
+2019-7-30,Flights 7 day average,6549,Number
+2019-7-31,Flights 7 day average,6557,Number
+2019-8-1,Flights 7 day average,6608,Number
+2019-8-2,Flights 7 day average,6623,Number
+2019-8-3,Flights 7 day average,6631,Number
+2019-8-4,Flights 7 day average,6640,Number
+2019-8-5,Flights 7 day average,6631,Number
+2019-8-6,Flights 7 day average,6615,Number
+2019-8-7,Flights 7 day average,6576,Number
+2019-8-8,Flights 7 day average,6567,Number
+2019-8-9,Flights 7 day average,6540,Number
+2019-8-10,Flights 7 day average,6519,Number
+2019-8-11,Flights 7 day average,6523,Number
+2019-8-12,Flights 7 day average,6522,Number
+2019-8-13,Flights 7 day average,6531,Number
+2019-8-14,Flights 7 day average,6554,Number
+2019-8-15,Flights 7 day average,6551,Number
+2019-8-16,Flights 7 day average,6575,Number
+2019-8-17,Flights 7 day average,6585,Number
+2019-8-18,Flights 7 day average,6585,Number
+2019-8-19,Flights 7 day average,6592,Number
+2019-8-20,Flights 7 day average,6598,Number
+2019-8-21,Flights 7 day average,6613,Number
+2019-8-22,Flights 7 day average,6623,Number
+2019-8-23,Flights 7 day average,6633,Number
+2019-8-24,Flights 7 day average,6636,Number
+2019-8-25,Flights 7 day average,6632,Number
+2019-8-26,Flights 7 day average,6598,Number
+2019-8-27,Flights 7 day average,6608,Number
+2019-8-28,Flights 7 day average,6617,Number
+2019-8-29,Flights 7 day average,6631,Number
+2019-8-30,Flights 7 day average,6647,Number
+2019-8-31,Flights 7 day average,6664,Number
+2019-9-1,Flights 7 day average,6661,Number
+2019-9-2,Flights 7 day average,6715,Number
+2019-9-3,Flights 7 day average,6717,Number
+2019-9-4,Flights 7 day average,6709,Number
+2019-9-5,Flights 7 day average,6710,Number
+2019-9-6,Flights 7 day average,6679,Number
+2019-9-7,Flights 7 day average,6650,Number
+2019-9-8,Flights 7 day average,6669,Number
+2019-9-9,Flights 7 day average,6617,Number
+2019-9-10,Flights 7 day average,6601,Number
+2019-9-11,Flights 7 day average,6591,Number
+2019-9-12,Flights 7 day average,6589,Number
+2019-9-13,Flights 7 day average,6617,Number
+2019-9-14,Flights 7 day average,6612,Number
+2019-9-15,Flights 7 day average,6607,Number
+2019-9-16,Flights 7 day average,6648,Number
+2019-9-17,Flights 7 day average,6656,Number
+2019-9-18,Flights 7 day average,6659,Number
+2019-9-19,Flights 7 day average,6655,Number
+2019-9-20,Flights 7 day average,6651,Number
+2019-9-21,Flights 7 day average,6640,Number
+2019-9-22,Flights 7 day average,6625,Number
+2019-9-23,Flights 7 day average,6617,Number
+2019-9-24,Flights 7 day average,6581,Number
+2019-9-25,Flights 7 day average,6575,Number
+2019-9-26,Flights 7 day average,6570,Number
+2019-9-27,Flights 7 day average,6491,Number
+2019-9-28,Flights 7 day average,6475,Number
+2019-9-29,Flights 7 day average,6466,Number
+2019-9-30,Flights 7 day average,6460,Number
+2019-10-1,Flights 7 day average,6423,Number
+2019-10-2,Flights 7 day average,6392,Number
+2019-10-3,Flights 7 day average,6349,Number
+2019-10-4,Flights 7 day average,6387,Number
+2019-10-5,Flights 7 day average,6352,Number
+2019-10-6,Flights 7 day average,6330,Number
+2019-10-7,Flights 7 day average,6285,Number
+2019-10-8,Flights 7 day average,6263,Number
+2019-10-9,Flights 7 day average,6210,Number
+2019-10-10,Flights 7 day average,6189,Number
+2019-10-11,Flights 7 day average,6164,Number
+2019-10-12,Flights 7 day average,6138,Number
+2019-10-13,Flights 7 day average,6108,Number
+2019-10-14,Flights 7 day average,6097,Number
+2019-10-15,Flights 7 day average,6113,Number
+2019-10-16,Flights 7 day average,6121,Number
+2019-10-17,Flights 7 day average,6116,Number
+2019-10-18,Flights 7 day average,6124,Number
+2019-10-19,Flights 7 day average,6144,Number
+2019-10-20,Flights 7 day average,6148,Number
+2019-10-21,Flights 7 day average,6151,Number
+2019-10-22,Flights 7 day average,6140,Number
+2019-10-23,Flights 7 day average,6148,Number
+2019-10-24,Flights 7 day average,6152,Number
+2019-10-25,Flights 7 day average,6124,Number
+2019-10-26,Flights 7 day average,6112,Number
+2019-10-27,Flights 7 day average,6061,Number
+2019-10-28,Flights 7 day average,5996,Number
+2019-10-29,Flights 7 day average,5928,Number
+2019-10-30,Flights 7 day average,5832,Number
+2019-10-31,Flights 7 day average,5749,Number
+2019-11-1,Flights 7 day average,5669,Number
+2019-11-2,Flights 7 day average,5567,Number
+2019-11-3,Flights 7 day average,5539,Number
+2019-11-4,Flights 7 day average,5503,Number
+2019-11-5,Flights 7 day average,5439,Number
+2019-11-6,Flights 7 day average,5356,Number
+2019-11-7,Flights 7 day average,5280,Number
+2019-11-8,Flights 7 day average,5254,Number
+2019-11-9,Flights 7 day average,5175,Number
+2019-11-10,Flights 7 day average,5130,Number
+2019-11-11,Flights 7 day average,5105,Number
+2019-11-12,Flights 7 day average,5050,Number
+2019-11-13,Flights 7 day average,5021,Number
+2019-11-14,Flights 7 day average,5019,Number
+2019-11-15,Flights 7 day average,5020,Number
+2019-11-16,Flights 7 day average,5015,Number
+2019-11-17,Flights 7 day average,5006,Number
+2019-11-18,Flights 7 day average,4994,Number
+2019-11-19,Flights 7 day average,4986,Number
+2019-11-20,Flights 7 day average,4991,Number
+2019-11-21,Flights 7 day average,4975,Number
+2019-11-22,Flights 7 day average,4967,Number
+2019-11-23,Flights 7 day average,4948,Number
+2019-11-24,Flights 7 day average,4936,Number
+2019-11-25,Flights 7 day average,4914,Number
+2019-11-26,Flights 7 day average,4915,Number
+2019-11-27,Flights 7 day average,4914,Number
+2019-11-28,Flights 7 day average,4915,Number
+2019-11-29,Flights 7 day average,4895,Number
+2019-11-30,Flights 7 day average,4903,Number
+2019-12-1,Flights 7 day average,4913,Number
+2019-12-2,Flights 7 day average,4948,Number
+2019-12-3,Flights 7 day average,4987,Number
+2019-12-4,Flights 7 day average,5034,Number
+2019-12-5,Flights 7 day average,5045,Number
+2019-12-6,Flights 7 day average,5063,Number
+2019-12-7,Flights 7 day average,5095,Number
+2019-12-8,Flights 7 day average,5102,Number
+2019-12-9,Flights 7 day average,5111,Number
+2019-12-10,Flights 7 day average,5101,Number
+2019-12-11,Flights 7 day average,5109,Number
+2019-12-12,Flights 7 day average,5139,Number
+2019-12-13,Flights 7 day average,5164,Number
+2019-12-14,Flights 7 day average,5219,Number
+2019-12-15,Flights 7 day average,5244,Number
+2019-12-16,Flights 7 day average,5245,Number
+2019-12-17,Flights 7 day average,5265,Number
+2019-12-18,Flights 7 day average,5272,Number
+2019-12-19,Flights 7 day average,5320,Number
+2019-12-20,Flights 7 day average,5336,Number
+2019-12-21,Flights 7 day average,5402,Number
+2019-12-22,Flights 7 day average,5422,Number
+2019-12-23,Flights 7 day average,5409,Number
+2019-12-24,Flights 7 day average,5245,Number
+2019-12-25,Flights 7 day average,5107,Number
+2019-12-26,Flights 7 day average,4921,Number
+2019-12-27,Flights 7 day average,4861,Number
+2019-12-28,Flights 7 day average,4836,Number
+2019-12-29,Flights 7 day average,4813,Number
+2019-12-30,Flights 7 day average,4763,Number
+2019-12-31,Flights 7 day average,4795,Number
+2020-1-1,Flights 7 day average,4761,Number
+2020-1-2,Flights 7 day average,4869,Number
+2020-1-3,Flights 7 day average,4872,Number
+2020-1-4,Flights 7 day average,4865,Number
+2020-1-5,Flights 7 day average,4889,Number
+2020-1-6,Flights 7 day average,4904,Number
+2020-1-7,Flights 7 day average,4978,Number
+2020-1-8,Flights 7 day average,5053,Number
+2020-1-9,Flights 7 day average,4989,Number
+2020-1-10,Flights 7 day average,4954,Number
+2020-1-11,Flights 7 day average,4862,Number
+2020-1-12,Flights 7 day average,4799,Number
+2020-1-13,Flights 7 day average,4739,Number
+2020-1-14,Flights 7 day average,4667,Number
+2020-1-15,Flights 7 day average,4651,Number
+2020-1-16,Flights 7 day average,4648,Number
+2020-1-17,Flights 7 day average,4650,Number
+2020-1-18,Flights 7 day average,4644,Number
+2020-1-19,Flights 7 day average,4650,Number
+2020-1-20,Flights 7 day average,4678,Number
+2020-1-21,Flights 7 day average,4713,Number
+2020-1-22,Flights 7 day average,4696,Number
+2020-1-23,Flights 7 day average,4710,Number
+2020-1-24,Flights 7 day average,4728,Number
+2020-1-25,Flights 7 day average,4725,Number
+2020-1-26,Flights 7 day average,4717,Number
+2020-1-27,Flights 7 day average,4718,Number
+2020-1-28,Flights 7 day average,4713,Number
+2020-1-29,Flights 7 day average,4736,Number
+2020-1-30,Flights 7 day average,4733,Number
+2020-1-31,Flights 7 day average,4730,Number
+2020-2-1,Flights 7 day average,4753,Number
+2020-2-2,Flights 7 day average,4758,Number
+2020-2-3,Flights 7 day average,4772,Number
+2020-2-4,Flights 7 day average,4800,Number
+2020-2-5,Flights 7 day average,4829,Number
+2020-2-6,Flights 7 day average,4856,Number
+2020-2-7,Flights 7 day average,4872,Number
+2020-2-8,Flights 7 day average,4888,Number
+2020-2-9,Flights 7 day average,4855,Number
+2020-2-10,Flights 7 day average,4844,Number
+2020-2-11,Flights 7 day average,4852,Number
+2020-2-12,Flights 7 day average,4880,Number
+2020-2-13,Flights 7 day average,4915,Number
+2020-2-14,Flights 7 day average,4964,Number
+2020-2-15,Flights 7 day average,4978,Number
+2020-2-16,Flights 7 day average,5005,Number
+2020-2-17,Flights 7 day average,5053,Number
+2020-2-18,Flights 7 day average,5108,Number
+2020-2-19,Flights 7 day average,5123,Number
+2020-2-20,Flights 7 day average,5124,Number
+2020-2-21,Flights 7 day average,5102,Number
+2020-2-22,Flights 7 day average,5151,Number
+2020-2-23,Flights 7 day average,5227,Number
+2020-2-24,Flights 7 day average,5256,Number
+2020-2-25,Flights 7 day average,5285,Number
+2020-2-26,Flights 7 day average,5305,Number
+2020-2-27,Flights 7 day average,5326,Number
+2020-2-28,Flights 7 day average,5320,Number
+2020-2-29,Flights 7 day average,5276,Number
+2020-3-1,Flights 7 day average,5248,Number
+2020-3-2,Flights 7 day average,5235,Number
+2020-3-3,Flights 7 day average,5225,Number
+2020-3-4,Flights 7 day average,5202,Number
+2020-3-5,Flights 7 day average,5137,Number
+2020-3-6,Flights 7 day average,5083,Number
+2020-3-7,Flights 7 day average,5056,Number
+2020-3-8,Flights 7 day average,5011,Number
+2020-3-9,Flights 7 day average,4965,Number
+2020-3-10,Flights 7 day average,4876,Number
+2020-3-11,Flights 7 day average,4796,Number
+2020-3-12,Flights 7 day average,4783,Number
+2020-3-13,Flights 7 day average,4762,Number
+2020-3-14,Flights 7 day average,4726,Number
+2020-3-15,Flights 7 day average,4654,Number
+2020-3-16,Flights 7 day average,4556,Number
+2020-3-17,Flights 7 day average,4428,Number
+2020-3-18,Flights 7 day average,4275,Number
+2020-3-19,Flights 7 day average,4043,Number
+2020-3-20,Flights 7 day average,3772,Number
+2020-3-21,Flights 7 day average,3463,Number
+2020-3-22,Flights 7 day average,3099,Number
+2020-3-23,Flights 7 day average,2696,Number
+2020-3-24,Flights 7 day average,2377,Number
+2020-3-25,Flights 7 day average,2065,Number
+2020-3-26,Flights 7 day average,1754,Number
+2020-3-27,Flights 7 day average,1438,Number
+2020-3-28,Flights 7 day average,1267,Number
+2020-3-29,Flights 7 day average,1096,Number
+2020-3-30,Flights 7 day average,952,Number
+2020-3-31,Flights 7 day average,857,Number
+2020-4-1,Flights 7 day average,801,Number
+2020-4-2,Flights 7 day average,736,Number
+2020-4-3,Flights 7 day average,680,Number
+2020-4-4,Flights 7 day average,642,Number
+2020-4-5,Flights 7 day average,607,Number
+2020-4-6,Flights 7 day average,586,Number
+2020-4-7,Flights 7 day average,569,Number
+2020-4-8,Flights 7 day average,557,Number
+2020-4-9,Flights 7 day average,545,Number
+2020-4-10,Flights 7 day average,518,Number
+2020-4-11,Flights 7 day average,500,Number
+2020-4-12,Flights 7 day average,483,Number
+2020-4-13,Flights 7 day average,462,Number
+2020-4-14,Flights 7 day average,453,Number
+2020-4-15,Flights 7 day average,449,Number
+2020-4-16,Flights 7 day average,452,Number
+2020-4-17,Flights 7 day average,463,Number
+2020-4-18,Flights 7 day average,470,Number
+2020-4-19,Flights 7 day average,478,Number
+2020-4-20,Flights 7 day average,505,Number
+2020-4-21,Flights 7 day average,509,Number
+2020-4-22,Flights 7 day average,516,Number
+2020-4-23,Flights 7 day average,519,Number
+2020-4-24,Flights 7 day average,526,Number
+2020-4-25,Flights 7 day average,529,Number
+2020-4-26,Flights 7 day average,530,Number
+2020-4-27,Flights 7 day average,533,Number
+2020-4-28,Flights 7 day average,538,Number
+2020-4-29,Flights 7 day average,542,Number
+2020-4-30,Flights 7 day average,548,Number
+2020-5-1,Flights 7 day average,549,Number
+2020-5-2,Flights 7 day average,549,Number
+2020-5-3,Flights 7 day average,559,Number
+2020-5-4,Flights 7 day average,562,Number
+2020-5-5,Flights 7 day average,568,Number
+2020-5-6,Flights 7 day average,578,Number
+2020-5-7,Flights 7 day average,583,Number
+2020-5-8,Flights 7 day average,578,Number
+2020-5-9,Flights 7 day average,580,Number
+2020-5-10,Flights 7 day average,585,Number
+2020-5-11,Flights 7 day average,593,Number
+2020-5-12,Flights 7 day average,601,Number
+2020-5-13,Flights 7 day average,599,Number
+2020-5-14,Flights 7 day average,601,Number
+2020-5-15,Flights 7 day average,620,Number
+2020-5-16,Flights 7 day average,628,Number
+2020-5-17,Flights 7 day average,625,Number
+2020-5-18,Flights 7 day average,632,Number
+2020-5-19,Flights 7 day average,632,Number
+2020-5-20,Flights 7 day average,641,Number
+2020-5-21,Flights 7 day average,641,Number
+2020-5-22,Flights 7 day average,639,Number
+2020-5-23,Flights 7 day average,650,Number
+2020-5-24,Flights 7 day average,658,Number
+2020-5-25,Flights 7 day average,650,Number
+2020-5-26,Flights 7 day average,663,Number
+2020-5-27,Flights 7 day average,672,Number
+2020-5-28,Flights 7 day average,677,Number
+2020-5-29,Flights 7 day average,698,Number
+2020-5-30,Flights 7 day average,696,Number
+2020-5-31,Flights 7 day average,696,Number
+2020-6-1,Flights 7 day average,708,Number
+2020-6-2,Flights 7 day average,718,Number
+2020-6-3,Flights 7 day average,728,Number
+2020-6-4,Flights 7 day average,751,Number
+2020-6-5,Flights 7 day average,765,Number
+2020-6-6,Flights 7 day average,785,Number
+2020-6-7,Flights 7 day average,810,Number
+2020-6-8,Flights 7 day average,822,Number
+2020-6-9,Flights 7 day average,815,Number
+2020-6-10,Flights 7 day average,807,Number
+2020-6-11,Flights 7 day average,791,Number
+2020-6-12,Flights 7 day average,778,Number
+2020-6-13,Flights 7 day average,758,Number
+2020-6-14,Flights 7 day average,742,Number
+2020-6-15,Flights 7 day average,752,Number
+2020-6-16,Flights 7 day average,761,Number
+2020-6-17,Flights 7 day average,768,Number
+2020-6-18,Flights 7 day average,785,Number
+2020-6-19,Flights 7 day average,798,Number
+2020-6-20,Flights 7 day average,806,Number
+2020-6-21,Flights 7 day average,822,Number
+2020-6-22,Flights 7 day average,842,Number
+2020-6-23,Flights 7 day average,859,Number
+2020-6-24,Flights 7 day average,877,Number
+2020-6-25,Flights 7 day average,899,Number
+2020-6-26,Flights 7 day average,915,Number
+2020-6-27,Flights 7 day average,931,Number
+2020-6-28,Flights 7 day average,936,Number
+2020-6-29,Flights 7 day average,931,Number
+2020-6-30,Flights 7 day average,941,Number
+2020-7-1,Flights 7 day average,1023,Number
+2020-7-2,Flights 7 day average,1094,Number
+2020-7-3,Flights 7 day average,1183,Number
+2020-7-4,Flights 7 day average,1271,Number
+2020-7-5,Flights 7 day average,1363,Number
+2020-7-6,Flights 7 day average,1455,Number
+2020-7-7,Flights 7 day average,1528,Number
+2020-7-8,Flights 7 day average,1531,Number
+2020-7-9,Flights 7 day average,1550,Number
+2020-7-10,Flights 7 day average,1584,Number
+2020-7-11,Flights 7 day average,1614,Number
+2020-7-12,Flights 7 day average,1640,Number
+2020-7-13,Flights 7 day average,1654,Number
+2020-7-14,Flights 7 day average,1674,Number
+2020-7-15,Flights 7 day average,1714,Number
+2020-7-16,Flights 7 day average,1774,Number
+2020-7-17,Flights 7 day average,1825,Number
+2020-7-18,Flights 7 day average,1889,Number
+2020-7-19,Flights 7 day average,1951,Number
+2020-7-20,Flights 7 day average,2014,Number
+2020-7-21,Flights 7 day average,2067,Number
+2020-7-22,Flights 7 day average,2098,Number
+2020-7-23,Flights 7 day average,2105,Number
+2020-7-24,Flights 7 day average,2127,Number
+2020-7-25,Flights 7 day average,2160,Number
+2020-7-26,Flights 7 day average,2190,Number
+2020-7-27,Flights 7 day average,2192,Number
+2020-7-28,Flights 7 day average,2195,Number
+2020-7-29,Flights 7 day average,2204,Number
+2020-7-30,Flights 7 day average,2208,Number
+2020-7-31,Flights 7 day average,2224,Number
+2020-8-1,Flights 7 day average,2308,Number
+2020-8-2,Flights 7 day average,2384,Number
+2020-8-3,Flights 7 day average,2485,Number
+2020-8-4,Flights 7 day average,2547,Number
+2020-8-5,Flights 7 day average,2606,Number
+2020-8-6,Flights 7 day average,2677,Number
+2020-8-7,Flights 7 day average,2741,Number
+2020-8-8,Flights 7 day average,2723,Number
+2020-8-9,Flights 7 day average,2724,Number
+2020-8-10,Flights 7 day average,2719,Number
+2020-8-11,Flights 7 day average,2718,Number
+2020-8-12,Flights 7 day average,2713,Number
+2020-8-13,Flights 7 day average,2696,Number
+2020-8-14,Flights 7 day average,2702,Number
+2020-8-15,Flights 7 day average,2704,Number
+2020-8-16,Flights 7 day average,2705,Number
+2020-8-17,Flights 7 day average,2697,Number
+2020-8-18,Flights 7 day average,2699,Number
+2020-8-19,Flights 7 day average,2710,Number
+2020-8-20,Flights 7 day average,2731,Number
+2020-8-21,Flights 7 day average,2723,Number
+2020-8-22,Flights 7 day average,2726,Number
+2020-8-23,Flights 7 day average,2734,Number
+2020-8-24,Flights 7 day average,2754,Number
+2020-8-25,Flights 7 day average,2755,Number
+2020-8-26,Flights 7 day average,2766,Number
+2020-8-27,Flights 7 day average,2778,Number
+2020-8-28,Flights 7 day average,2806,Number
+2020-8-29,Flights 7 day average,2818,Number
+2020-8-30,Flights 7 day average,2836,Number
+2020-8-31,Flights 7 day average,2848,Number
+2020-9-1,Flights 7 day average,2875,Number
+2020-9-2,Flights 7 day average,2858,Number
+2020-9-3,Flights 7 day average,2848,Number
+2020-9-4,Flights 7 day average,2833,Number
+2020-9-5,Flights 7 day average,2804,Number
+2020-9-6,Flights 7 day average,2786,Number
+2020-9-7,Flights 7 day average,2750,Number
+2020-9-8,Flights 7 day average,2713,Number
+2020-9-9,Flights 7 day average,2703,Number
+2020-9-10,Flights 7 day average,2693,Number
+2020-9-11,Flights 7 day average,2701,Number
+2020-9-12,Flights 7 day average,2688,Number
+2020-9-13,Flights 7 day average,2681,Number
+2020-9-14,Flights 7 day average,2680,Number
+2020-9-15,Flights 7 day average,2679,Number
+2020-9-16,Flights 7 day average,2675,Number
+2020-9-17,Flights 7 day average,2681,Number
+2020-9-18,Flights 7 day average,2674,Number
+2020-9-19,Flights 7 day average,2666,Number
+2020-9-20,Flights 7 day average,2665,Number
+2020-9-21,Flights 7 day average,2659,Number
+2020-9-22,Flights 7 day average,2650,Number
+2020-9-23,Flights 7 day average,2640,Number
+2020-9-24,Flights 7 day average,2627,Number
+2020-9-25,Flights 7 day average,2614,Number
+2020-9-26,Flights 7 day average,2611,Number
+2020-9-27,Flights 7 day average,2600,Number
+2020-9-28,Flights 7 day average,2596,Number
+2020-9-29,Flights 7 day average,2590,Number
+2020-9-30,Flights 7 day average,2575,Number
+2020-10-1,Flights 7 day average,2541,Number
+2020-10-2,Flights 7 day average,2514,Number
+2020-10-3,Flights 7 day average,2488,Number
+2020-10-4,Flights 7 day average,2451,Number
+2020-10-5,Flights 7 day average,2418,Number
+2020-10-6,Flights 7 day average,2385,Number
+2020-10-7,Flights 7 day average,2360,Number
+2020-10-8,Flights 7 day average,2353,Number
+2020-10-9,Flights 7 day average,2339,Number
+2020-10-10,Flights 7 day average,2321,Number
+2020-10-11,Flights 7 day average,2304,Number
+2020-10-12,Flights 7 day average,2279,Number
+2020-10-13,Flights 7 day average,2252,Number
+2020-10-14,Flights 7 day average,2230,Number
+2020-10-15,Flights 7 day average,2206,Number
+2020-10-16,Flights 7 day average,2203,Number
+2020-10-17,Flights 7 day average,2208,Number
+2020-10-18,Flights 7 day average,2196,Number
+2020-10-19,Flights 7 day average,2171,Number
+2020-10-20,Flights 7 day average,2152,Number
+2020-10-21,Flights 7 day average,2131,Number
+2020-10-22,Flights 7 day average,2113,Number
+2020-10-23,Flights 7 day average,2077,Number
+2020-10-24,Flights 7 day average,2057,Number
+2020-10-25,Flights 7 day average,2058,Number
+2020-10-26,Flights 7 day average,2064,Number
+2020-10-27,Flights 7 day average,2062,Number
+2020-10-28,Flights 7 day average,2061,Number
+2020-10-29,Flights 7 day average,2062,Number
+2020-10-30,Flights 7 day average,2075,Number
+2020-10-31,Flights 7 day average,2074,Number
+2020-11-1,Flights 7 day average,2077,Number
+2020-11-2,Flights 7 day average,2061,Number
+2020-11-3,Flights 7 day average,2055,Number
+2020-11-4,Flights 7 day average,2054,Number
+2020-11-5,Flights 7 day average,2000,Number
+2020-11-6,Flights 7 day average,1923,Number
+2020-11-7,Flights 7 day average,1834,Number
+2020-11-8,Flights 7 day average,1731,Number
+2020-11-9,Flights 7 day average,1646,Number
+2020-11-10,Flights 7 day average,1578,Number
+2020-11-11,Flights 7 day average,1495,Number
+2020-11-12,Flights 7 day average,1451,Number
+2020-11-13,Flights 7 day average,1390,Number
+2020-11-14,Flights 7 day average,1330,Number
+2020-11-15,Flights 7 day average,1277,Number
+2020-11-16,Flights 7 day average,1254,Number
+2020-11-17,Flights 7 day average,1234,Number
+2020-11-18,Flights 7 day average,1213,Number
+2020-11-19,Flights 7 day average,1200,Number
+2020-11-20,Flights 7 day average,1165,Number
+2020-11-21,Flights 7 day average,1151,Number
+2020-11-22,Flights 7 day average,1128,Number
+2020-11-23,Flights 7 day average,1110,Number
+2020-11-24,Flights 7 day average,1105,Number
+2020-11-25,Flights 7 day average,1110,Number
+2020-11-26,Flights 7 day average,1097,Number
+2020-11-27,Flights 7 day average,1091,Number
+2020-11-28,Flights 7 day average,1090,Number
+2020-11-29,Flights 7 day average,1091,Number
+2020-11-30,Flights 7 day average,1093,Number
+2020-12-1,Flights 7 day average,1106,Number
+2020-12-2,Flights 7 day average,1127,Number
+2020-12-3,Flights 7 day average,1158,Number
+2020-12-4,Flights 7 day average,1210,Number
+2020-12-5,Flights 7 day average,1250,Number
+2020-12-6,Flights 7 day average,1291,Number
+2020-12-7,Flights 7 day average,1318,Number
+2020-12-8,Flights 7 day average,1343,Number
+2020-12-9,Flights 7 day average,1369,Number
+2020-12-10,Flights 7 day average,1408,Number
+2020-12-11,Flights 7 day average,1449,Number
+2020-12-12,Flights 7 day average,1489,Number
+2020-12-13,Flights 7 day average,1527,Number
+2020-12-14,Flights 7 day average,1560,Number
+2020-12-15,Flights 7 day average,1591,Number
+2020-12-16,Flights 7 day average,1611,Number
+2020-12-17,Flights 7 day average,1689,Number
+2020-12-18,Flights 7 day average,1773,Number
+2020-12-19,Flights 7 day average,1882,Number
+2020-12-20,Flights 7 day average,1981,Number
+2020-12-21,Flights 7 day average,2016,Number
+2020-12-22,Flights 7 day average,2010,Number
+2020-12-23,Flights 7 day average,2023,Number
+2020-12-24,Flights 7 day average,1885,Number
+2020-12-25,Flights 7 day average,1728,Number
+2020-12-26,Flights 7 day average,1545,Number
+2020-12-27,Flights 7 day average,1414,Number
+2020-12-28,Flights 7 day average,1332,Number
+2020-12-29,Flights 7 day average,1293,Number
+2020-12-30,Flights 7 day average,1247,Number
+2020-12-31,Flights 7 day average,1207,Number
+2021-1-1,Flights 7 day average,1117,Number
+2021-1-2,Flights 7 day average,1186,Number
+2021-1-3,Flights 7 day average,1242,Number
+2021-1-4,Flights 7 day average,1286,Number
+2021-1-5,Flights 7 day average,1300,Number
+2021-1-6,Flights 7 day average,1286,Number
+2021-1-7,Flights 7 day average,1330,Number
+2021-1-8,Flights 7 day average,1432,Number
+2021-1-9,Flights 7 day average,1401,Number
+2021-1-10,Flights 7 day average,1345,Number
+2021-1-11,Flights 7 day average,1272,Number
+2021-1-12,Flights 7 day average,1221,Number
+2021-1-13,Flights 7 day average,1181,Number
+2021-1-14,Flights 7 day average,1155,Number
+2021-1-15,Flights 7 day average,1114,Number
+2021-1-16,Flights 7 day average,1058,Number
+2021-1-17,Flights 7 day average,997,Number
+2021-1-18,Flights 7 day average,980,Number
+2021-1-19,Flights 7 day average,966,Number
+2021-1-20,Flights 7 day average,945,Number
+2021-1-21,Flights 7 day average,922,Number
+2021-1-22,Flights 7 day average,908,Number
+2021-1-23,Flights 7 day average,892,Number
+2021-1-24,Flights 7 day average,870,Number
+2021-1-25,Flights 7 day average,858,Number
+2021-1-26,Flights 7 day average,853,Number
+2021-1-27,Flights 7 day average,856,Number
+2021-1-28,Flights 7 day average,857,Number
+2021-1-29,Flights 7 day average,844,Number
+2021-1-30,Flights 7 day average,853,Number
+2021-1-31,Flights 7 day average,862,Number
+2021-2-1,Flights 7 day average,861,Number
+2021-2-2,Flights 7 day average,859,Number
+2021-2-3,Flights 7 day average,861,Number
+2021-2-4,Flights 7 day average,858,Number
+2021-2-5,Flights 7 day average,865,Number
+2021-2-6,Flights 7 day average,863,Number
+2021-2-7,Flights 7 day average,853,Number
+2021-2-8,Flights 7 day average,845,Number
+2021-2-9,Flights 7 day average,833,Number
+2021-2-10,Flights 7 day average,841,Number
+2021-2-11,Flights 7 day average,851,Number
+2021-2-12,Flights 7 day average,855,Number
+2021-2-13,Flights 7 day average,859,Number
+2021-2-14,Flights 7 day average,863,Number
+2021-2-15,Flights 7 day average,877,Number
+2021-2-16,Flights 7 day average,885,Number
+2021-2-17,Flights 7 day average,876,Number
+2021-2-18,Flights 7 day average,875,Number
+2021-2-19,Flights 7 day average,864,Number
+2021-2-20,Flights 7 day average,853,Number
+2021-2-21,Flights 7 day average,862,Number
+2021-2-22,Flights 7 day average,861,Number
+2021-2-23,Flights 7 day average,861,Number
+2021-2-24,Flights 7 day average,871,Number
+2021-2-25,Flights 7 day average,877,Number
+2021-2-26,Flights 7 day average,888,Number
+2021-2-27,Flights 7 day average,898,Number
+2021-2-28,Flights 7 day average,904,Number
+2021-3-1,Flights 7 day average,913,Number
+2021-3-2,Flights 7 day average,928,Number
+2021-3-3,Flights 7 day average,935,Number
+2021-3-4,Flights 7 day average,943,Number
+2021-3-5,Flights 7 day average,947,Number
+2021-3-6,Flights 7 day average,944,Number
+2021-3-7,Flights 7 day average,942,Number
+2021-3-8,Flights 7 day average,941,Number
+2021-3-9,Flights 7 day average,942,Number
+2021-3-10,Flights 7 day average,939,Number
+2021-3-11,Flights 7 day average,925,Number
+2021-3-12,Flights 7 day average,926,Number
+2021-3-13,Flights 7 day average,922,Number
+2021-3-14,Flights 7 day average,926,Number
+2021-3-15,Flights 7 day average,929,Number
+2021-3-16,Flights 7 day average,934,Number
+2021-3-17,Flights 7 day average,951,Number
+2021-3-18,Flights 7 day average,964,Number
+2021-3-19,Flights 7 day average,980,Number
+2021-3-20,Flights 7 day average,992,Number
+2021-3-21,Flights 7 day average,997,Number
+2021-3-22,Flights 7 day average,1001,Number
+2021-3-23,Flights 7 day average,995,Number
+2021-3-24,Flights 7 day average,983,Number
+2021-3-25,Flights 7 day average,989,Number
+2021-3-26,Flights 7 day average,1000,Number
+2021-3-27,Flights 7 day average,1007,Number
+2021-3-28,Flights 7 day average,1014,Number
+2021-3-29,Flights 7 day average,1028,Number
+2021-3-30,Flights 7 day average,1038,Number
+2021-3-31,Flights 7 day average,1068,Number
+2021-4-1,Flights 7 day average,1098,Number
+2021-4-2,Flights 7 day average,1083,Number
+2021-4-3,Flights 7 day average,1081,Number
+2021-4-4,Flights 7 day average,1068,Number
+2021-4-5,Flights 7 day average,1046,Number
+2021-4-6,Flights 7 day average,1043,Number
+2021-4-7,Flights 7 day average,1041,Number
+2021-4-8,Flights 7 day average,1024,Number
+2021-4-9,Flights 7 day average,1038,Number
+2021-4-10,Flights 7 day average,1054,Number
+2021-4-11,Flights 7 day average,1080,Number
+2021-4-12,Flights 7 day average,1113,Number
+2021-4-13,Flights 7 day average,1131,Number
+2021-4-14,Flights 7 day average,1126,Number
+2021-4-15,Flights 7 day average,1127,Number
+2021-4-16,Flights 7 day average,1129,Number
+2021-4-17,Flights 7 day average,1118,Number
+2021-4-18,Flights 7 day average,1127,Number
+2021-4-19,Flights 7 day average,1129,Number
+2021-4-20,Flights 7 day average,1124,Number
+2021-4-21,Flights 7 day average,1121,Number
+2021-4-22,Flights 7 day average,1118,Number
+2021-4-23,Flights 7 day average,1118,Number
+2021-4-24,Flights 7 day average,1119,Number
+2021-4-25,Flights 7 day average,1097,Number
+2021-4-26,Flights 7 day average,1094,Number
+2021-4-27,Flights 7 day average,1096,Number
+2021-4-28,Flights 7 day average,1097,Number
+2021-4-29,Flights 7 day average,1105,Number
+2021-4-30,Flights 7 day average,1120,Number
+2021-5-1,Flights 7 day average,1132,Number
+2021-5-2,Flights 7 day average,1139,Number
+2021-5-3,Flights 7 day average,1134,Number
+2021-5-4,Flights 7 day average,1139,Number
+2021-5-5,Flights 7 day average,1143,Number
+2021-5-6,Flights 7 day average,1140,Number
+2021-5-7,Flights 7 day average,1144,Number
+2021-5-8,Flights 7 day average,1129,Number
+2021-5-9,Flights 7 day average,1142,Number
+2021-5-10,Flights 7 day average,1169,Number
+2021-5-11,Flights 7 day average,1170,Number
+2021-5-12,Flights 7 day average,1171,Number
+2021-5-13,Flights 7 day average,1177,Number
+2021-5-14,Flights 7 day average,1168,Number
+2021-5-15,Flights 7 day average,1174,Number
+2021-5-16,Flights 7 day average,1168,Number
+2021-5-17,Flights 7 day average,1196,Number
+2021-5-18,Flights 7 day average,1217,Number
+2021-5-19,Flights 7 day average,1249,Number
+2021-5-20,Flights 7 day average,1281,Number
+2021-5-21,Flights 7 day average,1329,Number
+2021-5-22,Flights 7 day average,1378,Number
+2021-5-23,Flights 7 day average,1428,Number
+2021-5-24,Flights 7 day average,1443,Number
+2021-5-25,Flights 7 day average,1457,Number
+2021-5-26,Flights 7 day average,1475,Number
+2021-5-27,Flights 7 day average,1511,Number
+2021-5-28,Flights 7 day average,1589,Number
+2021-5-29,Flights 7 day average,1665,Number
+2021-5-30,Flights 7 day average,1704,Number
+2021-5-31,Flights 7 day average,1692,Number
+2021-6-1,Flights 7 day average,1764,Number
+2021-6-2,Flights 7 day average,1806,Number
+2021-6-3,Flights 7 day average,1832,Number
+2021-6-4,Flights 7 day average,1834,Number
+2021-6-5,Flights 7 day average,1859,Number
+2021-6-6,Flights 7 day average,1920,Number
+2021-6-7,Flights 7 day average,1992,Number
+2021-6-8,Flights 7 day average,1966,Number
+2021-6-9,Flights 7 day average,1960,Number
+2021-6-10,Flights 7 day average,1946,Number
+2021-6-11,Flights 7 day average,1928,Number
+2021-6-12,Flights 7 day average,1878,Number
+2021-6-13,Flights 7 day average,1835,Number
+2021-6-14,Flights 7 day average,1819,Number
+2021-6-15,Flights 7 day average,1824,Number
+2021-6-16,Flights 7 day average,1835,Number
+2021-6-17,Flights 7 day average,1863,Number
+2021-6-18,Flights 7 day average,1877,Number
+2021-6-19,Flights 7 day average,1897,Number
+2021-6-20,Flights 7 day average,1921,Number
+2021-6-21,Flights 7 day average,1927,Number
+2021-6-22,Flights 7 day average,1943,Number
+2021-6-23,Flights 7 day average,1945,Number
+2021-6-24,Flights 7 day average,1942,Number
+2021-6-25,Flights 7 day average,1952,Number
+2021-6-26,Flights 7 day average,1970,Number
+2021-6-27,Flights 7 day average,1970,Number
+2021-6-28,Flights 7 day average,1990,Number
+2021-6-29,Flights 7 day average,1994,Number
+2021-6-30,Flights 7 day average,2013,Number
+2021-7-1,Flights 7 day average,2046,Number
+2021-7-2,Flights 7 day average,2074,Number
+2021-7-3,Flights 7 day average,2106,Number
+2021-7-4,Flights 7 day average,2126,Number
+2021-7-5,Flights 7 day average,2155,Number
+2021-7-6,Flights 7 day average,2184,Number
+2021-7-7,Flights 7 day average,2203,Number
+2021-7-8,Flights 7 day average,2217,Number
+2021-7-9,Flights 7 day average,2247,Number
+2021-7-10,Flights 7 day average,2285,Number
+2021-7-11,Flights 7 day average,2307,Number
+2021-7-12,Flights 7 day average,2328,Number
+2021-7-13,Flights 7 day average,2343,Number
+2021-7-14,Flights 7 day average,2343,Number
+2021-7-15,Flights 7 day average,2340,Number
+2021-7-16,Flights 7 day average,2369,Number
+2021-7-17,Flights 7 day average,2411,Number
+2021-7-18,Flights 7 day average,2456,Number
+2021-7-19,Flights 7 day average,2519,Number
+2021-7-20,Flights 7 day average,2588,Number
+2021-7-21,Flights 7 day average,2652,Number
+2021-7-22,Flights 7 day average,2729,Number
+2021-7-23,Flights 7 day average,2788,Number
+2021-7-24,Flights 7 day average,2831,Number
+2021-7-25,Flights 7 day average,2877,Number
+2021-7-26,Flights 7 day average,2882,Number
+2021-7-27,Flights 7 day average,2882,Number
+2021-7-28,Flights 7 day average,2897,Number
+2021-7-29,Flights 7 day average,2894,Number
+2021-7-30,Flights 7 day average,2889,Number
+2021-7-31,Flights 7 day average,2905,Number
+2021-8-1,Flights 7 day average,2929,Number
+2021-8-2,Flights 7 day average,2966,Number
+2021-8-3,Flights 7 day average,3011,Number
+2021-8-4,Flights 7 day average,3047,Number
+2021-8-5,Flights 7 day average,3078,Number
+2021-8-6,Flights 7 day average,3087,Number
+2021-8-7,Flights 7 day average,3098,Number
+2021-8-8,Flights 7 day average,3111,Number
+2021-8-9,Flights 7 day average,3102,Number
+2021-8-10,Flights 7 day average,3096,Number
+2021-8-11,Flights 7 day average,3106,Number
+2021-8-12,Flights 7 day average,3115,Number
+2021-8-13,Flights 7 day average,3128,Number
+2021-8-14,Flights 7 day average,3141,Number
+2021-8-15,Flights 7 day average,3142,Number
+2021-8-16,Flights 7 day average,3165,Number
+2021-8-17,Flights 7 day average,3175,Number
+2021-8-18,Flights 7 day average,3189,Number
+2021-8-19,Flights 7 day average,3202,Number
+2021-8-20,Flights 7 day average,3227,Number
+2021-8-21,Flights 7 day average,3228,Number
+2021-8-22,Flights 7 day average,3256,Number
+2021-8-23,Flights 7 day average,3273,Number
+2021-8-24,Flights 7 day average,3294,Number
+2021-8-25,Flights 7 day average,3320,Number
+2021-8-26,Flights 7 day average,3344,Number
+2021-8-27,Flights 7 day average,3356,Number
+2021-8-28,Flights 7 day average,3383,Number
+2021-8-29,Flights 7 day average,3405,Number
+2021-8-30,Flights 7 day average,3429,Number
+2021-8-31,Flights 7 day average,3469,Number
+2021-9-1,Flights 7 day average,3494,Number
+2021-9-2,Flights 7 day average,3521,Number
+2021-9-3,Flights 7 day average,3546,Number
+2021-9-4,Flights 7 day average,3552,Number
+2021-9-5,Flights 7 day average,3589,Number
+2021-9-6,Flights 7 day average,3608,Number
+2021-9-7,Flights 7 day average,3595,Number
+2021-9-8,Flights 7 day average,3580,Number
+2021-9-9,Flights 7 day average,3585,Number
+2021-9-10,Flights 7 day average,3596,Number
+2021-9-11,Flights 7 day average,3591,Number
+2021-9-12,Flights 7 day average,3579,Number
+2021-9-13,Flights 7 day average,3588,Number
+2021-9-14,Flights 7 day average,3580,Number
+2021-9-15,Flights 7 day average,3593,Number
+2021-9-16,Flights 7 day average,3586,Number
+2021-9-17,Flights 7 day average,3595,Number
+2021-9-18,Flights 7 day average,3587,Number
+2021-9-19,Flights 7 day average,3593,Number
+2021-9-20,Flights 7 day average,3591,Number
+2021-9-21,Flights 7 day average,3600,Number
+2021-9-22,Flights 7 day average,3592,Number
+2021-9-23,Flights 7 day average,3611,Number
+2021-9-24,Flights 7 day average,3609,Number
+2021-9-25,Flights 7 day average,3614,Number
+2021-9-26,Flights 7 day average,3609,Number
+2021-9-27,Flights 7 day average,3604,Number
+2021-9-28,Flights 7 day average,3587,Number
+2021-9-29,Flights 7 day average,3586,Number
+2021-9-30,Flights 7 day average,3564,Number
+2021-10-1,Flights 7 day average,3576,Number
+2021-10-2,Flights 7 day average,3559,Number
+2021-10-3,Flights 7 day average,3562,Number
+2021-10-4,Flights 7 day average,3571,Number
+2021-10-5,Flights 7 day average,3572,Number
+2021-10-6,Flights 7 day average,3568,Number
+2021-10-7,Flights 7 day average,3573,Number
+2021-10-8,Flights 7 day average,3576,Number
+2021-10-9,Flights 7 day average,3575,Number
+2021-10-10,Flights 7 day average,3563,Number
+2021-10-11,Flights 7 day average,3556,Number
+2021-10-12,Flights 7 day average,3567,Number
+2021-10-13,Flights 7 day average,3569,Number
+2021-10-14,Flights 7 day average,3578,Number
+2021-10-15,Flights 7 day average,3582,Number
+2021-10-16,Flights 7 day average,3613,Number
+2021-10-17,Flights 7 day average,3625,Number
+2021-10-18,Flights 7 day average,3622,Number
+2021-10-19,Flights 7 day average,3613,Number
+2021-10-20,Flights 7 day average,3614,Number
+2021-10-21,Flights 7 day average,3622,Number
+2021-10-22,Flights 7 day average,3641,Number
+2021-10-23,Flights 7 day average,3646,Number
+2021-10-24,Flights 7 day average,3654,Number
+2021-10-25,Flights 7 day average,3657,Number
+2021-10-26,Flights 7 day average,3658,Number
+2021-10-27,Flights 7 day average,3667,Number
+2021-10-28,Flights 7 day average,3654,Number
+2021-10-29,Flights 7 day average,3633,Number
+2021-10-30,Flights 7 day average,3637,Number
+2021-10-31,Flights 7 day average,3666,Number
+2021-11-1,Flights 7 day average,3678,Number
+2021-11-2,Flights 7 day average,3686,Number
+2021-11-3,Flights 7 day average,3664,Number
+2021-11-4,Flights 7 day average,3653,Number
+2021-11-5,Flights 7 day average,3618,Number
+2021-11-6,Flights 7 day average,3531,Number
+2021-11-7,Flights 7 day average,3458,Number
+2021-11-8,Flights 7 day average,3415,Number
+2021-11-9,Flights 7 day average,3387,Number
+2021-11-10,Flights 7 day average,3359,Number
+2021-11-11,Flights 7 day average,3339,Number
+2021-11-12,Flights 7 day average,3322,Number
+2021-11-13,Flights 7 day average,3294,Number
+2021-11-14,Flights 7 day average,3284,Number
+2021-11-15,Flights 7 day average,3283,Number
+2021-11-16,Flights 7 day average,3284,Number
+2021-11-17,Flights 7 day average,3280,Number
+2021-11-18,Flights 7 day average,3270,Number
+2021-11-19,Flights 7 day average,3274,Number
+2021-11-20,Flights 7 day average,3281,Number
+2021-11-21,Flights 7 day average,3268,Number
+2021-11-22,Flights 7 day average,3262,Number
+2021-11-23,Flights 7 day average,3253,Number
+2021-11-24,Flights 7 day average,3250,Number
+2021-11-25,Flights 7 day average,3264,Number
+2021-11-26,Flights 7 day average,3233,Number
+2021-11-27,Flights 7 day average,3204,Number
+2021-11-28,Flights 7 day average,3195,Number
+2021-11-29,Flights 7 day average,3207,Number
+2021-11-30,Flights 7 day average,3197,Number
+2021-12-1,Flights 7 day average,3193,Number
+2021-12-2,Flights 7 day average,3187,Number
+2021-12-3,Flights 7 day average,3198,Number
+2021-12-4,Flights 7 day average,3228,Number
+2021-12-5,Flights 7 day average,3232,Number
+2021-12-6,Flights 7 day average,3221,Number
+2021-12-7,Flights 7 day average,3194,Number
+2021-12-8,Flights 7 day average,3198,Number
+2021-12-9,Flights 7 day average,3195,Number
+2021-12-10,Flights 7 day average,3233,Number
+2021-12-11,Flights 7 day average,3270,Number
+2021-12-12,Flights 7 day average,3301,Number
+2021-12-13,Flights 7 day average,3327,Number
+2021-12-14,Flights 7 day average,3402,Number
+2021-12-15,Flights 7 day average,3466,Number
+2021-12-16,Flights 7 day average,3538,Number
+2021-12-17,Flights 7 day average,3618,Number
+2021-12-18,Flights 7 day average,3675,Number
+2021-12-19,Flights 7 day average,3703,Number
+2021-12-20,Flights 7 day average,3755,Number
+2021-12-21,Flights 7 day average,3797,Number
+2021-12-22,Flights 7 day average,3820,Number
+2021-12-23,Flights 7 day average,3808,Number
+2021-12-24,Flights 7 day average,3580,Number
+2021-12-25,Flights 7 day average,3512,Number
+2021-12-26,Flights 7 day average,3430,Number
+2021-12-27,Flights 7 day average,3366,Number
+2021-12-28,Flights 7 day average,3317,Number
+2021-12-29,Flights 7 day average,3253,Number
+2021-12-30,Flights 7 day average,3195,Number
+2021-12-31,Flights 7 day average,3203,Number
+2022-1-1,Flights 7 day average,3133,Number
+2022-1-2,Flights 7 day average,3211,Number
+2022-1-3,Flights 7 day average,3236,Number
+2022-1-4,Flights 7 day average,3247,Number
+2022-1-5,Flights 7 day average,3239,Number
+2022-1-6,Flights 7 day average,3204,Number
+2022-1-7,Flights 7 day average,3287,Number
+2022-1-8,Flights 7 day average,3360,Number
+2022-1-9,Flights 7 day average,3329,Number
+2022-1-10,Flights 7 day average,3163,Number
+2022-1-11,Flights 7 day average,3003,Number
+2022-1-12,Flights 7 day average,2858,Number
+2022-1-13,Flights 7 day average,2760,Number
+2022-1-14,Flights 7 day average,2655,Number
+2022-1-15,Flights 7 day average,2555,Number
+2022-1-16,Flights 7 day average,2443,Number
+2022-1-17,Flights 7 day average,2417,Number
+2022-1-18,Flights 7 day average,2396,Number
+2022-1-19,Flights 7 day average,2386,Number
+2022-1-20,Flights 7 day average,2383,Number
+2022-1-21,Flights 7 day average,2390,Number
+2022-1-22,Flights 7 day average,2397,Number
+2022-1-23,Flights 7 day average,2400,Number
+2022-1-24,Flights 7 day average,2398,Number
+2022-1-25,Flights 7 day average,2398,Number
+2022-1-26,Flights 7 day average,2400,Number
+2022-1-27,Flights 7 day average,2400,Number
+2022-1-28,Flights 7 day average,2396,Number
+2022-1-29,Flights 7 day average,2381,Number
+2022-1-30,Flights 7 day average,2378,Number
+2022-1-31,Flights 7 day average,2382,Number
+2022-2-1,Flights 7 day average,2438,Number
+2022-2-2,Flights 7 day average,2508,Number
+2022-2-3,Flights 7 day average,2570,Number
+2022-2-4,Flights 7 day average,2637,Number
+2022-2-5,Flights 7 day average,2709,Number
+2022-2-6,Flights 7 day average,2786,Number
+2022-2-7,Flights 7 day average,2873,Number
+2022-2-8,Flights 7 day average,2902,Number
+2022-2-9,Flights 7 day average,2915,Number
+2022-2-10,Flights 7 day average,2983,Number
+2022-2-11,Flights 7 day average,3090,Number
+2022-2-12,Flights 7 day average,3210,Number
+2022-2-13,Flights 7 day average,3257,Number
+2022-2-14,Flights 7 day average,3312,Number
+2022-2-15,Flights 7 day average,3358,Number
+2022-2-16,Flights 7 day average,3388,Number
+2022-2-17,Flights 7 day average,3397,Number
+2022-2-18,Flights 7 day average,3242,Number
+2022-2-19,Flights 7 day average,3273,Number
+2022-2-20,Flights 7 day average,3302,Number
+2022-2-21,Flights 7 day average,3296,Number
+2022-2-22,Flights 7 day average,3314,Number
+2022-2-23,Flights 7 day average,3341,Number
+2022-2-24,Flights 7 day average,3345,Number
+2022-2-25,Flights 7 day average,3483,Number
+2022-2-26,Flights 7 day average,3394,Number
+2022-2-27,Flights 7 day average,3396,Number
+2022-2-28,Flights 7 day average,3435,Number
+2022-3-1,Flights 7 day average,3458,Number
+2022-3-2,Flights 7 day average,3497,Number
+2022-3-3,Flights 7 day average,3529,Number
+2022-3-4,Flights 7 day average,3559,Number
+2022-3-5,Flights 7 day average,3592,Number
+2022-3-6,Flights 7 day average,3600,Number
+2022-3-7,Flights 7 day average,3619,Number
+2022-3-8,Flights 7 day average,3641,Number
+2022-3-9,Flights 7 day average,3645,Number
+2022-3-10,Flights 7 day average,3669,Number
+2022-3-11,Flights 7 day average,3674,Number
+2022-3-12,Flights 7 day average,3677,Number
+2022-3-13,Flights 7 day average,3693,Number
+2022-3-14,Flights 7 day average,3706,Number
+2022-3-15,Flights 7 day average,3723,Number
+2022-3-16,Flights 7 day average,3742,Number
+2022-3-17,Flights 7 day average,3747,Number
+2022-3-18,Flights 7 day average,3765,Number
+2022-3-19,Flights 7 day average,3779,Number
+2022-3-20,Flights 7 day average,3778,Number
+2022-3-21,Flights 7 day average,3781,Number
+2022-3-22,Flights 7 day average,3775,Number
+2022-3-23,Flights 7 day average,3783,Number
+2022-3-24,Flights 7 day average,3778,Number
+2022-3-25,Flights 7 day average,3777,Number
+2022-3-26,Flights 7 day average,3780,Number
+2022-3-27,Flights 7 day average,3848,Number
+2022-3-28,Flights 7 day average,3968,Number
+2022-3-29,Flights 7 day average,4126,Number
+2022-3-30,Flights 7 day average,4247,Number
+2022-3-31,Flights 7 day average,4361,Number
+2022-4-1,Flights 7 day average,4460,Number
+2022-4-2,Flights 7 day average,4569,Number
+2022-4-3,Flights 7 day average,4588,Number
+2022-4-4,Flights 7 day average,4600,Number
+2022-4-5,Flights 7 day average,4601,Number
+2022-4-6,Flights 7 day average,4653,Number
+2022-4-7,Flights 7 day average,4690,Number
+2022-4-8,Flights 7 day average,4715,Number
+2022-4-9,Flights 7 day average,4741,Number
+2022-4-10,Flights 7 day average,4769,Number
+2022-4-11,Flights 7 day average,4786,Number
+2022-4-12,Flights 7 day average,4816,Number
+2022-4-13,Flights 7 day average,4815,Number
+2022-4-14,Flights 7 day average,4839,Number
+2022-4-15,Flights 7 day average,4810,Number
+2022-4-16,Flights 7 day average,4780,Number
+2022-4-17,Flights 7 day average,4756,Number
+2022-4-18,Flights 7 day average,4753,Number
+2022-4-19,Flights 7 day average,4771,Number
+2022-4-20,Flights 7 day average,4784,Number
+2022-4-21,Flights 7 day average,4763,Number
+2022-4-22,Flights 7 day average,4795,Number
+2022-4-23,Flights 7 day average,4789,Number
+2022-4-24,Flights 7 day average,4816,Number
+2022-4-25,Flights 7 day average,4820,Number
+2022-4-26,Flights 7 day average,4810,Number
+2022-4-27,Flights 7 day average,4808,Number
+2022-4-28,Flights 7 day average,4832,Number
+2022-4-29,Flights 7 day average,4865,Number
+2022-4-30,Flights 7 day average,4891,Number
+2022-5-1,Flights 7 day average,4910,Number
+2022-5-2,Flights 7 day average,4956,Number
+2022-5-3,Flights 7 day average,4995,Number
+2022-5-4,Flights 7 day average,5034,Number
+2022-5-5,Flights 7 day average,5080,Number
+2022-5-6,Flights 7 day average,5112,Number
+2022-5-7,Flights 7 day average,5144,Number
+2022-5-8,Flights 7 day average,5184,Number
+2022-5-9,Flights 7 day average,5202,Number
+2022-5-10,Flights 7 day average,5211,Number
+2022-5-11,Flights 7 day average,5230,Number
+2022-5-12,Flights 7 day average,5235,Number
+2022-5-13,Flights 7 day average,5244,Number
+2022-5-14,Flights 7 day average,5269,Number
+2022-5-15,Flights 7 day average,5272,Number
+2022-5-16,Flights 7 day average,5274,Number
+2022-5-17,Flights 7 day average,5289,Number
+2022-5-18,Flights 7 day average,5301,Number
+2022-5-19,Flights 7 day average,5317,Number
+2022-5-20,Flights 7 day average,5314,Number
+2022-5-21,Flights 7 day average,5325,Number
+2022-5-22,Flights 7 day average,5345,Number
+2022-5-23,Flights 7 day average,5367,Number
+2022-5-24,Flights 7 day average,5380,Number
+2022-5-25,Flights 7 day average,5410,Number
+2022-5-26,Flights 7 day average,5437,Number
+2022-5-27,Flights 7 day average,5511,Number
+2022-5-28,Flights 7 day average,5576,Number
+2022-5-29,Flights 7 day average,5596,Number
+2022-5-30,Flights 7 day average,5632,Number
+2022-5-31,Flights 7 day average,5652,Number
+2022-6-1,Flights 7 day average,5680,Number
+2022-6-2,Flights 7 day average,5667,Number
+2022-6-3,Flights 7 day average,5593,Number
+2022-6-4,Flights 7 day average,5563,Number
+2022-6-5,Flights 7 day average,5596,Number
+2022-6-6,Flights 7 day average,5617,Number
+2022-6-7,Flights 7 day average,5642,Number
+2022-6-8,Flights 7 day average,5626,Number
+2022-6-9,Flights 7 day average,5661,Number
+2022-6-10,Flights 7 day average,5715,Number
+2022-6-11,Flights 7 day average,5719,Number
+2022-6-12,Flights 7 day average,5703,Number
+2022-6-13,Flights 7 day average,5695,Number
+2022-6-14,Flights 7 day average,5699,Number
+2022-6-15,Flights 7 day average,5717,Number
+2022-6-16,Flights 7 day average,5714,Number
+2022-6-17,Flights 7 day average,5701,Number
+2022-6-18,Flights 7 day average,5686,Number
+2022-6-19,Flights 7 day average,5681,Number
+2022-6-20,Flights 7 day average,5664,Number
+2022-6-21,Flights 7 day average,5665,Number
+2022-6-22,Flights 7 day average,5655,Number
+2022-6-23,Flights 7 day average,5645,Number
+2022-6-24,Flights 7 day average,5646,Number
+2022-6-25,Flights 7 day average,5653,Number
+2022-6-26,Flights 7 day average,5646,Number

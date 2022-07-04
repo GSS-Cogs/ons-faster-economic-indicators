@@ -1,0 +1,27 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Number of UK flights",
+    "summary": "Number of flights to, from, and within the UK",
+    "description": "These data are daily flight figures from the European Organisation for the Safety of Air Navigation (EUROCONTROL). Daily flight numbers for the UK alongside other countries are available in EUROCONTROL's dashboard. EUROCONTROL is a pan-European, civil-military organisation dedicated to supporting European aviation. Its Aviation Intelligence and Performance Review Unit provides independent collection and validation of air navigation services' performance-related data and intelligence gathering.\nThe flights data include international arrivals and departures to and from the UK (including Crown dependencies) and domestic UK flights but exclude overflights (flights that pass over UK territory). They capture all flight movements that operate under Instrument Flight Rules (IFR), where the pilot uses instruments in the flight deck to control, guide and adjust the plane. This includes commercial flights carrying passengers and cargo as well as non-commercial flights such as private and military flights.\nData from EUROCONTROL do not include information on the volume of passengers or cargo carried on UK flights. Especially in the context of the coronavirus (COVID-19) pandemic, flights might not be operating at full capacity and therefore trends in passengers and cargo will differ from trends in flights presented here.",
+    "keywords": [
+        "flights",
+        "domestic"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "columns": {
+        "Date": {
+            "label": "Date",
+            "from_template": "day"
+        },
+        "Measure": {
+            "type": "measures"
+        },
+        "Value": {
+            "type": "observations"
+        },
+        "Unit": {
+            "type": "units"
+        }
+    }
+}
