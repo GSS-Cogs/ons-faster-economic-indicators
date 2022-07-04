@@ -71,18 +71,11 @@
     ],
     "rdfs:seeAlso": [
         {
-            "@id": "number-of-uk-flights.csv#class/date",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
             "@id": "number-of-uk-flights.csv#component/flights",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
+                "http://purl.org/linked-data/cube#ComponentSet"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -101,18 +94,212 @@
             ]
         },
         {
-            "@id": "number-of-uk-flights.csv#dataset",
+            "@id": "number-of-uk-flights.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#class/date",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "number-of-uk-flights.csv#component/date"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/flights-7-day-average"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/measure-type"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/flights"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/unit"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "number-of-uk-flights.csv#measure/flights"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#measure/flights-7-day-average"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#measure/flights-7-day-average",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Flights 7 day average"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#measure/flights",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Flights"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#dimension/date",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "date.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "number-of-uk-flights.csv#class/date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/date",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#dataset",
+            "@type": [
                 "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://purl.org/linked-data/cube#DataSet",
-                "http://purl.org/linked-data/cube#Attachable"
+                "http://purl.org/linked-data/cube#DataSet"
             ],
             "http://purl.org/dc/terms/description": [
                 {
                     "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
-                    "@value": "\nThese data are daily flight figures from the European Organisation for the Safety of Air Navigation (EUROCONTROL). Daily flight numbers for the UK alongside other countries are available in EUROCONTROL's dashboard. EUROCONTROL is a pan-European, civil-military organisation dedicated to supporting European aviation. Its Aviation Intelligence and Performance Review Unit provides independent collection and validation of air navigation services' performance-related data and intelligence gathering.\nThe flights data include international arrivals and departures to and from the UK (including Crown dependencies) and domestic UK flights but exclude overflights (flights that pass over UK territory). They capture all flight movements that operate under Instrument Flight Rules (IFR), where the pilot uses instruments in the flight deck to control, guide and adjust the plane. This includes commercial flights carrying passengers and cargo as well as non-commercial flights such as private and military flights.\nData from EUROCONTROL do not include information on the volume of passengers or cargo carried on UK flights. Especially in the context of the coronavirus (COVID-19) pandemic, flights might not be operating at full capacity and therefore trends in passengers and cargo will differ from trends in flights presented here."
+                    "@value": "These data are daily flight figures from the European Organisation for the Safety of Air Navigation (EUROCONTROL). Daily flight numbers for the UK alongside other countries are available in EUROCONTROL's dashboard. EUROCONTROL is a pan-European, civil-military organisation dedicated to supporting European aviation. Its Aviation Intelligence and Performance Review Unit provides independent collection and validation of air navigation services' performance-related data and intelligence gathering.\nThe flights data include international arrivals and departures to and from the UK (including Crown dependencies) and domestic UK flights but exclude overflights (flights that pass over UK territory). They capture all flight movements that operate under Instrument Flight Rules (IFR), where the pilot uses instruments in the flight deck to control, guide and adjust the plane. This includes commercial flights carrying passengers and cargo as well as non-commercial flights such as private and military flights.\nData from EUROCONTROL do not include information on the volume of passengers or cargo carried on UK flights. Especially in the context of the coronavirus (COVID-19) pandemic, flights might not be operating at full capacity and therefore trends in passengers and cargo will differ from trends in flights presented here."
                 }
             ],
             "http://purl.org/dc/terms/identifier": [
@@ -123,7 +310,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-06-30T15:12:10.442697"
+                    "@value": "2022-07-04T18:22:17.505245"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -134,7 +321,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-06-30T15:12:10.442697"
+                    "@value": "2022-07-04T18:22:17.505245"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -168,122 +355,20 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "domestic"
+                    "@value": "flights"
                 },
                 {
                     "@language": "en",
-                    "@value": "Flights"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#measure/flights",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Flights"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#dimension/date",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "date.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "number-of-uk-flights.csv#class/date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/unit",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": true
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/measure-type",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
+                    "@value": "domestic"
                 }
             ]
         },
         {
             "@id": "number-of-uk-flights.csv#component/flights-7-day-average",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
+                "http://purl.org/linked-data/cube#ComponentSet"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -302,87 +387,19 @@
             ]
         },
         {
-            "@id": "number-of-uk-flights.csv#structure",
+            "@id": "number-of-uk-flights.csv#dependency/date",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DataStructureDefinition"
+                "http://rdfs.org/ns/void#Dataset"
             ],
-            "http://purl.org/linked-data/cube#component": [
+            "http://rdfs.org/ns/void#dataDump": [
                 {
-                    "@id": "number-of-uk-flights.csv#component/flights-7-day-average"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/unit"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/flights"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/date"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/measure-type"
+                    "@id": "./date.csv-metadata.json"
                 }
             ],
-            "http://purl.org/linked-data/cube#componentProperty": [
+            "http://rdfs.org/ns/void#uriSpace": [
                 {
-                    "@id": "number-of-uk-flights.csv#measure/flights-7-day-average"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#measure/flights"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/date",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 1
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#measure/flights-7-day-average",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Flights 7 day average"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                    "@value": "date.csv#"
                 }
             ]
         },
