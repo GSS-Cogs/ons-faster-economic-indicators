@@ -18,10 +18,11 @@
             "type": "measures"
         },
         "Value": {
-            "type": "observations"
-        },
-        "Unit": {
-            "type": "units"
+            "type": "observations",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            }
         }
     }
 }

@@ -1,0 +1,34 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Transactions at Pret A Manger",
+    "summary": "The number of transactions at Pret A Manger stores relative to January 2020",
+    "description": "\nPret A Manger is a sandwich and coffee shop franchise chain, operating around 400 stores across the UK. Its transactional data are presented as an index and show total weekly till transactions at Pret A Manger shops as a proportion of the average weekly level in the first four weeks of 2020 (between Friday 3 January and Thursday 30 January 2020). Because of this comparison across the data time series, users should expect an element of seasonality in the data.",
+    "keywords": [
+        "pret",
+        "sandwich",
+        "coffee",
+        "city",
+        "lunch",
+        "takeaway",
+        "office",
+        "commuter"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "columns": {
+        "Week": {
+            "from_template": "week"
+        },
+        "Value": {
+            "type": "observations",
+            "measure": {
+                "label": "indexed sales",
+                "description": "indexed weekly sales indexed ((Friday 3 January and Thursday 30 January 2020)/4=100)"
+            },
+            "unit": {
+                "label": "unitless",
+                "from_existing": "http://qudt.org/vocab/unit/UNITLESS"
+            }
+        }
+    }
+}

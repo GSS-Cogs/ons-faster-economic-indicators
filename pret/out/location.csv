@@ -1,0 +1,11 @@
+Label,Notation,Parent Notation,Sort Priority,Description
+London: Airports,london-airports,,0,
+London: City Worker,london-city-worker,,1,
+London: Stations,london-stations,,2,
+London: Suburban,london-suburban,,3,
+London: West End,london-west-end,,4,
+Manchester,manchester,,5,
+Regional Stations,regional-stations,,6,
+Regional Towns,regional-towns,,7,
+Scotland,scotland,,8,
+Yorkshire,yorkshire,,9,

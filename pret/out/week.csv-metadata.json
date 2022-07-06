@@ -1,44 +1,44 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "date.csv#code-list",
-    "url": "date.csv",
-    "tableSchema": "date.table.json",
+    "@id": "week.csv#code-list",
+    "url": "week.csv",
+    "tableSchema": "week.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "date.csv#code-list",
+            "@id": "week.csv#code-list",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                "http://www.w3.org/ns/dcat#Resource"
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Date"
+                    "@value": "Week"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-07-06T11:46:25.116427"
+                    "@value": "2022-07-06T11:30:20.097101"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-07-06T11:46:25.116427"
+                    "@value": "2022-07-06T11:30:20.097101"
                 }
             ],
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Date"
+                    "@value": "Week"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Date"
+                    "@value": "Week"
                 }
             ]
         }
