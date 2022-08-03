@@ -29,6 +29,26 @@
                 "label": "unitless",
                 "from_existing": "http://qudt.org/vocab/unit/UNITLESS"
             }
+        },
+        "Location": {
+            "type": "dimension",
+            "code_list": {
+                "title": "Pret A Manger locations",
+                "summary": "Stores included in each location",
+                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "Yorkshire",
+                        "description": "The only two Pret stores in Yorkshire",
+                        "notation": "Yorkshire"
+                    },
+                    {
+                        "label": "London stations",
+                        "description": "Three large train stations in London",
+                        "notation": "Londond stations"
+                    }
+                ]
+            }
         }
     }
 }
