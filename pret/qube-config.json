@@ -39,13 +39,53 @@
                 "concepts": [
                     {
                         "label": "Yorkshire",
-                        "description": "The only two Pret stores in Yorkshire",
+                        "description": "Pret A Manger stores in Yorkshire",
                         "notation": "Yorkshire"
                     },
                     {
-                        "label": "London stations",
-                        "description": "Three large train stations in London",
-                        "notation": "Londond stations"
+                        "label": "London: Suburban",
+                        "description": "Pret A Manger stores outside of Zones 1 and 2, but within Central London; predominantly in residential areas of London",
+                        "notation": "London: Suburban"
+                    },
+                    {
+                        "label": "Manchester",
+                        "description": "Pret A Manger stores in Manchester",
+                        "notation": "Manchester"
+                    },
+                    {
+                        "label": "London: West End",
+                        "description": "Pret A Manger stores in popular retail areas within Central London",
+                        "notation": "London: West End"
+                    },
+                    {
+                        "label": "London: Stations",
+                        "description": "Pret A Manger stores in three large train stations in London",
+                        "notation": "London: Stations"
+                    },
+                    {
+                        "label": "Regional Towns",
+                        "description": "Pret A Manger stores in towns not listed elsewhere",
+                        "notation": "Regional Towns"
+                    },
+                    {
+                        "label": "Scotland",
+                        "description": "Pret A Manger stores in Scotland",
+                        "notation": "Scotland"
+                    },
+                    {
+                        "label": "London: Airports",
+                        "description": "Pret A Manger stores in four major airports in London",
+                        "notation": "London: Airports"
+                    },
+                    {
+                        "label": "London: City Worker",
+                        "description": "Pret A Manger stores in the Square Mile and Canary Wharf",
+                        "notation": "London: City Worker"
+                    },
+                    {
+                        "label": "Regional Stations",
+                        "description": "Pret A Manger stores in stations in towns not listed elsewhere",
+                        "notation": "Regional Stations"
                     }
                 ]
             }

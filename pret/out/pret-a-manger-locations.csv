@@ -1,0 +1,11 @@
+Label,Notation,Parent Notation,Sort Priority,Description
+Yorkshire,Yorkshire,,0,Pret A Manger stores in Yorkshire
+London: Suburban,London: Suburban,,1,"Pret A Manger stores outside of Zones 1 and 2, but within Central London; predominantly in residential areas of London"
+Manchester,Manchester,,2,Pret A Manger stores in Manchester
+London: West End,London: West End,,3,Pret A Manger stores in popular retail areas within Central London
+London: Stations,London: Stations,,4,Pret A Manger stores in three large train stations in London
+Regional Towns,Regional Towns,,5,Pret A Manger stores in towns not listed elsewhere
+Scotland,Scotland,,6,Pret A Manger stores in Scotland
+London: Airports,London: Airports,,7,Pret A Manger stores in four major airports in London
+London: City Worker,London: City Worker,,8,Pret A Manger stores in the Square Mile and Canary Wharf
+Regional Stations,Regional Stations,,9,Pret A Manger stores in stations in towns not listed elsewhere

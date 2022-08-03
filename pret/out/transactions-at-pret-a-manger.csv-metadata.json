@@ -17,7 +17,7 @@
                         "titles": "Location",
                         "name": "location",
                         "propertyUrl": "transactions-at-pret-a-manger.csv#dimension/location",
-                        "valueUrl": "location.csv#{+location}",
+                        "valueUrl": "pret-a-manger-locations.csv#{+location}",
                         "required": true
                     },
                     {
@@ -63,7 +63,7 @@
                     {
                         "columnReference": "location",
                         "reference": {
-                            "resource": "location.csv",
+                            "resource": "pret-a-manger-locations.csv",
                             "columnReference": "notation"
                         }
                     }
@@ -81,27 +81,115 @@
             "suppressOutput": true
         },
         {
-            "url": "location.csv",
-            "tableSchema": "location.table.json",
+            "url": "pret-a-manger-locations.csv",
+            "tableSchema": "pret-a-manger-locations.table.json",
             "suppressOutput": true
         }
     ],
     "rdfs:seeAlso": [
         {
+            "@id": "transactions-at-pret-a-manger.csv#component/indexed-sales",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
             "@id": "transactions-at-pret-a-manger.csv#class/week",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "transactions-at-pret-a-manger.csv#component/location",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "transactions-at-pret-a-manger.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#component/measure-type"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#component/unit"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#component/week"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#component/location"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#component/indexed-sales"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#dimension/week"
+                }
             ]
         },
         {
             "@id": "transactions-at-pret-a-manger.csv#dimension/week",
             "@type": [
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
             ],
             "http://purl.org/linked-data/cube#codeList": [
                 {
@@ -126,11 +214,44 @@
             ]
         },
         {
+            "@id": "transactions-at-pret-a-manger.csv#dimension/location",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "pret-a-manger-locations.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Location"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "transactions-at-pret-a-manger.csv#class/location"
+                }
+            ]
+        },
+        {
+            "@id": "transactions-at-pret-a-manger.csv#class/location",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
             "@id": "transactions-at-pret-a-manger.csv#component/week",
             "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSet"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -149,67 +270,13 @@
             ]
         },
         {
-            "@id": "transactions-at-pret-a-manger.csv#component/unit",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": true
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
-                }
-            ]
-        },
-        {
-            "@id": "transactions-at-pret-a-manger.csv#dimension/location",
-            "@type": [
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "location.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Location"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#class/location"
-                }
-            ]
-        },
-        {
             "@id": "transactions-at-pret-a-manger.csv#dataset",
             "@type": [
                 "http://purl.org/linked-data/cube#DataSet",
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable"
             ],
             "http://purl.org/dc/terms/description": [
                 {
@@ -225,7 +292,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-07-06T11:30:20.104979"
+                    "@value": "2022-08-03T17:12:16.682355"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -236,7 +303,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-07-06T11:30:20.104979"
+                    "@value": "2022-08-03T17:12:16.682355"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -270,15 +337,7 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "lunch"
-                },
-                {
-                    "@language": "en",
-                    "@value": "office"
-                },
-                {
-                    "@language": "en",
-                    "@value": "sandwich"
+                    "@value": "takeaway"
                 },
                 {
                     "@language": "en",
@@ -286,7 +345,19 @@
                 },
                 {
                     "@language": "en",
+                    "@value": "pret"
+                },
+                {
+                    "@language": "en",
                     "@value": "city"
+                },
+                {
+                    "@language": "en",
+                    "@value": "office"
+                },
+                {
+                    "@language": "en",
+                    "@value": "lunch"
                 },
                 {
                     "@language": "en",
@@ -294,86 +365,45 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "takeaway"
-                },
-                {
-                    "@language": "en",
-                    "@value": "pret"
+                    "@value": "sandwich"
                 }
             ]
         },
         {
-            "@id": "transactions-at-pret-a-manger.csv#component/indexed-sales",
+            "@id": "transactions-at-pret-a-manger.csv#component/unit",
             "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
                 }
             ],
-            "http://purl.org/linked-data/cube#measure": [
+            "http://purl.org/linked-data/cube#componentRequired": [
                 {
-                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
+                    "@value": true
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "transactions-at-pret-a-manger.csv#structure",
-            "@type": [
-                "http://purl.org/linked-data/cube#DataStructureDefinition",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#component/week"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#component/indexed-sales"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#component/location"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#component/unit"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#component/measure-type"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#dimension/week"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
+                    "@value": 4
                 }
             ]
         },
         {
             "@id": "transactions-at-pret-a-manger.csv#measure/indexed-sales",
             "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
             ],
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
@@ -394,34 +424,11 @@
             ]
         },
         {
-            "@id": "transactions-at-pret-a-manger.csv#component/location",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "transactions-at-pret-a-manger.csv#dimension/location"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 2
-                }
-            ]
-        },
-        {
             "@id": "transactions-at-pret-a-manger.csv#component/measure-type",
             "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSet"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -440,17 +447,10 @@
             ]
         },
         {
-            "@id": "transactions-at-pret-a-manger.csv#class/location",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
             "@id": "transactions-at-pret-a-manger.csv#dependency/week",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -464,28 +464,28 @@
             ]
         },
         {
-            "@id": "transactions-at-pret-a-manger.csv#dependency/location",
+            "@id": "transactions-at-pret-a-manger.csv#dependency/pret-a-manger-locations",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
-                    "@id": "./location.csv-metadata.json"
+                    "@id": "./pret-a-manger-locations.csv-metadata.json"
                 }
             ],
             "http://rdfs.org/ns/void#uriSpace": [
                 {
-                    "@value": "location.csv#"
+                    "@value": "pret-a-manger-locations.csv#"
                 }
             ]
         },
         {
             "@id": "transactions-at-pret-a-manger.csv#unit/unitless",
             "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://qudt.org/schema/qudt/Unit",
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
             ],
             "http://qudt.org/schema/qudt/isScalingOf": [
                 {
