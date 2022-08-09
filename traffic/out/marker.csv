@@ -1,0 +1,6 @@
+Label,Notation,Parent Notation,Sort Priority,Description
+Data contain high levels of imputation,data-contain-high-levels-of-imputation,,0,
+Data suppressed as unreliable,data-suppressed-as-unreliable,,1,
+Data suppressed for disclosure purposes,data-suppressed-for-disclosure-purposes,,2,
+No data available,no-data-available,,3,
+asdf,asdf,,4,
