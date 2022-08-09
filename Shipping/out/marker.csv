@@ -1,0 +1,4 @@
+Label,Notation,Parent Notation,Sort Priority,Description
+Data available,data-available,,0,
+Data suppressed for disclosure,data-suppressed-for-disclosure,,1,
+Data unavailable due to technical issues,data-unavailable-due-to-technical-issues,,2,

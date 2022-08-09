@@ -7,10 +7,10 @@
         {
             "@id": "seasonal-adjustment.csv#code-list",
             "@type": [
-                "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
@@ -20,13 +20,13 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-08-04T18:26:03.505645"
+                    "@value": "2022-08-09T15:41:24.525265"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-08-04T18:26:03.505645"
+                    "@value": "2022-08-09T15:41:24.525265"
                 }
             ],
             "http://purl.org/dc/terms/title": [

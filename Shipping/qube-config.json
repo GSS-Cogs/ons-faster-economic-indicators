@@ -1,0 +1,88 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "VAT diffusion indices",
+    "summary": "Diffusion indices created using HMRC VAT returns, and associatd number of firms contributing to those indices",
+    "description": "Diffusion indices show changes in business turnover (total value of all sales and other outputs excluding VAT), and expenditure (total value of purchases and all other inputs excluding VAT), for both month-on-month and month-on-a-year-ago.\nVAT reporters received in the first seven days after the reporting period are included. Given that there are normally five working days in the first seven days of the month, the data content is relatively consistent month to month. This cut-off date was chosen to increase timeliness, while also being the earliest date when the key economic sectors provided a sufficiently accurate indicator of economic performance.\nMore quality and methodology information is available in Faster indicators of UK economic activity: Value Added Tax returns.",
+    "keywords": [
+        "tax",
+        "turnover",
+        "expenditure",
+        "diffusion",
+        "index",
+        "business",
+        "firms"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "columns": {
+        "Month": {
+            "label": "Month",
+            "from_template": "month"
+        },
+        "Metric": {
+            "type": "attribute",
+            "values": [
+                {
+                    "label": "Turnover current prices",
+                    "description": "Diffusion index based on reported turnover"
+                },
+                {
+                    "label": "Expenditure current prices",
+                    "description": "Diffusion index based on reported expenditure"
+                }
+            ]
+        },
+        "Time period": {
+            "type": "attribute",
+            "values": [
+                {
+                    "label": "Month on Month",
+                    "description": "Index calculated as the current month compared to the previous month"
+                },
+                {
+                    "label": "Month on a Year ago",
+                    "description": "Index calculated as the current month compared to the same month a year ago"
+                }
+            ]
+        },
+        "Seasonal Adjustment": {
+            "type": "attribute",
+            "values": [
+                {
+                    "label": "SA",
+                    "description": "Seasonally adjusted: Data have been adjusted for seasonality using X-13arima"
+                },
+                {
+                    "label": "NSA",
+                    "description": "Non-seasonally adjusted: Data have not been adjusted for seasonality"
+                }
+            ]
+        },
+        "Estimate": {
+            "type": "attribute",
+            "description": "Diffusion index calculated on data reported in the first seven days of the month"
+        },
+        "SIC": {
+            "type": "dimension"
+        },
+        "Measure": {
+            "type": "measures",
+            "values": [
+                {
+                    "label": "Diffusion index",
+                    "description": "Calculated as the number of firms reporting increasing turnover over the number of firms reporting decreasing turnover"
+                },
+                {
+                    "label": "Number of firms in diffusion index",
+                    "description": "The number of firms reporting their data in both the current month and the comparison month"
+                }
+            ]
+        },
+        "Value": {
+            "type": "observations"
+        },
+        "Unit": {
+                "type": "units"
+            }
+        }
+    }
