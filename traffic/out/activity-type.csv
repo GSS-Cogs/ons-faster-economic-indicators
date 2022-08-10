@@ -1,0 +1,7 @@
+Label,Notation,Parent Notation,Sort Priority,Description
+Cars,Cars,,0,Cars
+Motorbikes,Motorbikes,,1,Motorbikes
+Buses,Buses,,2,Buses
+Trucks,Trucks,,3,Trucks
+Vans,Vans,,4,Vans
+Pedestrians & cyclists,Pedestrians & cyclists,,5,Pedestrians & cyclists
