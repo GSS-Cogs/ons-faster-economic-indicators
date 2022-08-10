@@ -1,0 +1,5382 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "uk-port-visits-by-ships.csv#dataset",
+    "tables": [
+        {
+            "url": "uk-port-visits-by-ships.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Day",
+                        "name": "day",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#attribute/day",
+                        "valueUrl": "uk-port-visits-by-ships.csv#attribute/day/{+day}",
+                        "required": false
+                    },
+                    {
+                        "titles": "Date",
+                        "name": "date",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format",
+                        "valueUrl": "date-in-iso-format.csv#{+date}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Seasonal Adjustment",
+                        "name": "seasonal_adjustment",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment",
+                        "valueUrl": "seasonal-adjustment.csv#{+seasonal_adjustment}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Port",
+                        "name": "port",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#dimension/port",
+                        "valueUrl": "port.csv#{+port}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Value",
+                        "name": "value",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#measure/{+measure}",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "Ship Type",
+                        "name": "ship_type",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#dimension/ship-type",
+                        "valueUrl": "ship-types.csv#{+ship_type}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Frequency",
+                        "name": "frequency",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#dimension/frequency",
+                        "valueUrl": "frequency.csv#{+frequency}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Measure",
+                        "name": "measure",
+                        "propertyUrl": "http://purl.org/linked-data/cube#measureType",
+                        "valueUrl": "uk-port-visits-by-ships.csv#measure/{+measure}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Unit",
+                        "name": "unit",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "uk-port-visits-by-ships.csv#unit/{+unit}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Marker",
+                        "name": "marker",
+                        "propertyUrl": "uk-port-visits-by-ships.csv#attribute/observation-status",
+                        "valueUrl": "uk-port-visits-by-ships.csv#attribute/observation-status/{+marker}",
+                        "required": false
+                    },
+                    {
+                        "name": "virt_type",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "http://purl.org/linked-data/cube#Observation"
+                    },
+                    {
+                        "name": "virt_dataset",
+                        "virtual": true,
+                        "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
+                        "valueUrl": "uk-port-visits-by-ships.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "date",
+                        "reference": {
+                            "resource": "date-in-iso-format.csv",
+                            "columnReference": "notation"
+                        }
+                    },
+                    {
+                        "columnReference": "seasonal_adjustment",
+                        "reference": {
+                            "resource": "seasonal-adjustment.csv",
+                            "columnReference": "notation"
+                        }
+                    },
+                    {
+                        "columnReference": "port",
+                        "reference": {
+                            "resource": "port.csv",
+                            "columnReference": "notation"
+                        }
+                    },
+                    {
+                        "columnReference": "ship_type",
+                        "reference": {
+                            "resource": "ship-types.csv",
+                            "columnReference": "notation"
+                        }
+                    },
+                    {
+                        "columnReference": "frequency",
+                        "reference": {
+                            "resource": "frequency.csv",
+                            "columnReference": "notation"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "date",
+                    "seasonal_adjustment",
+                    "port",
+                    "ship_type",
+                    "frequency",
+                    "measure"
+                ],
+                "aboutUrl": "uk-port-visits-by-ships.csv#obs/{date},{seasonal_adjustment},{port},{ship_type},{frequency}@{measure}"
+            }
+        },
+        {
+            "url": "date-in-iso-format.csv",
+            "tableSchema": "date-in-iso-format.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "seasonal-adjustment.csv",
+            "tableSchema": "seasonal-adjustment.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "port.csv",
+            "tableSchema": "port.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "ship-types.csv",
+            "tableSchema": "ship-types.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "frequency.csv",
+            "tableSchema": "frequency.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "uk-port-visits-by-ships.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/day"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/ship-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/number-of-unique-ships"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/unit"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/measure-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/frequency"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/day"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#AttributeProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Day"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "number of unique ships"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "port.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Selected ports in the UK"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Port"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/port"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/unit",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 10
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "seasonal-adjustment.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/observation-status",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 11
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 9
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/observation-status",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#AttributeProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Observation Status"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dataset",
+            "@type": [
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://purl.org/linked-data/cube#DataSet"
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "\nShips equipped with Automatic Identification System (AIS) equipment on-board transmit positional information every 2 seconds when moving and up to 3 minutes when anchored or moored. Originally introduced for navigational safety, AIS data can also be used as a source of information for monitoring trends in shipping activity.\nWe collect and aggregate these messages to identify the number of ships that travel within a port bounding box and remain there for a series of transmissions, before travelling outside of the boundary again. The AIS messages also allow us to identify a subset of all ships as cargo and tanker ships.\nThis dataset provides the number of daily visits for 16 of the UK's most significant freight ports by tonnage, and a sum of those visits as a UK total. The UK total is seasonally adjusted using the seasonal adjustment method TRAMO-SEATS modified to deal with higher frequency time series."
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "UK port visits by ships"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2022-08-10T11:58:16.539818"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2022-08-10T11:58:16.539818"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/office-for-national-statistics"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "UK port visits by ships"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Counts of daily ship visits to selected UK ports, by ship type"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "UK port visits by ships"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "trade"
+                },
+                {
+                    "@language": "en",
+                    "@value": "shipping"
+                },
+                {
+                    "@language": "en",
+                    "@value": "ports"
+                },
+                {
+                    "@language": "en",
+                    "@value": "tanker"
+                },
+                {
+                    "@language": "en",
+                    "@value": "maritime"
+                },
+                {
+                    "@language": "en",
+                    "@value": "passenger"
+                },
+                {
+                    "@language": "en",
+                    "@value": "cargo"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/ship-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/frequency",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/frequency",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/frequency",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "frequency.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Frequency"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/frequency"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "number of visits to port"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/day",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/ship-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/measure-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/ship-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "ship-types.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Ship Type"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/ship-type"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/number-of-unique-ships",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "date-in-iso-format.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Date in ISO format"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dependency/date-in-iso-format",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./date-in-iso-format.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "date-in-iso-format.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dependency/seasonal-adjustment",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./seasonal-adjustment.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "seasonal-adjustment.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dependency/port",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./port.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "port.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dependency/ship-types",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./ship-types.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "ship-types.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dependency/frequency",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./frequency.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "frequency.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/1",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "1"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/10",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "10"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/100",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "100"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/101",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "101"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/102",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "102"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/103",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "103"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/104",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "104"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/105",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "105"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/106",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "106"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/107",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "107"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/108",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "108"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/109",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "109"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/11",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "11"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/110",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "110"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/111",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "111"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/112",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "112"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/113",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "113"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/114",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "114"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/115",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "115"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/116",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "116"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/117",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "117"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/118",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "118"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/119",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "119"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/12",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "12"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/120",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "120"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/121",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "121"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/122",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "122"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/123",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "123"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/124",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "124"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/125",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "125"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/126",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "126"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/127",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "127"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/128",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "128"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/129",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "129"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/13",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "13"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/130",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "130"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/131",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "131"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/132",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "132"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/133",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "133"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/134",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "134"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/135",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "135"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/136",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "136"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/137",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "137"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/138",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "138"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/139",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "139"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/14",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "14"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/140",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "140"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/141",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "141"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/142",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "142"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/143",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "143"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/144",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "144"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/145",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "145"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/146",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "146"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/147",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "147"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/148",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "148"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/149",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "149"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/15",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "15"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/150",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "150"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/151",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "151"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/152",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "152"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/153",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "153"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/154",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "154"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/155",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "155"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/156",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "156"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/157",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "157"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/158",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "158"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/159",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "159"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/16",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "16"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/160",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "160"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/161",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "161"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/162",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "162"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/163",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "163"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/164",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "164"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/165",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "165"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/166",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "166"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/167",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "167"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/168",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "168"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/169",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "169"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/17",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "17"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/170",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "170"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/171",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "171"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/172",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "172"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/173",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "173"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/174",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "174"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/175",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "175"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/176",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "176"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/177",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "177"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/178",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "178"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/179",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "179"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/18",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "18"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/180",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "180"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/181",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "181"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/182",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "182"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/183",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "183"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/184",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "184"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/185",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "185"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/186",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "186"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/187",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "187"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/188",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "188"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/189",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "189"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/19",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "19"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/190",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "190"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/191",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "191"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/192",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "192"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/193",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "193"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/194",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "194"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/195",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "195"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/196",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "196"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/197",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "197"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/198",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "198"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/199",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "199"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/2",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "2"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/20",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "20"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/200",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "200"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/201",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "201"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/202",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "202"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/203",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "203"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/204",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "204"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/205",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "205"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/206",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "206"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/207",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "207"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/208",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "208"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/209",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "209"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/21",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "21"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/210",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "210"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/211",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "211"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/212",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "212"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/213",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "213"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/214",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "214"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/215",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "215"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/216",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "216"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/217",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "217"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/218",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "218"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/219",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "219"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/22",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "22"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/220",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "220"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/221",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "221"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/222",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "222"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/223",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "223"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/224",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "224"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/225",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "225"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/226",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "226"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/227",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "227"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/228",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "228"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/229",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "229"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/23",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "23"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/230",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "230"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/231",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "231"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/232",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "232"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/233",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "233"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/234",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "234"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/235",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "235"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/236",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "236"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/237",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "237"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/238",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "238"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/239",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "239"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/24",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "24"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/240",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "240"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/241",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "241"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/242",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "242"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/243",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "243"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/244",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "244"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/245",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "245"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/246",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "246"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/247",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "247"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/248",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "248"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/249",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "249"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/25",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "25"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/250",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "250"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/251",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "251"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/252",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "252"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/253",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "253"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/254",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "254"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/255",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "255"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/256",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "256"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/257",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "257"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/258",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "258"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/259",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "259"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/26",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "26"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/260",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "260"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/261",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "261"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/262",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "262"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/263",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "263"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/264",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "264"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/265",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "265"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/266",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "266"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/267",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "267"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/268",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "268"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/269",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "269"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/27",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "27"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/270",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "270"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/271",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "271"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/272",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "272"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/273",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "273"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/274",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "274"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/275",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "275"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/276",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "276"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/277",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "277"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/278",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "278"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/279",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "279"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/28",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "28"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/280",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "280"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/281",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "281"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/282",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "282"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/283",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "283"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/284",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "284"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/285",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "285"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/286",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "286"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/287",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "287"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/288",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "288"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/289",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "289"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/29",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "29"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/290",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "290"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/291",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "291"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/292",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "292"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/293",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "293"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/294",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "294"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/295",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "295"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/296",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "296"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/297",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "297"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/298",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "298"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/299",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "299"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/3",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "3"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/30",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "30"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/300",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "300"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/301",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "301"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/302",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "302"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/303",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "303"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/304",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "304"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/305",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "305"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/306",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "306"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/307",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "307"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/308",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "308"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/309",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "309"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/31",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "31"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/310",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "310"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/311",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "311"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/312",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "312"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/313",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "313"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/314",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "314"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/315",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "315"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/316",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "316"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/317",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "317"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/318",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "318"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/319",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "319"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/32",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "32"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/320",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "320"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/321",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "321"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/322",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "322"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/323",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "323"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/324",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "324"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/325",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "325"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/326",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "326"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/327",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "327"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/328",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "328"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/329",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "329"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/33",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "33"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/330",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "330"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/331",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "331"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/332",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "332"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/333",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "333"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/334",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "334"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/335",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "335"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/336",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "336"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/337",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "337"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/338",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "338"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/339",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "339"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/34",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "34"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/340",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "340"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/341",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "341"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/342",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "342"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/343",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "343"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/344",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "344"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/345",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "345"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/346",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "346"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/347",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "347"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/348",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "348"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/349",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "349"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/35",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "35"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/350",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "350"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/351",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "351"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/352",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "352"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/353",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "353"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/354",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "354"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/355",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "355"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/356",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "356"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/357",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "357"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/358",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "358"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/359",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "359"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/36",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "36"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/360",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "360"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/361",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "361"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/362",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "362"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/363",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "363"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/364",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "364"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/365",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "365"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/366",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "366"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/37",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "37"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/38",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "38"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/39",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "39"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/4",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "4"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/40",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "40"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/41",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "41"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/42",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "42"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/43",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "43"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/44",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "44"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/45",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "45"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/46",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "46"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/47",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "47"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/48",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "48"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/49",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "49"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/5",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "5"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/50",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "50"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/51",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "51"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/52",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "52"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/53",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "53"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/54",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "54"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/55",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "55"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/56",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "56"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/57",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "57"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/58",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "58"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/59",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "59"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/6",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "6"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/60",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "60"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/61",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "61"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/62",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "62"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/63",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "63"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/64",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "64"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/65",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "65"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/66",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "66"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/67",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "67"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/68",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "68"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/69",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "69"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/7",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "7"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/70",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "70"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/71",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "71"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/72",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "72"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/73",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "73"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/74",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "74"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/75",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "75"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/76",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "76"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/77",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "77"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/78",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "78"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/79",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "79"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/8",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "8"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/80",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "80"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/81",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "81"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/82",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "82"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/83",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "83"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/84",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "84"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/85",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "85"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/86",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "86"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/87",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "87"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/88",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "88"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/89",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "89"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/9",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "9"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/90",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "90"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/91",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "91"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/92",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "92"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/93",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "93"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/94",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "94"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/95",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "95"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/96",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "96"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/97",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "97"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/98",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "98"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day/99",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "99"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/observation-status/data-suppressed-for-disclosure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Data suppressed for disclosure"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/observation-status/data-unavailable-due-to-technical-issues",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Data unavailable due to technical issues"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#unit/number",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://qudt.org/schema/qudt/Unit"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number"
+                }
+            ]
+        }
+    ]
+}

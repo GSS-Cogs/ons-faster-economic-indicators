@@ -1,0 +1,34 @@
+{
+  "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+  "title": "Ship types",
+  "summary": "Types of ships available",
+  "description": "god morgon",
+  "creator": "http://statistics.data.gov.uk",
+  "publisher": "http://statistics.data.gov.uk",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "themes": [
+    "http://example.com/themes/biscuits"
+  ],
+  "keywords": [
+    "All",
+    "Ships",
+    "Cargo",
+    "Tanker"
+  ],
+  "sort": {
+    "by": "label",
+    "method": "ascending"
+  },
+"concepts": [
+                    {
+                        "label": "All Ships",
+                        "notation": "All",
+                        "description": "Total number of ships"
+                    },
+                    {
+                        "label": "Cargo & Tanker",
+                        "notation": "C&T",
+                        "description": "Total Cargo and Tanker Ships"
+                    }
+                 ]
+}

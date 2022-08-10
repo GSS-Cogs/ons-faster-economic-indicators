@@ -1,0 +1,62 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "UK port visits by ships",
+    "summary": "Counts of daily ship visits to selected UK ports, by ship type",
+    "description": "\nShips equipped with Automatic Identification System (AIS) equipment on-board transmit positional information every 2 seconds when moving and up to 3 minutes when anchored or moored. Originally introduced for navigational safety, AIS data can also be used as a source of information for monitoring trends in shipping activity.\nWe collect and aggregate these messages to identify the number of ships that travel within a port bounding box and remain there for a series of transmissions, before travelling outside of the boundary again. The AIS messages also allow us to identify a subset of all ships as cargo and tanker ships.\nThis dataset provides the number of daily visits for 16 of the UK's most significant freight ports by tonnage, and a sum of those visits as a UK total. The UK total is seasonally adjusted using the seasonal adjustment method TRAMO-SEATS modified to deal with higher frequency time series.",
+    "keywords": [
+        "cargo",
+        "tanker",
+        "passenger",
+        "trade",
+        "maritime",
+        "ports",
+        "shipping"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "columns": {
+        "Day": {
+            "label": "Day",
+            "type": "attribute"
+        },
+        "Date": {
+            "label": "Date in ISO format",
+            "type": "dimension",
+            "from_template": "day"
+        },
+        "Seasonal Adjustment": {
+            "type": "dimension",
+            "description": "SA = seasonally adjusted, NSA = non-seasonally adjusted",
+            "code_list": "./qube-config-shipping-SA.json"
+        },
+         "Port": {
+            "type": "dimension",
+            "description": "Selected ports in the UK"
+        },
+
+        "Value": {
+                "type": "observations"
+            },
+
+        "Ship Type": {
+            "type": "dimension",
+            "code_list": "./qube-config-shipping-type.json"
+        },
+
+        "Frequency": {
+            "type": "dimension"
+
+        },
+
+        "Measure": {
+            "type": "measures"
+
+        },
+        "Unit": {
+            "type": "units"
+        },
+        "Marker": {
+            "from_template": "observation-status"
+        }
+        }
+    }
