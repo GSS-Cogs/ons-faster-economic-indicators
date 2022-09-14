@@ -15,7 +15,17 @@
             "from_template": "day"
         },
         "Measure": {
-            "type": "measures"
+            "type": "measures",
+            "values": [
+                {
+                    "label": "Flights",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#flights"
+                },
+                {
+                    "label": "Flights 7 day average",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#7-day-average-flights"
+                }
+            ]
         },
         "Value": {
             "type": "observations",

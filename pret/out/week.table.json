@@ -1,6 +1,12 @@
 {
     "columns": [
         {
+            "titles": "Uri Identifier",
+            "name": "uri_identifier",
+            "required": true,
+            "suppressOutput": true
+        },
+        {
             "titles": "Label",
             "name": "label",
             "required": true,
@@ -13,11 +19,11 @@
             "propertyUrl": "skos:notation"
         },
         {
-            "titles": "Parent Notation",
-            "name": "parent_notation",
+            "titles": "Parent Uri Identifier",
+            "name": "parent_uri_identifier",
             "required": false,
             "propertyUrl": "skos:broader",
-            "valueUrl": "week.csv#{+parent_notation}"
+            "valueUrl": "week.csv#{+parent_uri_identifier}"
         },
         {
             "titles": "Sort Priority",
@@ -54,6 +60,6 @@
             "valueUrl": "skos:Concept"
         }
     ],
-    "aboutUrl": "week.csv#{+notation}",
-    "primaryKey": "notation"
+    "aboutUrl": "week.csv#{+uri_identifier}",
+    "primaryKey": "uri_identifier"
 }

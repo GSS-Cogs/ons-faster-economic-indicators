@@ -1,7 +1,7 @@
-Label,Notation,Parent Notation,Sort Priority,Description
-North East,North East,,0,Publicly available traffic cameras from https://netrafficcams.co.uk/map
-London,London,,1,Publicly available traffic cameras from Transport for London https://www.tfljamcams.net/
-Greater Manchester,Greater Manchester,,2,Publicly available traffic cameras from Transport for Greater Manchester https://tfgm.com/roads/live-traffic-cameras
-Northern Ireland,Northern Ireland,,3,Publicly available traffic cameras from Traffic Watch NI https://trafficwatchni.com/twni/cameras
-Southend,Southend,,4,Publicly available traffic cameras in Southend https://sbctraffic.southend.gov.uk/
-Reading,Reading,,5,Publicly available traffic cameras from travel Reading http://www.reading-travelinfo.co.uk/live-traffic-cameras.aspx
+Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
+north-east,North East,North East,,0,Publicly available traffic cameras from https://netrafficcams.co.uk/map
+london,London,London,,1,Publicly available traffic cameras from Transport for London https://www.tfljamcams.net/
+greater-manchester,Greater Manchester,Greater Manchester,,2,Publicly available traffic cameras from Transport for Greater Manchester https://tfgm.com/roads/live-traffic-cameras
+northern-ireland,Northern Ireland,Northern Ireland,,3,Publicly available traffic cameras from Traffic Watch NI https://trafficwatchni.com/twni/cameras
+southend,Southend,Southend,,4,Publicly available traffic cameras in Southend https://sbctraffic.southend.gov.uk/
+reading,Reading,Reading,,5,Publicly available traffic cameras from travel Reading http://www.reading-travelinfo.co.uk/live-traffic-cameras.aspx

@@ -1,6 +1,12 @@
 {
     "columns": [
         {
+            "titles": "Uri Identifier",
+            "name": "uri_identifier",
+            "required": true,
+            "suppressOutput": true
+        },
+        {
             "titles": "Label",
             "name": "label",
             "required": true,
@@ -13,11 +19,11 @@
             "propertyUrl": "skos:notation"
         },
         {
-            "titles": "Parent Notation",
-            "name": "parent_notation",
+            "titles": "Parent Uri Identifier",
+            "name": "parent_uri_identifier",
             "required": false,
             "propertyUrl": "skos:broader",
-            "valueUrl": "month.csv#{+parent_notation}"
+            "valueUrl": "month.csv#{+parent_uri_identifier}"
         },
         {
             "titles": "Sort Priority",
@@ -31,6 +37,13 @@
             "name": "description",
             "required": false,
             "propertyUrl": "rdfs:comment"
+        },
+        {
+            "titles": "Original Concept URI",
+            "name": "uri",
+            "required": true,
+            "propertyUrl": "owl:sameAs",
+            "valueUrl": "{+uri}"
         },
         {
             "virtual": true,
@@ -47,6 +60,6 @@
             "valueUrl": "skos:Concept"
         }
     ],
-    "aboutUrl": "month.csv#{+notation}",
-    "primaryKey": "notation"
+    "aboutUrl": "month.csv#{+uri_identifier}",
+    "primaryKey": "uri_identifier"
 }

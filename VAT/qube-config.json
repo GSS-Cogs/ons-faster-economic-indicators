@@ -70,11 +70,13 @@
             "values": [
                 {
                     "label": "Diffusion index",
-                    "description": "Calculated as the number of firms reporting increasing turnover over the number of firms reporting decreasing turnover"
+                    "description": "Calculated as the number of firms reporting increasing turnover over the number of firms reporting decreasing turnover",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
                 },
                 {
                     "label": "Number of firms in diffusion index",
-                    "description": "The number of firms reporting their data in both the current month and the comparison month"
+                    "description": "The number of firms reporting their data in both the current month and the comparison month",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
                 }
             ]
         },

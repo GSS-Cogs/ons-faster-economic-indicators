@@ -47,10 +47,18 @@
             "type": "dimension"
 
         },
-
         "Measure": {
-            "type": "measures"
-
+            "type": "measures",
+            "values": [
+                {
+                    "label": "number of visits to port",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#number-of-visits-to-port"
+                },
+                {
+                    "label": "number of unique ships",
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#number-of-unique-ships"
+                }
+            ]
         },
         "Unit": {
             "type": "units"

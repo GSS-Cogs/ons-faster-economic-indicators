@@ -118,7 +118,8 @@
             "type": "observations",
             "measure": {
                 "label": "counts of objects",
-                "description": "counts of the number of pedestrians or vehicles identified on the traffic camera feed"
+                "description": "counts of the number of pedestrians or vehicles identified on the traffic camera feed",
+                "from_existing": "http://gss-data.org.uk/def/measure/count"
             },
             "unit": {
                 "label": "number",

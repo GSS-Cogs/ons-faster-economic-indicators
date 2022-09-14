@@ -23,7 +23,8 @@
             "type": "observations",
             "measure": {
                 "label": "indexed sales",
-                "description": "indexed weekly sales indexed ((Friday 3 January and Thursday 30 January 2020)/4=100)"
+                "description": "indexed weekly sales indexed ((Friday 3 January and Thursday 30 January 2020)/4=100)",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#indexed-sales-value"
             },
             "unit": {
                 "label": "unitless",

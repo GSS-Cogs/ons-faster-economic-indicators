@@ -7,10 +7,10 @@
         {
             "@id": "seasonal-adjustment.csv#code-list",
             "@type": [
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -31,7 +31,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-08-10T11:58:16.510030"
+                    "@value": "2022-09-14T12:24:42.165036"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -42,7 +42,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-08-10T11:58:16.510030"
+                    "@value": "2022-09-14T12:24:42.165036"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -75,20 +75,15 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "NSA"
-                },
-                {
-                    "@language": "en",
                     "@value": "SA"
                 },
                 {
                     "@language": "en",
-                    "@value": "7MA"
-                }
-            ],
-            "http://www.w3.org/ns/dcat#theme": [
+                    "@value": "NSA"
+                },
                 {
-                    "@id": "http://example.com/themes/biscuits"
+                    "@language": "en",
+                    "@value": "7MA"
                 }
             ]
         }
