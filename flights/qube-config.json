@@ -9,6 +9,7 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
     "columns": {
         "Date": {
             "label": "Date",
@@ -29,6 +30,7 @@
         },
         "Value": {
             "type": "observations",
+            "data_type": "double",
             "unit": {
                 "label": "Number",
                 "from_existing": "http://qudt.org/vocab/unit/NUM"

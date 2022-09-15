@@ -8,8 +8,8 @@
             "@id": "pret-a-manger-locations.csv#code-list",
             "@type": [
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Resource"
             ],
             "http://purl.org/dc/terms/identifier": [
@@ -20,7 +20,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-14T12:17:32.316594"
+                    "@value": "2022-09-15T15:47:31.003212"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -31,7 +31,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-14T12:17:32.316594"
+                    "@value": "2022-09-15T15:47:31.003212"
                 }
             ],
             "http://purl.org/dc/terms/title": [

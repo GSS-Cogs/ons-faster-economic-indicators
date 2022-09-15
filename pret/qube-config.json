@@ -15,12 +15,14 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes": "https://www.ons.gov.uk/businessindustryandtrade",
     "columns": {
         "Week": {
             "from_template": "week"
         },
         "Value": {
             "type": "observations",
+            "data_type": "decimal",
             "measure": {
                 "label": "indexed sales",
                 "description": "indexed weekly sales indexed ((Friday 3 January and Thursday 30 January 2020)/4=100)",
