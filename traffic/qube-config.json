@@ -59,21 +59,9 @@
             }
         },
         "Seasonal_adjustment": {
-            "type": "attribute",
-            "values": [
-                {
-                    "label": "SA",
-                    "description": "Seasonally adjusted: Data have been adjusted for seasonality using X-13arima"
-                },
-                {
-                    "label": "NSA",
-                    "description": "Non-seasonally adjusted: Data have not been adjusted for seasonality"
-                },
-                {
-                    "label": "Trend",
-                    "description": "The smoothed trend of the data after being adjusted for seasonality"
-                }
-            ]
+            "type": "dimension",
+            "description": "SA = seasonally adjusted, NSA = non-seasonally adjusted",
+            "code_list": "./qube-config-traffic-SA.json"
         },
         "Measure": {
             "type": "dimension",

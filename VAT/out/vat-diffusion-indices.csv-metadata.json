@@ -30,9 +30,9 @@
                     {
                         "titles": "Seasonal Adjustment",
                         "name": "seasonal_adjustment",
-                        "propertyUrl": "vat-diffusion-indices.csv#attribute/seasonal-adjustment",
-                        "valueUrl": "vat-diffusion-indices.csv#attribute/seasonal-adjustment/{+seasonal_adjustment}",
-                        "required": false
+                        "propertyUrl": "vat-diffusion-indices.csv#dimension/seasonal-adjustment",
+                        "valueUrl": "seasonal-adjustment.csv#{+seasonal_adjustment}",
+                        "required": true
                     },
                     {
                         "titles": "Estimate",
@@ -91,6 +91,13 @@
                         }
                     },
                     {
+                        "columnReference": "seasonal_adjustment",
+                        "reference": {
+                            "resource": "seasonal-adjustment.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
                         "columnReference": "sic",
                         "reference": {
                             "resource": "sic.csv",
@@ -100,15 +107,21 @@
                 ],
                 "primaryKey": [
                     "month",
+                    "seasonal_adjustment",
                     "sic",
                     "measure"
                 ],
-                "aboutUrl": "vat-diffusion-indices.csv#obs/{month},{sic}@{measure}"
+                "aboutUrl": "vat-diffusion-indices.csv#obs/{month},{seasonal_adjustment},{sic}@{measure}"
             }
         },
         {
             "url": "month.csv",
             "tableSchema": "month.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "seasonal-adjustment.csv",
+            "tableSchema": "seasonal-adjustment.table.json",
             "suppressOutput": true
         },
         {
@@ -119,95 +132,87 @@
     ],
     "rdfs:seeAlso": [
         {
-            "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index",
+            "@id": "vat-diffusion-indices.csv#class/month",
             "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#attribute/estimate",
+            "@type": [
+                "http://purl.org/linked-data/cube#AttributeProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
             ],
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
                     "@language": "en",
-                    "@value": "The number of firms reporting their data in both the current month and the comparison month"
+                    "@value": "Diffusion index calculated on data reported in the first seven days of the month"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Number of firms in diffusion index"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                    "@value": "Estimate"
                 }
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#component/number-of-firms-in-diffusion-index",
+            "@id": "vat-diffusion-indices.csv#component/measure-type",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
-            "http://purl.org/linked-data/cube#measure": [
+            "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 8
+                    "@value": 9
                 }
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#component/metric",
+            "@id": "vat-diffusion-indices.csv#component/sic",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/metric"
-                }
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "vat-diffusion-indices.csv#attribute/metric"
+                    "@id": "vat-diffusion-indices.csv#dimension/sic"
                 }
             ],
-            "http://purl.org/linked-data/cube#componentRequired": [
+            "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@value": false
+                    "@id": "vat-diffusion-indices.csv#dimension/sic"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 2
+                    "@value": 6
                 }
             ]
         },
         {
             "@id": "vat-diffusion-indices.csv#dataset",
             "@type": [
-                "http://purl.org/linked-data/cube#Attachable",
-                "http://www.w3.org/ns/dcat#Dataset",
                 "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/dcat#Resource"
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable"
             ],
             "http://purl.org/dc/terms/description": [
                 {
@@ -223,7 +228,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-15T17:30:29.124396"
+                    "@value": "2022-09-20T14:50:24.078723"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -234,7 +239,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-15T17:30:29.124396"
+                    "@value": "2022-09-20T14:50:24.078723"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -268,15 +273,11 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "tax"
-                },
-                {
-                    "@language": "en",
-                    "@value": "turnover"
-                },
-                {
-                    "@language": "en",
                     "@value": "firms"
+                },
+                {
+                    "@language": "en",
+                    "@value": "tax"
                 },
                 {
                     "@language": "en",
@@ -284,15 +285,19 @@
                 },
                 {
                     "@language": "en",
+                    "@value": "turnover"
+                },
+                {
+                    "@language": "en",
                     "@value": "expenditure"
                 },
                 {
                     "@language": "en",
-                    "@value": "index"
+                    "@value": "business"
                 },
                 {
                     "@language": "en",
-                    "@value": "business"
+                    "@value": "index"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
@@ -302,327 +307,10 @@
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#component/seasonal-adjustment",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": false
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#dimension/month",
-            "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "month.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Month"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "vat-diffusion-indices.csv#class/month"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#measure/diffusion-index",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "Calculated as the number of firms reporting increasing turnover over the number of firms reporting decreasing turnover"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Diffusion index"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment",
-            "@type": [
-                "http://purl.org/linked-data/cube#AttributeProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Seasonal Adjustment"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#class/month",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#attribute/estimate",
-            "@type": [
-                "http://purl.org/linked-data/cube#AttributeProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "Diffusion index calculated on data reported in the first seven days of the month"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Estimate"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#dimension/sic",
-            "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "sic.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "SIC"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "vat-diffusion-indices.csv#class/sic"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#component/estimate",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": false
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#class/sic",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#structure",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#DataStructureDefinition"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "vat-diffusion-indices.csv#component/estimate"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/time-period"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/seasonal-adjustment"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/measure-type"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/diffusion-index"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/number-of-firms-in-diffusion-index"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/metric"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/sic"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/month"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#component/unit"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/sic"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/month"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/time-period"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#measure/diffusion-index"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/metric"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
-                },
-                {
-                    "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#component/month",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/month"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/month"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 1
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#component/unit",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": true
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 10
-                }
-            ]
-        },
-        {
             "@id": "vat-diffusion-indices.csv#component/time-period",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#attribute": [
@@ -651,8 +339,8 @@
             "@type": [
                 "http://purl.org/linked-data/cube#AttributeProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
@@ -662,71 +350,71 @@
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#attribute/time-period",
+            "@id": "vat-diffusion-indices.csv#component/seasonal-adjustment",
             "@type": [
-                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#dimension/month",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "month.csv#code-list"
+                }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Time period"
+                    "@value": "Month"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "vat-diffusion-indices.csv#class/month"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
                 }
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#component/measure-type",
+            "@id": "vat-diffusion-indices.csv#class/seasonal-adjustment",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 9
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#component/sic",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/sic"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "vat-diffusion-indices.csv#dimension/sic"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 6
-                }
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ]
         },
         {
             "@id": "vat-diffusion-indices.csv#component/diffusion-index",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
@@ -746,10 +434,354 @@
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#dependency/month",
+            "@id": "vat-diffusion-indices.csv#component/estimate",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#attribute/time-period",
+            "@type": [
+                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Time period"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#dimension/seasonal-adjustment",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "seasonal-adjustment.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "vat-diffusion-indices.csv#class/seasonal-adjustment"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://rdfs.org/ns/void#Dataset"
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "The number of firms reporting their data in both the current month and the comparison month"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of firms in diffusion index"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#component/metric",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/metric"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/metric"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 10
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#component/month",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/month"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/month"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#dimension/sic",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "sic.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "SIC"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "vat-diffusion-indices.csv#class/sic"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#class/sic",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "vat-diffusion-indices.csv#component/month"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/sic"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/measure-type"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/time-period"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/unit"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/estimate"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/number-of-firms-in-diffusion-index"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/diffusion-index"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/seasonal-adjustment"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#component/metric"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/time-period"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/seasonal-adjustment"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#measure/diffusion-index"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/month"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/metric"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#dimension/sic"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
+                },
+                {
+                    "@id": "vat-diffusion-indices.csv#attribute/estimate"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#measure/diffusion-index",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Calculated as the number of firms reporting increasing turnover over the number of firms reporting decreasing turnover"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Diffusion index"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#count-of-companies"
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#component/number-of-firms-in-diffusion-index",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "vat-diffusion-indices.csv#dependency/month",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -763,10 +795,27 @@
             ]
         },
         {
+            "@id": "vat-diffusion-indices.csv#dependency/seasonal-adjustment",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./seasonal-adjustment.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "seasonal-adjustment.csv#"
+                }
+            ]
+        },
+        {
             "@id": "vat-diffusion-indices.csv#dependency/sic",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://rdfs.org/ns/void#Dataset"
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -852,42 +901,6 @@
             ]
         },
         {
-            "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment/sa",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "Seasonally adjusted: Data have been adjusted for seasonality using X-13arima"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "SA"
-                }
-            ]
-        },
-        {
-            "@id": "vat-diffusion-indices.csv#attribute/seasonal-adjustment/nsa",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "Non-seasonally adjusted: Data have not been adjusted for seasonality"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "NSA"
-                }
-            ]
-        },
-        {
             "@id": "vat-diffusion-indices.csv#attribute/estimate/day7",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
@@ -902,9 +915,9 @@
         {
             "@id": "vat-diffusion-indices.csv#unit/number",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://qudt.org/schema/qudt/Unit",
                 "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://qudt.org/schema/qudt/Unit"
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
@@ -916,9 +929,9 @@
         {
             "@id": "vat-diffusion-indices.csv#unit/unitless",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://qudt.org/schema/qudt/Unit",
                 "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://qudt.org/schema/qudt/Unit"
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {

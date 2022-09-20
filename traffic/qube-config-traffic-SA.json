@@ -1,0 +1,36 @@
+{
+  "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+  "title": "Seasonal Adjustment",
+  "summary": "Seasonal adjustment components",
+  "description": "A code list of Seasonal adjustment components",
+  "creator": "http://statistics.data.gov.uk",
+  "publisher": "http://statistics.data.gov.uk",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": [
+    "SA",
+    "NSA",
+    "Trend",
+    "7MA"
+  ],
+  "sort": {
+    "by": "label",
+    "method": "ascending"
+  },
+  "concepts": [
+    {
+      "label": "SA",
+      "notation": "SA",
+      "description": "Seasonally adjusted value"
+    },
+    {
+      "label": "NSA",
+      "notation": "NSA",
+      "description": "Non-seasonally adjusted value"
+    },
+    {
+      "label": "Trend",
+      "notation": "Trend",
+      "description": "Non-seasonally adjusted value"
+    }
+  ]
+}
