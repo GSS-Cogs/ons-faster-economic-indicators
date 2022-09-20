@@ -1,11 +1,11 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "month.csv#code-list",
-    "url": "month.csv",
-    "tableSchema": "month.table.json",
+    "@id": "metric.csv#code-list",
+    "url": "metric.csv",
+    "tableSchema": "metric.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "month.csv#code-list",
+            "@id": "metric.csv#code-list",
             "@type": [
                 "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
@@ -14,31 +14,42 @@
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Month"
+                    "@value": "Metric"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:14:26.034465"
+                    "@value": "2022-09-20T15:14:26.062775"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "https://screativecommons.org/licenses/by/4.0/"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:14:26.034465"
+                    "@value": "2022-09-20T15:14:26.062775"
                 }
             ],
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Month"
+                    "@value": "Metric"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Diffusion index based on reported turnover or expenditure"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Month"
+                    "@value": "Metric"
                 }
             ]
         }

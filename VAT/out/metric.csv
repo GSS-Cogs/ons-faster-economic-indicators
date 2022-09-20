@@ -1,0 +1,3 @@
+Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
+turnover-current-prices,Turnover current prices,Turnover current prices,,0,Diffusion index based on reported turnover
+expenditure-current-prices,Expenditure current prices,Expenditure current prices,,1,Diffusion index based on reported expenditure

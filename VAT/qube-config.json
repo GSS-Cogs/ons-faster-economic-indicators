@@ -21,17 +21,24 @@
             "from_template": "month"
         },
         "Metric": {
-            "type": "attribute",
-            "values": [
-                {
-                    "label": "Turnover current prices",
-                    "description": "Diffusion index based on reported turnover"
-                },
-                {
-                    "label": "Expenditure current prices",
-                    "description": "Diffusion index based on reported expenditure"
-                }
-            ]
+            "type": "dimension",
+            "code_list": {
+                "title": "Metric",
+                "summary": "Diffusion index based on reported turnover or expenditure",
+                "license": "https://screativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "Turnover current prices",
+                        "description": "Diffusion index based on reported turnover",
+                        "notation": "Turnover current prices"
+                    },
+                    {
+                        "label": "Expenditure current prices",
+                        "description": "Diffusion index based on reported expenditure",
+                        "notation": "Expenditure current prices"
+                    }
+                ]
+            }
         },
         "Time period": {
             "type": "attribute",
@@ -77,7 +84,7 @@
             "type": "observations"
         },
         "Unit": {
-                "type": "units"
-            }
+            "type": "units"
         }
     }
+}
