@@ -41,17 +41,24 @@
             }
         },
         "Time period": {
-            "type": "attribute",
-            "values": [
-                {
-                    "label": "Month on Month",
-                    "description": "Index calculated as the current month compared to the previous month"
-                },
-                {
-                    "label": "Month on a Year ago",
-                    "description": "Index calculated as the current month compared to the same month a year ago"
-                }
-            ]
+            "type": "dimension",
+            "code_list": {
+                "title": "Time period",
+                "summary": "Index calculated as the current month compared to the previous month or previous year",
+                "license": "https://screativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "Month on Month",
+                        "description": "Index calculated as the current month compared to the previous month",
+                        "notation": "Month on Month"
+                    },
+                    {
+                        "label": "Month on a Year ago",
+                        "description": "Index calculated as the current month compared to the same month a year ago",
+                        "notation": "Month on a Year ago"
+                    }
+                ]
+            }
         },
         "Seasonal Adjustment": {
             "type": "dimension",

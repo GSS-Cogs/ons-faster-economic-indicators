@@ -1,11 +1,11 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "sic.csv#code-list",
-    "url": "sic.csv",
-    "tableSchema": "sic.table.json",
+    "@id": "time-period.csv#code-list",
+    "url": "time-period.csv",
+    "tableSchema": "time-period.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "sic.csv#code-list",
+            "@id": "time-period.csv#code-list",
             "@type": [
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "http://www.w3.org/ns/dcat#Resource",
@@ -14,31 +14,42 @@
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "SIC"
+                    "@value": "Time period"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:22:45.661284"
+                    "@value": "2022-09-20T15:22:45.630688"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "https://screativecommons.org/licenses/by/4.0/"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:22:45.661284"
+                    "@value": "2022-09-20T15:22:45.630688"
                 }
             ],
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "SIC"
+                    "@value": "Time period"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Index calculated as the current month compared to the previous month or previous year"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "SIC"
+                    "@value": "Time period"
                 }
             ]
         }
