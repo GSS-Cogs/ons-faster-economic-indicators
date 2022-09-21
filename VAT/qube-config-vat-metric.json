@@ -22,37 +22,37 @@
                     {
                         "label": "Turnover current prices",
                         "description": "Diffusion index based on reported turnover",
-                        "notation": "1Turnover current prices"
+                        "notation": "Turnover current prices"
                     },
                     {
                         "label": "Expenditure current prices",
                         "description": "Diffusion index based on reported expenditure",
-                        "notation": "1Expenditure current prices"
+                        "notation": "Expenditure current prices"
                     },
                     {
                         "label": "New reporters",
                         "description": "Number of new reporters",
-                        "notation": "1New reporters"
+                        "notation": "New reporters"
                     },
                     {
                         "label": "Record type Tax due",
                         "description": "Number of reporters by tax due record type",
-                        "notation": "1Record type Tax due"
+                        "notation": "Record type Tax due"
                     },
                     {
                         "label": "Record type Repayment claim",
                         "description": "Number of reporters by repayment claim record type",
-                        "notation": "1Record type Repayment claim"
+                        "notation": "Record type Repayment claim"
                     },
                     {
                         "label": "Record type Re-input tax due",
                         "description": "Number of reporters by re-input tax due record type",
-                        "notation": "1Record type Re-input tax due"
+                        "notation": "Record type Re-input tax due"
                     },
                     {
                         "label": "Record type Re-input repayment claim",
                         "description": "Number of reporters by re-input repayment claim record type",
-                        "notation": "1Record type Re-input repayment claim"
+                        "notation": "Record type Re-input repayment claim"
                     }
 ]
 }
