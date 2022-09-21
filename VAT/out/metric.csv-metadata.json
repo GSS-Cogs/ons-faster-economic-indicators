@@ -7,10 +7,21 @@
         {
             "@id": "metric.csv#code-list",
             "@type": [
+                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "Diffusion index based on reported turnover or expenditure, new reporters by record type"
+                }
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
@@ -20,18 +31,23 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:22:45.623896"
+                    "@value": "2022-09-21T10:37:07.650243"
                 }
             ],
             "http://purl.org/dc/terms/license": [
                 {
-                    "@id": "https://screativecommons.org/licenses/by/4.0/"
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T15:22:45.623896"
+                    "@value": "2022-09-21T10:37:07.650243"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
                 }
             ],
             "http://purl.org/dc/terms/title": [
@@ -43,13 +59,39 @@
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
                     "@language": "en",
-                    "@value": "Diffusion index based on reported turnover or expenditure"
+                    "@value": "Diffusion index and new reporters"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
                     "@value": "Metric"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "record type"
+                },
+                {
+                    "@language": "en",
+                    "@value": "reporters"
+                },
+                {
+                    "@language": "en",
+                    "@value": "turnover"
+                },
+                {
+                    "@language": "en",
+                    "@value": "expenditure"
+                },
+                {
+                    "@language": "en",
+                    "@value": "claim"
+                },
+                {
+                    "@language": "en",
+                    "@value": "tax due"
                 }
             ]
         }

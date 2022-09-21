@@ -1,3 +1,8 @@
 Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
-turnover-current-prices,Turnover current prices,Turnover current prices,,0,Diffusion index based on reported turnover
-expenditure-current-prices,Expenditure current prices,Expenditure current prices,,1,Diffusion index based on reported expenditure
+1expenditure-current-prices,Expenditure current prices,1Expenditure current prices,,0,Diffusion index based on reported expenditure
+1new-reporters,New reporters,1New reporters,,1,Number of new reporters
+1record-type-re-input-repayment-claim,Record type Re-input repayment claim,1Record type Re-input repayment claim,,2,Number of reporters by re-input repayment claim record type
+1record-type-re-input-tax-due,Record type Re-input tax due,1Record type Re-input tax due,,3,Number of reporters by re-input tax due record type
+1record-type-repayment-claim,Record type Repayment claim,1Record type Repayment claim,,4,Number of reporters by repayment claim record type
+1record-type-tax-due,Record type Tax due,1Record type Tax due,,5,Number of reporters by tax due record type
+1turnover-current-prices,Turnover current prices,1Turnover current prices,,6,Diffusion index based on reported turnover
