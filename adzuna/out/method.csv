@@ -1,0 +1,4 @@
+Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
+deduplication-method-applied,deduplication method applied,deduplication-method-applied,,0,
+no-deduplication-method-applied,no deduplication method applied,no-deduplication-method-applied,,1,
+non-deduplication-method-applied,non deduplication method applied,non-deduplication-method-applied,,2,

@@ -1,0 +1,52 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Online job advert estimates",
+    "summary": "Experimental job advert indices covering the UK job market",
+    "description": "These indices are created based upon job adverts provided by Adzuna. This data includes information on several million job advert entries each month, live across the UK across the period February 2018 to December 2022, broken down by job category and UK countries and English regions.\nAdzuna is an online job search engine who collate information from thousands of different sources in the UK. These range from direct employers’ websites to recruitment software providers to traditional job boards thus providing a comprehensive view of current online job adverts. Adzuna is working in partnership with ONS and have made data available for analysis including online advert job descriptions, job titles, job locations, job categories and salary information. The data provided are a point-in-time estimate of all job adverts indexed in Adzuna’s job search engine during the point of data extraction.",
+    "keywords":[
+        "vacancies",
+        "jobs",
+        "adverts",
+        "job market",
+        "adzuna",
+        "online jobs"
+    ]
+    ,
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "columns": {
+        "Date": {
+            "label": "Date in ISO format",
+            "type": "dimension",
+            "from_template": "day"
+        },
+         "Breakdown": {
+            "type": "dimension",
+            "description": "broken down by job category and by UK countries and English regions. "
+        },
+
+        "Value": {
+                "type": "observations"
+            },
+
+        "Method": {
+            "type": "dimension",
+            "description": "method applied during data collection "
+        },
+
+        "Type": {
+            "type": "dimension"
+        },
+
+        "Measure": {
+            "type": "measures"
+
+        },
+        "Unit": {
+            "type": "units"
+        },
+        "Marker": {
+            "from_template": "observation-status"
+        }
+        }
+    }
