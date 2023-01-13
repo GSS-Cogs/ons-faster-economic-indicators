@@ -1,16 +1,29 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "metric.csv#code-list",
-    "url": "metric.csv",
-    "tableSchema": "metric.table.json",
+    "@id": "seasonal-adjustment.csv#code-list",
+    "url": "seasonal-adjustment.csv",
+    "tableSchema": "seasonal-adjustment.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "metric.csv#code-list",
+            "@id": "seasonal-adjustment.csv#csvcubed-build-activity",
             "@type": [
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
+            "@id": "seasonal-adjustment.csv#code-list",
+            "@type": [
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -20,18 +33,18 @@
             "http://purl.org/dc/terms/description": [
                 {
                     "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
-                    "@value": "Diffusion index based on reported turnover or expenditure, new reporters by record type"
+                    "@value": "A code list of Seasonal adjustment components"
                 }
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Metric"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-21T11:00:37.525252"
+                    "@value": "2023-01-13T12:23:46.488897"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -42,7 +55,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-21T11:00:37.525252"
+                    "@value": "2023-01-13T12:23:46.488897"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -53,45 +66,42 @@
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Metric"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
                     "@language": "en",
-                    "@value": "Diffusion index and new reporters"
+                    "@value": "Seasonal adjustment components"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Metric"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "reporters"
+                    "@value": "SA"
                 },
                 {
                     "@language": "en",
-                    "@value": "tax due"
+                    "@value": "Trend"
                 },
                 {
                     "@language": "en",
-                    "@value": "claim"
+                    "@value": "7MA"
                 },
                 {
                     "@language": "en",
-                    "@value": "expenditure"
-                },
+                    "@value": "NSA"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
-                    "@language": "en",
-                    "@value": "turnover"
-                },
-                {
-                    "@language": "en",
-                    "@value": "record type"
+                    "@id": "seasonal-adjustment.csv#csvcubed-build-activity"
                 }
             ]
         }

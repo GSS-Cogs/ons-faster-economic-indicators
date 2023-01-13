@@ -1,16 +1,17 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "seasonal-adjustment.csv#code-list",
-    "url": "seasonal-adjustment.csv",
-    "tableSchema": "seasonal-adjustment.table.json",
+    "@id": "metric.csv#code-list",
+    "url": "metric.csv",
+    "tableSchema": "metric.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "seasonal-adjustment.csv#code-list",
+            "@id": "metric.csv#code-list",
             "@type": [
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -20,18 +21,18 @@
             "http://purl.org/dc/terms/description": [
                 {
                     "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
-                    "@value": "A code list of Seasonal adjustment components"
+                    "@value": "Diffusion index based on reported turnover or expenditure, new reporters by record type"
                 }
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Seasonal Adjustment"
+                    "@value": "Metric"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-21T11:00:37.531601"
+                    "@value": "2023-01-13T12:23:46.481300"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -42,7 +43,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-21T11:00:37.531601"
+                    "@value": "2023-01-13T12:23:46.481300"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -53,37 +54,62 @@
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Seasonal Adjustment"
+                    "@value": "Metric"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
                     "@language": "en",
-                    "@value": "Seasonal adjustment components"
+                    "@value": "Diffusion index and new reporters"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Seasonal Adjustment"
+                    "@value": "Metric"
                 }
             ],
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "Trend"
+                    "@value": "reporters"
                 },
                 {
                     "@language": "en",
-                    "@value": "SA"
+                    "@value": "claim"
                 },
                 {
                     "@language": "en",
-                    "@value": "7MA"
+                    "@value": "expenditure"
                 },
                 {
                     "@language": "en",
-                    "@value": "NSA"
+                    "@value": "record type"
+                },
+                {
+                    "@language": "en",
+                    "@value": "tax due"
+                },
+                {
+                    "@language": "en",
+                    "@value": "turnover"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "metric.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "metric.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
                 }
             ]
         }
