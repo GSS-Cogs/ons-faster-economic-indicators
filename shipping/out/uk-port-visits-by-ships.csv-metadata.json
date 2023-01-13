@@ -165,253 +165,88 @@
     ],
     "rdfs:seeAlso": [
         {
-            "@id": "uk-port-visits-by-ships.csv#component/port",
+            "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
                 }
             ],
             "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 4
+                    "@value": 2
                 }
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment",
+            "@id": "uk-port-visits-by-ships.csv#csvcubed-build-activity",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
+                "http://www.w3.org/ns/prov#Activity"
             ],
-            "http://purl.org/linked-data/cube#componentProperty": [
+            "http://www.w3.org/ns/prov#used": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 3
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
                 }
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#component/frequency",
+            "@id": "uk-port-visits-by-ships.csv#attribute/observation-status",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 7
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format",
-            "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "date-in-iso-format.csv#code-list"
-                }
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Date in ISO format"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format"
+                    "@value": "Observation Status"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
                 {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
                 }
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#class/frequency",
+            "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#structure",
-            "@type": [
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DataStructureDefinition"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/observation-status"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/day"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/frequency"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/measure-type"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/number-of-unique-ships"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/unit"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/ship-type"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#component/port"
-                }
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#attribute/day"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#attribute/observation-status"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
-                },
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
                 {
                     "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
-                },
-                {
-                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships"
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#dimension/frequency",
-            "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "frequency.csv#code-list"
                 }
             ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
+            "http://purl.org/linked-data/cube#order": [
                 {
-                    "@language": "en",
-                    "@value": "Frequency"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#class/frequency"
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment",
-            "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "seasonal-adjustment.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Seasonal Adjustment"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment"
+                    "@value": 8
                 }
             ]
         },
         {
             "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port",
             "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
                 "http://purl.org/linked-data/cube#ComponentProperty"
             ],
@@ -433,52 +268,48 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment",
+            "@id": "uk-port-visits-by-ships.csv#class/ship-type",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/2000/01/rdf-schema#Class"
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#dimension/port",
+            "@id": "uk-port-visits-by-ships.csv#component/unit",
             "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
-            "http://purl.org/linked-data/cube#codeList": [
+            "http://purl.org/linked-data/cube#attribute": [
                 {
-                    "@id": "port.csv#code-list"
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
                 }
             ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
+            "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@language": "en",
-                    "@value": "Selected ports in the UK"
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
                 }
             ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
+            "http://purl.org/linked-data/cube#componentRequired": [
                 {
-                    "@language": "en",
-                    "@value": "Port"
+                    "@value": true
                 }
             ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
+            "http://purl.org/linked-data/cube#order": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#class/port"
+                    "@value": 10
                 }
             ]
         },
         {
             "@id": "uk-port-visits-by-ships.csv#dataset",
             "@type": [
-                "http://purl.org/linked-data/cube#Attachable",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset",
                 "http://purl.org/linked-data/cube#DataSet",
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/ns/dcat#Dataset"
+                "http://www.w3.org/ns/dcat#Resource"
             ],
             "http://purl.org/dc/terms/description": [
                 {
@@ -494,7 +325,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T11:53:56.481370"
+                    "@value": "2023-01-13T11:59:30.388153"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -505,7 +336,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T11:53:56.481370"
+                    "@value": "2023-01-13T11:59:30.388153"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -547,15 +378,11 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "maritime"
-                },
-                {
-                    "@language": "en",
-                    "@value": "trade"
-                },
-                {
-                    "@language": "en",
                     "@value": "ports"
+                },
+                {
+                    "@language": "en",
+                    "@value": "maritime"
                 },
                 {
                     "@language": "en",
@@ -564,6 +391,10 @@
                 {
                     "@language": "en",
                     "@value": "shipping"
+                },
+                {
+                    "@language": "en",
+                    "@value": "trade"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
@@ -578,117 +409,43 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 2
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#component/measure-type",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#component/unit",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": true
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 10
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#class/port",
+            "@id": "uk-port-visits-by-ships.csv#class/frequency",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/2000/01/rdf-schema#Class"
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#dimension/ship-type",
+            "@id": "uk-port-visits-by-ships.csv#dimension/frequency",
             "@type": [
-                "http://purl.org/linked-data/cube#DimensionProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#CodedProperty",
                 "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
             ],
             "http://purl.org/linked-data/cube#codeList": [
                 {
-                    "@id": "ship-types.csv#code-list"
+                    "@id": "frequency.csv#code-list"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Ship Type"
+                    "@value": "Frequency"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#range": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#class/ship-type"
+                    "@id": "uk-port-visits-by-ships.csv#class/frequency"
                 }
             ]
         },
         {
             "@id": "uk-port-visits-by-ships.csv#component/number-of-unique-ships",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
@@ -708,32 +465,10 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#attribute/day",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#AttributeProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Day"
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#class/ship-type",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
             "@id": "uk-port-visits-by-ships.csv#component/observation-status",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#attribute": [
@@ -758,40 +493,10 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 8
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
             "@id": "uk-port-visits-by-ships.csv#component/day",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#attribute": [
@@ -816,30 +521,144 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#attribute/observation-status",
+            "@id": "uk-port-visits-by-ships.csv#component/port",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "seasonal-adjustment.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
+                }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Observation Status"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+            "http://www.w3.org/2000/01/rdf-schema#range": [
                 {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                    "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment"
                 }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/ship-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "ship-types.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Ship Type"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/ship-type"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/frequency",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/ship-type",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
             ]
         },
         {
             "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships",
             "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
                 "http://purl.org/linked-data/cube#ComponentProperty"
             ],
@@ -861,45 +680,226 @@
             ]
         },
         {
-            "@id": "uk-port-visits-by-ships.csv#csvcubed-build-activity",
+            "@id": "uk-port-visits-by-ships.csv#component/measure-type",
             "@type": [
-                "http://www.w3.org/ns/prov#Activity",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
-                }
-            ]
-        },
-        {
-            "@id": "uk-port-visits-by-ships.csv#component/ship-type",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
             "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 6
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "port.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Selected ports in the UK"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Port"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/port"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://purl.org/linked-data/cube#ComponentSet"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/seasonal-adjustment"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/frequency"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/day"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/measure-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/unit"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/ship-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/date-in-iso-format"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/number-of-visits-to-port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/number-of-unique-ships"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#component/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/day"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/ship-type"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-visits-to-port"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#measure/number-of-unique-ships"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/seasonal-adjustment"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#dimension/frequency"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "uk-port-visits-by-ships.csv#attribute/observation-status"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#dimension/date-in-iso-format",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "date-in-iso-format.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Date in ISO format"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "uk-port-visits-by-ships.csv#class/date-in-iso-format"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#class/port",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "uk-port-visits-by-ships.csv#attribute/day",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#AttributeProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Day"
                 }
             ]
         },
         {
             "@id": "uk-port-visits-by-ships.csv#dependency/date-in-iso-format",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -915,8 +915,8 @@
         {
             "@id": "uk-port-visits-by-ships.csv#dependency/seasonal-adjustment",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -932,8 +932,8 @@
         {
             "@id": "uk-port-visits-by-ships.csv#dependency/port",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -949,8 +949,8 @@
         {
             "@id": "uk-port-visits-by-ships.csv#dependency/ship-types",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -966,8 +966,8 @@
         {
             "@id": "uk-port-visits-by-ships.csv#dependency/frequency",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -5400,8 +5400,8 @@
             "@id": "uk-port-visits-by-ships.csv#unit/number",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://qudt.org/schema/qudt/Unit"
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {

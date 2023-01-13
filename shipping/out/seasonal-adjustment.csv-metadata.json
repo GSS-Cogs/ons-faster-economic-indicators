@@ -1,17 +1,29 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "ship-types.csv#code-list",
-    "url": "ship-types.csv",
-    "tableSchema": "ship-types.table.json",
+    "@id": "seasonal-adjustment.csv#code-list",
+    "url": "seasonal-adjustment.csv",
+    "tableSchema": "seasonal-adjustment.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "ship-types.csv#code-list",
+            "@id": "seasonal-adjustment.csv#csvcubed-build-activity",
             "@type": [
-                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
+            "@id": "seasonal-adjustment.csv#code-list",
+            "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/prov#Entity",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                "http://www.w3.org/ns/dcat#Resource"
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -21,18 +33,18 @@
             "http://purl.org/dc/terms/description": [
                 {
                     "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
-                    "@value": "god morgon"
+                    "@value": "A code list of Seasonal adjustment components"
                 }
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Ship types"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T11:53:56.471969"
+                    "@value": "2023-01-13T11:59:30.364259"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -43,7 +55,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T11:53:56.471969"
+                    "@value": "2023-01-13T11:59:30.364259"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -54,59 +66,42 @@
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Ship types"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
                     "@language": "en",
-                    "@value": "Types of ships available"
+                    "@value": "Seasonal adjustment components"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Ship types"
+                    "@value": "Seasonal Adjustment"
                 }
             ],
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "All"
+                    "@value": "7MA"
                 },
                 {
                     "@language": "en",
-                    "@value": "Ships"
+                    "@value": "NSA"
                 },
                 {
                     "@language": "en",
-                    "@value": "Cargo"
+                    "@value": "SA"
                 },
                 {
                     "@language": "en",
-                    "@value": "Tanker"
-                }
-            ],
-            "http://www.w3.org/ns/dcat#theme": [
-                {
-                    "@id": "http://example.com/themes/biscuits"
+                    "@value": "Trend"
                 }
             ],
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
-                    "@id": "ship-types.csv#csvcubed-build-activity"
-                }
-            ]
-        },
-        {
-            "@id": "ship-types.csv#csvcubed-build-activity",
-            "@type": [
-                "http://www.w3.org/ns/prov#Activity",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                    "@id": "seasonal-adjustment.csv#csvcubed-build-activity"
                 }
             ]
         }
