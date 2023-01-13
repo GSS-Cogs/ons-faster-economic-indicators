@@ -28,7 +28,7 @@
         "Seasonal Adjustment": {
             "type": "dimension",
             "description": "SA = seasonally adjusted, NSA = non-seasonally adjusted",
-            "code_list": "./qube-config-shipping-SA.json"
+            "code_list": "./shipping-SA.json"
         },
          "Port": {
             "type": "dimension",
@@ -41,7 +41,7 @@
 
         "Ship Type": {
             "type": "dimension",
-            "code_list": "./qube-config-shipping-type.json"
+            "code_list": "./shipping-type.json"
         },
 
         "Frequency": {
