@@ -16,26 +16,17 @@
             "label": "Date",
             "from_template": "day"
         },
-        "Measure": {
-            "type": "measures",
-            "values": [
-                {
-                    "label": "Flights",
-                    "from_existing": "https://purl.org/csv-cubed/resources/measures#flights"
-                },
-                {
-                    "label": "Flights 7 day average",
-                    "from_existing": "https://purl.org/csv-cubed/resources/measures#7-day-average-flights"
-                }
-            ]
+        "Marker": {
+            "from_template": "observation-status" 
         },
-        "Value": {
-            "type": "observations",
-            "data_type": "double",
-            "unit": {
-                "label": "Number",
-                "from_existing": "http://qudt.org/vocab/unit/NUM"
-            }
+        "Metric": {
+            "type": "measures"
+        },
+        "value": {
+            "type": "observations"            
+        },        
+        "Unit": {
+            "type": "units"
         }
-    }
+}
 }

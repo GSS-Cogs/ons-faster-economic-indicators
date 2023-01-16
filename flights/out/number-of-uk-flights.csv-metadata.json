@@ -14,17 +14,31 @@
                         "required": true
                     },
                     {
-                        "titles": "Measure",
-                        "name": "measure",
+                        "titles": "Marker",
+                        "name": "marker",
+                        "propertyUrl": "number-of-uk-flights.csv#attribute/observation-status",
+                        "valueUrl": "number-of-uk-flights.csv#attribute/observation-status/{+marker}",
+                        "required": false
+                    },
+                    {
+                        "titles": "Metric",
+                        "name": "metric",
                         "propertyUrl": "http://purl.org/linked-data/cube#measureType",
-                        "valueUrl": "number-of-uk-flights.csv#measure/{+measure}",
+                        "valueUrl": "number-of-uk-flights.csv#measure/{+metric}",
                         "required": true
                     },
                     {
-                        "titles": "Value",
+                        "titles": "value",
                         "name": "value",
-                        "propertyUrl": "number-of-uk-flights.csv#measure/{+measure}",
-                        "datatype": "double",
+                        "propertyUrl": "number-of-uk-flights.csv#measure/{+metric}",
+                        "datatype": "decimal",
+                        "required": false
+                    },
+                    {
+                        "titles": "Unit",
+                        "name": "unit",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "number-of-uk-flights.csv#unit/{+unit}",
                         "required": true
                     },
                     {
@@ -38,12 +52,6 @@
                         "virtual": true,
                         "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
                         "valueUrl": "number-of-uk-flights.csv#dataset"
-                    },
-                    {
-                        "name": "virt_unit",
-                        "virtual": true,
-                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
-                        "valueUrl": "number-of-uk-flights.csv#unit/number"
                     }
                 ],
                 "foreignKeys": [
@@ -57,9 +65,9 @@
                 ],
                 "primaryKey": [
                     "date",
-                    "measure"
+                    "metric"
                 ],
-                "aboutUrl": "number-of-uk-flights.csv#obs/{date}@{measure}"
+                "aboutUrl": "number-of-uk-flights.csv#obs/{date}@{metric}"
             }
         },
         {
@@ -70,13 +78,291 @@
     ],
     "rdfs:seeAlso": [
         {
+            "@id": "number-of-uk-flights.csv#component/date",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#measure/number-of-flights",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of flights"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/seven-day-average",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "number-of-uk-flights.csv#measure/seven-day-average"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "number-of-uk-flights.csv#measure/seven-day-average"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/number-of-flights",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "number-of-uk-flights.csv#measure/number-of-flights"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "number-of-uk-flights.csv#measure/number-of-flights"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#AttributeProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Observation Status"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#class/date",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#measure/seven-day-average",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Seven-day average"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "number-of-uk-flights.csv#component/unit"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/observation-status"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/seven-day-average"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/date"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/number-of-flights"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#component/measure-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#measure/seven-day-average"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#dimension/date"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "number-of-uk-flights.csv#measure/number-of-flights"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#dimension/date",
+            "@type": [
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "date.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "number-of-uk-flights.csv#class/date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
             "@id": "number-of-uk-flights.csv#dataset",
             "@type": [
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://purl.org/linked-data/cube#DataSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://purl.org/linked-data/cube#Attachable"
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataSet"
             ],
             "http://purl.org/dc/terms/description": [
                 {
@@ -92,7 +378,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-15T15:37:49.498559"
+                    "@value": "2023-01-16T13:40:35.134849"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -103,7 +389,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-15T15:37:49.498559"
+                    "@value": "2023-01-16T13:40:35.134849"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -141,6 +427,10 @@
                 },
                 {
                     "@language": "en",
+                    "@value": "international"
+                },
+                {
+                    "@language": "en",
                     "@value": "flights"
                 }
             ],
@@ -148,255 +438,38 @@
                 {
                     "@id": "https://www.ons.gov.uk/businessindustryandtrade"
                 }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#dimension/date",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
-            "http://purl.org/linked-data/cube#codeList": [
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
-                    "@id": "date.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "number-of-uk-flights.csv#class/date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                    "@id": "number-of-uk-flights.csv#csvcubed-build-activity"
                 }
             ]
         },
         {
-            "@id": "number-of-uk-flights.csv#component/flights",
+            "@id": "number-of-uk-flights.csv#component/observation-status",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "number-of-uk-flights.csv#attribute/observation-status"
+                }
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "number-of-uk-flights.csv#measure/flights"
+                    "@id": "number-of-uk-flights.csv#attribute/observation-status"
                 }
             ],
-            "http://purl.org/linked-data/cube#measure": [
+            "http://purl.org/linked-data/cube#componentRequired": [
                 {
-                    "@id": "number-of-uk-flights.csv#measure/flights"
+                    "@value": false
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
                     "@value": 2
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#structure",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DataStructureDefinition"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "number-of-uk-flights.csv#component/date"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/flights"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/unit"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/flights-7-day-average"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#component/measure-type"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "number-of-uk-flights.csv#measure/flights-7-day-average"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "number-of-uk-flights.csv#measure/flights"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/measure-type",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#class/date",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#measure/flights",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Flights"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "https://purl.org/csv-cubed/resources/measures#flights"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/date",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "number-of-uk-flights.csv#dimension/date"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 1
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/unit",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentRequired": [
-                {
-                    "@value": true
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#measure/flights-7-day-average",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Flights 7 day average"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#double"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "https://purl.org/csv-cubed/resources/measures#7-day-average-flights"
-                }
-            ]
-        },
-        {
-            "@id": "number-of-uk-flights.csv#component/flights-7-day-average",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "number-of-uk-flights.csv#measure/flights-7-day-average"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "number-of-uk-flights.csv#measure/flights-7-day-average"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 3
                 }
             ]
         },
@@ -418,37 +491,388 @@
             ]
         },
         {
-            "@id": "number-of-uk-flights.csv#unit/number",
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1096",
             "@type": [
-                "http://qudt.org/schema/qudt/Unit",
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://qudt.org/schema/qudt/isScalingOf": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
-            ],
-            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
-                {
-                    "@type": "http://www.w3.org/2001/XMLSchema#float",
-                    "@value": "1.0"
-                }
-            ],
-            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Number"
+                    "@value": "[Note 1] this note applies to C1096"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1097",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C1097"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1098",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C1098"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1099",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C1099"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1100",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C1100"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c1101",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C1101"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c258",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C258"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c259",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C259"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c260",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C260"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c261",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C261"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c262",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C262"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c263",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C263"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c264",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C264"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c365",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C365"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c366",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C366"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c367",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C367"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c368",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C368"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c369",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C369"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c370",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C370"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c411",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C411"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c412",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C412"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c413",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C413"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c414",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C414"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c415",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C415"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c416",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C416"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c731",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C731"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c732",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C732"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c733",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C733"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c734",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C734"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c735",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C735"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#attribute/observation-status/-note-1-this-note-applies-to-c736",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "[Note 1] this note applies to C736"
+                }
+            ]
+        },
+        {
+            "@id": "number-of-uk-flights.csv#unit/count",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Count"
                 }
             ]
         }
