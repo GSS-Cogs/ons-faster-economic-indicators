@@ -18,12 +18,12 @@
   },
   "concepts": [
     {
-      "label": "SA",
+      "label": "Seasonally adjusted",
       "notation": "SA",
       "description": "Seasonally adjusted value"
     },
     {
-      "label": "NSA",
+      "label": "Non seasonally adjusted",
       "notation": "NSA",
       "description": "Non-seasonally adjusted value"
     },

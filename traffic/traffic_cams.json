@@ -1,0 +1,123 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Traffic camera activity",
+    "summary": "Counts of pedestrians and types of vehicles captured by traffic cameras",
+    "description": "Busyness indices using traffic camera data to monitor flows of cars, pedestrians, cyclists, buses and commercial vehicles for selected cities and regions of the UK. Experimental Statistics.",
+    "keywords": [
+        "cars",
+        "trucks",
+        "lorries",
+        "HGV",
+        "busyness"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
+    "columns": {
+        "Date": {
+            "label": "Date",
+            "from_template": "day"
+        },
+        "Location": {
+            "type": "dimension",
+            "code_list": {
+                "title": "Traffic camera regions",
+                "summary": "List of regions from which traffic camera data is collected",
+                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "North East",
+                        "description": "Publicly available traffic cameras from https://netrafficcams.co.uk/map",
+                        "notation": "North East"
+                    },
+                    {
+                        "label": "London",
+                        "description": "Publicly available traffic cameras from Transport for London https://www.tfljamcams.net/",
+                        "notation": "London"
+                    },
+                    {
+                        "label": "Greater Manchester",
+                        "description": "Publicly available traffic cameras from Transport for Greater Manchester https://tfgm.com/roads/live-traffic-cameras",
+                        "notation": "Greater Manchester"
+                    },
+                    {
+                        "label": "Northern Ireland",
+                        "description": "Publicly available traffic cameras from Traffic Watch NI https://trafficwatchni.com/twni/cameras",
+                        "notation": "Northern Ireland"
+                    },
+                    {
+                        "label": "Southend",
+                        "description": "Publicly available traffic cameras in Southend https://sbctraffic.southend.gov.uk/",
+                        "notation": "Southend"
+                    },
+                    {
+                        "label": "Reading",
+                        "description": "Publicly available traffic cameras from travel Reading http://www.reading-travelinfo.co.uk/live-traffic-cameras.aspx",
+                        "notation": "Reading"
+                    }
+                ]
+            }
+        },
+        "Seasonal Adjustment": {
+            "type": "dimension",
+            "description": "SA = seasonally adjusted, NSA = non-seasonally adjusted",
+            "code_list": "./qube-config-traffic-SA.json"
+        },
+        "Vehicle": {
+            "type": "dimension",
+            "code_list": {
+                "title": "Activity type",
+                "summary": "List of vehicle types and pedestrians identified by traffic cameras",
+                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "concepts": [
+                    {
+                        "label": "Cars",
+                        "description": "Cars",
+                        "notation": "Cars"
+                    },
+                    {
+                        "label": "Motorbikes",
+                        "description": "Motorbikes",
+                        "notation": "Motorbikes"
+                    },
+                    {
+                        "label": "Buses",
+                        "description": "Buses",
+                        "notation": "Buses"
+                    },
+                    {
+                        "label": "Trucks",
+                        "description": "Trucks",
+                        "notation": "Trucks"
+                    },
+                    {
+                        "label": "Vans",
+                        "description": "Vans",
+                        "notation": "Vans"
+                    },
+                    {
+                        "label": "Pedestrians & cyclists",
+                        "description": "Pedestrians & cyclists",
+                        "notation": "Pedestrians & cyclists"
+                    }
+                ]
+            }
+        },
+        
+        "Value": {
+            "type": "observations"
+        },
+
+        "Unit": {
+            "type": "units"                
+        },
+        
+        "Marker": {
+            "from_template": "observation-status"
+        },
+
+        "Measure" : {
+            "type" : "measures"
+        }
+    }
+    }

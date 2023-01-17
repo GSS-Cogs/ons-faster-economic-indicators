@@ -5,12 +5,25 @@
     "tableSchema": "traffic-camera-regions.table.json",
     "rdfs:seeAlso": [
         {
+            "@id": "traffic-camera-regions.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
             "@id": "traffic-camera-regions.csv#code-list",
             "@type": [
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/prov#Entity"
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
@@ -20,7 +33,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T14:48:29.582616"
+                    "@value": "2023-01-17T14:09:40.081791"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -31,7 +44,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T14:48:29.582616"
+                    "@value": "2023-01-17T14:09:40.081791"
                 }
             ],
             "http://purl.org/dc/terms/title": [
@@ -50,6 +63,11 @@
                 {
                     "@language": "en",
                     "@value": "Traffic camera regions"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "traffic-camera-regions.csv#csvcubed-build-activity"
                 }
             ]
         }

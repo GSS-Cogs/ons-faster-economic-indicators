@@ -14,32 +14,32 @@
                         "required": true
                     },
                     {
-                        "titles": "Seasonal_adjustment",
-                        "name": "seasonal_adjustment",
-                        "propertyUrl": "traffic-camera-activity.csv#dimension/seasonal_adjustment",
-                        "valueUrl": "seasonal-adjustment.csv#{+seasonal_adjustment}",
+                        "titles": "Location",
+                        "name": "location",
+                        "propertyUrl": "traffic-camera-activity.csv#dimension/location",
+                        "valueUrl": "traffic-camera-regions.csv#{+location}",
                         "required": true
                     },
                     {
-                        "titles": "Region",
-                        "name": "region",
-                        "propertyUrl": "traffic-camera-activity.csv#dimension/region",
-                        "valueUrl": "traffic-camera-regions.csv#{+region}",
+                        "titles": "Vehicle",
+                        "name": "vehicle",
+                        "propertyUrl": "traffic-camera-activity.csv#dimension/vehicle",
+                        "valueUrl": "activity-type.csv#{+vehicle}",
                         "required": true
                     },
                     {
-                        "titles": "Measure",
-                        "name": "measure",
-                        "propertyUrl": "traffic-camera-activity.csv#dimension/measure",
-                        "valueUrl": "activity-type.csv#{+measure}",
-                        "required": true
-                    },
-                    {
-                        "titles": "Values",
-                        "name": "values",
-                        "propertyUrl": "traffic-camera-activity.csv#measure/counts-of-objects",
+                        "titles": "Value",
+                        "name": "value",
+                        "propertyUrl": "traffic-camera-activity.csv#measure/{+measure}",
                         "datatype": "decimal",
                         "required": false
+                    },
+                    {
+                        "titles": "Seasonal Adjustment",
+                        "name": "seasonal_adjustment",
+                        "propertyUrl": "traffic-camera-activity.csv#dimension/seasonal-adjustment",
+                        "valueUrl": "seasonal-adjustment.csv#{+seasonal_adjustment}",
+                        "required": true
                     },
                     {
                         "titles": "Marker",
@@ -47,6 +47,20 @@
                         "propertyUrl": "traffic-camera-activity.csv#attribute/observation-status",
                         "valueUrl": "traffic-camera-activity.csv#attribute/observation-status/{+marker}",
                         "required": false
+                    },
+                    {
+                        "titles": "Unit",
+                        "name": "unit",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "traffic-camera-activity.csv#unit/{+unit}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Measure",
+                        "name": "measure",
+                        "propertyUrl": "http://purl.org/linked-data/cube#measureType",
+                        "valueUrl": "traffic-camera-activity.csv#measure/{+measure}",
+                        "required": true
                     },
                     {
                         "name": "virt_type",
@@ -59,18 +73,6 @@
                         "virtual": true,
                         "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
                         "valueUrl": "traffic-camera-activity.csv#dataset"
-                    },
-                    {
-                        "name": "virt_unit",
-                        "virtual": true,
-                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
-                        "valueUrl": "traffic-camera-activity.csv#unit/number"
-                    },
-                    {
-                        "name": "virt_measure",
-                        "virtual": true,
-                        "propertyUrl": "http://purl.org/linked-data/cube#measureType",
-                        "valueUrl": "traffic-camera-activity.csv#measure/counts-of-objects"
                     }
                 ],
                 "foreignKeys": [
@@ -82,44 +84,40 @@
                         }
                     },
                     {
-                        "columnReference": "seasonal_adjustment",
-                        "reference": {
-                            "resource": "seasonal-adjustment.csv",
-                            "columnReference": "uri_identifier"
-                        }
-                    },
-                    {
-                        "columnReference": "region",
+                        "columnReference": "location",
                         "reference": {
                             "resource": "traffic-camera-regions.csv",
                             "columnReference": "uri_identifier"
                         }
                     },
                     {
-                        "columnReference": "measure",
+                        "columnReference": "vehicle",
                         "reference": {
                             "resource": "activity-type.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "seasonal_adjustment",
+                        "reference": {
+                            "resource": "seasonal-adjustment.csv",
                             "columnReference": "uri_identifier"
                         }
                     }
                 ],
                 "primaryKey": [
                     "date",
+                    "location",
+                    "vehicle",
                     "seasonal_adjustment",
-                    "region",
                     "measure"
                 ],
-                "aboutUrl": "traffic-camera-activity.csv#obs/{date},{seasonal_adjustment},{region},{measure}"
+                "aboutUrl": "traffic-camera-activity.csv#obs/{date},{location},{vehicle},{seasonal_adjustment}@{measure}"
             }
         },
         {
             "url": "date.csv",
             "tableSchema": "date.table.json",
-            "suppressOutput": true
-        },
-        {
-            "url": "seasonal-adjustment.csv",
-            "tableSchema": "seasonal-adjustment.table.json",
             "suppressOutput": true
         },
         {
@@ -131,43 +129,146 @@
             "url": "activity-type.csv",
             "tableSchema": "activity-type.table.json",
             "suppressOutput": true
+        },
+        {
+            "url": "seasonal-adjustment.csv",
+            "tableSchema": "seasonal-adjustment.table.json",
+            "suppressOutput": true
         }
     ],
     "rdfs:seeAlso": [
         {
-            "@id": "traffic-camera-activity.csv#component/observation-status",
+            "@id": "traffic-camera-activity.csv#dimension/date",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
-            "http://purl.org/linked-data/cube#attribute": [
+            "http://purl.org/linked-data/cube#codeList": [
                 {
-                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
+                    "@id": "date.csv#code-list"
                 }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "traffic-camera-activity.csv#class/date"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#dimension/location",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "traffic-camera-regions.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Location"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "traffic-camera-activity.csv#class/location"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#attribute/observation-status",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#AttributeProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Observation Status"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#class/date",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#class/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#component/location",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
+                    "@id": "traffic-camera-activity.csv#dimension/location"
                 }
             ],
-            "http://purl.org/linked-data/cube#componentRequired": [
+            "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@value": false
+                    "@id": "traffic-camera-activity.csv#dimension/location"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 8
+                    "@value": 2
                 }
             ]
         },
         {
             "@id": "traffic-camera-activity.csv#component/unit",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#attribute": [
                 {
@@ -186,6 +287,57 @@
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
+                    "@value": 7
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#component/number-of-vehicles",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "traffic-camera-activity.csv#measure/number-of-vehicles"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "traffic-camera-activity.csv#measure/number-of-vehicles"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#component/observation-status",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": false
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
                     "@value": 6
                 }
             ]
@@ -193,125 +345,32 @@
         {
             "@id": "traffic-camera-activity.csv#component/measure-type",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#class/measure",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#component/seasonal_adjustment",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "traffic-camera-activity.csv#dimension/seasonal_adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "traffic-camera-activity.csv#dimension/seasonal_adjustment"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 2
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#class/region",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#class/date",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#dimension/region",
-            "@type": [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "traffic-camera-regions.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Region"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "traffic-camera-activity.csv#class/region"
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#component/region",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/region"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
             "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/region"
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 3
+                    "@value": 4
                 }
             ]
         },
         {
             "@id": "traffic-camera-activity.csv#component/date",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -330,72 +389,94 @@
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#structure",
+            "@id": "traffic-camera-activity.csv#measure/number-of-vehicles",
             "@type": [
-                "http://purl.org/linked-data/cube#DataStructureDefinition",
-                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of vehicles"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#class/location",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#dimension/seasonal-adjustment",
+            "@type": [
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
-            "http://purl.org/linked-data/cube#component": [
+            "http://purl.org/linked-data/cube#codeList": [
                 {
-                    "@id": "traffic-camera-activity.csv#component/date"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/observation-status"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/unit"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/region"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/seasonal_adjustment"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/measure-type"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/measure"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#component/counts-of-objects"
+                    "@id": "seasonal-adjustment.csv#code-list"
                 }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "traffic-camera-activity.csv#class/seasonal-adjustment"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#component/vehicle",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/seasonal_adjustment"
-                },
+                    "@id": "traffic-camera-activity.csv#dimension/vehicle"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@id": "traffic-camera-activity.csv#measure/counts-of-objects"
-                },
+                    "@id": "traffic-camera-activity.csv#dimension/vehicle"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/measure"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#dimension/date"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "traffic-camera-activity.csv#dimension/region"
+                    "@value": 3
                 }
             ]
         },
         {
             "@id": "traffic-camera-activity.csv#dataset",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/ns/dcat#Dataset",
                 "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#DataSet"
             ],
             "http://purl.org/dc/terms/description": [
@@ -412,7 +493,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T14:48:29.652169"
+                    "@value": "2023-01-17T14:09:40.097952"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -423,7 +504,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2022-09-20T14:48:29.652169"
+                    "@value": "2023-01-17T14:09:40.097952"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -457,10 +538,6 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "lorries"
-                },
-                {
-                    "@language": "en",
                     "@value": "cars"
                 },
                 {
@@ -469,194 +546,103 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "trucks"
+                    "@value": "lorries"
                 },
                 {
                     "@language": "en",
                     "@value": "HGV"
+                },
+                {
+                    "@language": "en",
+                    "@value": "trucks"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
                 {
                     "@id": "https://www.ons.gov.uk/economy/economicoutputandproductivity"
                 }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "traffic-camera-activity.csv#csvcubed-build-activity"
+                }
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#component/measure",
+            "@id": "traffic-camera-activity.csv#class/vehicle",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#structure",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "traffic-camera-activity.csv#component/observation-status"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/number-of-vehicles"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/location"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/measure-type"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/unit"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/date"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/vehicle"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#component/seasonal-adjustment"
+                }
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/measure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
                 {
-                    "@id": "traffic-camera-activity.csv#dimension/measure"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
+                    "@id": "traffic-camera-activity.csv#dimension/vehicle"
+                },
                 {
-                    "@value": 4
+                    "@id": "traffic-camera-activity.csv#dimension/seasonal-adjustment"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#measure/number-of-vehicles"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#dimension/location"
+                },
+                {
+                    "@id": "traffic-camera-activity.csv#dimension/date"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
                 }
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#class/seasonal_adjustment",
+            "@id": "traffic-camera-activity.csv#dimension/vehicle",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#measure/counts-of-objects",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "counts of the number of pedestrians or vehicles identified on the traffic camera feed"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "counts of objects"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://gss-data.org.uk/def/measure/count"
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#dimension/seasonal_adjustment",
-            "@type": [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#DimensionProperty",
                 "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "seasonal-adjustment.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "SA = seasonally adjusted, NSA = non-seasonally adjusted"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Seasonal_adjustment"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "traffic-camera-activity.csv#class/seasonal_adjustment"
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#component/counts-of-objects",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "traffic-camera-activity.csv#measure/counts-of-objects"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "traffic-camera-activity.csv#measure/counts-of-objects"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 7
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#dimension/date",
-            "@type": [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "date.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "traffic-camera-activity.csv#class/date"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#attribute/observation-status",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#AttributeProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Observation Status"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#obsStatus"
-                }
-            ]
-        },
-        {
-            "@id": "traffic-camera-activity.csv#dimension/measure",
-            "@type": [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty"
             ],
             "http://purl.org/linked-data/cube#codeList": [
                 {
@@ -666,20 +652,43 @@
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Measure"
+                    "@value": "Vehicle"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#range": [
                 {
-                    "@id": "traffic-camera-activity.csv#class/measure"
+                    "@id": "traffic-camera-activity.csv#class/vehicle"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#component/seasonal-adjustment",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "traffic-camera-activity.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "traffic-camera-activity.csv#dimension/seasonal-adjustment"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
                 }
             ]
         },
         {
             "@id": "traffic-camera-activity.csv#dependency/date",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -693,27 +702,10 @@
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#dependency/seasonal-adjustment",
-            "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://rdfs.org/ns/void#dataDump": [
-                {
-                    "@id": "./seasonal-adjustment.csv-metadata.json"
-                }
-            ],
-            "http://rdfs.org/ns/void#uriSpace": [
-                {
-                    "@value": "seasonal-adjustment.csv#"
-                }
-            ]
-        },
-        {
             "@id": "traffic-camera-activity.csv#dependency/traffic-camera-regions",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -729,8 +721,8 @@
         {
             "@id": "traffic-camera-activity.csv#dependency/activity-type",
             "@type": [
-                "http://rdfs.org/ns/void#Dataset",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
             "http://rdfs.org/ns/void#dataDump": [
                 {
@@ -744,26 +736,43 @@
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#attribute/observation-status/data-contain-high-levels-of-imputation",
+            "@id": "traffic-camera-activity.csv#dependency/seasonal-adjustment",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://rdfs.org/ns/void#Dataset"
             ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
+            "http://rdfs.org/ns/void#dataDump": [
                 {
-                    "@language": "en",
-                    "@value": "Data contain high levels of imputation"
+                    "@id": "./seasonal-adjustment.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "seasonal-adjustment.csv#"
                 }
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#attribute/observation-status/data-suppressed-as-unreliable",
+            "@id": "traffic-camera-activity.csv#attribute/observation-status/data-excluded-because-of-reliability-issues",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Data suppressed as unreliable"
+                    "@value": "Data excluded because of reliability issues"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-activity.csv#attribute/observation-status/data-has-high-levels-of-imputation",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Data has high levels of imputation"
                 }
             ]
         },
@@ -780,49 +789,28 @@
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#attribute/observation-status/no-data-available",
+            "@id": "traffic-camera-activity.csv#attribute/observation-status/data-unavailable",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "No data available"
+                    "@value": "Data unavailable"
                 }
             ]
         },
         {
-            "@id": "traffic-camera-activity.csv#unit/number",
+            "@id": "traffic-camera-activity.csv#unit/count",
             "@type": [
                 "http://qudt.org/schema/qudt/Unit",
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://qudt.org/schema/qudt/isScalingOf": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
-            ],
-            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
-                {
-                    "@type": "http://www.w3.org/2001/XMLSchema#float",
-                    "@value": "1.0"
-                }
-            ],
-            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
-                {
-                    "@id": "http://qudt.org/vocab/unit/NUM"
-                }
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "number"
+                    "@value": "Count"
                 }
             ]
         }
