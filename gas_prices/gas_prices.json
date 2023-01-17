@@ -1,0 +1,37 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Gas prices",
+    "summary": "Daily and rolling average System Average Price (SAP) of gas traded in Great Britain over the On-the-Day Commodity Market (OCM)",
+    "description": "\nThe daily SAP determines the futures price and is used to indicate supply constraints and demand pressures. These data are accessed weekly, in a Monday to Sunday format. The data can be subject to extreme within-day trading prices, which can lead to skewing of actual traded prices. It must also be noted that while these data reflect spot prices on the day, traders can opt for futures contracts where the buyer and the seller agree the market-determined price for gas for a future date. Other markets also exist for wholesale gas trading in Great Britain. Despite this, the scope of SAP is sufficient to provide a representation of supply constraints and demand pressures in the gas industry.",   
+    "keywords": [
+        "gas",
+        "sap",
+        "energy",
+        "trade",
+        "price"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes": "https://www.ons.gov.uk/businessindustryandtrade",
+    "columns": {
+        "Date": {
+            "from_template": "day"
+        },
+        "Gas price": {
+            "type": "observations",
+            "data_type": "decimal",
+            "measure": {
+                "label": "SAP",
+                "description": "System average price (aggregate price traded for a specific delivery day)"
+            },
+            "unit": {
+                "label": "p/kWh",
+                "description": "Pence per Kilowatt hour"
+            }
+        },
+        "Periodicity": {
+            "type": "dimension",
+            "description": "System Average Price of gas traded on a specific day and preceding seven-day rolling average"
+        }
+    }
+}
