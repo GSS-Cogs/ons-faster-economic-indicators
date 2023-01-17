@@ -1,0 +1,31 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Heathrow Flight Passengers",
+    "summary": "Monthly passenger numbers at London Heathrow Airport, to, from, and within the UK",
+    "description": "These data are the total passenger numbers arriving and departing on scheduled or charter international and domestic services at London Heathrow Airport (LHR) over a calendar month.",
+    "keywords": [
+        "passenger",
+        "flights",
+        "domestic",
+        "international"
+    ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
+    "columns": {
+        "Date": {
+            "label": "Date",
+            "from_template": "month"
+        },
+
+        "Metric": {
+            "type": "measures"
+        },
+        "Value": {
+            "type": "observations"
+        },
+        "Unit": {
+            "type": "units"
+        }
+}
+}
