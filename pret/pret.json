@@ -17,8 +17,8 @@
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes": "https://www.ons.gov.uk/businessindustryandtrade",
     "columns": {
-        "Week": {
-            "from_template": "week"
+        "Date": {
+            "from_template": "day"
         },
         "Value": {
             "type": "observations",
@@ -39,7 +39,7 @@
                 "title": "Pret A Manger locations",
                 "summary": "Stores included in each location",
                 "license": "https://creativecommons.org/licenses/by/4.0/",
-                "from_existing": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
+                "from_existing": "http://purl.org/linked-data/sdmx/2009/dimension#refArea",
                 "concepts": [
                     {
                         "label": "Yorkshire",
