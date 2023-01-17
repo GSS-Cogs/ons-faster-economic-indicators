@@ -7,5 +7,5 @@ This is a demonstration library for ONS' faster economic indicators data; it con
 * `adzuna/` contains the configuration file and the latest output folder for CSV-W conversion of the adzuna indicator
 * `vat/` contains the configuration file and the latest output folder for CSV-W conversion of the vat indicator
 * `traffic/` contains the configuration file and the latest output folder for CSV-W conversion of the traffic cameras indicator
-
+* `gas_prices/` contains the configuration file and the latest output folder for CSV-W conversion of the SAP gas indicator
 
