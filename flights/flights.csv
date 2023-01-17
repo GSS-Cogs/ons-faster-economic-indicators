@@ -249,13 +249,13 @@ Date,Marker,Metric,value,Unit
 2019-09-06,,Number of flights,6850.0,Count
 2019-09-07,,Number of flights,5997.0,Count
 2019-09-08,,Number of flights,6507.0,Count
-2019-09-09,[Note 1] this note applies to C258,Number of flights,6096.0,Count
-2019-09-10,[Note 1] this note applies to C259,Number of flights,5926.0,Count
-2019-09-11,[Note 1] this note applies to C260,Number of flights,6656.0,Count
-2019-09-12,[Note 1] this note applies to C261,Number of flights,6948.0,Count
-2019-09-13,[Note 1] this note applies to C262,Number of flights,7047.0,Count
-2019-09-14,[Note 1] this note applies to C263,Number of flights,5965.0,Count
-2019-09-15,[Note 1] this note applies to C264,Number of flights,6467.0,Count
+2019-09-09,,Number of flights,6096.0,Count
+2019-09-10,,Number of flights,5926.0,Count
+2019-09-11,,Number of flights,6656.0,Count
+2019-09-12,,Number of flights,6948.0,Count
+2019-09-13,,Number of flights,7047.0,Count
+2019-09-14,,Number of flights,5965.0,Count
+2019-09-15,,Number of flights,6467.0,Count
 2019-09-16,,Number of flights,6847.0,Count
 2019-09-17,,Number of flights,6663.0,Count
 2019-09-18,,Number of flights,6678.0,Count
@@ -356,12 +356,12 @@ Date,Marker,Metric,value,Unit
 2019-12-22,,Number of flights,5380.0,Count
 2019-12-23,,Number of flights,5494.0,Count
 2019-12-24,,Number of flights,3883.0,Count
-2019-12-25,[Note 1] this note applies to C365,Number of flights,1386.0,Count
-2019-12-26,[Note 1] this note applies to C366,Number of flights,4498.0,Count
-2019-12-27,[Note 1] this note applies to C367,Number of flights,5513.0,Count
-2019-12-28,[Note 1] this note applies to C368,Number of flights,4894.0,Count
-2019-12-29,[Note 1] this note applies to C369,Number of flights,5220.0,Count
-2019-12-30,[Note 1] this note applies to C370,Number of flights,5140.0,Count
+2019-12-25,,Number of flights,1386.0,Count
+2019-12-26,,Number of flights,4498.0,Count
+2019-12-27,,Number of flights,5513.0,Count
+2019-12-28,,Number of flights,4894.0,Count
+2019-12-29,,Number of flights,5220.0,Count
+2019-12-30,,Number of flights,5140.0,Count
 2019-12-31,,Number of flights,4112.0,Count
 2020-01-01,,Number of flights,3950.0,Count
 2020-01-02,,Number of flights,5252.0,Count
@@ -402,12 +402,12 @@ Date,Marker,Metric,value,Unit
 2020-02-06,,Number of flights,5058.0,Count
 2020-02-07,,Number of flights,5525.0,Count
 2020-02-08,,Number of flights,4410.0,Count
-2020-02-09,[Note 1] this note applies to C411,Number of flights,3171.0,Count
-2020-02-10,[Note 1] this note applies to C412,Number of flights,5056.0,Count
-2020-02-11,[Note 1] this note applies to C413,Number of flights,4579.0,Count
-2020-02-12,[Note 1] this note applies to C414,Number of flights,4801.0,Count
-2020-02-13,[Note 1] this note applies to C415,Number of flights,5299.0,Count
-2020-02-14,[Note 1] this note applies to C416,Number of flights,5870.0,Count
+2020-02-09,,Number of flights,3171.0,Count
+2020-02-10,,Number of flights,5056.0,Count
+2020-02-11,,Number of flights,4579.0,Count
+2020-02-12,,Number of flights,4801.0,Count
+2020-02-13,,Number of flights,5299.0,Count
+2020-02-14,,Number of flights,5870.0,Count
 2020-02-15,,Number of flights,4506.0,Count
 2020-02-16,,Number of flights,4927.0,Count
 2020-02-17,,Number of flights,5392.0,Count
@@ -722,12 +722,12 @@ Date,Marker,Metric,value,Unit
 2020-12-22,,Number of flights,1508.0,Count
 2020-12-23,,Number of flights,1684.0,Count
 2020-12-24,,Number of flights,1231.0,Count
-2020-12-25,[Note 1] this note applies to C731,Number of flights,364.0,Count
-2020-12-26,[Note 1] this note applies to C732,Number of flights,926.0,Count
-2020-12-27,[Note 1] this note applies to C733,Number of flights,1337.0,Count
-2020-12-28,[Note 1] this note applies to C734,Number of flights,1258.0,Count
-2020-12-29,[Note 1] this note applies to C735,Number of flights,1233.0,Count
-2020-12-30,[Note 1] this note applies to C736,Number of flights,1359.0,Count
+2020-12-25,,Number of flights,364.0,Count
+2020-12-26,,Number of flights,926.0,Count
+2020-12-27,,Number of flights,1337.0,Count
+2020-12-28,,Number of flights,1258.0,Count
+2020-12-29,,Number of flights,1233.0,Count
+2020-12-30,,Number of flights,1359.0,Count
 2020-12-31,,Number of flights,952.0,Count
 2021-01-01,,Number of flights,753.0,Count
 2021-01-02,,Number of flights,1412.0,Count
@@ -1087,12 +1087,12 @@ Date,Marker,Metric,value,Unit
 2021-12-22,,Number of flights,3667.0,Count
 2021-12-23,,Number of flights,3767.0,Count
 2021-12-24,,Number of flights,2849.0,Count
-2021-12-25,[Note 1] this note applies to C1096,Number of flights,934.0,Count
-2021-12-26,[Note 1] this note applies to C1097,Number of flights,3135.0,Count
-2021-12-27,[Note 1] this note applies to C1098,Number of flights,3568.0,Count
-2021-12-28,[Note 1] this note applies to C1099,Number of flights,3238.0,Count
-2021-12-29,[Note 1] this note applies to C1100,Number of flights,3224.0,Count
-2021-12-30,[Note 1] this note applies to C1101,Number of flights,3358.0,Count
+2021-12-25,,Number of flights,934.0,Count
+2021-12-26,,Number of flights,3135.0,Count
+2021-12-27,,Number of flights,3568.0,Count
+2021-12-28,,Number of flights,3238.0,Count
+2021-12-29,,Number of flights,3224.0,Count
+2021-12-30,,Number of flights,3358.0,Count
 2021-12-31,,Number of flights,2904.0,Count
 2022-01-01,,Number of flights,2501.0,Count
 2022-01-02,,Number of flights,3685.0,Count
@@ -1434,12 +1434,12 @@ Date,Marker,Metric,value,Unit
 2022-12-04,,Number of flights,4411.0,Count
 2022-12-05,,Number of flights,4649.0,Count
 2022-12-06,,Number of flights,4275.0,Count
-2019-01-02,,Seven-day average,1,Count
-2019-01-03,,Seven-day average,1,Count
-2019-01-04,,Seven-day average,1,Count
-2019-01-05,,Seven-day average,1,Count
-2019-01-06,,Seven-day average,1,Count
-2019-01-07,,Seven-day average,1,Count
+2019-01-02,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
+2019-01-03,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
+2019-01-04,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
+2019-01-05,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
+2019-01-06,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
+2019-01-07,unable to calculate seven-day average due to insufficient data,Seven-day average,,Count
 2019-01-08,,Seven-day average,5191.0,Count
 2019-01-09,,Seven-day average,5128.0,Count
 2019-01-10,,Seven-day average,5062.0,Count
@@ -1684,13 +1684,13 @@ Date,Marker,Metric,value,Unit
 2019-09-06,,Seven-day average,6679.0,Count
 2019-09-07,,Seven-day average,6650.0,Count
 2019-09-08,,Seven-day average,6669.0,Count
-2019-09-09,[Note 1] this note applies to C258,Seven-day average,6617.0,Count
-2019-09-10,[Note 1] this note applies to C259,Seven-day average,6601.0,Count
-2019-09-11,[Note 1] this note applies to C260,Seven-day average,6591.0,Count
-2019-09-12,[Note 1] this note applies to C261,Seven-day average,6589.0,Count
-2019-09-13,[Note 1] this note applies to C262,Seven-day average,6617.0,Count
-2019-09-14,[Note 1] this note applies to C263,Seven-day average,6612.0,Count
-2019-09-15,[Note 1] this note applies to C264,Seven-day average,6607.0,Count
+2019-09-09,average value affected by interpolated daily flight value,Seven-day average,6617.0,Count
+2019-09-10,average value affected by interpolated daily flight value,Seven-day average,6601.0,Count
+2019-09-11,average value affected by interpolated daily flight value,Seven-day average,6591.0,Count
+2019-09-12,average value affected by interpolated daily flight value,Seven-day average,6589.0,Count
+2019-09-13,average value affected by interpolated daily flight value,Seven-day average,6617.0,Count
+2019-09-14,average value affected by interpolated daily flight value,Seven-day average,6612.0,Count
+2019-09-15,average value affected by interpolated daily flight value,Seven-day average,6607.0,Count
 2019-09-16,,Seven-day average,6648.0,Count
 2019-09-17,,Seven-day average,6656.0,Count
 2019-09-18,,Seven-day average,6659.0,Count
@@ -1791,12 +1791,12 @@ Date,Marker,Metric,value,Unit
 2019-12-22,,Seven-day average,5422.0,Count
 2019-12-23,,Seven-day average,5409.0,Count
 2019-12-24,,Seven-day average,5245.0,Count
-2019-12-25,[Note 1] this note applies to C365,Seven-day average,5107.0,Count
-2019-12-26,[Note 1] this note applies to C366,Seven-day average,4921.0,Count
-2019-12-27,[Note 1] this note applies to C367,Seven-day average,4861.0,Count
-2019-12-28,[Note 1] this note applies to C368,Seven-day average,4836.0,Count
-2019-12-29,[Note 1] this note applies to C369,Seven-day average,4813.0,Count
-2019-12-30,[Note 1] this note applies to C370,Seven-day average,4763.0,Count
+2019-12-25,average value affected by interpolated daily flight value,Seven-day average,5107.0,Count
+2019-12-26,average value affected by interpolated daily flight value,Seven-day average,4921.0,Count
+2019-12-27,average value affected by interpolated daily flight value,Seven-day average,4861.0,Count
+2019-12-28,average value affected by interpolated daily flight value,Seven-day average,4836.0,Count
+2019-12-29,average value affected by interpolated daily flight value,Seven-day average,4813.0,Count
+2019-12-30,average value affected by interpolated daily flight value,Seven-day average,4763.0,Count
 2019-12-31,,Seven-day average,4795.0,Count
 2020-01-01,,Seven-day average,4761.0,Count
 2020-01-02,,Seven-day average,4869.0,Count
@@ -1837,12 +1837,12 @@ Date,Marker,Metric,value,Unit
 2020-02-06,,Seven-day average,4856.0,Count
 2020-02-07,,Seven-day average,4872.0,Count
 2020-02-08,,Seven-day average,4888.0,Count
-2020-02-09,[Note 1] this note applies to C411,Seven-day average,4855.0,Count
-2020-02-10,[Note 1] this note applies to C412,Seven-day average,4844.0,Count
-2020-02-11,[Note 1] this note applies to C413,Seven-day average,4852.0,Count
-2020-02-12,[Note 1] this note applies to C414,Seven-day average,4880.0,Count
-2020-02-13,[Note 1] this note applies to C415,Seven-day average,4915.0,Count
-2020-02-14,[Note 1] this note applies to C416,Seven-day average,4964.0,Count
+2020-02-09,average value affected by interpolated daily flight value,Seven-day average,4855.0,Count
+2020-02-10,average value affected by interpolated daily flight value,Seven-day average,4844.0,Count
+2020-02-11,average value affected by interpolated daily flight value,Seven-day average,4852.0,Count
+2020-02-12,average value affected by interpolated daily flight value,Seven-day average,4880.0,Count
+2020-02-13,average value affected by interpolated daily flight value,Seven-day average,4915.0,Count
+2020-02-14,average value affected by interpolated daily flight value,Seven-day average,4964.0,Count
 2020-02-15,,Seven-day average,4978.0,Count
 2020-02-16,,Seven-day average,5005.0,Count
 2020-02-17,,Seven-day average,5053.0,Count
@@ -2157,12 +2157,12 @@ Date,Marker,Metric,value,Unit
 2020-12-22,,Seven-day average,2010.0,Count
 2020-12-23,,Seven-day average,2023.0,Count
 2020-12-24,,Seven-day average,1885.0,Count
-2020-12-25,[Note 1] this note applies to C731,Seven-day average,1685.0,Count
-2020-12-26,[Note 1] this note applies to C732,Seven-day average,1502.0,Count
-2020-12-27,[Note 1] this note applies to C733,Seven-day average,1370.0,Count
-2020-12-28,[Note 1] this note applies to C734,Seven-day average,1289.0,Count
-2020-12-29,[Note 1] this note applies to C735,Seven-day average,1250.0,Count
-2020-12-30,[Note 1] this note applies to C736,Seven-day average,1203.0,Count
+2020-12-25,average value affected by interpolated daily flight value,Seven-day average,1685.0,Count
+2020-12-26,average value affected by interpolated daily flight value,Seven-day average,1502.0,Count
+2020-12-27,average value affected by interpolated daily flight value,Seven-day average,1370.0,Count
+2020-12-28,average value affected by interpolated daily flight value,Seven-day average,1289.0,Count
+2020-12-29,average value affected by interpolated daily flight value,Seven-day average,1250.0,Count
+2020-12-30,average value affected by interpolated daily flight value,Seven-day average,1203.0,Count
 2020-12-31,,Seven-day average,1163.0,Count
 2021-01-01,,Seven-day average,1117.0,Count
 2021-01-02,,Seven-day average,1186.0,Count
@@ -2522,12 +2522,12 @@ Date,Marker,Metric,value,Unit
 2021-12-22,,Seven-day average,3820.0,Count
 2021-12-23,,Seven-day average,3808.0,Count
 2021-12-24,,Seven-day average,3580.0,Count
-2021-12-25,[Note 1] this note applies to C1096,Seven-day average,3512.0,Count
-2021-12-26,[Note 1] this note applies to C1097,Seven-day average,3430.0,Count
-2021-12-27,[Note 1] this note applies to C1098,Seven-day average,3366.0,Count
-2021-12-28,[Note 1] this note applies to C1099,Seven-day average,3317.0,Count
-2021-12-29,[Note 1] this note applies to C1100,Seven-day average,3253.0,Count
-2021-12-30,[Note 1] this note applies to C1101,Seven-day average,3195.0,Count
+2021-12-25,average value affected by interpolated daily flight value,Seven-day average,3512.0,Count
+2021-12-26,average value affected by interpolated daily flight value,Seven-day average,3430.0,Count
+2021-12-27,average value affected by interpolated daily flight value,Seven-day average,3366.0,Count
+2021-12-28,average value affected by interpolated daily flight value,Seven-day average,3317.0,Count
+2021-12-29,average value affected by interpolated daily flight value,Seven-day average,3253.0,Count
+2021-12-30,average value affected by interpolated daily flight value,Seven-day average,3195.0,Count
 2021-12-31,,Seven-day average,3203.0,Count
 2022-01-01,,Seven-day average,3133.0,Count
 2022-01-02,,Seven-day average,3211.0,Count
