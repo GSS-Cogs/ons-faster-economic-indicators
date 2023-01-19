@@ -32,7 +32,7 @@
                     {
                         "label": "New reporters",
                         "description": "Number of new reporters",
-                        "notation": "New reporters"
+                        "notation": "New reporters "
                     },
                     {
                         "label": "Record type Tax due",
@@ -48,11 +48,6 @@
                         "label": "Record type Re-input tax due",
                         "description": "Number of reporters by re-input tax due record type",
                         "notation": "Record type Re-input tax due"
-                    },
-                    {
-                        "label": "Record type Re-input repayment claim",
-                        "description": "Number of reporters by re-input repayment claim record type",
-                        "notation": "Record type Re-input repayment claim"
                     }
 ]
 }

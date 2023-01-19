@@ -5,25 +5,13 @@
     "tableSchema": "seasonal-adjustment.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "seasonal-adjustment.csv#csvcubed-build-activity",
-            "@type": [
-                "http://www.w3.org/ns/prov#Activity",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
-                }
-            ]
-        },
-        {
             "@id": "seasonal-adjustment.csv#code-list",
             "@type": [
-                "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/ns/prov#Entity",
                 "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/ns/dcat#Dataset"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -44,7 +32,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T12:23:46.488897"
+                    "@value": "2023-01-19T09:36:39.355973"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -55,7 +43,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-13T12:23:46.488897"
+                    "@value": "2023-01-19T09:36:39.355973"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -84,7 +72,7 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "SA"
+                    "@value": "7MA"
                 },
                 {
                     "@language": "en",
@@ -92,7 +80,7 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "7MA"
+                    "@value": "SA"
                 },
                 {
                     "@language": "en",
@@ -102,6 +90,18 @@
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
                     "@id": "seasonal-adjustment.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "seasonal-adjustment.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
                 }
             ]
         }
