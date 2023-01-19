@@ -1,0 +1,578 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "gas-prices.csv#dataset",
+    "tables": [
+        {
+            "url": "gas-prices.csv",
+            "tableSchema": {
+                "columns": [
+                    {
+                        "titles": "Date",
+                        "name": "date",
+                        "propertyUrl": "gas-prices.csv#dimension/day",
+                        "valueUrl": "day.csv#{+date}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Periodicity",
+                        "name": "periodicity",
+                        "propertyUrl": "gas-prices.csv#dimension/periodicity",
+                        "valueUrl": "periodicity.csv#{+periodicity}",
+                        "required": true
+                    },
+                    {
+                        "titles": "Gas price",
+                        "name": "gas_price",
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "gas-prices.csv#measure/sap",
+                        "datatype": "decimal",
+                        "required": true
+                    },
+                    {
+                        "name": "virt_slice",
+                        "virtual": true,
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Slice"
+                    },
+                    {
+                        "name": "virt_slice_structure",
+                        "virtual": true,
+                        "propertyUrl": "qb:sliceStructure",
+                        "valueUrl": "gas-prices.csv#slice/cross-measures"
+                    },
+                    {
+                        "name": "virt_obs_gas_price",
+                        "virtual": true,
+                        "propertyUrl": "qb:Observation",
+                        "valueUrl": "gas-prices.csv#obs/{date},{periodicity}@sap"
+                    },
+                    {
+                        "name": "virt_obs_gas_price_meas",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "qb:measureType",
+                        "valueUrl": "gas-prices.csv#measure/sap"
+                    },
+                    {
+                        "name": "virt_obs_gas_price_unit",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "gas-prices.csv#unit/p/kwh"
+                    },
+                    {
+                        "name": "virt_dim_gas_price_date",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "gas-prices.csv#dimension/day",
+                        "valueUrl": "day.csv#{+date}"
+                    },
+                    {
+                        "name": "virt_dim_gas_price_periodicity",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "gas-prices.csv#dimension/periodicity",
+                        "valueUrl": "periodicity.csv#{+periodicity}"
+                    },
+                    {
+                        "name": "virt_obs_gas_price_type",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "qb:Observation"
+                    },
+                    {
+                        "name": "virt_dataSet_gas_price",
+                        "virtual": true,
+                        "aboutUrl": "gas-prices.csv#obs/{date},{periodicity}@sap",
+                        "propertyUrl": "qb:dataSet",
+                        "valueUrl": "gas-prices.csv#dataset"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "date",
+                        "reference": {
+                            "resource": "day.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    },
+                    {
+                        "columnReference": "periodicity",
+                        "reference": {
+                            "resource": "periodicity.csv",
+                            "columnReference": "uri_identifier"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "date",
+                    "periodicity"
+                ],
+                "aboutUrl": "gas-prices.csv#slice/{date},{periodicity}"
+            }
+        },
+        {
+            "url": "day.csv",
+            "tableSchema": "day.table.json",
+            "suppressOutput": true
+        },
+        {
+            "url": "periodicity.csv",
+            "tableSchema": "periodicity.table.json",
+            "suppressOutput": true
+        }
+    ],
+    "rdfs:seeAlso": [
+        {
+            "@id": "gas-prices.csv#component/periodicity",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "gas-prices.csv#dimension/periodicity"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "gas-prices.csv#dimension/periodicity"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#dimension/day",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "day.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "gas-prices.csv#class/day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "gas-prices.csv#component/measure-type"
+                },
+                {
+                    "@id": "gas-prices.csv#component/unit"
+                },
+                {
+                    "@id": "gas-prices.csv#component/sap"
+                },
+                {
+                    "@id": "gas-prices.csv#component/day"
+                },
+                {
+                    "@id": "gas-prices.csv#component/periodicity"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "gas-prices.csv#dimension/periodicity"
+                },
+                {
+                    "@id": "gas-prices.csv#dimension/day"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "gas-prices.csv#measure/sap"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "gas-prices.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#component/day",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "gas-prices.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "gas-prices.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#component/sap",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "gas-prices.csv#measure/sap"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "gas-prices.csv#measure/sap"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#slice/cross-measures",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#SliceKey"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "gas-prices.csv#dimension/day"
+                },
+                {
+                    "@id": "gas-prices.csv#dimension/periodicity"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#dimension/periodicity",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "periodicity.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "System Average Price of gas traded on a specific day and preceding seven-day rolling average"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Periodicity"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "gas-prices.csv#class/periodicity"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#class/periodicity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#measure/sap",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "System average price (aggregate price traded for a specific delivery day)"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "SAP"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#class/day",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#dataset",
+            "@type": [
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Resource"
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "\nThe daily SAP determines the futures price and is used to indicate supply constraints and demand pressures. These data are accessed weekly, in a Monday to Sunday format. The data can be subject to extreme within-day trading prices, which can lead to skewing of actual traded prices. It must also be noted that while these data reflect spot prices on the day, traders can opt for futures contracts where the buyer and the seller agree the market-determined price for gas for a future date. Other markets also exist for wholesale gas trading in Great Britain. Despite this, the scope of SAP is sufficient to provide a representation of supply constraints and demand pressures in the gas industry."
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Gas prices"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-01-17T16:30:02.413274"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-01-17T16:30:02.413274"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "https://www.gov.uk/government/organisations/office-for-national-statistics"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Gas prices"
+                }
+            ],
+            "http://purl.org/linked-data/cube#structure": [
+                {
+                    "@id": "gas-prices.csv#structure"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Daily and rolling average System Average Price (SAP) of gas traded in Great Britain over the On-the-Day Commodity Market (OCM)"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Gas prices"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "trade"
+                },
+                {
+                    "@language": "en",
+                    "@value": "energy"
+                },
+                {
+                    "@language": "en",
+                    "@value": "price"
+                },
+                {
+                    "@language": "en",
+                    "@value": "sap"
+                },
+                {
+                    "@language": "en",
+                    "@value": "gas"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#theme": [
+                {
+                    "@id": "https://www.ons.gov.uk/businessindustryandtrade"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "gas-prices.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#dependency/day",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./day.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "day.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#dependency/periodicity",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./periodicity.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "periodicity.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "gas-prices.csv#unit/p/kwh",
+            "@type": [
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Pence per Kilowatt hour"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "p/kWh"
+                }
+            ]
+        }
+    ]
+}
