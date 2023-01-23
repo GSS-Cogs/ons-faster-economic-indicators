@@ -1,0 +1,34 @@
+{
+    "$schema": "https://purl.org/csv-cubed/qube-config/v1",
+    "title": "Sales and jobs at small businesses",
+    "summary": "Indices of sales and jobs at small businesses from Xero, an accounting software company",
+    "description": "Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.\nSales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).\nJobs are measured by the number of unique employees of a business who are issued a payslip in a month.",
+    "keywords": [
+        "employees",
+        "employment",
+        "small businesses"
+           ],
+    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "themes": "https://www.ons.gov.uk/businessindustryandtrade",
+    "columns": {
+        "Date": {
+            "from_template": "month"
+        },
+        "Value": {
+            "type": "observations",
+            "data_type": "decimal"
+        },
+        "Measure": {
+              "label": "index",
+               "description": "index 2019 =100"
+            },
+         "Unit": {
+              "label": "unitless"
+            },
+        "Industry": {
+            "type": "dimension", 
+            "label": "Industry"
+        }
+    }
+}
