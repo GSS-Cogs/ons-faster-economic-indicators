@@ -1,23 +1,11 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "industry.csv#code-list",
-    "url": "industry.csv",
-    "tableSchema": "industry.table.json",
+    "@id": "month.csv#code-list",
+    "url": "month.csv",
+    "tableSchema": "month.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "industry.csv#csvcubed-build-activity",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/prov#Activity"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
-                }
-            ]
-        },
-        {
-            "@id": "industry.csv#code-list",
+            "@id": "month.csv#code-list",
             "@type": [
                 "http://www.w3.org/ns/dcat#Resource",
                 "http://www.w3.org/2004/02/skos/core#ConceptScheme",
@@ -27,36 +15,48 @@
             ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Industry"
+                    "@value": "Month"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-23T10:47:29.546978"
+                    "@value": "2023-01-23T10:47:29.538117"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-23T10:47:29.546978"
+                    "@value": "2023-01-23T10:47:29.538117"
                 }
             ],
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Industry"
+                    "@value": "Month"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Industry"
+                    "@value": "Month"
                 }
             ],
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
-                    "@id": "industry.csv#csvcubed-build-activity"
+                    "@id": "month.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "month.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
                 }
             ]
         }

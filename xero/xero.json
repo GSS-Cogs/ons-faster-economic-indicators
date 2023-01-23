@@ -20,15 +20,17 @@
             "data_type": "decimal"
         },
         "Measure": {
-              "label": "index",
-               "description": "index 2019 =100"
+            "type": "measures"
             },
          "Unit": {
-              "label": "unitless"
+            "type": "units"
             },
         "Industry": {
             "type": "dimension", 
             "label": "Industry"
+        },
+        "Category":{
+            "type": "dimension"
         }
     }
 }
