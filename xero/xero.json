@@ -8,9 +8,10 @@
         "employment",
         "small businesses"
            ],
-    "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes": "https://www.ons.gov.uk/businessindustryandtrade",
+    "creator": "https://www.xero.com/uk/resources/small-business-insights/",
     "columns": {
         "Date": {
             "from_template": "month"
