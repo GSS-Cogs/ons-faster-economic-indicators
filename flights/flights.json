@@ -11,22 +11,32 @@
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
+    "creator" : "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html",
     "columns": {
         "Date": {
-            "label": "Date",
             "from_template": "day"
         },
         "Marker": {
             "from_template": "observation-status" 
         },
-        "Metric": {
-            "type": "measures"
-        },
+        
         "value": {
-            "type": "observations"            
-        },        
-        "Unit": {
-            "type": "units"
+            "type": "observations",
+            "unit": "http://qudt.org/vocab/unit/NUM",
+            "data_type": "int"
+        },
+        "Measure": {
+            "type": "measures",
+            "values": [
+                {
+                    "label": "Number of flights",
+                    "description": "Total number of arrival and departures for international and domestic flights, excluding flyovers."
+                },
+                {
+                    "label": "Seven-day average",
+                    "description": "Backward looking rolling seven day average of the Number of Flights"
+                }
+            ]
         }
-}
+    }
 }
