@@ -10,19 +10,21 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
-    "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
-    "creator" : "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html",
+    "themes": "https://www.ons.gov.uk/businessindustryandtrade",
+    "creator": "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html",
     "columns": {
         "Date": {
             "from_template": "day"
         },
         "Marker": {
-            "from_template": "observation-status" 
+            "from_template": "observation-status"
         },
-        
         "value": {
             "type": "observations",
-            "unit": "http://qudt.org/vocab/unit/NUM",
+            "unit": {
+                "from_existing": "http://qudt.org/vocab/unit/NUM",
+                "label": "number"
+            },
             "data_type": "int"
         },
         "Measure": {
