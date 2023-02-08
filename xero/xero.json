@@ -2,7 +2,7 @@
     "$schema": "https://purl.org/csv-cubed/qube-config/v1",
     "title": "Sales and jobs at small businesses",
     "summary": "Indices of sales and jobs at small businesses from Xero, an accounting software company",
-    "description": "Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.\nSales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).\nJobs are measured by the number of unique employees of a business who are issued a payslip in a month.",
+    "description": "Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.\nSmall businesses are here defined by Xero as organisations with fewer than 20 employees.\nSales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).\nJobs are measured based on the number of unique employees of a business who are issued a payslip in a month. One individual is one payslip in a particular month if they work at least 1 hour in that month. The sample of small businesses is restricted based on the employment size band and erroneous payslips or those identified for non-wage purposes are excluded. Growth in small business jobs is calculated using the weighted average of within-firm year-on-year growth in jobs. As such, this accounts for any change in subscriber base and firms which shutdown entirely due to the pandemic.\nSales are measured based on the face value of invoices issued by firms within each month. Subscriber base changes are accounted for by measuring sales growth in one specific month using the sample of firms which also operated in the previous year.",
     "keywords": [
         "employees",
         "employment",
@@ -18,20 +18,31 @@
         },
         "Value": {
             "type": "observations",
-            "data_type": "decimal"
+            "data_type": "decimal",
+            "unit": {
+                "label": "Unitless",
+                "from_existing": "http://qudt.org/vocab/unit/UNITLESS"
+            } 
         },
-        "Measure": {
-            "type": "measures"
-            },
-         "Unit": {
-            "type": "units"
-            },
+
         "Industry": {
             "type": "dimension", 
             "label": "Industry"
         },
-        "Category":{
-            "type": "dimension"
+        "Category": {
+            "type": "measures",
+            "values": [
+                {
+                    "label": "Sales",
+                    "description": "Index of sales where 100 is the equivalent month of 2019",
+                    "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
+                },
+                {
+                    "label": "Jobs",
+                    "description": "Index of jobs where 100 is the equivalent month of 2019",
+                    "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
+                }
+            ]
         }
     }
 }

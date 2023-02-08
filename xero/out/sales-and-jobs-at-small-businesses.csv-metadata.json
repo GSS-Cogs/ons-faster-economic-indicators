@@ -23,29 +23,15 @@
                     {
                         "titles": "Value",
                         "name": "value",
-                        "propertyUrl": "sales-and-jobs-at-small-businesses.csv#measure/{+measure}",
+                        "propertyUrl": "sales-and-jobs-at-small-businesses.csv#measure/{+category}",
                         "datatype": "decimal",
                         "required": true
                     },
                     {
                         "titles": "Category",
                         "name": "category",
-                        "propertyUrl": "sales-and-jobs-at-small-businesses.csv#dimension/category",
-                        "valueUrl": "category.csv#{+category}",
-                        "required": true
-                    },
-                    {
-                        "titles": "Measure",
-                        "name": "measure",
                         "propertyUrl": "http://purl.org/linked-data/cube#measureType",
-                        "valueUrl": "sales-and-jobs-at-small-businesses.csv#measure/{+measure}",
-                        "required": true
-                    },
-                    {
-                        "titles": "Unit",
-                        "name": "unit",
-                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
-                        "valueUrl": "sales-and-jobs-at-small-businesses.csv#unit/{+unit}",
+                        "valueUrl": "sales-and-jobs-at-small-businesses.csv#measure/{+category}",
                         "required": true
                     },
                     {
@@ -59,6 +45,12 @@
                         "virtual": true,
                         "propertyUrl": "http://purl.org/linked-data/cube#dataSet",
                         "valueUrl": "sales-and-jobs-at-small-businesses.csv#dataset"
+                    },
+                    {
+                        "name": "virt_unit",
+                        "virtual": true,
+                        "propertyUrl": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+                        "valueUrl": "sales-and-jobs-at-small-businesses.csv#unit/unitless"
                     }
                 ],
                 "foreignKeys": [
@@ -75,22 +67,14 @@
                             "resource": "industry.csv",
                             "columnReference": "uri_identifier"
                         }
-                    },
-                    {
-                        "columnReference": "category",
-                        "reference": {
-                            "resource": "category.csv",
-                            "columnReference": "uri_identifier"
-                        }
                     }
                 ],
                 "primaryKey": [
                     "date",
                     "industry",
-                    "category",
-                    "measure"
+                    "category"
                 ],
-                "aboutUrl": "sales-and-jobs-at-small-businesses.csv#obs/{date},{industry},{category}@{measure}"
+                "aboutUrl": "sales-and-jobs-at-small-businesses.csv#obs/{date},{industry}@{category}"
             }
         },
         {
@@ -102,22 +86,93 @@
             "url": "industry.csv",
             "tableSchema": "industry.table.json",
             "suppressOutput": true
-        },
-        {
-            "url": "category.csv",
-            "tableSchema": "category.table.json",
-            "suppressOutput": true
         }
     ],
     "rdfs:seeAlso": [
         {
+            "@id": "sales-and-jobs-at-small-businesses.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/unit"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/sales"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/industry"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/jobs"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/month"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#component/measure-type"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/jobs"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/sales"
+                }
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#component/unit",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#attribute": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentRequired": [
+                {
+                    "@value": true
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
             "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month",
             "@type": [
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
             ],
             "http://purl.org/linked-data/cube#codeList": [
                 {
@@ -142,200 +197,11 @@
             ]
         },
         {
-            "@id": "sales-and-jobs-at-small-businesses.csv#component/100-equivalent-month-of-2019",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/100-equivalent-month-of-2019"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/100-equivalent-month-of-2019"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#class/industry",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#component/category",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/category"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/category"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#measure/100-equivalent-month-of-2019",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#ComponentProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "100 = equivalent  month of 2019"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#dimension/category",
-            "@type": [
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "category.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Category"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#class/category"
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#structure",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DataStructureDefinition",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/measure-type"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/category"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/100-equivalent-month-of-2019"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/unit"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/month"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#component/industry"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/100-equivalent-month-of-2019"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/category"
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#component/industry",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 2
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#csvcubed-build-activity",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/prov#Activity"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#class/category",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Class"
-            ]
-        },
-        {
             "@id": "sales-and-jobs-at-small-businesses.csv#component/measure-type",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -354,95 +220,77 @@
             ]
         },
         {
-            "@id": "sales-and-jobs-at-small-businesses.csv#component/unit",
+            "@id": "sales-and-jobs-at-small-businesses.csv#component/industry",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#attribute": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                }
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
                 }
             ],
-            "http://purl.org/linked-data/cube#componentRequired": [
+            "http://purl.org/linked-data/cube#dimension": [
                 {
-                    "@value": true
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry"
                 }
             ],
             "http://purl.org/linked-data/cube#order": [
                 {
-                    "@value": 6
+                    "@value": 2
                 }
             ]
         },
         {
-            "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry",
+            "@id": "sales-and-jobs-at-small-businesses.csv#measure/jobs",
             "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
             ],
-            "http://purl.org/linked-data/cube#codeList": [
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
                 {
-                    "@id": "industry.csv#code-list"
+                    "@language": "en",
+                    "@value": "Index of jobs where 100 is the equivalent month of 2019"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Industry"
+                    "@value": "Jobs"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#range": [
                 {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#class/industry"
-                }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#component/month",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
                 }
             ],
-            "http://purl.org/linked-data/cube#dimension": [
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
                 {
-                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 1
+                    "@id": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
                 }
             ]
         },
         {
             "@id": "sales-and-jobs-at-small-businesses.csv#dataset",
             "@type": [
-                "http://www.w3.org/ns/dcat#Resource",
-                "http://purl.org/linked-data/cube#Attachable",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#Attachable",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://purl.org/linked-data/cube#DataSet"
+                "http://purl.org/linked-data/cube#DataSet",
+                "http://www.w3.org/ns/dcat#Resource"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "https://www.xero.com/uk/resources/small-business-insights/"
+                }
             ],
             "http://purl.org/dc/terms/description": [
                 {
                     "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
-                    "@value": "Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.\nSales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).\nJobs are measured by the number of unique employees of a business who are issued a payslip in a month."
+                    "@value": "Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.\nSmall businesses are here defined by Xero as organisations with fewer than 20 employees.\nSales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).\nJobs are measured based on the number of unique employees of a business who are issued a payslip in a month. One individual is one payslip in a particular month if they work at least 1 hour in that month. The sample of small businesses is restricted based on the employment size band and erroneous payslips or those identified for non-wage purposes are excluded. Growth in small business jobs is calculated using the weighted average of within-firm year-on-year growth in jobs. As such, this accounts for any change in subscriber base and firms which shutdown entirely due to the pandemic.\nSales are measured based on the face value of invoices issued by firms within each month. Subscriber base changes are accounted for by measuring sales growth in one specific month using the sample of firms which also operated in the previous year."
                 }
             ],
             "http://purl.org/dc/terms/identifier": [
@@ -453,18 +301,18 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-23T10:47:29.554244"
+                    "@value": "2023-02-08T14:47:22.373128"
                 }
             ],
             "http://purl.org/dc/terms/license": [
                 {
-                    "@id": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-01-23T10:47:29.554244"
+                    "@value": "2023-02-08T14:47:22.373128"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -498,15 +346,15 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
+                    "@value": "small businesses"
+                },
+                {
+                    "@language": "en",
                     "@value": "employment"
                 },
                 {
                     "@language": "en",
                     "@value": "employees"
-                },
-                {
-                    "@language": "en",
-                    "@value": "small businesses"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
@@ -521,10 +369,155 @@
             ]
         },
         {
+            "@id": "sales-and-jobs-at-small-businesses.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.2"
+                }
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#measure/sales",
+            "@type": [
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Index of sales where 100 is the equivalent month of 2019"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Sales"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#decimal"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
+                }
+            ]
+        },
+        {
             "@id": "sales-and-jobs-at-small-businesses.csv#class/month",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#class/industry",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#component/sales",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/sales"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/sales"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#dimension/industry",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "industry.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Industry"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#class/industry"
+                }
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#component/jobs",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/jobs"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#measure/jobs"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "sales-and-jobs-at-small-businesses.csv#component/month",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "sales-and-jobs-at-small-businesses.csv#dimension/month"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
             ]
         },
         {
@@ -562,33 +555,37 @@
             ]
         },
         {
-            "@id": "sales-and-jobs-at-small-businesses.csv#dependency/category",
+            "@id": "sales-and-jobs-at-small-businesses.csv#unit/unitless",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://rdfs.org/ns/void#Dataset"
+                "http://qudt.org/schema/qudt/Unit",
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
             ],
-            "http://rdfs.org/ns/void#dataDump": [
+            "http://qudt.org/schema/qudt/isScalingOf": [
                 {
-                    "@id": "./category.csv-metadata.json"
+                    "@id": "http://qudt.org/vocab/unit/UNITLESS"
                 }
             ],
-            "http://rdfs.org/ns/void#uriSpace": [
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasFactor": [
                 {
-                    "@value": "category.csv#"
+                    "@type": "http://www.w3.org/2001/XMLSchema#float",
+                    "@value": "1.0"
                 }
-            ]
-        },
-        {
-            "@id": "sales-and-jobs-at-small-businesses.csv#unit/index",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
-                "http://qudt.org/schema/qudt/Unit"
+            ],
+            "http://www.ontology-of-units-of-measure.org/resource/om-2/hasUnit": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/UNITLESS"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+                {
+                    "@id": "http://qudt.org/vocab/unit/UNITLESS"
+                }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Index"
+                    "@value": "Unitless"
                 }
             ]
         }
