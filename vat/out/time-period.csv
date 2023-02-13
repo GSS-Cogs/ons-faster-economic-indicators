@@ -1,3 +1,0 @@
-Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
-month-on-month,Month on Month,Month on Month,,0,Index calculated as the current month compared to the previous month
-month-on-a-year-ago,Month on a Year ago,Month on a Year ago,,1,Index calculated as the current month compared to the same month a year ago
