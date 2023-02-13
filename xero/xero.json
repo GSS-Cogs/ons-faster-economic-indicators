@@ -27,7 +27,8 @@
 
         "Industry": {
             "type": "dimension", 
-            "label": "Industry"
+            "code_list": "./xero-industries.json"
+
         },
         "Category": {
             "type": "measures",

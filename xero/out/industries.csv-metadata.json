@@ -1,11 +1,11 @@
 {
     "@context": "http://www.w3.org/ns/csvw",
-    "@id": "month.csv#code-list",
-    "url": "month.csv",
-    "tableSchema": "month.table.json",
+    "@id": "industries.csv#code-list",
+    "url": "industries.csv",
+    "tableSchema": "industries.table.json",
     "rdfs:seeAlso": [
         {
-            "@id": "month.csv#code-list",
+            "@id": "industries.csv#code-list",
             "@type": [
                 "http://www.w3.org/ns/dcat#Resource",
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
@@ -13,43 +13,55 @@
                 "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/ns/prov#Entity"
             ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "List of all industries included in the dataset, these do not match the SIC classification"
+                }
+            ],
             "http://purl.org/dc/terms/identifier": [
                 {
-                    "@value": "Month"
+                    "@value": "Industries"
                 }
             ],
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-13T16:03:26.686056"
+                    "@value": "2023-02-13T16:03:26.698478"
                 }
             ],
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-13T16:03:26.686056"
+                    "@value": "2023-02-13T16:03:26.698478"
                 }
             ],
             "http://purl.org/dc/terms/title": [
                 {
                     "@language": "en",
-                    "@value": "Month"
+                    "@value": "Industries"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "List of all industries included in the dataset"
                 }
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
                     "@language": "en",
-                    "@value": "Month"
+                    "@value": "Industries"
                 }
             ],
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
-                    "@id": "month.csv#csvcubed-build-activity"
+                    "@id": "industries.csv#csvcubed-build-activity"
                 }
             ]
         },
         {
-            "@id": "month.csv#csvcubed-build-activity",
+            "@id": "industries.csv#csvcubed-build-activity",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://www.w3.org/ns/prov#Activity"
