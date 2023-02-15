@@ -1,54 +1,53 @@
 {
-  "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
-  "title": "Metric",
-  "summary": "Diffusion index and new reporters",
-  "description": "Diffusion index based on reported turnover or expenditure, new reporters by record type",
-  "creator": "http://statistics.data.gov.uk",
-  "publisher": "http://statistics.data.gov.uk",
-  "license": "https://creativecommons.org/licenses/by/4.0/",
-  "keywords": [
-    "turnover",
-    "expenditure",
-    "reporters",
-    "tax due",
-    "record type",
-    "claim"
-  ],
-  "sort": {
-    "by": "label",
-    "method": "ascending"
-  },
-"concepts": [
-                    {
-                        "label": "Turnover current prices",
-                        "description": "Diffusion index based on reported turnover",
-                        "notation": "Turnover current prices"
-                    },
-                    {
-                        "label": "Expenditure current prices",
-                        "description": "Diffusion index based on reported expenditure",
-                        "notation": "Expenditure current prices"
-                    },
-                    {
-                        "label": "New reporters",
-                        "description": "Number of new reporters",
-                        "notation": "New reporters "
-                    },
-                    {
-                        "label": "Record type Tax due",
-                        "description": "Number of reporters by tax due record type",
-                        "notation": "Record type Tax due"
-                    },
-                    {
-                        "label": "Record type Repayment claim",
-                        "description": "Number of reporters by repayment claim record type",
-                        "notation": "Record type Repayment claim"
-                    },
-                    {
-                        "label": "Record type Re-input tax due",
-                        "description": "Number of reporters by re-input tax due record type",
-                        "notation": "Record type Re-input tax due"
-                    }
-]
+	"$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+	"title": "Metric",
+	"summary": "Diffusion index and new reporters",
+	"description": "Diffusion index based on reported turnover or expenditure, new reporters by record type",
+	"creator": "http://statistics.data.gov.uk",
+	"publisher": "http://statistics.data.gov.uk",
+	"license": "https://creativecommons.org/licenses/by/4.0/",
+	"keywords": [
+		"turnover",
+		"expenditure",
+		"reporters",
+		"tax due",
+		"record type",
+		"claim"
+	],
+	"sort": {
+		"by": "label",
+		"method": "ascending"
+	},
+	"concepts": [
+		{
+			"label": "Turnover current prices",
+			"description": "Diffusion index based on reported turnover",
+			"notation": "Turnover current prices"
+		},
+		{
+			"label": "Expenditure current prices",
+			"description": "Diffusion index based on reported expenditure",
+			"notation": "Expenditure current prices"
+		},
+		{
+			"label": "New reporters",
+			"description": "Number of new reporters",
+			"notation": "New reporters "
+		},
+		{
+			"label": "Record type Tax due",
+			"description": "Number of reporters by tax due record type",
+			"notation": "Record type Tax due"
+		},
+		{
+			"label": "Record type Repayment claim",
+			"description": "Number of reporters by repayment claim record type",
+			"notation": "Record type Repayment claim"
+		},
+		{
+			"label": "Record type Re-input tax due",
+			"description": "Number of reporters by re-input tax due record type",
+			"notation": "Record type Re-input tax due"
+		}
+	]
 }
-
