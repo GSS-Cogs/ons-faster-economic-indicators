@@ -30,7 +30,8 @@
             "code_list": "./vat-SA.json"
         },
         "SIC": {
-            "type": "dimension"
+            "type": "dimension",
+            "code_list": "./vat-sic.json"
         },
          "Variable": {
             "type": "measures",
