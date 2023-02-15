@@ -1,12 +1,12 @@
 Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
 all,All,All,,0,The all category is weighted to be representative of the UK's small business economy
-accommodation-and-food-services,Accommodation and Food Services,Accommodation and Food Services,all,0,Accommodation and Food Services
-administrative-and-support-services,Administrative and Support Services,Administrative and Support Services,all,1,Administrative and Support Services
-construction,Construction,Construction,all,2,Construction
-health-care-and-social-assistance,Health Care and Social Assistance,Health Care and Social Assistance,all,3,Health Care and Social Assistance
+manufacturing,Manufacturing,Manufacturing,all,0,Manufacturing
+construction,Construction,Construction,all,1,Construction
+retail-trade,Retail Trade,Retail Trade,all,2,Retail Trade
+accommodation-and-food-services,Accommodation and Food Services,Accommodation and Food Services,all,3,Accommodation and Food Services
 information-media-and-telecommunications,Information Media and Telecommunications,Information Media and Telecommunications,all,4,Information Media and Telecommunications
-manufacturing,Manufacturing,Manufacturing,all,5,Manufacturing
-other-services,Other Services,Other Services,all,6,Other Services
-professional-scientific-and-technical-services,"Professional, Scientific and Technical Services","Professional, Scientific and Technical Services",all,7,"Professional, Scientific and Technical Services"
-rental-hiring-and-real-estate-services,"Rental, Hiring and Real Estate Services","Rental, Hiring and Real Estate Services",all,8,"Rental, Hiring and Real Estate Services"
-retail-trade,Retail Trade,Retail Trade,all,9,Retail Trade
+rental-hiring-and-real-estate-services,"Rental, Hiring and Real Estate Services","Rental, Hiring and Real Estate Services",all,5,"Rental, Hiring and Real Estate Services"
+professional-scientific-and-technical-services,"Professional, Scientific and Technical Services","Professional, Scientific and Technical Services",all,6,"Professional, Scientific and Technical Services"
+administrative-and-support-services,Administrative and Support Services,Administrative and Support Services,all,7,Administrative and Support Services
+health-care-and-social-assistance,Health Care and Social Assistance,Health Care and Social Assistance,all,8,Health Care and Social Assistance
+other-services,Other Services,Other Services,all,9,Other Services
