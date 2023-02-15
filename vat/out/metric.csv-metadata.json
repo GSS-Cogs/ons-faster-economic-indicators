@@ -12,18 +12,18 @@
             ],
             "http://www.w3.org/ns/prov#used": [
                 {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.2"
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.3"
                 }
             ]
         },
         {
             "@id": "metric.csv#code-list",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/prov#Entity",
                 "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/prov#Entity",
                 "http://www.w3.org/ns/dcat#Dataset",
-                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -44,7 +44,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-13T18:30:51.400344"
+                    "@value": "2023-02-15T16:05:11.805113"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -55,7 +55,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-13T18:30:51.400344"
+                    "@value": "2023-02-15T16:05:11.805113"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -84,10 +84,6 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "reporters"
-                },
-                {
-                    "@language": "en",
                     "@value": "tax due"
                 },
                 {
@@ -96,15 +92,19 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "turnover"
-                },
-                {
-                    "@language": "en",
                     "@value": "claim"
                 },
                 {
                     "@language": "en",
+                    "@value": "turnover"
+                },
+                {
+                    "@language": "en",
                     "@value": "record type"
+                },
+                {
+                    "@language": "en",
+                    "@value": "reporters"
                 }
             ],
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
