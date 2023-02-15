@@ -4,10 +4,6 @@
     "title": "Industries",
     "summary": "List of all industries included in the dataset",
     "description": "List of all industries included in the dataset, these do not match the SIC classification",
-    "sort": {
-        "by": "label",
-        "method": "ascending"
-    },
     "concepts": [
         {
             "label": "All",
@@ -15,11 +11,6 @@
             "description": "The all category is weighted to be representative of the UK's small business economy",
             "sort_order": 0,
             "children": [
-                {
-                    "label": "Health Care and Social Assistance",
-                    "notation": "Health Care and Social Assistance",
-                    "description": "Health Care and Social Assistance"
-                },
                 {
                     "label": "Manufacturing",
                     "notation": "Manufacturing",
@@ -59,6 +50,11 @@
                     "label": "Administrative and Support Services",
                     "notation": "Administrative and Support Services",
                     "description": "Administrative and Support Services"
+                },
+                {
+                    "label": "Health Care and Social Assistance",
+                    "notation": "Health Care and Social Assistance",
+                    "description": "Health Care and Social Assistance"
                 },
                 {
                     "label": "Other Services",
