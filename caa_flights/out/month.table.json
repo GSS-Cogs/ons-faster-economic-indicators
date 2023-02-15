@@ -23,7 +23,7 @@
             "name": "parent_uri_identifier",
             "required": false,
             "propertyUrl": "skos:broader",
-            "valueUrl": "date.csv#{+parent_uri_identifier}"
+            "valueUrl": "month.csv#{+parent_uri_identifier}"
         },
         {
             "titles": "Sort Priority",
@@ -50,7 +50,7 @@
             "name": "virt_inScheme",
             "required": true,
             "propertyUrl": "skos:inScheme",
-            "valueUrl": "date.csv#code-list"
+            "valueUrl": "month.csv#code-list"
         },
         {
             "virtual": true,
@@ -60,6 +60,6 @@
             "valueUrl": "skos:Concept"
         }
     ],
-    "aboutUrl": "date.csv#{+uri_identifier}",
+    "aboutUrl": "month.csv#{+uri_identifier}",
     "primaryKey": "uri_identifier"
 }
