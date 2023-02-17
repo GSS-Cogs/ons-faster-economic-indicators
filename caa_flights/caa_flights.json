@@ -24,12 +24,10 @@
                 "from_existing": "http://qudt.org/vocab/unit/NUM"
             },
             "measure": {
-                "label": "Number of passangers",
+                "label": "Number of passengers",
                 "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#passengers"
             },
             "data_type": "int"
-        },
-        "Metric": false,
-        "unit": false
-}
+        }
+    }
 }
