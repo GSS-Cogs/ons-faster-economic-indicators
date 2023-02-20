@@ -1,0 +1,161 @@
+{
+    "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+    "title": "Industries",
+    "summary": "List of all industries included in the dataset",
+    "description": "The Adzuna categories used do not correspond to Standard Industrial Classification (SIC) categories.",
+    "concepts": [
+        {
+            "label": "All industries",
+            "notation": "All",
+            "description": "All industries",
+            "sort_order": 0,
+            "children": [
+                {
+                    "label": "Manufacturing",
+                    "notation": "Manufacturing",
+                    "description": "Manufacturing"
+                },
+                {
+                    "label": "Energy / oil & gas",
+                    "notation": "Energy / oil & gas",
+                    "description": "Energy / oil & gas"
+                },
+                {
+                    "label": "Construction / trades",
+                    "notation": "Construction / trades",
+                    "description": "Construction / trades"
+                },
+                {
+                    "label": "Wholesale and retail",
+                    "notation": "Wholesale and retail",
+                    "description": "Wholesale and retail"
+                },
+                {
+                    "label": "Graduate",
+                    "notation": "Graduate",
+                    "description": "Graduate"
+                },
+                {
+                    "label": "Transport / logistics / warehouse",
+                    "notation": "Transport / logistics / warehouse",
+                    "description": "Transport / logistics / warehouse"
+                },
+                {
+                    "label": "Travel / tourism",
+                    "notation": "Travel / tourism",
+                    "description": "Travel / tourism"
+                },
+                {
+                    "label": "Catering and hospitality",
+                    "notation": "Catering and hospitality",
+                    "description": "Catering and hospitality"
+                },
+                {
+                    "label": "IT / Computing / Software",
+                    "notation": "IT / Computing / Software",
+                    "description": "IT / Computing / Software"
+                },
+                {
+                    "label": "Accounting / Finance",
+                    "notation": "Accounting / Finance",
+                    "description": "Accounting / Finance"
+                },
+                {
+                    "label": "Property",
+                    "notation": "Property",
+                    "description": "Property"
+                },
+                {
+                    "label": "Engineering",
+                    "notation": "Engineering",
+                    "description": "Engineering"
+                },
+                {
+                    "label": "Legal",
+                    "notation": "Legal",
+                    "description": "Legal"
+                },
+                {
+                    "label": "Management / exec / consulting",
+                    "notation": "Management / exec / consulting",
+                    "description": "Management / exec / consulting"
+                },
+                {
+                    "label": "Marketing / advertising / PR",
+                    "notation": "Marketing / advertising / PR",
+                    "description": "Marketing / advertising / PR"
+                },
+                {
+                    "label": "Scientific / QA",
+                    "notation": "Scientific / QA",
+                    "description": "Scientific / QA"
+                },
+                {
+                    "label": "Admin / clerical / secretarial",
+                    "notation": "Admin / clerical / secretarial",
+                    "description": "Admin / clerical / secretarial"
+                },
+                {
+                    "label": "Customer service / support",
+                    "notation": "Customer service / support",
+                    "description": "Customer service / support"
+                },
+                {
+                    "label": "Facilities / maintenance",
+                    "notation": "Facilities / maintenance",
+                    "description": "Facilities / maintenance"
+                },
+                {
+                    "label": "HR & recruitment",
+                    "notation": "HR & recruitment",
+                    "description": "HR & recruitment"
+                },
+                {
+                    "label": "Education",
+                    "notation": "Education",
+                    "description": "Education"
+                },
+                {
+                    "label": "Part-time / weekend",
+                    "notation": "Part-time / weekend",
+                    "description": "Part-time / weekend"
+                },
+                {
+                    "label": "Charity / voluntary",
+                    "notation": "Charity / voluntary",
+                    "description": "Charity / voluntary"
+                },
+                {
+                    "label": "Healthcare and Social care",
+                    "notation": "Healthcare and Social care",
+                    "description": "Healthcare and Social care"
+                },
+                {
+                    "label": "Creative / design / arts & media",
+                    "notation": "Creative / design / arts & media",
+                    "description": "Creative / design / arts & media"
+                },
+                {
+                    "label": "Other / general",
+                    "notation": "Other / general",
+                    "description": "Other / general"
+                },
+                {
+                    "label": "Sales",
+                    "notation": "Sales",
+                    "description": "Sales"
+                },
+                {
+                    "label": "Domestic help",
+                    "notation": "Domestic help",
+                    "description": "Domestic help"
+                },
+                {
+                    "label": "Unknown",
+                    "notation": "Unknown",
+                    "description": "The 'unknown' category relates to locations or categories which have not been able to match"
+                }
+            ]
+        }
+    ]
+}

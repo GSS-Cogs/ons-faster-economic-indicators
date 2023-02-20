@@ -23,7 +23,7 @@
             "name": "parent_uri_identifier",
             "required": false,
             "propertyUrl": "skos:broader",
-            "valueUrl": "type.csv#{+parent_uri_identifier}"
+            "valueUrl": "day.csv#{+parent_uri_identifier}"
         },
         {
             "titles": "Sort Priority",
@@ -39,11 +39,18 @@
             "propertyUrl": "rdfs:comment"
         },
         {
+            "titles": "Original Concept URI",
+            "name": "uri",
+            "required": true,
+            "propertyUrl": "owl:sameAs",
+            "valueUrl": "{+uri}"
+        },
+        {
             "virtual": true,
             "name": "virt_inScheme",
             "required": true,
             "propertyUrl": "skos:inScheme",
-            "valueUrl": "type.csv#code-list"
+            "valueUrl": "day.csv#code-list"
         },
         {
             "virtual": true,
@@ -53,6 +60,6 @@
             "valueUrl": "skos:Concept"
         }
     ],
-    "aboutUrl": "type.csv#{+uri_identifier}",
+    "aboutUrl": "day.csv#{+uri_identifier}",
     "primaryKey": "uri_identifier"
 }
