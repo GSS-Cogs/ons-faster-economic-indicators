@@ -9,8 +9,7 @@
   "keywords": [
     "SA",
     "NSA",
-    "Trend",
-    "7MA"
+    "Trend"
   ],
   "sort": {
     "by": "label",
@@ -30,7 +29,7 @@
     {
       "label": "Trend",
       "notation": "Trend",
-      "description": "Non-seasonally adjusted value"
+      "description": "The trend of the seasonally adjusted values"
     }
   ]
 }
