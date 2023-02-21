@@ -1,0 +1,129 @@
+{
+    "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+    "title": "Sectors and subsectors",
+    "summary": "List of all sectors and subsectors, classified by SIC included in the dataset",
+    "description": "List of all sectors and subsectors, classified by SIC included in the dataset",
+    "concepts": [
+        {
+            "label": "Total (A-T)",
+            "notation": "A-T",
+            "description": "All sectors",
+            "sort_order": 0,
+            "children": [
+                {
+                    "label": "Agriculture, forestry and fishing (A)",
+                    "notation": "A",
+                    "description": "Division 01: Crop and animal production, hunting and related service activities \n Division 02: Forestry and logging \nDivision 03: Fishing and aquaculture",
+                    "sort_order": 0
+                },
+                {
+                    "label": "Production (B-E)",
+                    "notation": "B-E",
+                    "description": "Production",
+                    "sort_order": 1,
+                    "children": [
+                        {
+                            "label": "Mining and quarrying (B)",
+                            "notation": "B",
+                            "description": "Division 05: Mining of coal and lignite \nDivision 06: Extraction of crude petroleum and natural gas \n Division 07: Mining of metal ores \n Division 08: Other mining and quarrying \nDivision 09: Mining support service activities"
+                        },
+                        {
+                            "label": "Manufacturing (C)",
+                            "notation": "C",
+                            "description": "Division 10: Manufacture of food products \nDivision 11: Manufacture of beverages \nDivision 12: Manufacture of tobacco products \nDivision 13: Manufacture of textiles \nDivision 14: Manufacture of wearing apparel \nDivision 15: Manufacture of leather and related products \nDivision 16: Manufacture of wood and of products of wood and cork, except furniture; manufacture of articles of straw and plaiting materials \nDivision 17: Manufacture of paper and paper products \nDivision 18: Printing and reproduction of recorded media \nDivision 19: Manufacture of coke and refined petroleum products \nDivision 20: Manufacture of chemicals and chemical products \nDivision 21: Manufacture of basic pharmaceutical products and pharmaceutical preparations \nDivision 22: Manufacture of rubber and plastic products \nDivision 23: Manufacture of other non-metallic mineral products \nDivision 24: Manufacture of basic metals \nDivision 25: Manufacture of fabricated metal products, except machinery and equipment \nDivision 26: Manufacture of computer, electronic and optical products \nDivision 27: Manufacture of electrical equipment \nDivision 28: Manufacture of machinery and equipment n.e.c. \nDivision 29: Manufacture of motor vehicles, trailers and semi-trailers \nDivision 30: Manufacture of other transport equipment \nDivision 31: Manufacture of furniture \nDivision 32: Other manufacturing \nDivision 33: Repair and installation of machinery and equipment"
+                        },
+                        {
+                            "label": "Electricity, gas, steam and air (D)",
+                            "notation": "D",
+                            "description": "Division 35: Electricity, gas, steam and air conditioning supply"
+                        },
+                        {
+                            "label": "Water supply, sewerage, etc (E)",
+                            "notation": "E",
+                            "description": "Division 36: Water collection, treatment and supply \nDivision 37: Sewerage \nDivision 38: Waste collection, treatment and disposal activities; materials recovery \nDivision 39: Remediation activities and other waste management services"
+                        }
+                    ]
+                },
+                {
+                    "label": "Construction (F)",
+                    "notation": "F",
+                    "description": "Construction",
+                    "sort_order": 2
+                },
+                {
+                    "label": "Services (G-T)",
+                    "notation": "G-T",
+                    "description": "Services",
+                    "sort_order": 3,
+                    "children": [
+                        {
+                            "label": "Wholesale and retail; repair of motor vehicles (G)",
+                            "notation": "G",
+                            "description": "Division 45: Wholesale and retail trade and repair of motor vehicles and motorcycles \nDivision 46: Wholesale trade, except of motor vehicles and motorcycles \nDivision 47: Retail trade, except of motor vehicles and motorcycles"
+                        },
+                        {
+                            "label": "Transport and storage (H)",
+                            "notation": "H",
+                            "description": "Division 49: Land transport and transport via pipelines \nDivision 50: Water transport \nDivision 51: Air transport \nDivision 52: Warehousing and support activities for transportation \nDivision 53: Postal and courier activities"
+                        },
+                        {
+                            "label": "Accommodation and food services (I)",
+                            "notation": "I",
+                            "description": "Division 55: Accommodation\nDivision 56: Food and beverage service activities"
+                        },
+                        {
+                            "label": "Information and communication (J)",
+                            "notation": "J",
+                            "description": "Division 58: Publishing activities \nDivision 59: Motion picture, video and television programme production, sound recording and music publishing activities \nDivision 60: Programming and broadcasting activities \nDivision 61: Telecommunications \nDivision 62: Computer programming, consultancy and related activities \nDivision 63: Information service activities"
+                        },
+                        {
+                            "label": "Financial and insurance activities (K)",
+                            "notation": "K",
+                            "description": "Division 64: Financial service activities, except insurance and pension funding \nDivision 65: Insurance, reinsurance and pension funding, except compulsory social security \nDivision 66: Activities auxiliary to financial services and insurance activities"
+                        },
+                        {
+                            "label": "Real estate activities (L)",
+                            "notation": "L",
+                            "description": "Division 68: Real estate activities"
+                        },
+                        {
+                            "label": "Professional, scientific and technical activities (M)",
+                            "notation": "M",
+                            "description": "Division 69: Legal and accounting activities \nDivision 70: Activities of head offices; management consultancy activities \nDivision 71: Architectural and engineering activities; technical testing and analysis \nDivision 72: Scientific research and development \nDivision 73: Advertising and market research \nDivision 74: Other professional, scientific and technical activities \nDivision 75: Veterinary activities"
+                        },
+                        {
+                            "label": "Administrative and support activities (N)",
+                            "notation": "N",
+                            "description": "Division 77: Rental and leasing activities click here to open the components of this sicDivision 78: Employment activities click here to open the components of this sicDivision 79: Travel agency, tour operator and other reservation service and related activities click here to open the components of this sicDivision 80: Security and investigation activities click here to open the components of this sicDivision 81: Services to buildings and landscape activities click here to open the components of this sicDivision 82: Office administrative, office support and other business support activities"
+                        },
+                        {
+                            "label": "Public administration and defence (O)",
+                            "notation": "O",
+                            "description": "Division 84: Public administration and defence; compulsory social security"
+                        },
+                        {
+                            "label": "Education (P)",
+                            "notation": "P",
+                            "description": "Division 85: Education"
+                        },
+                        {
+                            "label": "Human health and social work (Q)",
+                            "notation": "Q",
+                            "description": "Division 86: Human health activities \nDivision 87: Residential care activities \nDivision 88: Social work activities without accommodation"
+                        },
+                        {
+                            "label": "Arts, entertainmant and recreation (R)",
+                            "notation": "R",
+                            "description": "Division 90: Creative, arts and entertainment activities \nDivision 91: Libraries, archives, museums and other cultural activities \nDivision 92: Gambling and betting activities \nDivision 93: Sports activities and amusement and recreation activities"
+                        },
+                        {
+                            "label": "Other service activities (S)",
+                            "notation": "S",
+                            "description": "Division 94: Activities of membership organisations \nDivision 95: Repair of computers and personal and household goods \nDivision 96: Other personal service activities"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -13,9 +13,9 @@
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
+    "creator":"https://www.gov.uk/government/organisations/office-for-national-statistics",
     "columns": {
         "Date": {
-            "label": "Date",
             "from_template": "day"
         },
         "Location": {
@@ -103,21 +103,21 @@
                 ]
             }
         },
-        
         "Value": {
-            "type": "observations"
+            "type": "observations",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            },
+            "measure": {
+                "label": "Count",
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#count"
+            },
+            "data_type": "int"
         },
-
-        "Unit": {
-            "type": "units"                
-        },
-        
         "Marker": {
             "from_template": "observation-status"
-        },
-
-        "Measure" : {
-            "type" : "measures"
+        }
         }
     }
-    }
+    

@@ -12,20 +12,22 @@
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
+    "creator": "https://www.caa.co.uk/data-and-analysis/",
     "columns": {
         "Date": {
-            "label": "Date",
             "from_template": "month"
         },
-
-        "Metric": {
-            "type": "measures"
-        },
         "Value": {
-            "type": "observations"
-        },
-        "Unit": {
-            "type": "units"
+            "type": "observations",
+            "unit": {
+                "label": "Number",
+                "from_existing": "http://qudt.org/vocab/unit/NUM"
+            },
+            "measure": {
+                "label": "Number of passengers",
+                "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#passengers"
+            },
+            "data_type": "int"
         }
-}
+    }
 }

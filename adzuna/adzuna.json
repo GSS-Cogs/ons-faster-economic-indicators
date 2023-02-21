@@ -14,36 +14,38 @@
     ,
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "creator":"https://www.adzuna.co.uk/",
+    "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
     "columns": {
         "Date": {
-            "label": "Date in ISO format",
-            "type": "dimension",
             "from_template": "day"
         },
-         "Breakdown": {
+         "Industry": {
             "type": "dimension",
-            "description": "broken down by job category and by UK countries and English regions. "
+            "code_list":"./adzuna-industries.json"
         },
 
         "Value": {
-                "type": "observations"
-            },
-
+            "type": "observations",
+            "data_type": "float",
+            "unit": {
+                "label": "Unitless",
+                "from_existing": "http://qudt.org/vocab/unit/UNITLESS"
+            } 
+        },
         "Method": {
             "type": "dimension",
             "description": "method applied during data collection "
         },
 
-        "Type": {
-            "type": "dimension"
+        "Region": {
+            "type": "dimension",
+            "from_template": "statistical-geography"
         },
 
         "Measure": {
             "type": "measures"
 
-        },
-        "Unit": {
-            "type": "units"
         },
         "Marker": {
             "from_template": "observation-status"

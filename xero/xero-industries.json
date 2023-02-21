@@ -1,0 +1,67 @@
+
+{
+    "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+    "title": "Industries",
+    "summary": "List of all industries included in the dataset",
+    "description": "List of all industries included in the dataset, these do not match the SIC classification",
+    "concepts": [
+        {
+            "label": "All",
+            "notation": "All",
+            "description": "The all category is weighted to be representative of the UK's small business economy",
+            "sort_order": 0,
+            "children": [
+                {
+                    "label": "Manufacturing",
+                    "notation": "Manufacturing",
+                    "description": "Manufacturing"
+                },
+                {
+                    "label": "Construction",
+                    "notation": "Construction",
+                    "description": "Construction"
+                },
+                {
+                    "label": "Retail Trade",
+                    "notation": "Retail Trade",
+                    "description": "Retail Trade"
+                },
+                {
+                    "label": "Accommodation and Food Services",
+                    "notation": "Accommodation and Food Services",
+                    "description": "Accommodation and Food Services"
+                },
+                {
+                    "label": "Information Media and Telecommunications",
+                    "notation": "Information Media and Telecommunications",
+                    "description": "Information Media and Telecommunications"
+                },
+                {
+                    "label": "Rental, Hiring and Real Estate Services",
+                    "notation": "Rental, Hiring and Real Estate Services",
+                    "description": "Rental, Hiring and Real Estate Services"
+                },
+                {
+                    "label": "Professional, Scientific and Technical Services",
+                    "notation": "Professional, Scientific and Technical Services",
+                    "description": "Professional, Scientific and Technical Services"
+                },
+                 {
+                    "label": "Administrative and Support Services",
+                    "notation": "Administrative and Support Services",
+                    "description": "Administrative and Support Services"
+                },
+                {
+                    "label": "Health Care and Social Assistance",
+                    "notation": "Health Care and Social Assistance",
+                    "description": "Health Care and Social Assistance"
+                },
+                {
+                    "label": "Other Services",
+                    "notation": "Other Services",
+                    "description": "Other Services"
+                }
+            ]
+        }
+    ]
+}

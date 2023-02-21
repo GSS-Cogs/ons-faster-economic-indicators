@@ -14,10 +14,10 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "creator":"https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
     "columns": {
         "Month": {
-            "label": "Month",
             "from_template": "month"
         },
         "Metric": {
@@ -30,28 +30,35 @@
             "code_list": "./vat-SA.json"
         },
         "SIC": {
-            "type": "dimension"
+            "type": "dimension",
+            "code_list": "./vat-sic.json"
         },
          "Variable": {
             "type": "measures",
             "values": [
                 {
-                    "label": "Diffusion index Month on a Year ago"
+                    "label": "Diffusion index Month on a Year ago",
+                    "description": "Diffusion indices are an aggregate measure used to track whether most firms are reporting an increase or decrease in turnover in their Value Added Tax (VAT) returns. They are calculated as the percentage of firms with increasing turnover minus the percentage with decreasing turnover, or increasing expenditure minus decreasing expenditure.\nThe indices are constructed to lie between 1 and negative 1, so an index of 0.05 means that 5% more firms reported an increase in turnover compared with the previous month than those reporting a decrease in turnover. Conversely, an index of negative 0.05 means that 5% more firms reported a decrease in turnover compared with the equivalent month of prior year."
                 },
                 {
-                    "label": "Diffusion index Month on Month"
+                    "label": "Diffusion index Month on Month",
+                    "description": "Diffusion indices are an aggregate measure used to track whether most firms are reporting an increase or decrease in turnover in their Value Added Tax (VAT) returns. They are calculated as the percentage of firms with increasing turnover minus the percentage with decreasing turnover, or increasing expenditure minus decreasing expenditure.\nThe indices are constructed to lie between 1 and negative 1, so an index of 0.05 means that 5% more firms reported an increase in turnover compared with the previous month than those reporting a decrease in turnover. Conversely, an index of negative 0.05 means that 5% more firms reported a decrease in turnover compared with the previous month"
                 },
                 {
-                    "label": "Number of firms in diffusion index Month on a Year ago"
+                    "label": "Number of firms in diffusion index Month on a Year ago",
+                    "description": "The number of firms whose returns contributed to the diffusion index."
                 },
                 {
-                    "label": "Number of firms in diffusion index Month on Month"
+                    "label": "Number of firms in diffusion index Month on Month",
+                    "description": "The number of firms whose returns contributed to the diffusion index."
                 },
                 {
-                    "label": "Number of new reporters"
+                    "label": "Number of new reporters",
+                    "description": "New reporters are counts of VAT reporters that have never previously submitted a VAT return, broken down by section.\nThe stated month is when the return was received by HM Revenue and Customs (HMRC), not the reporting period."
                 },
                 {
-                    "label": "Number of reporters of this record type"
+                    "label": "Number of reporters of this record type",
+                    "description": "Record type is all VAT reporters, broken down by whether the business is paying tax, reclaiming tax, re-inputting to pay or reclaim tax (correcting a mistake prior to submitting the return), or submitting a replacement to pay or reclaim tax (correcting a mistake after submitting the return)."
                 }
             ]
             },
@@ -72,7 +79,17 @@
             "type": "observations"
         },
         "Unit": {
-            "type": "units"
+            "type": "units",
+            "values": [
+                {
+                    "label": "Unitless",
+                    "from_existing": "http://qudt.org/vocab/unit/UNITLESS"
+                },
+                {
+                    "label": "Number",
+                    "from_existing": "http://qudt.org/vocab/unit/NUM"
+                }
+            ]
         },
         "Marker": {
             "from_template": "observation-status"
