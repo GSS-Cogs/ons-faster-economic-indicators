@@ -1,0 +1,75 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "traffic-camera-regions.csv#code-list",
+    "url": "traffic-camera-regions.csv",
+    "tableSchema": "traffic-camera-regions.table.json",
+    "rdfs:seeAlso": [
+        {
+            "@id": "traffic-camera-regions.csv#code-list",
+            "@type": [
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset"
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Traffic camera regions"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-02-22T17:24:46.351025"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-02-22T17:24:46.351025"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Traffic camera regions"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "List of regions from which traffic camera data is collected"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Traffic camera regions"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "traffic-camera-regions.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "traffic-camera-regions.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.4"
+                }
+            ]
+        }
+    ]
+}
