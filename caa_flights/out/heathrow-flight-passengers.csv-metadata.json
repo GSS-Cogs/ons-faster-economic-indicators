@@ -36,7 +36,7 @@
                     {
                         "name": "virt_obs_value",
                         "virtual": true,
-                        "propertyUrl": "qb:Observation",
+                        "propertyUrl": "qb:observation",
                         "valueUrl": "heathrow-flight-passengers.csv#obs/{date}@number-of-passengers"
                     },
                     {
@@ -98,47 +98,11 @@
     ],
     "rdfs:seeAlso": [
         {
-            "@id": "heathrow-flight-passengers.csv#slice/cross-measures",
-            "@type": [
-                "http://purl.org/linked-data/cube#SliceKey",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#dimension/month"
-                }
-            ]
-        },
-        {
-            "@id": "heathrow-flight-passengers.csv#component/number-of-passengers",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 4
-                }
-            ]
-        },
-        {
             "@id": "heathrow-flight-passengers.csv#component/month",
             "@type": [
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -157,6 +121,101 @@
             ]
         },
         {
+            "@id": "heathrow-flight-passengers.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DataStructureDefinition"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#component/unit"
+                },
+                {
+                    "@id": "heathrow-flight-passengers.csv#component/month"
+                },
+                {
+                    "@id": "heathrow-flight-passengers.csv#component/measure-type"
+                },
+                {
+                    "@id": "heathrow-flight-passengers.csv#component/number-of-passengers"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
+                },
+                {
+                    "@id": "heathrow-flight-passengers.csv#dimension/month"
+                }
+            ],
+            "http://purl.org/linked-data/cube#sliceKey": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#slice/cross-measures"
+                }
+            ]
+        },
+        {
+            "@id": "heathrow-flight-passengers.csv#dimension/month",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#DimensionProperty"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "month.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Month"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#class/month"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "heathrow-flight-passengers.csv#component/number-of-passengers",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 4
+                }
+            ]
+        },
+        {
             "@id": "heathrow-flight-passengers.csv#csvcubed-build-activity",
             "@type": [
                 "http://www.w3.org/ns/prov#Activity",
@@ -164,23 +223,29 @@
             ],
             "http://www.w3.org/ns/prov#used": [
                 {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.0"
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.4"
                 }
             ]
         },
         {
-            "@id": "heathrow-flight-passengers.csv#class/month",
+            "@id": "heathrow-flight-passengers.csv#slice/cross-measures",
             "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#SliceKey"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "heathrow-flight-passengers.csv#dimension/month"
+                }
             ]
         },
         {
             "@id": "heathrow-flight-passengers.csv#component/unit",
             "@type": [
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#attribute": [
                 {
@@ -204,11 +269,18 @@
             ]
         },
         {
+            "@id": "heathrow-flight-passengers.csv#class/month",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2000/01/rdf-schema#Class"
+            ]
+        },
+        {
             "@id": "heathrow-flight-passengers.csv#component/measure-type",
             "@type": [
                 "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#componentProperty": [
                 {
@@ -227,13 +299,38 @@
             ]
         },
         {
+            "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Number of passengers"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#int"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "https://purl.org/csv-cubed/resources/measures#passengers"
+                }
+            ]
+        },
+        {
             "@id": "heathrow-flight-passengers.csv#dataset",
             "@type": [
-                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/ns/dcat#Dataset",
                 "http://purl.org/linked-data/cube#DataSet",
                 "http://www.w3.org/ns/dcat#Resource",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://www.w3.org/ns/dcat#Dataset"
+                "http://purl.org/linked-data/cube#Attachable",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/dc/terms/creator": [
                 {
@@ -254,7 +351,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-16T18:40:47.146046"
+                    "@value": "2023-02-22T16:40:07.894576"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -265,7 +362,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-16T18:40:47.146046"
+                    "@value": "2023-02-22T16:40:07.894576"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -299,19 +396,19 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "passenger"
-                },
-                {
-                    "@language": "en",
                     "@value": "domestic"
                 },
                 {
                     "@language": "en",
-                    "@value": "international"
+                    "@value": "flights"
                 },
                 {
                     "@language": "en",
-                    "@value": "flights"
+                    "@value": "passenger"
+                },
+                {
+                    "@language": "en",
+                    "@value": "international"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
@@ -322,103 +419,6 @@
             "http://www.w3.org/ns/prov#wasGeneratedBy": [
                 {
                     "@id": "heathrow-flight-passengers.csv#csvcubed-build-activity"
-                }
-            ]
-        },
-        {
-            "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Number of passengers"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#int"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#passengers"
-                }
-            ]
-        },
-        {
-            "@id": "heathrow-flight-passengers.csv#dimension/month",
-            "@type": [
-                "http://purl.org/linked-data/cube#CodedProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "month.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Month"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#class/month"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
-                }
-            ]
-        },
-        {
-            "@id": "heathrow-flight-passengers.csv#structure",
-            "@type": [
-                "http://purl.org/linked-data/cube#DataStructureDefinition",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#ComponentSet"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#component/measure-type"
-                },
-                {
-                    "@id": "heathrow-flight-passengers.csv#component/month"
-                },
-                {
-                    "@id": "heathrow-flight-passengers.csv#component/unit"
-                },
-                {
-                    "@id": "heathrow-flight-passengers.csv#component/number-of-passengers"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#measure/number-of-passengers"
-                },
-                {
-                    "@id": "heathrow-flight-passengers.csv#dimension/month"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#sliceKey": [
-                {
-                    "@id": "heathrow-flight-passengers.csv#slice/cross-measures"
                 }
             ]
         },
@@ -442,9 +442,9 @@
         {
             "@id": "heathrow-flight-passengers.csv#unit/number",
             "@type": [
-                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
                 "http://qudt.org/schema/qudt/Unit",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.ontology-of-units-of-measure.org/resource/om-2/Unit"
             ],
             "http://qudt.org/schema/qudt/isScalingOf": [
                 {
