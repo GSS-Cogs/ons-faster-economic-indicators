@@ -15,6 +15,7 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "creator": "https://www.pret.co.uk/en-GB",
     "themes": "https://www.ons.gov.uk/businessindustryandtrade",
     "columns": {
         "Date": {

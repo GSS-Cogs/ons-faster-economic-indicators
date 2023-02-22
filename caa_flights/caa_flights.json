@@ -25,7 +25,7 @@
             },
             "measure": {
                 "label": "Number of passengers",
-                "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#passengers"
+                "from_existing": "https://purl.org/csv-cubed/resources/measures#passengers"
             },
             "data_type": "int"
         }

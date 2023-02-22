@@ -19,6 +19,7 @@
         "Marker": {
             "from_template": "observation-status"
         },
+        "index": false,
         "value": {
             "type": "observations",
             "unit": {
