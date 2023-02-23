@@ -14,39 +14,35 @@
     ],
     "license": "http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
+    "creator": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes": "https://www.ons.gov.uk/economy/economicoutputandproductivity",
     "columns": {
-        "Day": {
-            "label": "Day",
-            "type": "attribute"
-        },
         "Date": {
-            "label": "Date in ISO format",
             "type": "dimension",
-            "from_template": "day"
+            "label": "Period",
+            "from_existing": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod",
+            "cell_uri_template": "http://reference.data.gov.uk/id/{+column_name}"
         },
         "Seasonal Adjustment": {
             "type": "dimension",
             "description": "SA = seasonally adjusted, NSA = non-seasonally adjusted",
             "code_list": "./shipping-SA.json"
         },
-         "Port": {
+        "Port": {
             "type": "dimension",
             "description": "Selected ports in the UK"
         },
-
         "Value": {
-                "type": "observations"
-            },
-
+            "type": "observations",
+            "data_type": "int",
+            "unit": {
+                "from_existing": "http://qudt.org/vocab/unit/NUM",
+                "label": "number"
+            }
+        },
         "Ship Type": {
             "type": "dimension",
             "code_list": "./shipping-type.json"
-        },
-
-        "Frequency": {
-            "type": "dimension"
-
         },
         "Measure": {
             "type": "measures",
@@ -61,11 +57,8 @@
                 }
             ]
         },
-        "Unit": {
-            "type": "units"
-        },
         "Marker": {
             "from_template": "observation-status"
         }
-        }
     }
+}
