@@ -36,12 +36,12 @@
                 {
                     "label": "Sales",
                     "description": "Index of sales where 100 is the equivalent month of 2019",
-                    "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#index"
                 },
                 {
                     "label": "Jobs",
                     "description": "Index of jobs where 100 is the equivalent month of 2019",
-                    "from_existing": "https://raw.githubusercontent.com/GSS-Cogs/reusable-rdf-resources/main/rdf-definitions/measures/measures.csv#index"
+                    "from_existing": "https://purl.org/csv-cubed/resources/measures#index"
                 }
             ]
         }
