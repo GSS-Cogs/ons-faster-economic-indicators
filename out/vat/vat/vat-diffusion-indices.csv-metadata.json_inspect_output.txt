@@ -1,0 +1,97 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: VAT diffusion indices
+        - Label: VAT diffusion indices
+        - Issued: 2023-03-07T12:13:49.240485
+        - Modified: 2023-03-07T12:13:49.240485
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/economy/economicoutputandproductivity
+        - Keywords: 
+		-- diffusion
+		-- tax
+		-- turnover
+		-- business
+		-- firms
+		-- expenditure
+		-- index
+        - Contact Point: None
+        - Identifier: VAT diffusion indices
+        - Comment: Diffusion indices created using HMRC VAT returns, and associated number of firms contributing to those indices
+        - Description: Diffusion indices show changes in business turnover (total value of all sales and other outputs excluding VAT), and expenditure (total value of purchases and all other inputs excluding VAT), for both month-on-month and month-on-a-year-ago.
+		VAT reporters received in the first seven days after the reporting period are included. Given that there are normally five working days in the first seven days of the month, the data content is relatively consistent month to month. This cut-off date was chosen to increase timeliness, while also being the earliest date when the key economic sectors provided a sufficiently accurate indicator of economic performance.
+		More quality and methodology information is available in Faster indicators of UK economic activity: Value Added Tax returns.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: VAT diffusion indices
+        - Number of Components: 14
+        - Components:
+                                                                                Property                                         Property Label Property Type        Column Title Observation Value Column Titles  Required
+                                               vat-diffusion-indices.csv#dimension/month                                                  Month     Dimension               Month                                      True
+                                                 vat-diffusion-indices.csv#dimension/sic                                                    SIC     Dimension                 SIC                                      True
+                                            http://purl.org/linked-data/cube#measureType                                                            Dimension            Variable                                      True
+                                              vat-diffusion-indices.csv#dimension/metric                                                 Metric     Dimension              Metric                                      True
+                                 vat-diffusion-indices.csv#dimension/seasonal-adjustment                                    Seasonal Adjustment     Dimension Seasonal Adjustment                                      True
+                   vat-diffusion-indices.csv#measure/diffusion-index-month-on-a-year-ago                    Diffusion index Month on a Year ago       Measure                                                          True
+                        vat-diffusion-indices.csv#measure/diffusion-index-month-on-month                         Diffusion index Month on Month       Measure                                                          True
+vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index-month-on-a-year-ago Number of firms in diffusion index Month on a Year ago       Measure                                                          True
+     vat-diffusion-indices.csv#measure/number-of-firms-in-diffusion-index-month-on-month      Number of firms in diffusion index Month on Month       Measure                                                          True
+                               vat-diffusion-indices.csv#measure/number-of-new-reporters                                Number of new reporters       Measure                                                          True
+               vat-diffusion-indices.csv#measure/number-of-reporters-of-this-record-type                Number of reporters of this record type       Measure                                                          True
+                                            vat-diffusion-indices.csv#attribute/estimate                                               Estimate     Attribute            Estimate                                     False
+                             http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                                                            Attribute                Unit                                      True
+                                  vat-diffusion-indices.csv#attribute/observation-status                                     Observation Status     Attribute              Marker                                     False
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 4
+        - Code Lists:
+                           Code List        Code List Label     Columns Used In
+                metric.csv#code-list                 Metric              Metric
+                 month.csv#code-list                  Month               Month
+   seasonal-adjustment.csv#code-list    Seasonal Adjustment Seasonal Adjustment
+sectors-and-subsectors.csv#code-list Sectors and subsectors                 SIC
+
+- The data cube has the following dataset information:
+        - Number of Observations: 41100
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+  Month SIC  Value                  Metric Seasonal Adjustment                       Variable Estimate     Unit Marker
+2012-02 a-t  -0.02 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-03 a-t  -0.04 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-04 a-t  -0.06 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-05 a-t  -0.01 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-06 a-t  -0.14 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-07 a-t   0.01 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-08 a-t   0.00 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-09 a-t   0.03 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-10 a-t  -0.05 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+2012-11 a-t   0.02 turnover-current-prices                  sa diffusion-index-month-on-month     day7 unitless    NaN
+        - Last 10 Observations: 
+  Month SIC  Value                      Metric Seasonal Adjustment                                Variable Estimate   Unit Marker
+2022-03   s 2360.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-04   s 3100.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-05   s 3400.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-06   s 2340.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-07   s 3670.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-08   s 3430.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-09   s 2360.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-10   s 3180.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-11   s 2900.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+2022-12   s 2000.0 record-type-repayment-claim                 nsa number-of-reporters-of-this-record-type       m1 number    NaN
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+                                Measure     Unit  Count
+    diffusion-index-month-on-a-year-ago unitless   5764
+         diffusion-index-month-on-month unitless  11528
+                number-of-new-reporters   number   6528
+number-of-reporters-of-this-record-type   number  17280
+        

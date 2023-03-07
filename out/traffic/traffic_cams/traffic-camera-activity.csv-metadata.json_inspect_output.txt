@@ -1,0 +1,84 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Traffic camera activity
+        - Label: Traffic camera activity
+        - Issued: 2023-03-07T12:10:22.294521
+        - Modified: 2023-03-07T12:10:22.294521
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/economy/economicoutputandproductivity
+        - Keywords: 
+		-- busyness
+		-- HGV
+		-- trucks
+		-- lorries
+		-- cars
+        - Contact Point: None
+        - Identifier: Traffic camera activity
+        - Comment: Counts of pedestrians and types of vehicles captured by traffic cameras
+        - Description: Busyness indices using traffic camera data to monitor flows of cars, pedestrians, cyclists, buses, and commercial vehicles for selected cities and regions of the UK. Experimental Statistics.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Traffic camera activity
+        - Number of Components: 8
+        - Components:
+                                                   Property      Property Label Property Type        Column Title Observation Value Column Titles  Required
+                  traffic-camera-activity.csv#dimension/day                 Day     Dimension                Date                           Value      True
+             traffic-camera-activity.csv#dimension/location            Location     Dimension            Location                           Value      True
+              traffic-camera-activity.csv#dimension/vehicle             Vehicle     Dimension             Vehicle                           Value      True
+               http://purl.org/linked-data/cube#measureType                         Dimension                                                          True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                         Attribute                                               Value      True
+                  traffic-camera-activity.csv#measure/count               Count       Measure               Value                           Value      True
+  traffic-camera-activity.csv#dimension/seasonal-adjustment Seasonal Adjustment     Dimension Seasonal Adjustment                           Value      True
+   traffic-camera-activity.csv#attribute/observation-status  Observation Status     Attribute              Marker                           Value     False
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 4
+        - Code Lists:
+                           Code List        Code List Label     Columns Used In
+         activity-type.csv#code-list          Activity type             Vehicle
+                   day.csv#code-list                    Day                Date
+   seasonal-adjustment.csv#code-list    Seasonal Adjustment Seasonal Adjustment
+traffic-camera-regions.csv#code-list Traffic camera regions            Location
+
+- The data cube has the following dataset information:
+        - Number of Rows: 112752
+        - Number of Duplicates: 0
+        - First 10 Rows: 
+      Date Location Vehicle  Value Seasonal Adjustment           Marker
+01/03/2020   london    cars    NaN                 nsa data-unavailable
+02/03/2020   london    cars    NaN                 nsa data-unavailable
+03/03/2020   london    cars    NaN                 nsa data-unavailable
+04/03/2020   london    cars    NaN                 nsa data-unavailable
+05/03/2020   london    cars    NaN                 nsa data-unavailable
+06/03/2020   london    cars    NaN                 nsa data-unavailable
+07/03/2020   london    cars    NaN                 nsa data-unavailable
+08/03/2020   london    cars    NaN                 nsa data-unavailable
+09/03/2020   london    cars    NaN                 nsa data-unavailable
+10/03/2020   london    cars    NaN                 nsa data-unavailable
+        - Last 10 Rows: 
+      Date Location              Vehicle  Value Seasonal Adjustment                                      Marker
+30/12/2022  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+31/12/2022  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+01/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+02/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+03/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+04/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+05/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+06/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+07/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+08/01/2023  reading pedestrians-cyclists    NaN               trend data-excluded-because-of-reliability-issues
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+Measure   Unit  Count
+  Count Number 112752
+        
