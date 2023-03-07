@@ -2,7 +2,7 @@
     "$schema": "https://purl.org/csv-cubed/qube-config/v1",
     "title": "Traffic camera activity",
     "summary": "Counts of pedestrians and types of vehicles captured by traffic cameras",
-    "description": "Busyness indices using traffic camera data to monitor flows of cars, pedestrians, cyclists, buses and commercial vehicles for selected cities and regions of the UK. Experimental Statistics.",
+    "description": "Busyness indices using traffic camera data to monitor flows of cars, pedestrians, cyclists, buses, and commercial vehicles for selected cities and regions of the UK. Experimental Statistics.",
     "keywords": [
         "cars",
         "trucks",
