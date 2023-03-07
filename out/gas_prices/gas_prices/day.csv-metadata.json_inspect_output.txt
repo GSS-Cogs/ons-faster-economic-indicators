@@ -1,0 +1,53 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Day
+        - Label: Day
+        - Issued: 2023-03-07T12:20:10.540794
+        - Modified: 2023-03-07T12:20:10.540794
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Day
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 1841
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+Uri Identifier      Label   Notation  Parent Uri Identifier  Sort Priority  Description                           Original Concept URI
+    01/01/2018 01/01/2018 01/01/2018                    NaN              0          NaN http://reference.data.gov.uk/id/day/01/01/2018
+    01/01/2019 01/01/2019 01/01/2019                    NaN              1          NaN http://reference.data.gov.uk/id/day/01/01/2019
+    01/01/2020 01/01/2020 01/01/2020                    NaN              2          NaN http://reference.data.gov.uk/id/day/01/01/2020
+    01/01/2021 01/01/2021 01/01/2021                    NaN              3          NaN http://reference.data.gov.uk/id/day/01/01/2021
+    01/01/2022 01/01/2022 01/01/2022                    NaN              4          NaN http://reference.data.gov.uk/id/day/01/01/2022
+    01/01/2023 01/01/2023 01/01/2023                    NaN              5          NaN http://reference.data.gov.uk/id/day/01/01/2023
+    01/02/2018 01/02/2018 01/02/2018                    NaN              6          NaN http://reference.data.gov.uk/id/day/01/02/2018
+    01/02/2019 01/02/2019 01/02/2019                    NaN              7          NaN http://reference.data.gov.uk/id/day/01/02/2019
+    01/02/2020 01/02/2020 01/02/2020                    NaN              8          NaN http://reference.data.gov.uk/id/day/01/02/2020
+    01/02/2021 01/02/2021 01/02/2021                    NaN              9          NaN http://reference.data.gov.uk/id/day/01/02/2021
+        - Last 10 Concepts: 
+Uri Identifier      Label   Notation  Parent Uri Identifier  Sort Priority  Description                           Original Concept URI
+    31/10/2018 31/10/2018 31/10/2018                    NaN           1831          NaN http://reference.data.gov.uk/id/day/31/10/2018
+    31/10/2019 31/10/2019 31/10/2019                    NaN           1832          NaN http://reference.data.gov.uk/id/day/31/10/2019
+    31/10/2020 31/10/2020 31/10/2020                    NaN           1833          NaN http://reference.data.gov.uk/id/day/31/10/2020
+    31/10/2021 31/10/2021 31/10/2021                    NaN           1834          NaN http://reference.data.gov.uk/id/day/31/10/2021
+    31/10/2022 31/10/2022 31/10/2022                    NaN           1835          NaN http://reference.data.gov.uk/id/day/31/10/2022
+    31/12/2018 31/12/2018 31/12/2018                    NaN           1836          NaN http://reference.data.gov.uk/id/day/31/12/2018
+    31/12/2019 31/12/2019 31/12/2019                    NaN           1837          NaN http://reference.data.gov.uk/id/day/31/12/2019
+    31/12/2020 31/12/2020 31/12/2020                    NaN           1838          NaN http://reference.data.gov.uk/id/day/31/12/2020
+    31/12/2021 31/12/2021 31/12/2021                    NaN           1839          NaN http://reference.data.gov.uk/id/day/31/12/2021
+    31/12/2022 31/12/2022 31/12/2022                    NaN           1840          NaN http://reference.data.gov.uk/id/day/31/12/2022
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy: Hierarchy is too large to display.
+        

@@ -1,0 +1,152 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Day
+        - Label: Day
+        - Issued: 2023-03-07T12:20:29.019996
+        - Modified: 2023-03-07T12:20:29.019996
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Day
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 97
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+Uri Identifier      Label   Notation  Parent Uri Identifier  Sort Priority  Description                           Original Concept URI
+    01/04/2021 01/04/2021 01/04/2021                    NaN              0          NaN http://reference.data.gov.uk/id/day/01/04/2021
+    01/07/2021 01/07/2021 01/07/2021                    NaN              1          NaN http://reference.data.gov.uk/id/day/01/07/2021
+    01/09/2022 01/09/2022 01/09/2022                    NaN              2          NaN http://reference.data.gov.uk/id/day/01/09/2022
+    01/12/2022 01/12/2022 01/12/2022                    NaN              3          NaN http://reference.data.gov.uk/id/day/01/12/2022
+    02/06/2022 02/06/2022 02/06/2022                    NaN              4          NaN http://reference.data.gov.uk/id/day/02/06/2022
+    02/09/2021 02/09/2021 02/09/2021                    NaN              5          NaN http://reference.data.gov.uk/id/day/02/09/2021
+    02/12/2021 02/12/2021 02/12/2021                    NaN              6          NaN http://reference.data.gov.uk/id/day/02/12/2021
+    03/02/2022 03/02/2022 03/02/2022                    NaN              7          NaN http://reference.data.gov.uk/id/day/03/02/2022
+    03/03/2022 03/03/2022 03/03/2022                    NaN              8          NaN http://reference.data.gov.uk/id/day/03/03/2022
+    03/06/2021 03/06/2021 03/06/2021                    NaN              9          NaN http://reference.data.gov.uk/id/day/03/06/2021
+        - Last 10 Concepts: 
+Uri Identifier      Label   Notation  Parent Uri Identifier  Sort Priority  Description                           Original Concept URI
+    28/07/2022 28/07/2022 28/07/2022                    NaN             87          NaN http://reference.data.gov.uk/id/day/28/07/2022
+    28/10/2021 28/10/2021 28/10/2021                    NaN             88          NaN http://reference.data.gov.uk/id/day/28/10/2021
+    29/04/2021 29/04/2021 29/04/2021                    NaN             89          NaN http://reference.data.gov.uk/id/day/29/04/2021
+    29/07/2021 29/07/2021 29/07/2021                    NaN             90          NaN http://reference.data.gov.uk/id/day/29/07/2021
+    29/09/2022 29/09/2022 29/09/2022                    NaN             91          NaN http://reference.data.gov.uk/id/day/29/09/2022
+    29/12/2022 29/12/2022 29/12/2022                    NaN             92          NaN http://reference.data.gov.uk/id/day/29/12/2022
+    30/06/2022 30/06/2022 30/06/2022                    NaN             93          NaN http://reference.data.gov.uk/id/day/30/06/2022
+    30/09/2021 30/09/2021 30/09/2021                    NaN             94          NaN http://reference.data.gov.uk/id/day/30/09/2021
+    30/12/2021 30/12/2021 30/12/2021                    NaN             95          NaN http://reference.data.gov.uk/id/day/30/12/2021
+    31/03/2022 31/03/2022 31/03/2022                    NaN             96          NaN http://reference.data.gov.uk/id/day/31/03/2022
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── 01/04/2021
+├── 01/07/2021
+├── 01/09/2022
+├── 01/12/2022
+├── 02/06/2022
+├── 02/09/2021
+├── 02/12/2021
+├── 03/02/2022
+├── 03/03/2022
+├── 03/06/2021
+├── 03/11/2022
+├── 04/03/2021
+├── 04/08/2022
+├── 04/11/2021
+├── 05/01/2023
+├── 05/05/2022
+├── 05/08/2021
+├── 06/01/2022
+├── 06/05/2021
+├── 06/10/2022
+├── 07/04/2022
+├── 07/07/2022
+├── 07/10/2021
+├── 08/04/2021
+├── 08/07/2021
+├── 08/09/2022
+├── 08/12/2022
+├── 09/06/2022
+├── 09/09/2021
+├── 09/12/2021
+├── 10/02/2022
+├── 10/03/2022
+├── 10/06/2021
+├── 10/11/2022
+├── 11/03/2021
+├── 11/08/2022
+├── 11/11/2021
+├── 12/05/2022
+├── 12/08/2021
+├── 13/01/2022
+├── 13/05/2021
+├── 13/10/2022
+├── 14/04/2022
+├── 14/07/2022
+├── 14/10/2021
+├── 15/04/2021
+├── 15/07/2021
+├── 15/09/2022
+├── 15/12/2022
+├── 16/06/2022
+├── 16/09/2021
+├── 16/12/2021
+├── 17/02/2022
+├── 17/03/2022
+├── 17/06/2021
+├── 17/11/2022
+├── 18/03/2021
+├── 18/08/2022
+├── 18/11/2021
+├── 19/05/2022
+├── 19/08/2021
+├── 20/01/2022
+├── 20/05/2021
+├── 20/10/2022
+├── 21/04/2022
+├── 21/07/2022
+├── 21/10/2021
+├── 22/04/2021
+├── 22/07/2021
+├── 22/09/2022
+├── 22/12/2022
+├── 23/06/2022
+├── 23/09/2021
+├── 23/12/2021
+├── 24/02/2022
+├── 24/03/2022
+├── 24/06/2021
+├── 24/11/2022
+├── 25/03/2021
+├── 25/08/2022
+├── 25/11/2021
+├── 26/05/2022
+├── 26/08/2021
+├── 27/01/2022
+├── 27/05/2021
+├── 27/10/2022
+├── 28/04/2022
+├── 28/07/2022
+├── 28/10/2021
+├── 29/04/2021
+├── 29/07/2021
+├── 29/09/2022
+├── 29/12/2022
+├── 30/06/2022
+├── 30/09/2021
+├── 30/12/2021
+└── 31/03/2022
+
+        

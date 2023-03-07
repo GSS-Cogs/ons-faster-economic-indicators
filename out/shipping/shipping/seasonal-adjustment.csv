@@ -1,0 +1,5 @@
+Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
+7ma,7 day average,7MA,,0,Non-seasonally adjusted value
+nsa,NSA,NSA,,1,Non-seasonally adjusted value
+sa,SA,SA,,2,Seasonally adjusted value
+trend,Trend,Trend,,3,Non-seasonally adjusted value

@@ -1,0 +1,81 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Number of UK flights
+        - Label: Number of UK flights
+        - Issued: 2023-03-07T12:20:00.606413
+        - Modified: 2023-03-07T12:20:00.606413
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade
+        - Keywords: 
+		-- flights
+		-- domestic
+		-- international
+        - Contact Point: None
+        - Identifier: Number of UK flights
+        - Comment: Number of flights to, from, and within the UK
+        - Description: These data are daily flight figures from the European Organisation for the Safety of Air Navigation (EUROCONTROL). Daily flight numbers for the UK alongside other countries are available in EUROCONTROL's dashboard. EUROCONTROL is a pan-European, civil-military organisation dedicated to supporting European aviation. Its Aviation Intelligence and Performance Review Unit provides independent collection and validation of air navigation services' performance-related data and intelligence gathering.
+		The flights data include international arrivals and departures to and from the UK (including Crown dependencies) and domestic UK flights but exclude overflights (flights that pass over UK territory). They capture all flight movements that operate under Instrument Flight Rules (IFR), where the pilot uses instruments in the flight deck to control, guide and adjust the plane. This includes commercial flights carrying passengers and cargo as well as non-commercial flights such as private and military flights.
+		Data from EUROCONTROL do not include information on the volume of passengers or cargo carried on UK flights. Especially in the context of the coronavirus (COVID-19) pandemic, flights might not be operating at full capacity and therefore trends in passengers and cargo will differ from trends in flights presented here.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Number of UK flights
+        - Number of Components: 6
+        - Components:
+                                                   Property     Property Label Property Type Column Title Observation Value Column Titles  Required
+                     number-of-uk-flights.csv#dimension/day                Day     Dimension         Date                                      True
+      number-of-uk-flights.csv#attribute/observation-status Observation Status     Attribute       Marker                                     False
+         number-of-uk-flights.csv#measure/number-of-flights  Number of flights       Measure                                                   True
+         number-of-uk-flights.csv#measure/seven-day-average  Seven-day average       Measure                                                   True
+               http://purl.org/linked-data/cube#measureType                        Dimension      Measure                                      True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                        Attribute                                                   True
+- Columns where suppress output is true: 
+		-- index
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 1
+        - Code Lists:
+        Code List Code List Label Columns Used In
+day.csv#code-list             Day            Date
+
+- The data cube has the following dataset information:
+        - Number of Observations: 2870
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+      Date Marker  index           Measure  value
+2019-01-02    NaN      6 number-of-flights 5147.0
+2019-01-03    NaN      7 number-of-flights 5518.0
+2019-01-04    NaN      8 number-of-flights 5588.0
+2019-01-05    NaN      9 number-of-flights 4798.0
+2019-01-06    NaN     10 number-of-flights 5329.0
+2019-01-07    NaN     11 number-of-flights 5288.0
+2019-01-08    NaN     12 number-of-flights 4670.0
+2019-01-09    NaN     13 number-of-flights 4702.0
+2019-01-10    NaN     14 number-of-flights 5056.0
+2019-01-11    NaN     15 number-of-flights 5330.0
+        - Last 10 Observations: 
+      Date                                                    Marker  index           Measure  value
+2022-11-27                                                       NaN    332 seven-day-average 4281.0
+2022-11-28                                                       NaN    333 seven-day-average 4486.0
+2022-11-29                                                       NaN    334 seven-day-average 3939.0
+2022-11-30                                                       NaN    335 seven-day-average 4074.0
+2022-12-01 average-value-affected-by-interpolated-daily-flight-value    336 seven-day-average 4420.0
+2022-12-02 average-value-affected-by-interpolated-daily-flight-value    337 seven-day-average 4767.0
+2022-12-03 average-value-affected-by-interpolated-daily-flight-value    338 seven-day-average 3699.0
+2022-12-04 average-value-affected-by-interpolated-daily-flight-value    339 seven-day-average 4411.0
+2022-12-05 average-value-affected-by-interpolated-daily-flight-value    340 seven-day-average 4649.0
+2022-12-06 average-value-affected-by-interpolated-daily-flight-value    341 seven-day-average 4275.0
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+          Measure   Unit  Count
+number-of-flights number   1435
+seven-day-average number   1435
+        

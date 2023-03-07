@@ -1,0 +1,9 @@
+[
+    {
+        "message": "Creator 'https://www.adzuna.co.uk/' is not recognised by csvcubed.",
+        "json_path": "$.creator",
+        "offending_value": "https://www.adzuna.co.uk/",
+        "schema_validator_type": "enum",
+        "children": []
+    }
+]

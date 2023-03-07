@@ -1,0 +1,90 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: UK port visits by ships
+        - Label: UK port visits by ships
+        - Issued: 2023-03-07T12:20:48.559535
+        - Modified: 2023-03-07T12:20:48.559535
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/economy/economicoutputandproductivity
+        - Keywords: 
+		-- shipping
+		-- trade
+		-- passenger
+		-- tanker
+		-- maritime
+		-- cargo
+		-- ports
+        - Contact Point: None
+        - Identifier: UK port visits by ships
+        - Comment: Counts of daily ship visits to selected UK ports, by ship type
+        - Description: Ships equipped with Automatic Identification System (AIS) equipment on-board transmit positional information every 2 seconds when moving and up to 3 minutes when anchored or moored. Originally introduced for navigational safety, AIS data can also be used as a source of information for monitoring trends in shipping activity.
+		We collect and aggregate these messages to identify the number of ships that travel within a port bounding box and remain there for a series of transmissions, before travelling outside of the boundary again. The AIS messages also allow us to identify a subset of all ships as cargo and tanker ships.
+		This dataset provides the number of daily visits for 16 of the UK's most significant freight ports by tonnage, and a sum of those visits as a UK total. The UK total is seasonally adjusted using the seasonal adjustment method TRAMO-SEATS modified to deal with higher frequency time series.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: UK port visits by ships
+        - Number of Components: 9
+        - Components:
+                                                    Property           Property Label Property Type        Column Title Observation Value Column Titles  Required
+                uk-port-visits-by-ships.csv#dimension/period                   Period     Dimension                Date                                      True
+   uk-port-visits-by-ships.csv#dimension/seasonal-adjustment      Seasonal Adjustment     Dimension Seasonal Adjustment                                      True
+                  uk-port-visits-by-ships.csv#dimension/port                     Port     Dimension                Port                                      True
+                http://purl.org/linked-data/cube#measureType                              Dimension             Measure                                      True
+ http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                              Attribute                                                          True
+             uk-port-visits-by-ships.csv#dimension/ship-type                Ship Type     Dimension           Ship Type                                      True
+uk-port-visits-by-ships.csv#measure/number-of-visits-to-port number of visits to port       Measure                                                          True
+  uk-port-visits-by-ships.csv#measure/number-of-unique-ships   number of unique ships       Measure                                                          True
+    uk-port-visits-by-ships.csv#attribute/observation-status       Observation Status     Attribute              Marker                                     False
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 4
+        - Code Lists:
+                        Code List     Code List Label     Columns Used In
+             period.csv#code-list              Period                Date
+               port.csv#code-list                Port                Port
+seasonal-adjustment.csv#code-list Seasonal Adjustment Seasonal Adjustment
+         ship-types.csv#code-list          Ship types           Ship Type
+
+- The data cube has the following dataset information:
+        - Number of Observations: 63284
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+          Date Seasonal Adjustment              Port  Value Ship Type                  Measure                         Marker
+day/2019-04-01                 nsa         all-of-uk  280.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa           belfast   13.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa             dover   24.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa        felixstowe   23.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa             forth    6.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa grimsby-immingham   43.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa          holyhead    NaN       all number-of-visits-to-port data-suppressed-for-disclosure
+day/2019-04-01                 nsa             larne    NaN       all number-of-visits-to-port data-suppressed-for-disclosure
+day/2019-04-01                 nsa         liverpool   30.0       all number-of-visits-to-port                            NaN
+day/2019-04-01                 nsa            london   29.0       all number-of-visits-to-port                            NaN
+        - Last 10 Observations: 
+        Date Seasonal Adjustment            Port  Value Ship Type                Measure                         Marker
+week/2022-48                 nsa        holyhead    NaN       c-t number-of-unique-ships data-suppressed-for-disclosure
+week/2022-48                 nsa           larne    NaN       c-t number-of-unique-ships data-suppressed-for-disclosure
+week/2022-48                 nsa       liverpool   78.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa          london  106.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa   milford-haven   35.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa      portsmouth   14.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa     southampton   55.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa tees-hartlepool   61.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa            tyne    7.0       c-t number-of-unique-ships                            NaN
+week/2022-48                 nsa     warrenpoint    8.0       c-t number-of-unique-ships                            NaN
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+                 Measure   Unit  Count
+  number-of-unique-ships number   6112
+number-of-visits-to-port number  57172
+        

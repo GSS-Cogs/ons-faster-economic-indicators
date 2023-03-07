@@ -1,0 +1,85 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Industries
+        - Label: Industries
+        - Issued: 2023-03-07T12:19:36.804819
+        - Modified: 2023-03-07T12:19:36.804819
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Industries
+        - Comment: List of all industries included in the dataset
+        - Description: The Adzuna categories used do not correspond to Standard Industrial Classification (SIC) categories.
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 30
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+                   Uri Identifier                             Label                          Notation Parent Uri Identifier  Sort Priority                       Description
+                              all                    All industries                               All                   NaN              0                    All industries
+                    manufacturing                     Manufacturing                     Manufacturing                   all              0                     Manufacturing
+                 energy-/-oil-gas                Energy / oil & gas                Energy / oil & gas                   all              1                Energy / oil & gas
+            construction-/-trades             Construction / trades             Construction / trades                   all              2             Construction / trades
+             wholesale-and-retail              Wholesale and retail              Wholesale and retail                   all              3              Wholesale and retail
+                         graduate                          Graduate                          Graduate                   all              4                          Graduate
+transport-/-logistics-/-warehouse Transport / logistics / warehouse Transport / logistics / warehouse                   all              5 Transport / logistics / warehouse
+                 travel-/-tourism                  Travel / tourism                  Travel / tourism                   all              6                  Travel / tourism
+         catering-and-hospitality          Catering and hospitality          Catering and hospitality                   all              7          Catering and hospitality
+        it-/-computing-/-software         IT / Computing / Software         IT / Computing / Software                   all              8         IT / Computing / Software
+        - Last 10 Concepts: 
+                Uri Identifier                            Label                         Notation Parent Uri Identifier  Sort Priority                                                                                 Description
+                hr-recruitment                 HR & recruitment                 HR & recruitment                   all             19                                                                            HR & recruitment
+                     education                        Education                        Education                   all             20                                                                                   Education
+           part-time-/-weekend              Part-time / weekend              Part-time / weekend                   all             21                                                                         Part-time / weekend
+           charity-/-voluntary              Charity / voluntary              Charity / voluntary                   all             22                                                                         Charity / voluntary
+    healthcare-and-social-care       Healthcare and Social care       Healthcare and Social care                   all             23                                                                  Healthcare and Social care
+creative-/-design-/-arts-media Creative / design / arts & media Creative / design / arts & media                   all             24                                                            Creative / design / arts & media
+               other-/-general                  Other / general                  Other / general                   all             25                                                                             Other / general
+                         sales                            Sales                            Sales                   all             26                                                                                       Sales
+                 domestic-help                    Domestic help                    Domestic help                   all             27                                                                               Domestic help
+                       unknown                          Unknown                          Unknown                   all             28 The 'unknown' category relates to locations or categories which have not been able to match
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 2
+        - Concepts hierarchy:
+root
+└── All industries
+    ├── Accounting / Finance
+    ├── Admin / clerical / secretarial
+    ├── Catering and hospitality
+    ├── Charity / voluntary
+    ├── Construction / trades
+    ├── Creative / design / arts & media
+    ├── Customer service / support
+    ├── Domestic help
+    ├── Education
+    ├── Energy / oil & gas
+    ├── Engineering
+    ├── Facilities / maintenance
+    ├── Graduate
+    ├── HR & recruitment
+    ├── Healthcare and Social care
+    ├── IT / Computing / Software
+    ├── Legal
+    ├── Management / exec / consulting
+    ├── Manufacturing
+    ├── Marketing / advertising / PR
+    ├── Other / general
+    ├── Part-time / weekend
+    ├── Property
+    ├── Sales
+    ├── Scientific / QA
+    ├── Transport / logistics / warehouse
+    ├── Travel / tourism
+    ├── Unknown
+    └── Wholesale and retail
+
+        

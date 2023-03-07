@@ -1,0 +1,53 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Period
+        - Label: Period
+        - Issued: 2023-03-07T12:20:48.511519
+        - Modified: 2023-03-07T12:20:48.511519
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Period
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 1535
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+Uri Identifier          Label       Notation  Parent Uri Identifier  Sort Priority  Description             Original Concept URI
+day/2019-04-01 day/2019-04-01 day/2019-04-01                    NaN              0          NaN http://reference.data.gov.uk/id/
+day/2019-04-02 day/2019-04-02 day/2019-04-02                    NaN              1          NaN http://reference.data.gov.uk/id/
+day/2019-04-03 day/2019-04-03 day/2019-04-03                    NaN              2          NaN http://reference.data.gov.uk/id/
+day/2019-04-04 day/2019-04-04 day/2019-04-04                    NaN              3          NaN http://reference.data.gov.uk/id/
+day/2019-04-05 day/2019-04-05 day/2019-04-05                    NaN              4          NaN http://reference.data.gov.uk/id/
+day/2019-04-06 day/2019-04-06 day/2019-04-06                    NaN              5          NaN http://reference.data.gov.uk/id/
+day/2019-04-07 day/2019-04-07 day/2019-04-07                    NaN              6          NaN http://reference.data.gov.uk/id/
+day/2019-04-08 day/2019-04-08 day/2019-04-08                    NaN              7          NaN http://reference.data.gov.uk/id/
+day/2019-04-09 day/2019-04-09 day/2019-04-09                    NaN              8          NaN http://reference.data.gov.uk/id/
+day/2019-04-10 day/2019-04-10 day/2019-04-10                    NaN              9          NaN http://reference.data.gov.uk/id/
+        - Last 10 Concepts: 
+Uri Identifier        Label     Notation  Parent Uri Identifier  Sort Priority  Description             Original Concept URI
+  week/2022-39 week/2022-39 week/2022-39                    NaN           1525          NaN http://reference.data.gov.uk/id/
+  week/2022-40 week/2022-40 week/2022-40                    NaN           1526          NaN http://reference.data.gov.uk/id/
+  week/2022-41 week/2022-41 week/2022-41                    NaN           1527          NaN http://reference.data.gov.uk/id/
+  week/2022-42 week/2022-42 week/2022-42                    NaN           1528          NaN http://reference.data.gov.uk/id/
+  week/2022-43 week/2022-43 week/2022-43                    NaN           1529          NaN http://reference.data.gov.uk/id/
+  week/2022-44 week/2022-44 week/2022-44                    NaN           1530          NaN http://reference.data.gov.uk/id/
+  week/2022-45 week/2022-45 week/2022-45                    NaN           1531          NaN http://reference.data.gov.uk/id/
+  week/2022-46 week/2022-46 week/2022-46                    NaN           1532          NaN http://reference.data.gov.uk/id/
+  week/2022-47 week/2022-47 week/2022-47                    NaN           1533          NaN http://reference.data.gov.uk/id/
+  week/2022-48 week/2022-48 week/2022-48                    NaN           1534          NaN http://reference.data.gov.uk/id/
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy: Hierarchy is too large to display.
+        

@@ -1,0 +1,9 @@
+[
+    {
+        "message": "Creator 'https://www.caa.co.uk/data-and-analysis/' is not recognised by csvcubed.",
+        "json_path": "$.creator",
+        "offending_value": "https://www.caa.co.uk/data-and-analysis/",
+        "schema_validator_type": "enum",
+        "children": []
+    }
+]

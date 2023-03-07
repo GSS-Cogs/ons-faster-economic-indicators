@@ -1,0 +1,71 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Port
+        - Label: Port
+        - Issued: 2023-03-07T12:20:48.550697
+        - Modified: 2023-03-07T12:20:48.550697
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Port
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 16
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+   Uri Identifier               Label          Notation  Parent Uri Identifier  Sort Priority  Description
+        all-of-uk           All of UK         all-of-uk                    NaN              0          NaN
+          belfast             Belfast           belfast                    NaN              1          NaN
+            dover               Dover             dover                    NaN              2          NaN
+       felixstowe          Felixstowe        felixstowe                    NaN              3          NaN
+            forth               Forth             forth                    NaN              4          NaN
+grimsby-immingham Grimsby & Immingham grimsby-immingham                    NaN              5          NaN
+         holyhead            Holyhead          holyhead                    NaN              6          NaN
+            larne               Larne             larne                    NaN              7          NaN
+        liverpool           Liverpool         liverpool                    NaN              8          NaN
+           london              London            london                    NaN              9          NaN
+        - Last 10 Concepts: 
+ Uri Identifier             Label        Notation  Parent Uri Identifier  Sort Priority  Description
+       holyhead          Holyhead        holyhead                    NaN              6          NaN
+          larne             Larne           larne                    NaN              7          NaN
+      liverpool         Liverpool       liverpool                    NaN              8          NaN
+         london            London          london                    NaN              9          NaN
+  milford-haven     Milford Haven   milford-haven                    NaN             10          NaN
+     portsmouth        Portsmouth      portsmouth                    NaN             11          NaN
+    southampton       Southampton     southampton                    NaN             12          NaN
+tees-hartlepool Tees & Hartlepool tees-hartlepool                    NaN             13          NaN
+           tyne              Tyne            tyne                    NaN             14          NaN
+    warrenpoint       Warrenpoint     warrenpoint                    NaN             15          NaN
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── All of UK
+├── Belfast
+├── Dover
+├── Felixstowe
+├── Forth
+├── Grimsby & Immingham
+├── Holyhead
+├── Larne
+├── Liverpool
+├── London
+├── Milford Haven
+├── Portsmouth
+├── Southampton
+├── Tees & Hartlepool
+├── Tyne
+└── Warrenpoint
+
+        

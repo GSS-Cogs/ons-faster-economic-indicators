@@ -1,0 +1,89 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Online job advert estimates
+        - Label: Online job advert estimates
+        - Issued: 2023-03-07T12:19:36.814017
+        - Modified: 2023-03-07T12:19:36.814017
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.adzuna.co.uk/
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/economy/economicoutputandproductivity
+        - Keywords: 
+		-- adverts
+		-- adzuna
+		-- vacancies
+		-- jobs
+		-- online jobs
+		-- job market
+        - Contact Point: None
+        - Identifier: Online job advert estimates
+        - Comment: Experimental job advert indices covering the UK job market
+        - Description: These indices are created based upon job adverts provided by Adzuna. This data includes information on several million job advert entries each month, live across the UK across the period February 2018 to December 2022, broken down by job category and UK countries and English regions.
+		Adzuna is an online job search engine who collate information from thousands of different sources in the UK. These range from direct employers’ websites to recruitment software providers to traditional job boards thus providing a comprehensive view of current online job adverts. Adzuna is working in partnership with ONS and have made data available for analysis including online advert job descriptions, job titles, job locations, job categories and salary information. The data provided are a point-in-time estimate of all job adverts indexed in Adzuna’s job search engine during the point of data extraction.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Online job advert estimates
+        - Number of Components: 10
+        - Components:
+                                                                       Property                              Property Label Property Type Column Title Observation Value Column Titles  Required
+                                  online-job-advert-estimates.csv#dimension/day                                         Day     Dimension         Date                                      True
+                             online-job-advert-estimates.csv#dimension/industry                                    Industry     Dimension     Industry                                      True
+                                   http://purl.org/linked-data/cube#measureType                                                 Dimension      Measure                                      True
+                    http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                                                 Attribute                                                   True
+                               online-job-advert-estimates.csv#dimension/method                                      Method     Dimension       Method                                      True
+                online-job-advert-estimates.csv#dimension/statistical-geography                       Statistical Geography     Dimension       Region                                      True
+        online-job-advert-estimates.csv#measure/index-100-average-february-2020         Index (100 = Average February 2020)       Measure                                                   True
+ online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year  Index (100 = Equivalent period prior year)       Measure                                                   True
+online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year Index (100 = Equivalent periord prior year)       Measure                                                   True
+                   online-job-advert-estimates.csv#attribute/observation-status                          Observation Status     Attribute       Marker                                     False
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 3
+        - Code Lists:
+               Code List Code List Label Columns Used In
+       day.csv#code-list             Day            Date
+industries.csv#code-list      Industries        Industry
+    method.csv#code-list          Method          Method
+
+- The data cube has the following dataset information:
+        - Number of Observations: 31768
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+      Date             Industry      Value                          Method    Region                         Measure                                  Marker
+2018-02-07 accounting-/-finance 118.794997 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-02-15 accounting-/-finance 124.940120 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-02-22 accounting-/-finance 122.796310 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-03-01 accounting-/-finance 117.133021 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-03-08 accounting-/-finance 115.100941 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-03-15 accounting-/-finance 115.255965 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-03-22 accounting-/-finance 113.059782 no-deduplication-method-applied K02000001 index-100-average-february-2020 value-imputed-with-linear-interpolation
+2018-03-29 accounting-/-finance 110.863599 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+2018-04-05 accounting-/-finance 110.245595 no-deduplication-method-applied K02000001 index-100-average-february-2020 value-imputed-with-linear-interpolation
+2018-04-12 accounting-/-finance 109.627592 no-deduplication-method-applied K02000001 index-100-average-february-2020                                     NaN
+        - Last 10 Observations: 
+      Date Industry     Value                          Method    Region                                Measure Marker
+2022-11-11      all 79.075051 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-11-18      all 80.369835 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-11-25      all 77.272475 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-12-02      all 79.430167 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-12-09      all 78.766588 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-12-16      all 78.808523 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-12-22      all 79.611838 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2022-12-30      all 78.827608 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2023-01-06      all 79.121809 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+2023-01-13      all 80.006591 mo-deduplication-method-applied E92000001 index-100-equivalent-period-prior-year    NaN
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+                                Measure     Unit  Count
+        index-100-average-february-2020 Unitless  22704
+ index-100-equivalent-period-prior-year Unitless   3090
+index-100-equivalent-periord-prior-year Unitless   5974
+        
