@@ -13,7 +13,7 @@
     "publisher": "https://www.gov.uk/government/organisations/office-for-national-statistics",
     "themes" : "https://www.ons.gov.uk/businessindustryandtrade",
     "creator": "https://www.caa.co.uk/data-and-analysis/",
-    "columns": {
+    "columns":  {
         "Date": {
             "from_template": "month"
         },

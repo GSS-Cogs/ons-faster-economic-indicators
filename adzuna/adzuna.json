@@ -24,7 +24,6 @@
             "type": "dimension",
             "code_list":"./adzuna-industries.json"
         },
-
         "Value": {
             "type": "observations",
             "data_type": "float",
