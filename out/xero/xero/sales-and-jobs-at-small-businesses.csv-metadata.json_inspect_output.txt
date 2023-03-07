@@ -1,0 +1,83 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Sales and jobs at small businesses
+        - Label: Sales and jobs at small businesses
+        - Issued: 2023-03-07T11:58:02.713483
+        - Modified: 2023-03-07T11:58:02.713483
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: https://www.xero.com/uk/resources/small-business-insights/
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade
+        - Keywords: 
+		-- employees
+		-- employment
+		-- small-businesses
+        - Contact Point: None
+        - Identifier: Sales and jobs at small businesses
+        - Comment: Indices of sales and jobs at small businesses from Xero, an accounting software company
+        - Description: Data on sales and jobs in small businesses are taken from Xero, a global cloud-based accounting software platform with 785,000 small business subscribers in the UK.
+		Small businesses are here defined by Xero as organisations with fewer than 20 employees.
+		Sales are measured based on the face value of invoices issued by firms within each month (including via apps attached to the Xero account).
+		Jobs are measured based on the number of unique employees of a business who are issued a payslip in a month. One individual is one payslip in a particular month if they work at least 1 hour in that month. The sample of small businesses is restricted based on the employment size band and erroneous payslips or those identified for non-wage purposes are excluded. Growth in small business jobs is calculated using the weighted average of within-firm year-on-year growth in jobs. As such, this accounts for any change in subscriber base and firms which shutdown entirely due to the pandemic.
+		Sales are measured based on the face value of invoices issued by firms within each month. Subscriber base changes are accounted for by measuring sales growth in one specific month using the sample of firms which also operated in the previous year.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Sales and jobs at small businesses
+        - Number of Components: 6
+        - Components:
+                                                   Property Property Label Property Type Column Title Observation Value Column Titles  Required
+     sales-and-jobs-at-small-businesses.csv#dimension/month          Month     Dimension         Date                                      True
+  sales-and-jobs-at-small-businesses.csv#dimension/industry       Industry     Dimension     Industry                                      True
+               http://purl.org/linked-data/cube#measureType                    Dimension     Category                                      True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                    Attribute                                                   True
+       sales-and-jobs-at-small-businesses.csv#measure/sales          Sales       Measure                                                   True
+        sales-and-jobs-at-small-businesses.csv#measure/jobs           Jobs       Measure                                                   True
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 2
+        - Code Lists:
+               Code List Code List Label Columns Used In
+industries.csv#code-list      Industries        Industry
+     month.csv#code-list           Month            Date
+
+- The data cube has the following dataset information:
+        - Number of Observations: 1034
+        - Number of Duplicates: 0
+        - First 10 Observations: 
+   Date                                       Industry  Value Category
+2019-01                                  manufacturing  100.0     jobs
+2019-01                                   construction  100.0     jobs
+2019-01                                   retail-trade  100.0     jobs
+2019-01                accommodation-and-food-services  100.0     jobs
+2019-01       information-media-and-telecommunications  100.0     jobs
+2019-01         rental-hiring-and-real-estate-services  100.0     jobs
+2019-01 professional-scientific-and-technical-services  100.0     jobs
+2019-01            administrative-and-support-services  100.0     jobs
+2019-01                                 other-services  100.0     jobs
+2019-01              health-care-and-social-assistance  100.0     jobs
+        - Last 10 Observations: 
+   Date Industry      Value Category
+2022-07      all 123.599925    sales
+2022-07      all  96.321960     jobs
+2022-08      all 133.589210    sales
+2022-08      all  94.049089     jobs
+2022-09      all 129.082596    sales
+2022-09      all  93.941149     jobs
+2022-10      all 122.594517    sales
+2022-10      all  94.541018     jobs
+2022-11      all 128.992982    sales
+2022-11      all  91.643561     jobs
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+Measure     Unit  Count
+   jobs Unitless    517
+  sales Unitless    517
+        

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+    <h3>CSV-Ws generated are as below. The latest commit id is 38439e16a5c544f20b3209402fa800b34d389ba5.</h3>
+    <div id="files-container"></div>
+    <script type="text/javascript">
+        var html_str = "<ul>";
+        var files = "|||out/xero/xero/industries.table.json|||out/xero/xero/validation-errors.json|||out/xero/xero/month.csv-metadata.json|||out/xero/xero/sales-and-jobs-at-small-businesses.csv-metadata.json_inspect_output.txt|||out/xero/xero/month.csv|||out/xero/xero/industries.csv-metadata.json|||out/xero/xero/month.csv-metadata.json_inspect_output.txt|||out/xero/xero/industries.csv-metadata.json_inspect_output.txt|||out/xero/xero/sales-and-jobs-at-small-businesses.csv-metadata.json|||out/xero/xero/sales-and-jobs-at-small-businesses.csv|||out/xero/xero/industries.csv|||out/xero/xero/month.table.json".split('|||');
+        files.shift()
+        files.sort()
+        files.forEach(function(file) {
+        file = file.replace("./","")
+        link = "https://GSS-Cogs.github.io/ons-faster-economic-indicators/"+file
+        html_str += "<li>"+"<a href='"+ link + "'>"+file+"</a></li>";
+        });
+        html_str += "</ul>";
+        document.getElementById("files-container").innerHTML = html_str;
+    </script>
+    </body>
+</html>
