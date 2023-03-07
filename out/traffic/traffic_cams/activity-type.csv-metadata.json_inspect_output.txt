@@ -1,0 +1,45 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Activity type
+        - Label: Activity type
+        - Issued: 2023-03-07T12:10:22.287328
+        - Modified: 2023-03-07T12:10:22.287328
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Activity type
+        - Comment: List of vehicle types and pedestrians identified by traffic cameras
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 6
+        - Number of Duplicates: 0
+        - Concepts: 
+      Uri Identifier                  Label               Notation  Parent Uri Identifier  Sort Priority            Description
+                cars                   Cars                   Cars                    NaN              0                   Cars
+          motorbikes             Motorbikes             Motorbikes                    NaN              1             Motorbikes
+               buses                  Buses                  Buses                    NaN              2                  Buses
+              trucks                 Trucks                 Trucks                    NaN              3                 Trucks
+                vans                   Vans                   Vans                    NaN              4                   Vans
+pedestrians-cyclists Pedestrians & cyclists Pedestrians & cyclists                    NaN              5 Pedestrians & cyclists
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── Buses
+├── Cars
+├── Motorbikes
+├── Pedestrians & cyclists
+├── Trucks
+└── Vans
+
+        

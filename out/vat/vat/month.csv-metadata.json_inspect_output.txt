@@ -1,0 +1,53 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Month
+        - Label: Month
+        - Issued: 2023-03-07T12:13:49.219276
+        - Modified: 2023-03-07T12:13:49.219276
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Month
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 192
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+Uri Identifier   Label Notation  Parent Uri Identifier  Sort Priority  Description                          Original Concept URI
+       2007-01 2007-01  2007-01                    NaN              0          NaN http://reference.data.gov.uk/id/month/2007-01
+       2007-02 2007-02  2007-02                    NaN              1          NaN http://reference.data.gov.uk/id/month/2007-02
+       2007-03 2007-03  2007-03                    NaN              2          NaN http://reference.data.gov.uk/id/month/2007-03
+       2007-04 2007-04  2007-04                    NaN              3          NaN http://reference.data.gov.uk/id/month/2007-04
+       2007-05 2007-05  2007-05                    NaN              4          NaN http://reference.data.gov.uk/id/month/2007-05
+       2007-06 2007-06  2007-06                    NaN              5          NaN http://reference.data.gov.uk/id/month/2007-06
+       2007-07 2007-07  2007-07                    NaN              6          NaN http://reference.data.gov.uk/id/month/2007-07
+       2007-08 2007-08  2007-08                    NaN              7          NaN http://reference.data.gov.uk/id/month/2007-08
+       2007-09 2007-09  2007-09                    NaN              8          NaN http://reference.data.gov.uk/id/month/2007-09
+       2007-10 2007-10  2007-10                    NaN              9          NaN http://reference.data.gov.uk/id/month/2007-10
+        - Last 10 Concepts: 
+Uri Identifier   Label Notation  Parent Uri Identifier  Sort Priority  Description                          Original Concept URI
+       2022-03 2022-03  2022-03                    NaN            182          NaN http://reference.data.gov.uk/id/month/2022-03
+       2022-04 2022-04  2022-04                    NaN            183          NaN http://reference.data.gov.uk/id/month/2022-04
+       2022-05 2022-05  2022-05                    NaN            184          NaN http://reference.data.gov.uk/id/month/2022-05
+       2022-06 2022-06  2022-06                    NaN            185          NaN http://reference.data.gov.uk/id/month/2022-06
+       2022-07 2022-07  2022-07                    NaN            186          NaN http://reference.data.gov.uk/id/month/2022-07
+       2022-08 2022-08  2022-08                    NaN            187          NaN http://reference.data.gov.uk/id/month/2022-08
+       2022-09 2022-09  2022-09                    NaN            188          NaN http://reference.data.gov.uk/id/month/2022-09
+       2022-10 2022-10  2022-10                    NaN            189          NaN http://reference.data.gov.uk/id/month/2022-10
+       2022-11 2022-11  2022-11                    NaN            190          NaN http://reference.data.gov.uk/id/month/2022-11
+       2022-12 2022-12  2022-12                    NaN            191          NaN http://reference.data.gov.uk/id/month/2022-12
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy: Hierarchy is too large to display.
+        

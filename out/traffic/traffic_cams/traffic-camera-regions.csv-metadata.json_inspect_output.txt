@@ -1,0 +1,45 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Traffic camera regions
+        - Label: Traffic camera regions
+        - Issued: 2023-03-07T12:10:22.280832
+        - Modified: 2023-03-07T12:10:22.280832
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Traffic camera regions
+        - Comment: List of regions from which traffic camera data is collected
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 6
+        - Number of Duplicates: 0
+        - Concepts: 
+    Uri Identifier              Label           Notation  Parent Uri Identifier  Sort Priority                                                                                                          Description
+        north-east         North East         North East                    NaN              0                                              Publicly available traffic cameras from https://netrafficcams.co.uk/map
+            london             London             London                    NaN              1                             Publicly available traffic cameras from Transport for London https://www.tfljamcams.net/
+greater-manchester Greater Manchester Greater Manchester                    NaN              2 Publicly available traffic cameras from Transport for Greater Manchester https://tfgm.com/roads/live-traffic-cameras
+  northern-ireland   Northern Ireland   Northern Ireland                    NaN              3                     Publicly available traffic cameras from Traffic Watch NI https://trafficwatchni.com/twni/cameras
+          southend           Southend           Southend                    NaN              4                                   Publicly available traffic cameras in Southend https://sbctraffic.southend.gov.uk/
+           reading            Reading            Reading                    NaN              5 Publicly available traffic cameras from travel Reading http://www.reading-travelinfo.co.uk/live-traffic-cameras.aspx
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── Greater Manchester
+├── London
+├── North East
+├── Northern Ireland
+├── Reading
+└── Southend
+
+        
