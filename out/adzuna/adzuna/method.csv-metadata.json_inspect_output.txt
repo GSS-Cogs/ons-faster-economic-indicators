@@ -1,0 +1,39 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Method
+        - Label: Method
+        - Issued: 2023-03-07T12:19:36.810262
+        - Modified: 2023-03-07T12:19:36.810262
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Method
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 3
+        - Number of Duplicates: 0
+        - Concepts: 
+                 Uri Identifier                           Label                        Notation  Parent Uri Identifier  Sort Priority  Description
+   deduplication-method-applied    deduplication method applied    deduplication-method-applied                    NaN              0          NaN
+mo-deduplication-method-applied mo deduplication method applied mo-deduplication-method-applied                    NaN              1          NaN
+no-deduplication-method-applied no deduplication method applied no-deduplication-method-applied                    NaN              2          NaN
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── deduplication method applied
+├── mo deduplication method applied
+└── no deduplication method applied
+
+        

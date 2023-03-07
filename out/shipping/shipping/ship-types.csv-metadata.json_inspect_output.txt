@@ -1,0 +1,42 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Ship types
+        - Label: Ship types
+        - Issued: 2023-03-07T12:20:48.554804
+        - Modified: 2023-03-07T12:20:48.554804
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: http://statistics.data.gov.uk
+        - Publisher: http://statistics.data.gov.uk
+        - Landing Pages: None
+        - Themes: 
+		-- http://example.com/themes/biscuits
+        - Keywords: 
+		-- All
+		-- Cargo
+		-- Ships
+		-- Tanker
+        - Contact Point: None
+        - Identifier: Ship types
+        - Comment: Types of ships available
+        - Description: god morgon
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 2
+        - Number of Duplicates: 0
+        - Concepts: 
+Uri Identifier          Label Notation  Parent Uri Identifier  Sort Priority                  Description
+           all      All Ships      All                    NaN              0        Total number of ships
+           c-t Cargo & Tanker      C&T                    NaN              1 Total Cargo and Tanker Ships
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── All Ships
+└── Cargo & Tanker
+
+        

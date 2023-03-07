@@ -1,0 +1,82 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Transactions at Pret A Manger
+        - Label: Transactions at Pret A Manger
+        - Issued: 2023-03-07T12:20:29.034576
+        - Modified: 2023-03-07T12:20:29.034576
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.pret.co.uk/en-GB
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade
+        - Keywords: 
+		-- office
+		-- sandwich
+		-- city
+		-- coffee
+		-- lunch
+		-- takeaway
+		-- commuter
+		-- pret
+        - Contact Point: None
+        - Identifier: Transactions at Pret A Manger
+        - Comment: The number of transactions at Pret A Manger stores relative to January 2020
+        - Description: Pret A Manger is a sandwich and coffee shop franchise chain, operating around 400 stores across the UK. Its transactional data are presented as an index and show total weekly till transactions at Pret A Manger shops as a proportion of the average weekly level in the first four weeks of 2020 (between Friday 3 January and Thursday 30 January 2020). Because of this comparison across the data time series, users should expect an element of seasonality in the data.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Transactions at Pret A Manger
+        - Number of Components: 5
+        - Components:
+                                                   Property Property Label Property Type Column Title Observation Value Column Titles  Required
+            transactions-at-pret-a-manger.csv#dimension/day            Day     Dimension         Date                           Value      True
+       transactions-at-pret-a-manger.csv#dimension/location       Location     Dimension     Location                           Value      True
+               http://purl.org/linked-data/cube#measureType                    Dimension                                                   True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                    Attribute                                        Value      True
+    transactions-at-pret-a-manger.csv#measure/indexed-sales  indexed sales       Measure        Value                           Value      True
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 2
+        - Code Lists:
+                            Code List         Code List Label Columns Used In
+                    day.csv#code-list                     Day            Date
+pret-a-manger-locations.csv#code-list Pret A Manger locations        Location
+
+- The data cube has the following dataset information:
+        - Number of Rows: 970
+        - Number of Duplicates: 0
+        - First 10 Rows: 
+      Date  Location     Value
+04/03/2021 yorkshire 59.847099
+11/03/2021 yorkshire 60.037599
+18/03/2021 yorkshire 63.065547
+25/03/2021 yorkshire 66.103522
+01/04/2021 yorkshire 64.579521
+08/04/2021 yorkshire 55.846597
+15/04/2021 yorkshire 83.489159
+22/04/2021 yorkshire 96.182479
+29/04/2021 yorkshire 99.791954
+06/05/2021 yorkshire 99.220454
+        - Last 10 Rows: 
+      Date           Location     Value
+03/11/2022 london-city-worker 94.670235
+10/11/2022 london-city-worker 85.508318
+17/11/2022 london-city-worker 99.325791
+24/11/2022 london-city-worker 96.349760
+01/12/2022 london-city-worker 97.217878
+08/12/2022 london-city-worker 96.630699
+15/12/2022 london-city-worker 69.616959
+22/12/2022 london-city-worker 62.171211
+29/12/2022 london-city-worker 21.874830
+05/01/2023 london-city-worker 40.561616
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+      Measure     Unit  Count
+indexed sales unitless    970
+        

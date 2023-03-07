@@ -1,0 +1,76 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Heathrow Flight Passengers
+        - Label: Heathrow Flight Passengers
+        - Issued: 2023-03-07T12:19:50.737831
+        - Modified: 2023-03-07T12:19:50.737831
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.caa.co.uk/data-and-analysis/
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade
+        - Keywords: 
+		-- international
+		-- domestic
+		-- passenger
+		-- flights
+        - Contact Point: None
+        - Identifier: Heathrow Flight Passengers
+        - Comment: Monthly passenger numbers at London Heathrow Airport, to, from, and within the UK
+        - Description: These data are the total passenger numbers arriving and departing on scheduled or charter international and domestic services at London Heathrow Airport (LHR) over a calendar month.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Heathrow Flight Passengers
+        - Number of Components: 4
+        - Components:
+                                                   Property       Property Label Property Type Column Title Observation Value Column Titles  Required
+             heathrow-flight-passengers.csv#dimension/month                Month     Dimension         Date                           Value      True
+               http://purl.org/linked-data/cube#measureType                          Dimension                                                   True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                          Attribute                                        Value      True
+heathrow-flight-passengers.csv#measure/number-of-passengers Number of passengers       Measure        Value                           Value      True
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 1
+        - Code Lists:
+          Code List Code List Label Columns Used In
+month.csv#code-list           Month            Date
+
+- The data cube has the following dataset information:
+        - Number of Rows: 47
+        - Number of Duplicates: 0
+        - First 10 Rows: 
+   Date   Value
+2019-01 5927225
+2019-02 5482288
+2019-03 6527270
+2019-04 6705428
+2019-05 6683378
+2019-06 7158541
+2019-07 7659554
+2019-08 7578862
+2019-09 6685601
+2019-10 6907331
+        - Last 10 Rows: 
+   Date   Value
+2022-02 2823866
+2022-03 4163963
+2022-04 5088090
+2022-05 5307698
+2022-06 5954441
+2022-07 6307923
+2022-08 6084739
+2022-09 5867559
+2022-10 5812564
+2022-11 5646134
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+             Measure   Unit  Count
+Number of passengers Number     47
+        

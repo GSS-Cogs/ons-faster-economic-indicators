@@ -1,0 +1,114 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "ship-types.csv#code-list",
+    "url": "ship-types.csv",
+    "tableSchema": "ship-types.table.json",
+    "rdfs:seeAlso": [
+        {
+            "@id": "ship-types.csv#code-list",
+            "@type": [
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "god morgon"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Ship types"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:20:48.554804"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:20:48.554804"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Ship types"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Types of ships available"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Ship types"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "Cargo"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Ships"
+                },
+                {
+                    "@language": "en",
+                    "@value": "All"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Tanker"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#theme": [
+                {
+                    "@id": "http://example.com/themes/biscuits"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "ship-types.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "ship-types.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.3.1"
+                }
+            ]
+        }
+    ]
+}

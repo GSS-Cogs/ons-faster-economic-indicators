@@ -1,0 +1,9 @@
+[
+    {
+        "message": "Creator 'https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html' is not recognised by csvcubed.",
+        "json_path": "$.creator",
+        "offending_value": "https://www.eurocontrol.int/Economics/DailyTrafficVariation-States.html",
+        "schema_validator_type": "enum",
+        "children": []
+    }
+]

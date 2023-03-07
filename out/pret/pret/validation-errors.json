@@ -1,0 +1,9 @@
+[
+    {
+        "message": "Creator 'https://www.pret.co.uk/en-GB' is not recognised by csvcubed.",
+        "json_path": "$.creator",
+        "offending_value": "https://www.pret.co.uk/en-GB",
+        "schema_validator_type": "enum",
+        "children": []
+    }
+]

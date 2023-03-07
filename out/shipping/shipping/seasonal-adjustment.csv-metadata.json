@@ -1,0 +1,109 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "seasonal-adjustment.csv#code-list",
+    "url": "seasonal-adjustment.csv",
+    "tableSchema": "seasonal-adjustment.table.json",
+    "rdfs:seeAlso": [
+        {
+            "@id": "seasonal-adjustment.csv#code-list",
+            "@type": [
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+            ],
+            "http://purl.org/dc/terms/creator": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
+                }
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "A code list of Seasonal adjustment components"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:20:48.539791"
+                }
+            ],
+            "http://purl.org/dc/terms/license": [
+                {
+                    "@id": "https://creativecommons.org/licenses/by/4.0/"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:20:48.539791"
+                }
+            ],
+            "http://purl.org/dc/terms/publisher": [
+                {
+                    "@id": "http://statistics.data.gov.uk"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal adjustment components"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Seasonal Adjustment"
+                }
+            ],
+            "http://www.w3.org/ns/dcat#keyword": [
+                {
+                    "@language": "en",
+                    "@value": "NSA"
+                },
+                {
+                    "@language": "en",
+                    "@value": "SA"
+                },
+                {
+                    "@language": "en",
+                    "@value": "Trend"
+                },
+                {
+                    "@language": "en",
+                    "@value": "7MA"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "seasonal-adjustment.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "seasonal-adjustment.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://www.w3.org/ns/prov#Activity"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.3.1"
+                }
+            ]
+        }
+    ]
+}

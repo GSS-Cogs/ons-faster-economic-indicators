@@ -1,0 +1,37 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Periodicity
+        - Label: Periodicity
+        - Issued: 2023-03-07T12:20:10.570281
+        - Modified: 2023-03-07T12:20:10.570281
+        - License: None
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Periodicity
+        - Comment: None
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 2
+        - Number of Duplicates: 0
+        - Concepts: 
+                     Uri Identifier                               Label                            Notation  Parent Uri Identifier  Sort Priority  Description
+                         actual-day                          Actual day                          actual-day                    NaN              0          NaN
+preceding-seven-day-rolling-average Preceding seven-day rolling average preceding-seven-day-rolling-average                    NaN              1          NaN
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── Actual day
+└── Preceding seven-day rolling average
+
+        

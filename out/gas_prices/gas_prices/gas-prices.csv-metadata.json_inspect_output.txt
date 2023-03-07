@@ -1,0 +1,79 @@
+
+- This file is a data cube.
+
+- The data cube has the following catalog metadata:
+        - Title: Gas prices
+        - Label: Gas prices
+        - Issued: 2023-03-07T12:20:10.720972
+        - Modified: 2023-03-07T12:20:10.720972
+        - License: http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+        - Creator: https://www.nationalgas.com/
+        - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
+        - Landing Pages: None
+        - Themes: 
+		-- https://www.ons.gov.uk/businessindustryandtrade
+        - Keywords: 
+		-- sap
+		-- trade
+		-- energy
+		-- gas
+		-- price
+        - Contact Point: None
+        - Identifier: Gas prices
+        - Comment: Daily and rolling average System Average Price (SAP) of gas traded in Great Britain over the On-the-Day Commodity Market (OCM) between 1 January 2018 and 15 January 2023
+        - Description: The daily SAP determines the futures price and is used to indicate supply constraints and demand pressures. These data are accessed weekly, in a Monday to Sunday format. The data can be subject to extreme within-day trading prices, which can lead to skewing of actual traded prices. It must also be noted that while these data reflect spot prices on the day, traders can opt for futures contracts where the buyer and the seller agree the market-determined price for gas for a future date. Other markets also exist for wholesale gas trading in Great Britain. Despite this, the scope of SAP is sufficient to provide a representation of supply constraints and demand pressures in the gas industry.
+        
+
+- The data cube has the following data structure definition:
+- Dataset Label: Gas prices
+        - Number of Components: 5
+        - Components:
+                                                   Property Property Label Property Type Column Title Observation Value Column Titles  Required
+                               gas-prices.csv#dimension/day            Day     Dimension         Date                       Gas price      True
+                       gas-prices.csv#dimension/periodicity    Periodicity     Dimension  Periodicity                       Gas price      True
+               http://purl.org/linked-data/cube#measureType                    Dimension                                                   True
+http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure                    Attribute                                    Gas price      True
+                                 gas-prices.csv#measure/sap            SAP       Measure    Gas price                       Gas price      True
+- Columns where suppress output is true: None
+
+- The data cube has the following code list information:
+        - Number of Code Lists: 2
+        - Code Lists:
+                Code List Code List Label Columns Used In
+        day.csv#code-list             Day            Date
+periodicity.csv#code-list     Periodicity     Periodicity
+
+- The data cube has the following dataset information:
+        - Number of Rows: 3682
+        - Number of Duplicates: 0
+        - First 10 Rows: 
+      Date                         Periodicity  Gas price
+01/01/2018                          actual-day     1.7083
+01/01/2018 preceding-seven-day-rolling-average     1.8474
+02/01/2018                          actual-day     1.7331
+02/01/2018 preceding-seven-day-rolling-average     1.8318
+03/01/2018                          actual-day     1.7663
+03/01/2018 preceding-seven-day-rolling-average     1.8019
+04/01/2018                          actual-day     1.7719
+04/01/2018 preceding-seven-day-rolling-average     1.7835
+05/01/2018                          actual-day     1.7601
+05/01/2018 preceding-seven-day-rolling-average     1.7608
+        - Last 10 Rows: 
+      Date                         Periodicity  Gas price
+11/01/2023                          actual-day     5.4858
+11/01/2023 preceding-seven-day-rolling-average     5.4688
+12/01/2023                          actual-day     5.6646
+12/01/2023 preceding-seven-day-rolling-average     5.5275
+13/01/2023                          actual-day     5.5287
+13/01/2023 preceding-seven-day-rolling-average     5.6105
+14/01/2023                          actual-day     5.4769
+14/01/2023 preceding-seven-day-rolling-average     5.6606
+15/01/2023                          actual-day     5.6585
+15/01/2023 preceding-seven-day-rolling-average     5.6354
+        
+
+- The data cube has the following value counts:
+        - Value counts broken-down by measure and unit (of measure):
+Measure  Unit  Count
+    SAP p/kWh   3682
+        

@@ -1,0 +1,65 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Pret A Manger locations
+        - Label: Pret A Manger locations
+        - Issued: 2023-03-07T12:20:29.030082
+        - Modified: 2023-03-07T12:20:29.030082
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: None
+        - Publisher: None
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: None
+        - Contact Point: None
+        - Identifier: Pret A Manger locations
+        - Comment: Stores included in each location
+        - Description: None
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 10
+        - Number of Duplicates: 0
+        - First 10 Concepts: 
+    Uri Identifier               Label            Notation  Parent Uri Identifier  Sort Priority                                                                                                            Description
+         yorkshire           Yorkshire           Yorkshire                    NaN              0                                                                                      Pret A Manger stores in Yorkshire
+   london-suburban    London: Suburban    London: Suburban                    NaN              1 Pret A Manger stores outside of Zones 1 and 2, but within Central London; predominantly in residential areas of London
+        manchester          Manchester          Manchester                    NaN              2                                                                                     Pret A Manger stores in Manchester
+   london-west-end    London: West End    London: West End                    NaN              3                                                     Pret A Manger stores in popular retail areas within Central London
+   london-stations    London: Stations    London: Stations                    NaN              4                                                           Pret A Manger stores in three large train stations in London
+    regional-towns      Regional Towns      Regional Towns                    NaN              5                                                                     Pret A Manger stores in towns not listed elsewhere
+          scotland            Scotland            Scotland                    NaN              6                                                                                       Pret A Manger stores in Scotland
+   london-airports    London: Airports    London: Airports                    NaN              7                                                                  Pret A Manger stores in four major airports in London
+london-city-worker London: City Worker London: City Worker                    NaN              8                                                               Pret A Manger stores in the Square Mile and Canary Wharf
+ regional-stations   Regional Stations   Regional Stations                    NaN              9                                                         Pret A Manger stores in stations in towns not listed elsewhere
+        - Last 10 Concepts: 
+    Uri Identifier               Label            Notation  Parent Uri Identifier  Sort Priority                                                                                                            Description
+         yorkshire           Yorkshire           Yorkshire                    NaN              0                                                                                      Pret A Manger stores in Yorkshire
+   london-suburban    London: Suburban    London: Suburban                    NaN              1 Pret A Manger stores outside of Zones 1 and 2, but within Central London; predominantly in residential areas of London
+        manchester          Manchester          Manchester                    NaN              2                                                                                     Pret A Manger stores in Manchester
+   london-west-end    London: West End    London: West End                    NaN              3                                                     Pret A Manger stores in popular retail areas within Central London
+   london-stations    London: Stations    London: Stations                    NaN              4                                                           Pret A Manger stores in three large train stations in London
+    regional-towns      Regional Towns      Regional Towns                    NaN              5                                                                     Pret A Manger stores in towns not listed elsewhere
+          scotland            Scotland            Scotland                    NaN              6                                                                                       Pret A Manger stores in Scotland
+   london-airports    London: Airports    London: Airports                    NaN              7                                                                  Pret A Manger stores in four major airports in London
+london-city-worker London: City Worker London: City Worker                    NaN              8                                                               Pret A Manger stores in the Square Mile and Canary Wharf
+ regional-stations   Regional Stations   Regional Stations                    NaN              9                                                         Pret A Manger stores in stations in towns not listed elsewhere
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── London: Airports
+├── London: City Worker
+├── London: Stations
+├── London: Suburban
+├── London: West End
+├── Manchester
+├── Regional Stations
+├── Regional Towns
+├── Scotland
+└── Yorkshire
+
+        
