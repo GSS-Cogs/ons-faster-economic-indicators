@@ -33,7 +33,7 @@
             "type": "dimension",
             "code_list": "./vat-sic.json"
         },
-         "Variable": {
+        "Variable": {
             "type": "measures",
             "values": [
                 {
@@ -62,7 +62,7 @@
                 }
             ]
             },
-         "Estimate":{
+        "Estimate":{
             "type": "attribute",
             "values": [
                 {
