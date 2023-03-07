@@ -4,8 +4,8 @@
 - The data cube has the following catalog metadata:
         - Title: Sales and jobs at small businesses
         - Label: Sales and jobs at small businesses
-        - Issued: 2023-03-07T11:58:02.713483
-        - Modified: 2023-03-07T11:58:02.713483
+        - Issued: 2023-03-07T12:08:02.046071
+        - Modified: 2023-03-07T12:08:02.046071
         - License: https://creativecommons.org/licenses/by/4.0/
         - Creator: https://www.xero.com/uk/resources/small-business-insights/
         - Publisher: https://www.gov.uk/government/organisations/office-for-national-statistics
@@ -13,9 +13,9 @@
         - Themes: 
 		-- https://www.ons.gov.uk/businessindustryandtrade
         - Keywords: 
-		-- employees
 		-- employment
-		-- small-businesses
+		-- employees
+		-- small businesses
         - Contact Point: None
         - Identifier: Sales and jobs at small businesses
         - Comment: Indices of sales and jobs at small businesses from Xero, an accounting software company
