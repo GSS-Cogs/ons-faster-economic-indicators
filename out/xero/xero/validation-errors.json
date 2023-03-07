@@ -1,0 +1,9 @@
+[
+    {
+        "message": "Creator 'https://www.xero.com/uk/resources/small-business-insights/' is not recognised by csvcubed.",
+        "json_path": "$.creator",
+        "offending_value": "https://www.xero.com/uk/resources/small-business-insights/",
+        "schema_validator_type": "enum",
+        "children": []
+    }
+]
