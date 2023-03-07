@@ -1,0 +1,41 @@
+
+- This file is a code list.
+
+- The code list has the following catalog metadata:
+        - Title: Seasonal Adjustment
+        - Label: Seasonal Adjustment
+        - Issued: 2023-03-07T12:13:49.236765
+        - Modified: 2023-03-07T12:13:49.236765
+        - License: https://creativecommons.org/licenses/by/4.0/
+        - Creator: http://statistics.data.gov.uk
+        - Publisher: http://statistics.data.gov.uk
+        - Landing Pages: None
+        - Themes: None
+        - Keywords: 
+		-- Trend
+		-- SA
+		-- 7MA
+		-- NSA
+        - Contact Point: None
+        - Identifier: Seasonal Adjustment
+        - Comment: Seasonal adjustment components
+        - Description: A code list of Seasonal adjustment components
+        
+
+- The code list has the following dataset information:
+        - Number of Concepts: 2
+        - Number of Duplicates: 0
+        - Concepts: 
+Uri Identifier Label Notation  Parent Uri Identifier  Sort Priority                   Description
+           nsa   NSA      NSA                    NaN              0 Non-seasonally adjusted value
+            sa    SA       SA                    NaN              1     Seasonally adjusted value
+        
+
+- The code list has the following concepts information:
+        - Concepts hierarchy depth: 1
+        - Concepts hierarchy:
+root
+├── NSA
+└── SA
+
+        

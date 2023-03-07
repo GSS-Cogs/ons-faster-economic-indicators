@@ -1,0 +1,76 @@
+{
+    "@context": "http://www.w3.org/ns/csvw",
+    "@id": "sectors-and-subsectors.csv#code-list",
+    "url": "sectors-and-subsectors.csv",
+    "tableSchema": "sectors-and-subsectors.table.json",
+    "rdfs:seeAlso": [
+        {
+            "@id": "sectors-and-subsectors.csv#code-list",
+            "@type": [
+                "http://www.w3.org/ns/prov#Entity",
+                "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+                "http://www.w3.org/ns/dcat#Resource",
+                "http://www.w3.org/ns/dcat#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/dc/terms/description": [
+                {
+                    "@type": "https://www.w3.org/ns/iana/media-types/text/markdown#Resource",
+                    "@value": "List of all sectors and subsectors, classified by SIC included in the dataset"
+                }
+            ],
+            "http://purl.org/dc/terms/identifier": [
+                {
+                    "@value": "Sectors and subsectors"
+                }
+            ],
+            "http://purl.org/dc/terms/issued": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:13:49.228577"
+                }
+            ],
+            "http://purl.org/dc/terms/modified": [
+                {
+                    "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+                    "@value": "2023-03-07T12:13:49.228577"
+                }
+            ],
+            "http://purl.org/dc/terms/title": [
+                {
+                    "@language": "en",
+                    "@value": "Sectors and subsectors"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "List of all sectors and subsectors, classified by SIC included in the dataset"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Sectors and subsectors"
+                }
+            ],
+            "http://www.w3.org/ns/prov#wasGeneratedBy": [
+                {
+                    "@id": "sectors-and-subsectors.csv#csvcubed-build-activity"
+                }
+            ]
+        },
+        {
+            "@id": "sectors-and-subsectors.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.3.1"
+                }
+            ]
+        }
+    ]
+}
