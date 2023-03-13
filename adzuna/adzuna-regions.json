@@ -1,0 +1,90 @@
+{
+    "$schema": "https://purl.org/csv-cubed/code-list-config/v1",
+    "title": "Regions",
+    "summary": "List of all regions included in the dataset",
+    "concepts": [
+        {
+            "label": "K02000001",
+            "notation": "K02 United Kingdom",
+            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/K02000001", 
+            "children": [
+                {
+                    "label": "Unknown",
+                    "notation": "Unknown",
+                    "description": "The 'unknown' relates to regions which have not been able to match"
+                },
+                {
+                    "label": "W92000004",
+                    "notation": "W92 Country Wales",
+                    "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/W92000004"
+                },
+                {
+                    "label": "S92000003",
+                    "notation": "S92 Country Scotland",
+                    "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/S92000003"
+                },
+                {
+                    "label": "N92000002",
+                    "notation": "N92 Country Northern Ireland",
+                    "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/N92000002"
+                },
+                {
+                    "label": "E92000001",
+                    "notation": "E92 Country England",
+                    "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E92000001",
+                    "children": [
+                        {
+                            "label": "E12000001",
+                            "notation": "E12 Region North East",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000001"
+                        },
+                        {
+                            "label": "E12000002",
+                            "notation": "E12 Region North West",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000002"
+                        },
+                        {
+                            "label": "E12000003",
+                            "notation": "E12 Region Yorkshire and The Humber",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000003"
+                        },
+                        {
+                            "label": "E12000004",
+                            "notation": "E12 Region East Midlands",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000004"
+                        },
+                        {
+                            "label": "E12000005",
+                            "notation": "E12 Region West Midlands",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000005"
+                        },
+                        {
+                            "label": "E12000006",
+                            "notation": "E12 Region East of England",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000006"
+                        },
+                        {
+                            "label": "E12000007",
+                            "notation": "E12 Region London",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000007"
+                        },
+                        {
+                            "label": "E12000008",
+                            "notation": "E12 Region South East",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000008"
+                        },
+                        {
+                            "label": "E12000009",
+                            "notation": "E12 Region South West",
+                            "same_as": "https://statistics.data.gov.uk/atlas/resource?uri=http://statistics.data.gov.uk/id/statistical-geography/E12000009"
+                        }
+                    ]
+                   
+                }
+            ]
+        }
+    ]
+}
+
+
+     
