@@ -39,7 +39,7 @@
 
         "Region": {
             "type": "dimension",
-            "from_template": "statistical-geography"
+            "code_list":"./adzuna-regions.json"
         },
 
         "Measure": {
