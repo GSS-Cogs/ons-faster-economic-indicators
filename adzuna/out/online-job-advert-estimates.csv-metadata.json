@@ -37,8 +37,8 @@
                     {
                         "titles": "Region",
                         "name": "region",
-                        "propertyUrl": "online-job-advert-estimates.csv#dimension/statistical-geography",
-                        "valueUrl": "http://statistics.data.gov.uk/id/statistical-geography/{+region}",
+                        "propertyUrl": "online-job-advert-estimates.csv#dimension/region",
+                        "valueUrl": "regions.csv#{+region}",
                         "required": true
                     },
                     {
@@ -95,6 +95,13 @@
                             "resource": "method.csv",
                             "columnReference": "uri_identifier"
                         }
+                    },
+                    {
+                        "columnReference": "region",
+                        "reference": {
+                            "resource": "regions.csv",
+                            "columnReference": "uri_identifier"
+                        }
                     }
                 ],
                 "primaryKey": [
@@ -121,110 +128,14 @@
             "url": "method.csv",
             "tableSchema": "method.table.json",
             "suppressOutput": true
+        },
+        {
+            "url": "regions.csv",
+            "tableSchema": "regions.table.json",
+            "suppressOutput": true
         }
     ],
     "rdfs:seeAlso": [
-        {
-            "@id": "online-job-advert-estimates.csv#csvcubed-build-activity",
-            "@type": [
-                "http://www.w3.org/ns/prov#Activity",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/ns/prov#used": [
-                {
-                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.2.3"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/measure-type",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 3
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Index (100 = Equivalent period prior year)"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#float"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/statistical-geography",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/statistical-geography"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/statistical-geography"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 6
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/industry",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/industry"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/industry"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 2
-                }
-            ]
-        },
         {
             "@id": "online-job-advert-estimates.csv#component/observation-status",
             "@type": [
@@ -254,13 +165,36 @@
             ]
         },
         {
+            "@id": "online-job-advert-estimates.csv#component/index-100-average-february-2020",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 7
+                }
+            ]
+        },
+        {
             "@id": "online-job-advert-estimates.csv#dimension/industry",
             "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty"
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://purl.org/linked-data/cube#codeList": [
                 {
@@ -280,114 +214,10 @@
             ]
         },
         {
-            "@id": "online-job-advert-estimates.csv#component/method",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/method"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/method"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 5
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#class/method",
+            "@id": "online-job-advert-estimates.csv#class/region",
             "@type": [
                 "http://www.w3.org/2000/01/rdf-schema#Class",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/day",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/day"
-                }
-            ],
-            "http://purl.org/linked-data/cube#dimension": [
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/day"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 1
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020",
-            "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Index (100 = Average February 2020)"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "http://www.w3.org/2001/XMLSchema#float"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#class/statistical-geography",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#dimension/day",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "day.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Day"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "online-job-advert-estimates.csv#class/day"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
-                }
             ]
         },
         {
@@ -419,11 +249,131 @@
             ]
         },
         {
+            "@id": "online-job-advert-estimates.csv#class/method",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#dimension/method",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "method.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#comment": [
+                {
+                    "@language": "en",
+                    "@value": "method applied during data collection "
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Method"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "online-job-advert-estimates.csv#class/method"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/measure-type",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 3
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/industry",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/industry"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/industry"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 2
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#csvcubed-build-activity",
+            "@type": [
+                "http://www.w3.org/ns/prov#Activity",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://www.w3.org/ns/prov#used": [
+                {
+                    "@id": "https://github.com/GSS-Cogs/csvcubed/releases/tag/v0.3.1"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/day",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/day"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 1
+                }
+            ]
+        },
+        {
             "@id": "online-job-advert-estimates.csv#attribute/observation-status",
             "@type": [
+                "http://purl.org/linked-data/cube#AttributeProperty",
                 "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#AttributeProperty",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
@@ -439,11 +389,263 @@
             ]
         },
         {
+            "@id": "online-job-advert-estimates.csv#dimension/region",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "regions.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Region"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "online-job-advert-estimates.csv#class/region"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/region",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/region"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/region"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 6
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#class/day",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#class/industry",
+            "@type": [
+                "http://www.w3.org/2000/01/rdf-schema#Class",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#dimension/day",
+            "@type": [
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://purl.org/linked-data/cube#DimensionProperty",
+                "http://purl.org/linked-data/cube#CodedProperty",
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#codeList": [
+                {
+                    "@id": "day.csv#code-list"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "online-job-advert-estimates.csv#class/day"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Index (100 = Average February 2020)"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#float"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-period-prior-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 8
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#structure",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://purl.org/linked-data/cube#DataStructureDefinition",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#component": [
+                {
+                    "@id": "online-job-advert-estimates.csv#component/method"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/region"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/measure-type"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/industry"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-periord-prior-year"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/index-100-average-february-2020"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-period-prior-year"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/day"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/unit"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#component/observation-status"
+                }
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/day"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
+                },
+                {
+                    "@id": "http://purl.org/linked-data/cube#measureType"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#attribute/observation-status"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/region"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/method"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/industry"
+                },
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-periord-prior-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#measure": [
+                {
+                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 9
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentProperty",
+                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty"
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#label": [
+                {
+                    "@language": "en",
+                    "@value": "Index (100 = Equivalent period prior year)"
+                }
+            ],
+            "http://www.w3.org/2000/01/rdf-schema#range": [
+                {
+                    "@id": "http://www.w3.org/2001/XMLSchema#float"
+                }
+            ]
+        },
+        {
             "@id": "online-job-advert-estimates.csv#dataset",
             "@type": [
+                "http://purl.org/linked-data/cube#DataSet",
                 "http://www.w3.org/ns/dcat#Resource",
                 "http://purl.org/linked-data/cube#Attachable",
-                "http://purl.org/linked-data/cube#DataSet",
                 "http://www.w3.org/ns/dcat#Dataset",
                 "http://www.w3.org/2000/01/rdf-schema#Resource"
             ],
@@ -466,7 +668,7 @@
             "http://purl.org/dc/terms/issued": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-17T09:27:26.340474"
+                    "@value": "2023-03-13T10:12:55.193115"
                 }
             ],
             "http://purl.org/dc/terms/license": [
@@ -477,7 +679,7 @@
             "http://purl.org/dc/terms/modified": [
                 {
                     "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
-                    "@value": "2023-02-17T09:27:26.340474"
+                    "@value": "2023-03-13T10:12:55.193115"
                 }
             ],
             "http://purl.org/dc/terms/publisher": [
@@ -511,7 +713,11 @@
             "http://www.w3.org/ns/dcat#keyword": [
                 {
                     "@language": "en",
-                    "@value": "online jobs"
+                    "@value": "jobs"
+                },
+                {
+                    "@language": "en",
+                    "@value": "adverts"
                 },
                 {
                     "@language": "en",
@@ -519,7 +725,7 @@
                 },
                 {
                     "@language": "en",
-                    "@value": "jobs"
+                    "@value": "online jobs"
                 },
                 {
                     "@language": "en",
@@ -528,10 +734,6 @@
                 {
                     "@language": "en",
                     "@value": "job market"
-                },
-                {
-                    "@language": "en",
-                    "@value": "adverts"
                 }
             ],
             "http://www.w3.org/ns/dcat#theme": [
@@ -546,12 +748,35 @@
             ]
         },
         {
+            "@id": "online-job-advert-estimates.csv#component/method",
+            "@type": [
+                "http://purl.org/linked-data/cube#ComponentSpecification",
+                "http://purl.org/linked-data/cube#ComponentSet",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://purl.org/linked-data/cube#componentProperty": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/method"
+                }
+            ],
+            "http://purl.org/linked-data/cube#dimension": [
+                {
+                    "@id": "online-job-advert-estimates.csv#dimension/method"
+                }
+            ],
+            "http://purl.org/linked-data/cube#order": [
+                {
+                    "@value": 5
+                }
+            ]
+        },
+        {
             "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year",
             "@type": [
-                "http://purl.org/linked-data/cube#MeasureProperty",
                 "http://purl.org/linked-data/cube#ComponentProperty",
                 "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
+                "http://www.w3.org/2000/01/rdf-schema#Resource",
+                "http://purl.org/linked-data/cube#MeasureProperty"
             ],
             "http://www.w3.org/2000/01/rdf-schema#label": [
                 {
@@ -563,219 +788,6 @@
                 {
                     "@id": "http://www.w3.org/2001/XMLSchema#float"
                 }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-period-prior-year",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 8
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#dimension/statistical-geography",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Statistical Geography"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "online-job-advert-estimates.csv#class/statistical-geography"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/dimension#refArea"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#dimension/method",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentProperty",
-                "http://www.w3.org/2000/01/rdf-schema#Resource",
-                "http://purl.org/linked-data/cube#DimensionProperty",
-                "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
-                "http://purl.org/linked-data/cube#CodedProperty"
-            ],
-            "http://purl.org/linked-data/cube#codeList": [
-                {
-                    "@id": "method.csv#code-list"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#comment": [
-                {
-                    "@language": "en",
-                    "@value": "method applied during data collection "
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#label": [
-                {
-                    "@language": "en",
-                    "@value": "Method"
-                }
-            ],
-            "http://www.w3.org/2000/01/rdf-schema#range": [
-                {
-                    "@id": "online-job-advert-estimates.csv#class/method"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-periord-prior-year",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 9
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#class/industry",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#component/index-100-average-february-2020",
-            "@type": [
-                "http://purl.org/linked-data/cube#ComponentSpecification",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
-                }
-            ],
-            "http://purl.org/linked-data/cube#measure": [
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
-                }
-            ],
-            "http://purl.org/linked-data/cube#order": [
-                {
-                    "@value": 7
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#structure",
-            "@type": [
-                "http://purl.org/linked-data/cube#DataStructureDefinition",
-                "http://purl.org/linked-data/cube#ComponentSet",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
-            ],
-            "http://purl.org/linked-data/cube#component": [
-                {
-                    "@id": "online-job-advert-estimates.csv#component/industry"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/statistical-geography"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-period-prior-year"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/index-100-average-february-2020"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/day"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/observation-status"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/method"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/unit"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/index-100-equivalent-periord-prior-year"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#component/measure-type"
-                }
-            ],
-            "http://purl.org/linked-data/cube#componentProperty": [
-                {
-                    "@id": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/method"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-periord-prior-year"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-average-february-2020"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/statistical-geography"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/day"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#measure/index-100-equivalent-period-prior-year"
-                },
-                {
-                    "@id": "http://purl.org/linked-data/cube#measureType"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#attribute/observation-status"
-                },
-                {
-                    "@id": "online-job-advert-estimates.csv#dimension/industry"
-                }
-            ]
-        },
-        {
-            "@id": "online-job-advert-estimates.csv#class/day",
-            "@type": [
-                "http://www.w3.org/2000/01/rdf-schema#Class",
-                "http://www.w3.org/2000/01/rdf-schema#Resource"
             ]
         },
         {
@@ -826,6 +838,23 @@
             "http://rdfs.org/ns/void#uriSpace": [
                 {
                     "@value": "method.csv#"
+                }
+            ]
+        },
+        {
+            "@id": "online-job-advert-estimates.csv#dependency/regions",
+            "@type": [
+                "http://rdfs.org/ns/void#Dataset",
+                "http://www.w3.org/2000/01/rdf-schema#Resource"
+            ],
+            "http://rdfs.org/ns/void#dataDump": [
+                {
+                    "@id": "./regions.csv-metadata.json"
+                }
+            ],
+            "http://rdfs.org/ns/void#uriSpace": [
+                {
+                    "@value": "regions.csv#"
                 }
             ]
         },
