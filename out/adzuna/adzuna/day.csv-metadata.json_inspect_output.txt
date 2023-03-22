@@ -4,8 +4,8 @@
 - The code list has the following catalog metadata:
         - Title: Day
         - Label: Day
-        - Issued: 2023-03-07T12:19:36.790798
-        - Modified: 2023-03-07T12:19:36.790798
+        - Issued: 2023-03-22T14:23:58.697984
+        - Modified: 2023-03-22T14:23:58.697984
         - License: None
         - Creator: None
         - Publisher: None
