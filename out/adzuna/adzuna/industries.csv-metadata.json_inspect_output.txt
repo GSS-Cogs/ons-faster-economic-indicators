@@ -4,8 +4,8 @@
 - The code list has the following catalog metadata:
         - Title: Industries
         - Label: Industries
-        - Issued: 2023-03-07T12:19:36.804819
-        - Modified: 2023-03-07T12:19:36.804819
+        - Issued: 2023-03-22T14:23:58.708724
+        - Modified: 2023-03-22T14:23:58.708724
         - License: None
         - Creator: None
         - Publisher: None
