@@ -1,4 +1,0 @@
-Uri Identifier,Label,Notation,Parent Uri Identifier,Sort Priority,Description
-nsa,Non seasonally adjusted,NSA,,0,Non-seasonally adjusted value
-sa,Seasonally adjusted,SA,,1,Seasonally adjusted value
-trend,Trend,Trend,,2,The trend of the seasonally adjusted values
