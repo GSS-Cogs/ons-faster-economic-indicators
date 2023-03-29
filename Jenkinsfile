@@ -1,4 +1,4 @@
-@Library('pmd@csvwlib-build') _
+@Library('pmd@replacing-out') _
 
 csvw2pmd {
     csvwFilesDir = ["out/xero/xero"]
